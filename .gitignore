@@ -11,8 +11,6 @@ INMETRO/
 ORIGEM_E_DESTINO*/
 SENATRAN/
 
-# Pasta gerada pelo script
-dados_limpos/
 
 # Anotações temporárias e chaves de API
 APIS.txt
