@@ -1,0 +1,24 @@
+# Ambiente virtual do Python (essencial ignorar)
+.venv/
+__pycache__/
+*.pyc
+
+# Pastas com dados brutos pesados (Excel, CSV, PDF, Shapefiles)
+ANEEL/
+ANP/
+IBGE—mapa_da_RMSP/
+INMETRO/
+ORIGEM_E_DESTINO*/
+SENATRAN/
+
+# Pasta gerada pelo script
+dados_limpos/
+
+# Anotações temporárias e chaves de API
+APIS.txt
+*.txt
+
+# Arquivos temporários do sistema e do Excel
+~$*.xlsx
+.DS_Store
+Thumbs.db
