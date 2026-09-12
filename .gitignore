@@ -4,12 +4,15 @@ __pycache__/
 *.pyc
 
 # Pastas com dados brutos pesados (Excel, CSV, PDF, Shapefiles)
+ABVE/
 ANEEL/
 ANP/
+FIPE/
 IBGE—mapa_da_RMSP/
 INMETRO/
 ORIGEM_E_DESTINO*/
 SENATRAN/
+UBER/
 
 
 # Anotações temporárias e chaves de API

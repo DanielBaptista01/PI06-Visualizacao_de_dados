@@ -1,0 +1,171 @@
+﻿id_posto,titulo,operadora,logradouro,bairro_cidade,latitude,longitude,qtd_pontos_recarga,potencia_max_kw,tipos_conectores,status_operacional,custo_uso
+481244,Volvo - Faberge Mogi das Cruzes,Não informado,"Av. Ipiranga, 1252 - República - São Paulo - SP",São Paulo,-23.539995,-46.637025,1,7.0,,Desconhecido,
+481238,BYD Dealer Moóca,Não informado,"Av. Alcântara Machado, 576 - Mooca, - SP",São Paulo,-23.550967,-46.619468,2,60.0,,Desconhecido,
+188927,Shopping Cidade São Paulo,Não informado,1230 Avenida Paulista,São Paulo,-23.563426311792043,-46.65262563995975,1,7.0,,Desconhecido,
+463991,NetPark - Safra Paulista,Não informado,"Alameda Campinas, 450 - Jardim Paulista, São Paulo - SP, 01404-000",São Paulo,-23.565127,-46.652815,2,7.0,,Desconhecido,
+493908,Ayra Higienópolis,Não informado,"Av. Angélica, 634 - Santa Cecília",São Paulo,-23.5385054,-46.6550604,1,7.0,,Desconhecido,
+484657,Ayra Higienópolis,Não informado,"Av. Angélica, 634 - Santa Cecília",São Paulo,-23.5385054,-46.6550604,1,7.0,,Desconhecido,
+463993,NetPark - Frei Caneca,Não informado," Rua Frei Caneca, 1355",São Paulo,-23.558444,-46.657798,2,7.0,,Desconhecido,
+472929,Fifty,Não informado,Rua Joao Antonio de Oliveira,,-23.55655453757649,-46.605975167818656,1,,,Desconhecido,
+474661,Eco Luz - Vila Monumento,Não informado,"Avenida Dom Pedro I, 372",São Paulo,-23.568422293035272,-46.611635973921466,5,120.0,,Desconhecido,
+459074,Cond. Haddock Offices,Não informado,"Alameda Santos, 2326 - Jardim Paulista, São Paulo - SP, Brasil",São Paulo,-23.55792,-46.662059,2,22.0,,Desconhecido,
+507560,Cond. Haddock Offices,Não informado,"Alameda Santos, 2326 - Jardim Paulista, São Paulo - SP, Brasil",São Paulo,-23.55792,-46.662059,2,7.0,,Desconhecido,
+459073,Hotel Renaissance São Paulo,Não informado,"Alameda Santos, 2233 - Jardim Paulista, São Paulo - SP, 01419-002",São Paulo,-23.55865,-46.662117,1,7.0,,Desconhecido,
+235316,EZVolt Canindé,Não informado,"Rua Araguaia, 450",São Paulo,-23.525331839031068,-46.61824130456199,2,60.0,,Desconhecido,"R$ 1,97/KWh"
+507559,HOUSI - Bela Cintra,Não informado," R. Bela Cintra, 1425 - Cerqueira César, São Paulo - SP, 01415-001",São Paulo,-23.558693,-46.664027,1,7.0,,Desconhecido,
+459072,HOUSI - Bela Cintra,Não informado," R. Bela Cintra, 1425 - Cerqueira César, São Paulo - SP, 01415-001",São Paulo,-23.558693,-46.664027,1,7.0,,Desconhecido,
+481230,Volvo - Pão de Açúcar - Sede Jd Paulista,Não informado,"Av. Brigadeiro Luís Antônio, 3126 - Jardins, São Paulo - SP, Cep: 01402-901",São Paulo,-23.57272,-46.655087,1,7.0,,Desconhecido,
+188928,Pão de Açúcar Jardim Paulista,Não informado,Avenida Brigadeiro Luís Antônio,São Paulo,-23.573323,-46.654959,1,3.2,,Desconhecido,
+459070,Hotel Novotel SP Jardins,Não informado,"Alameda Campinas, 1435 - Jardim Paulista, São Paulo - SP, 01404-002",São Paulo,-23.572494,-46.659518,1,7.0,,Desconhecido,
+507557,Hotel Novotel SP Jardins,Não informado,"Alameda Campinas, 1435 - Jardim Paulista, São Paulo - SP, 01404-002",São Paulo,-23.572494,-46.659518,1,7.0,,Desconhecido,
+481232,Volvo - Pão de Açúcar - Oscar Freire,Não informado,"Al. Ministro Rocha Azevedo, 1136 - Jd. Paulista, São Paulo - SP",São Paulo,-23.566032,-46.66502,1,7.0,,Desconhecido,
+470649,Tcharge Eletroposto - Ricardo Jafet (SP),Não informado,"Av. Dr. Ricardo Jafet, 168 - Ipiranga",São Paulo,-23.57934617306097,-46.61268341338569,1,40.0,,Desconhecido,"R$1,50 + R$1,95/kWh"
+481245,Volvo - Autostar Pacaembu/Barra Funda,Não informado,"Rua Norma Pieruccini Gianotti, nº 725 - Barra Funda - SP",São Paulo,-23.523279,-46.657661,1,7.0,,Desconhecido,
+481233,Volvo - CJ Shop - São Paulo - SP,Não informado,"Rua Haddock Lobo, 1626 - Cerqueira César, São Paulo - SP",São Paulo,-23.564306,-46.668757,2,7.0,,Desconhecido,
+498022,Win Work Ibirapuera,Não informado,"R. Dr. Amâncio de Carvalho, 182 - Vila Mariana, São Paulo - SP, 04012-080",São Paulo,-23.583313,-46.651744,2,7.0,,Desconhecido,
+481226,Volvo - Pão de Açúcar - Ricardo Jaffet,Não informado,"R. Prof. Serafim Orlandi, 299 - Jardim Vila Mariana, São Paulo - SP",São Paulo,-23.587736,-46.620244,1,7.0,,Desconhecido,
+507565,Think Business Center,Não informado,"Av. Marquês de São Vicente, 230 - Várzea da Barra Funda, São Paulo - SP",São Paulo,-23.521619,-46.66221,1,7.0,,Desconhecido,
+459079,Think Business Center,Não informado,"Av. Marquês de São Vicente, 230 - Várzea da Barra Funda, São Paulo - SP",São Paulo,-23.521619,-46.66221,1,7.0,,Desconhecido,
+481243,Volvo - Granstad Belém (Radial),Não informado,"Av. Alcântara Machado, 3628, Pavilhão ""a"" - Quarta Parada, São Paulo, SP",São Paulo,-23.543964,-46.590131,1,7.0,,Desconhecido,
+463992,NetPark - Supéria Pinheiros,Não informado,"Rua Cardeal Arcoverde, 745 - cj 301 - Pinheiros, São Paulo - SP",São Paulo,-23.556774,-46.679939,1,7.0,,Desconhecido,
+507563,HOUSI - Turiassu,Não informado,"R. Turiassu, 1473 - Perdizes, São Paulo - SP, 05005-001",São Paulo,-23.530254,-46.676761,1,22.0,,Desconhecido,
+459077,HOUSI - Turiassu,Não informado,"R. Turiassu, 1473 - Perdizes, São Paulo - SP, 05005-001",São Paulo,-23.530254,-46.676761,1,22.0,,Desconhecido,
+507554,Estacionamento EZ Mark,Não informado,"Rua Domingos de Morais, 2187",São Paulo,-23.595483,-46.636218,4,7.0,,Desconhecido,
+459066,Estacionamento EZ Mark,Não informado,"Rua Domingos de Morais, 2187",São Paulo,-23.595483,-46.636218,2,7.0,,Desconhecido,
+210034,Hub EZVolt,Não informado,Rua Domingos da Fonseca 34,São Paulo,-23.575537,-46.592306,2,60.0,,Desconhecido,R$ 1.77 / kWh DC / R$ 1.47 / kWh AC
+460916,Atlas Estacionamentos - Ibirapuera,Não informado,"R. Sena Madureira, 1355 - bloco 1 - Ibirapuera, São Paulo - SP, 04021-051",São Paulo,-23.592811,-46.652129,1,7.0,,Desconhecido,
+484656,Ayra Pinheiros,Não informado,"Rua dos Pinheiros, 423 - Pinheiros",São Paulo,-23.5654975,-46.68211918,1,23.0,,Desconhecido,
+493907,Ayra Pinheiros,Não informado,"dos Pinheiros, 423 - Pinheiros",São Paulo,-23.5654975,-46.68211918,1,23.0,,Desconhecido,
+507553,Estacionamento Gallery Offices,Não informado," Rua Santa Cruz, 722 - Vila Mariana, São Paulo - SP, Brasil",São Paulo,-23.597703,-46.629607,1,22.0,,Desconhecido,
+459065,Estacionamento Gallery Offices,Não informado," Rua Santa Cruz, 722 - Vila Mariana, São Paulo - SP, Brasil",São Paulo,-23.597703,-46.629607,1,22.0,,Desconhecido,
+463989,NetPark - Head Offices,Não informado,"R. Joaquim Floriano, 72 - Itaim Bibi, São Paulo - SP, 04534-000",São Paulo,-23.583026,-46.670811,1,7.0,,Desconhecido,
+493910,H300,Não informado,"R. Heliodora, 336 - Santana",São Paulo,-23.5032896,-46.6435043,2,7.0,,Desconhecido,
+484659,H300,Não informado,"R. Heliodora, 336 - Santana",São Paulo,-23.5032896,-46.6435043,2,7.0,,Desconhecido,
+481231,Volvo - Pão de Açúcar - Jardim Paulistano,Não informado,"Al. Gabriel Monteiro da Silva, 1351 - Jardim Paulistano, São Paulo - SP",São Paulo,-23.571479,-46.681053,1,7.0,,Desconhecido,
+478014,Cond. La Place,Não informado,"R. Padre Chico, 221, Perdizes, São Paulo, SP",São Paulo,-23.530299,-46.681761,1,7.0,,Desconhecido,
+481229,Volvo - Intercar Jd Europa,Não informado,"Av. Europa, 930 - Jardim Europa, São Paulo - SP",São Paulo,-23.57756,-46.680662,1,7.0,,Desconhecido,
+481234,Volvo - Pão de Açúcar - Teodoro Sampaio,Não informado,"R. Teodoro Sampaio, 1933 - Pinheiros, São Paulo - SP",São Paulo,-23.563403,-46.6874,1,7.0,,Desconhecido,
+481235,Volvo - Pop Mais,Não informado,"R. Girassol, 285 - Vila Madalena, São Paulo - SP",São Paulo,-23.55623,-46.688928,1,36.0,,Desconhecido,
+204432,Shell Recharge - Posto Papa,Não informado,"Av. Prof. Celestino Bourroul, 34",São Paulo,-23.513169606914204,-46.67205640241309,2,50.0,,Desconhecido,R$ 2.15 / kWh
+235314,Movida Tatuapé,Não informado,"Avenida Condessa Elisabeth de Robiano, 1750",Tatuapé,-23.528501624957784,-46.5820379296955,3,50.0,,Desconhecido,"R$ 1,99 / kWh"
+460919,Trevo Brasília Corporate Santana,Não informado,"R. Voluntários da Pátria, 2468 / 2490 - Santana, São Paulo - SP,",São Paulo ,-23.498308,-46.625262,1,7.0,,Desconhecido,
+481224,Volvo - Granstad Saúde - Ricardo Jaffet,Não informado,"Av. Dr. Ricardo Jafet, 3113 - Saúde, São Paulo - SP",São Paulo,-23.603095,-46.625043,1,7.0,,Desconhecido,
+481240,"Volvo - Edifício Harmonia, São Paulo - SP",Não informado,"Rua Harmonia, 1250 - Sumarezinho, São Paulo - SP",São Paulo,-23.547844,-46.691425,2,22.0,,Desconhecido,
+280028,Shell Recharge - Zarp Limão (Carrefour),Não informado,Avenida Otaviano Alves De Lima 1824,São Paulo,-23.512731845813946,-46.67522751942326,2,24.0,,Desconhecido,R$ 2.10 / kWh
+481241,"Volvo - Edifício Lacerda, São Paulo - SP",Não informado,"R. Sen. César Lacerda Vergueiro, 380 - Sumarezinho, São Paulo - SP",São Paulo,-23.547079,-46.692582,2,22.0,,Desconhecido,
+481236,"Volvo - Edifício Lab, São Paulo",Não informado,"R. Mourato Coelho, 1404 - Pinheiros, São Paulo - SP",São Paulo,-23.556153,-46.69256,2,3.0,,Desconhecido,
+463988,NetPark - Spazio Del Sole,Não informado,"Rua Tabapuã, 1123 - Itaim Bibi, São Paulo - SP, 04533-014",São Paulo,-23.584947,-46.681128,1,7.0,,Desconhecido,
+469608,Netpark - New Place,Não informado,"AVENIDA BRIGADEIRO FARIA LIMA, 2927 01452-000 SAO PAULO SP JARDIM PAULISTANO BR - BRASIL",São Paulo,-23.581782,-46.683706,1,7.0,,Desconhecido,
+460380,Teld Eco Eletropost - Faria Lima,Não informado,"Av. Brg. Faria Lima, 2812, Jardim Europa",São Paulo,-23.581259431961428,-46.68497482483744,1,240.0,,Desconhecido,
+459068,NetPark - HL Faria Lima,Não informado,Rua Horácio Lafer 160,São Paulo,-23.586971,-46.680929,1,7.0,,Desconhecido,
+507555,NetPark - HL Faria Lima,Não informado,Rua Horácio Lafer 160,São Paulo,-23.586971,-46.680929,1,7.0,,Desconhecido,
+459075,Estacionamento Barcelos Office,Não informado,"R. Emílio Mallet, 317 - Vila Gomes Cardim, São Paulo - SP, 03320-000",São Paulo,-23.547077,-46.57106,1,7.0,,Desconhecido,
+507561,Estacionamento Barcelos Office,Não informado,"R. Emílio Mallet, 317 - Vila Gomes Cardim, São Paulo - SP, 03320-000",São Paulo,-23.547077,-46.57106,1,7.0,,Desconhecido,
+481239,Volvo - Condomínio Corujas - São Paulo - SP,Não informado,"R. Natingui, 442 Vila Madalena, São Paulo - SP",São Paulo,-23.550575,-46.695744,2,7.0,,Desconhecido,
+478012,Seculun - NetPark,Não informado,"Av. Brig. Faria Lima, 3144 - Itaim Bibi, São Paulo - SP, 01451",São Paulo,-23.584055,-46.68396,1,7.0,,Desconhecido,
+459071,Netpark - Arquiteto Roberto Bratke,Não informado,"R. dos Pinheiros, 1673 - Pinheiros, São Paulo - SP",São Paulo,-23.567441,-46.69369,1,7.0,,Desconhecido,
+507558,Netpark - Arquiteto Roberto Bratke,Não informado,"R. dos Pinheiros, 1673 - Pinheiros, São Paulo - SP",São Paulo,-23.567441,-46.69369,1,7.0,,Desconhecido,
+481237,Volvo - Idea Zarvos - Une,Não informado,"R. Natingui, 862, Vila Madalena",São Paulo,-23.554159,-46.69668,2,7.0,,Desconhecido,
+480002,Estacionamento B32,Não informado,"Av. Brig. Faria Lima, 3732",São Paulo,-23.58929574925442,-46.68218911759794,1,7.0,,Desconhecido,"R$ 12,00/hora (condôminos), R$ 15,00/hora (valet)"
+481242,Volvo - Pão de Açúcar - Tatuape,Não informado,"Rua Serra de Bragança, 647 - Tatuape, São Paulo - SP",São Paulo,-23.544237,-46.568994,1,7.0,,Desconhecido,
+502171,Hotel George V,Não informado,"Praça Roquete Pinto, 9 - Alto de Pinheiros, São Paulo - SP, 05420-020",São Paulo,-23.55834,-46.698759,1,7.0,,Desconhecido,
+312959,Eletroposto Kinsol - Mourisco,Não informado,"Avenida Regente Feijó, 1111",São Paulo,-23.558646887487882,-46.567517246674285,1,60.0,,Desconhecido,"Cobrança facilitada - SEM APPs - R$1,20/kWh"
+235315,Eletroposto EZVolt / 99 - 100% elétrico,Não informado,"Rua Oiti, 68",São Paulo,-23.559970126858673,-46.5676144657279,7,200.0,,Desconhecido,"DC: R$ 1,97/KWh - AC: R$ 1,77/KWh"
+460917,NetPark - JK,Não informado,"Av. Pres. Juscelino Kubitschek, 1455 - Itaim Bibi, São Paulo - SP, 04544-140",São Paulo,-23.591373,-46.682652,2,7.0,,Desconhecido,
+507551,Hotel Mercure SP Ibirapuera Privilege,Não informado,"Av. Macuco, 579 - Moema, São Paulo - SP",São Paulo,-23.604465,-46.665315,1,7.0,,Desconhecido,
+459063,Hotel Mercure SP Ibirapuera Privilege,Não informado,"Av. Macuco, 579 - Moema, São Paulo - SP",São Paulo,-23.604465,-46.665315,1,7.0,,Desconhecido,
+459067,HOUSI - VN Faria Lima,Não informado," Av. Brg. Faria Lima, 4540 - Itaim Bibi, São Paulo - SP, 04545-004",São Paulo,-23.595457,-46.679966,1,22.0,,Desconhecido,
+481222,NetPark - Vertex,Não informado,"Alameda dos Maracatins, 780 - Indianópolis, São Paulo - SP, 04089-001",São Paulo,-23.60755,-46.661547,2,7.0,,Desconhecido,
+507556,NetPark - Eldorado Business Tower,Não informado,"Av. Dra. Ruth Cardoso, 8501 - Pinheiros, São Paulo - SP, 05425-070",Pinheiros,-23.573492,-46.697787,7,7.0,,Desconhecido,
+459069,NetPark - Eldorado Business Tower,Não informado,"Av. Dra. Ruth Cardoso, 8501 - Pinheiros, São Paulo - SP, 05425-070",Pinheiros,-23.573492,-46.697787,7,7.0,,Desconhecido,
+463990,NetPark - WTorre,Não informado,"Av. das Nações Unidas, 7815 - Pinheiros, São Paulo - SP, 05425-905",São Paulo,-23.569716,-46.70112,4,7.0,,Desconhecido,
+484658,Edifício Panorama,Não informado,"Catão, 856 - Vila Romana",São Paulo,-23.5285183,-46.701479,2,7.0,,Desconhecido,
+493909,Edifício Panorama,Não informado,"Catão, 856 - Vila Romana",São Paulo,-23.5285183,-46.701479,2,7.0,,Desconhecido,
+498323,Movva Charge - IFLY.,Não informado,"Av. Dra. Ruth Cardoso, 6873 - Pinheiros",São Paulo,-23.5613218,-46.7047,2,120.0,,Desconhecido,
+459064,Eletroposto Vila Olímpia,Não informado,"R. Alvorada, 700 - Vila Olímpia, São Paulo - SP, 08582-785",São Paulo,-23.601724,-46.68087,4,60.0,,Desconhecido,
+507552,Eletroposto Vila Olímpia,Não informado,"R. Alvorada, 700 - Vila Olímpia, São Paulo - SP, 08582-785",São Paulo,-23.601724,-46.68087,4,60.0,,Desconhecido,
+280027,Shell Recharge - Posto Arinella Bandeirantes,Não informado,Avenida dos Bandeirantes 1365,São Paulo,-23.602552949226933,-46.680920547220495,3,60.0,,Desconhecido,R$ 2.15 / kWh
+260325,Porsche Center São Paulo - Stuttgart,Não informado,Av. Doutor Cardoso de Melo 1507,São Paulo,-23.597102776156603,-46.687928655473,2,350.0,,Desconhecido,Free
+493906,Ayra Moema,Não informado,"Av. dos Carinás, 181 - Moema",São Paulo,-23.6121694,-46.6677484,1,23.0,,Desconhecido,
+488432,Ayra Moema,Não informado,"Av. dos Carinás, 181 - Moema",São Paulo,-23.6121694,-46.6677484,1,23.0,,Desconhecido,
+470597,DSA X - Ventura São Paulo,Não informado,"Av. dos Bandeirantes, 3655 - Planalto Paulista",São Paulo,-23.616074,-46.664074,1,30.0,,Desconhecido,
+280026,Shell Recharge - Posto Shell São Gualter,Não informado,"Av. São Gualter, 918 - Pinheiros",São Paulo,-23.54340530469868,-46.71149398946048,2,50.0,,Desconhecido,R$ 2.15 / kWh
+306486,Eletroposto Kinsol - Alicante,Não informado,"Rod Ancheita, 1954",São Paulo,-23.61894885913506,-46.60213080816925,1,60.0,,Desconhecido,"Cobrança facilitada - SEM APPs - R$2,19/kWh"
+460950,Teld Eletroposto - Campo Belo,Não informado,"Av. Ver. José Diniz, 3670, Santo Amaro",São Paulo,-23.616317199274988,-46.6737152819976,1,240.0,,Desconhecido,
+494515,Cond. Austin Office,Não informado,"Av. Fagundes Filho, 145 - Vila da Saúde São Paulo - SP, 04304-010",São Paulo,-23.626421,-46.639706,1,7.0,,Desconhecido,
+507549,Hotel Ibis Congonhas,Não informado,"Ibis São Paulo Congonhas - R. Baronesa de Bela Vista, 801 - Vila Congonhas, São Paulo - SP, 04612-002, Brasil",São Paulo,-23.62481,-46.662287,1,7.0,,Desconhecido,
+459061,Hotel Ibis Congonhas,Não informado,"Ibis São Paulo Congonhas - R. Baronesa de Bela Vista, 801 - Vila Congonhas, São Paulo - SP, 04612-002, Brasil",São Paulo,-23.62481,-46.662287,1,7.0,,Desconhecido,
+478011,Eletroposto JP Estacionamento,Não informado,"R. Pará, 120 - Centro",São Caetano do Sul,-23.612978,-46.570496,2,7.0,,Desconhecido,
+507568,Cond. GoodStorage - Lapa Flex,Não informado,"R. Bartolomeu Paes, 136 - Vila Anastácio, São Paulo - SP, 05092-000",São Paulo,-23.513454,-46.71698,3,7.0,,Desconhecido,
+459082,Cond. GoodStorage - Lapa Flex,Não informado,"R. Bartolomeu Paes, 136 - Vila Anastácio, São Paulo - SP, 05092-000",São Paulo,-23.513454,-46.71698,3,7.0,,Desconhecido,
+459080,Eletroposto Penha,Não informado,"R. Lourdes, 28-98 - Vila Sao Geraldo, São Paulo - SP, 03607-050",São Paulo,-23.519517,-46.546305,11,30.0,,Desconhecido,
+507566,Eletroposto Penha,Não informado,"R. Lourdes, 28-98 - Vila Sao Geraldo, São Paulo - SP, 03607-050",São Paulo,-23.519517,-46.546305,9,30.0,,Desconhecido,
+478013,Academia Batalha,Não informado,"Av. Norberto Mayer, 271 - Vila Carrão, São Paulo - SP, 03425-040",São Paulo,-23.556821,-46.538807,1,7.0,,Desconhecido,
+481221,Volvo - Pão de Açúcar - Real Parque,Não informado,"Av. Magalhães de Castro, 6118 - Ibirapuera, São Paulo - SP",São Paulo,-23.611468,-46.701101,1,7.0,,Desconhecido,
+481227,Volvo - Pão de Açúcar - Morumbi,Não informado,"Av. Professor Francisco Morato, 2.385 - Butantã, São Paulo - SP",São Paulo,-23.58621,-46.721495,1,7.0,,Desconhecido,
+507567,Cond. GoodStorage - Park Vila Anastácio,Não informado,"R. João Tibiriçá, 958 - Vila Anastácio, São Paulo - SP, 05077-000 ",São Paulo,-23.517031,-46.724506,2,7.0,,Desconhecido,
+459081,Cond. GoodStorage - Park Vila Anastácio,Não informado,"R. João Tibiriçá, 958 - Vila Anastácio, São Paulo - SP, 05077-000 ",São Paulo,-23.517031,-46.724506,2,7.0,,Desconhecido,
+481225,Posto Espanha Morumbi,Não informado,"R. Jeriquara, 109 - Vila Inah, São Paulo - SP, 05620-070",São Paulo,-23.593975,-46.72105,2,30.0,,Desconhecido,
+481252,Volvo - Maria Amália - Tremembé - SP,Não informado,"Rua Maria Amalia Lopes Azevedo, 842, Tremembé",São Paulo,-23.457031,-46.618062,2,22.0,,Desconhecido,
+481219,Volvo - Pão de Açúcar - São Caetano do Sul,Não informado,"Rua Maranhão, 975, Santa paula, São caetano do sul, SP",São Caetano do Sul,-23.620981,-46.56384,1,7.0,,Desconhecido,
+459060,Trevo Neo Corporate Offices,Não informado,"R. Enxovia, 472 - Vila Sao Francisco (Zona Sul), São Francisco - SP, 04711-030",São Francisco,-23.627272,-46.700797,1,7.0,,Desconhecido,
+507548,Trevo Neo Corporate Offices,Não informado,"R. Enxovia, 472 - Vila Sao Francisco (Zona Sul), São Francisco - SP, 04711-030",São Francisco,-23.627272,-46.700797,1,7.0,,Desconhecido,
+507550,NetPark - Parque da Cidade,Não informado,"Av. das Nações Unidas, 14401 - Chácara Santo Antônio, São Paulo - SP, 04794-000",São Paulo,-23.624484,-46.704652,10,7.0,,Desconhecido,
+459062,NetPark - Parque da Cidade,Não informado,"Av. das Nações Unidas, 14401 - Chácara Santo Antônio, São Paulo - SP, 04794-000",São Paulo,-23.624484,-46.704652,10,7.0,,Desconhecido,
+474663,Go Electric - Poupaki Guarulhos,Não informado,"Av. Guarulhos, 2753",Guarulhos,-23.491442029038605,-46.545896199956836,2,60.0,,Desconhecido,
+507564,Cond. GoodStorage - Park VILA Leopoldina,Não informado,"Rua Major Paladino, 128 - Vila Leopoldina, São Paulo - SP",São Paulo,-23.523175,-46.73788,2,7.0,,Desconhecido,
+459078,Cond. GoodStorage - Park VILA Leopoldina,Não informado,"Rua Major Paladino, 128 - Vila Leopoldina, São Paulo - SP",São Paulo,-23.523175,-46.73788,2,7.0,,Desconhecido,
+480356,Avenida Jaguaré,Não informado,Avenida Jaguaré,,-23.55387211911497,-46.74270395005419,1,80.0,,Desconhecido,"R$2,40/kW"
+480001,Assaí Jaguaré Corifeu,Não informado,"Av. Corifeu de Azevedo Marques, 4160",São Paulo,-23.55749894454172,-46.7464817408935,1,22.0,,Desconhecido,"R$ 1,53/kW"
+312960,Eletroposto Kinsol - Puglia,Não informado,"Via Lateral-Norte, 775",Guarulhos,-23.4851750654032,-46.53915115585931,1,60.0,,Desconhecido,"Cobrança facilitada - SEM APPs - R$2,09/kWh"
+485166,Avenida Marginal Direita do Tietê,Não informado,Avenida Marginal Direita do Tietê,,-23.520964269395463,-46.74831936808573,2,100.0,,Desconhecido,
+491514,Vini Bela - EG Energia Geral,Não informado,"Rua Silvia, 417 Santa Maria",São Caetano do Sul,-23.635498,-46.555028,1,7.0,,Desconhecido,
+260326,Porsche Service | Body & Paint Stuttgart,Não informado,"Av. das Nações Unidas, 16.427",São Paulo,-23.635482262990976,-46.7184944540779,1,350.0,,Desconhecido,Free
+481220,Volvo - Pão de Açúcar - Portal Morumbi,Não informado,"R. Mal. Hastimphilo de Moura, 30 - Vila Suzana, São Paulo - SP",São Paulo,-23.615582,-46.739476,1,7.0,,Desconhecido,
+481217,Volvo - Toriba Santo André,Não informado,"Avenida Dom Pedro II, 2300, Campestre, Santo André, SP",Santo André,-23.636513,-46.543007,1,7.0,,Desconhecido,
+493895,Volvo - Clavi Ecco Tower - São Paulo - SP,Não informado,"Rua Luzia Balzani, 284, Vila Moreira, Guarulhos - SP, CEP 07020-021",Guarulhos,-23.471359,-46.535022,2,7.0,,Desconhecido,
+459084,Hotel Mercure Guarulhos,Não informado,"R. Barão de Mauá, 450 - Centro, Guarulhos - SP, 07012-040",São Paulo,-23.473188,-46.53199,1,7.0,,Desconhecido,
+507570,Hotel Mercure Guarulhos,Não informado,"R. Barão de Mauá, 450 - Centro, Guarulhos - SP, 07012-040",São Paulo,-23.473188,-46.53199,1,7.0,,Desconhecido,
+481218,Volvo - Pão de Açúcar - Panamby,Não informado,"Av. José Ramon Urtiza, 1000 - Vila Andrade, São Paulo - SP",São Paulo,-23.633728,-46.728989,1,7.0,,Desconhecido,
+478010,Dr. Bakana,Não informado,"Rua Dr. Fonseca Brasil, 118",São Paulo,-23.628272,-46.735053,3,30.0,,Desconhecido,
+485167,Avenida dos Autonomistas,Não informado,Avenida dos Autonomistas,,-23.539248597526225,-46.768938127935826,1,30.0,,Desconhecido,"R$1,99/kW"
+299465,Avenida Interlagos,Não informado,Avenida Interlagos,,-23.676008,-46.677134,1,22.0,,Desconhecido,Free
+463987,Dealer BYD,Não informado,"Rua Maestro Joaquim Capocchi, 174-200 - Jurubatuba, São Paulo - SP, 04696-100",Jurubatuba,-23.670539,-46.702961,2,60.0,,Desconhecido,
+481216,Volvo - Shopping ABC,Não informado,"Av. Pereira Barreto, 42 - Vila Gilda – Santo André - SP, CEP 09190-210",Santo André,-23.667771,-46.53356,2,22.0,,Desconhecido,
+488546,VA-e MOB | PONCE PARK GRU,Não informado,"Av. Pres. Tancredo de Almeida Neves, 2021 - São Roque, Guarulhos - SP, 07112-070",GUARULHOS,-23.464269,-46.500459,2,40.0,,Desconhecido,
+504272,VA-e MOB | DECOLAR PARK GRU,Não informado,"Av. Natalia Zarif, 2915 - Jardim Sao Geraldo, Guarulhos - SP, 07140-040",GUARULHOS,-23.435446,-46.495826,2,40.0,,Desconhecido,
+480107,Go Electric - Hortifruti Saúde,Não informado,"Rua Baltazar Borges, 15",São Bernardo do Campo,-23.72556741806669,-46.56948647355796,2,40.0,,Desconhecido,"R$2,00 + R$2,40 / kWh"
+193564,Eletroposto Tupinambá - Shopping Tamboré,Não informado,"Avenida Piracema, 669",Barueri,-23.504573961679867,-46.833734279267674,5,22.0,,Desconhecido,"R$1,80 / kWh"
+193563,Eletropostos Volvo - Shopping Tamboré,Não informado,"Avenida Piracema, 669",Barueri,-23.50463574761126,-46.834237110159734,2,7.0,,Desconhecido,Free
+460918,Cond. Office Tamboré,Não informado,"Av. Marcos Penteado de Ulhoa Rodrigues, 1119 - Tamboré, Barueri - SP, 06460-040",Barueri,-23.506065,-46.835005,1,7.0,,Desconhecido,
+481249,Volvo - Baltic Alphaville,Não informado,"Av. Tucunaré, 292 - Tamboré, Barueri - SP",Barueri,-23.498867,-46.836279,1,7.0,,Desconhecido,
+216749,Petrobras - Autos Posto Campeão 28,Não informado,"Rodovia dos Bandeirantes, Km 28,5 s/n",Caieiras,-23.39529398434665,-46.76765484366189,2,90.0,,Desconhecido,"2,75"
+481247,Volvo - Iguatemi Alphaville,Não informado,"Al. Rio Negro, 111 - Alphaville Industrial, Barueri - SP, 06454-000",Barueri,-23.50484,-46.847545,2,11.0,,Desconhecido,
+470599,DSA X - Selectpark Alphaville,Não informado,"Alameda Grajaú, 443",Barueri ,-23.49473,-46.847291,1,30.0,,Desconhecido,
+481251,Volvo - Pão de Açúcar - Tamboré,Não informado,"Av. Marcos Penteado de Ulhoa Rodrigues, 3436, Tamboré, Santana de Parnaíba, SP, 06543001",Tamboré,-23.466295,-46.846335,1,7.0,,Desconhecido,
+459083,Burger King Alphaville,Não informado,"Av. Alphaville, 630",Barueri,-23.485638,-46.856953,1,7.0,,Desconhecido,
+507569,Burger King Alphaville,Não informado,"Av. Alphaville, 630",Barueri,-23.485638,-46.856953,1,7.0,,Desconhecido,
+470648,Tcharge Eletroposto Guarulhos,Não informado,"Av. Papa João Paulo I, 2911 - Jardim Pres. Dutra",Guarulhos,-23.43077266362873,-46.437862133955306,1,40.0,,Desconhecido,"R$2,00 + R$2,00/kWh"
+481250,Volvo - Ecopistas - Guarulhos km 28,Não informado,"Rod. Ayrton Senna km 28 SENTIDO NORTE, Guarulhos - SP",Guarulhos,-23.468939,-46.408875,1,7.0,,Desconhecido,
+497947,Sodie Barueri Delivery,Não informado,Rua Antonio Pereira Tendeiro 111,Barueri,-23.50636,-46.87697,2,40.0,,Desconhecido,
+481246,Burger King Barueri,Não informado,"Av. Vinte e Seis de Março, 535 - Centro, Barueri, SP, Brasil",Barueri ,-23.511542,-46.879832,1,7.0,,Desconhecido,
+490008,Volvo - ECS - Sede Administrativa Ecorodovias,Não informado,"Rod. Imigrantes km 29 SENTIDO SUL, São Bernardo do Campo - SP",São Bernardo do Campo,-23.784818,-46.595659,1,7.0,,Desconhecido,
+300185,Hub de Recarga Go Electric - Riacho Grande,Não informado,"R. Heinrich Nordoff, 61 - Rio Grande",São Bernardo do Campo,-23.777805738791685,-46.52909857095193,3,360.0,,Desconhecido,
+478015,LUFT - AMAZON,Não informado,"Rod. Edgard Máximo Zambotto, 3909-4367 - Jordanesia, Cajamar - SP, 02675-031",Cajamar,-23.34408,-46.833265,2,150.0,,Desconhecido,
+297691,Cluster Go Electric - Cajamar,Não informado,Avenida Alfonso Leopoldo Vogel,Cajamar,-23.343242183188508,-46.840568279004515,5,120.0,,Desconhecido,"Desbloqueio: R$2,00; Tarifa: R$ 2,50/kWh"
+502638,DSA X - Km40 Castelinho da Pamonha,Não informado,"Rod. Pres. Castello Branco, s/n - Km 40 - Recanto Maravilha III, Santana de Parnaíba - SP",Santana de Parnaíba,-23.484371,-46.994,2,80.0,,Desconhecido,
+481211,Volvo - Ecovias - São Bernardo km 40,Não informado,Rod Anchieta KM 40 - Sentido Sul,São Bernardo do Campo,-23.866456,-46.495389,1,7.0,,Desconhecido,
+507572,Outlet Premium Grande São Paulo,Não informado,"Estr. de São Bento, 9550 - Jardim Josely, Itaquaquecetuba - SP, 08590-315",São Paulo,-23.434238,-46.27248,2,40.0,,Desconhecido,
+459085,Outlet Premium Grande São Paulo,Não informado,"Estr. de São Bento, 9550 - Jardim Josely, Itaquaquecetuba - SP, 08590-315",São Paulo,-23.434238,-46.27248,2,40.0,,Desconhecido,
+470601,DSA X - Ecoparada Madero,Não informado,"KM 44 | - Rod. Pres. Castello Branco, 44532 - Área I",Araçariguama,-23.46334,-47.02864,4,80.0,,Desconhecido,
+495131,Viskom Eletroposto,Não informado,"Rua Vereador Sidney da Silva Rocha, 65",Mogi das Cruzes,-23.513083299581353,-46.20446651877762,1,80.0,,Desconhecido,"2,50"
+474458,Posto Farol 48,Não informado,"Rodovia Presidente Castello Branco, km 48",Araçariguama,-23.449841532782614,-47.05821807309024,4,150.0,,Desconhecido,"R$2,00 + R$2,25 / kWh"
+481210,Volvo - Ecovias - Cubatão km 62,Não informado,Rod Imigrantes KM 62 - Sentido Norte,Cubatão,-23.926579,-46.431147,1,7.0,,Desconhecido,
+208603,Avenida Nove de Julho,Não informado,Avenida Nove de Julho,Jundiaí,-23.201969763240598,-46.891877367280586,1,7.4,,Desconhecido,0
+208604,3333 Avenida Nove de Julho,Não informado,3333 Avenida Nove de Julho,Jundiaí,-23.199628335130782,-46.890283229170905,1,22.0,,Desconhecido,Free
+208605,Ibis Jundiaí Shopping ,Não informado,Rua Luis de Jesus,Jundiaí,-23.1973506042565,-46.88930244157916,1,11.0,,Desconhecido,Estacionamento Pago
+459860,Eletroposto 80kw Empório Dom Olivio Jundiaí,Não informado,"Rua do Retiro, 925 - Vila Virginia ",Jundiaí ,-23.186808454754285,-46.89858099927869,1,80.0,,Desconhecido,"2,29"
+304279,Graal 56,Não informado,"Rod. dos Bandeirantes, Km 56",Jundiaí,-23.204803825697013,-46.92776021725456,2,120.0,,Desconhecido,"R$ 2,20/kWh"
+507574,Hotel Bourbon Atibaia,Não informado,"Rod. Fernão Dias, Km 37,5 - Parque das Nações, Atibaia - SP, 12954-904",Atibaia,-23.107962,-46.57259,2,7.0,,Desconhecido,
+459087,Hotel Bourbon Atibaia,Não informado,"Rod. Fernão Dias, Km 37,5 - Parque das Nações, Atibaia - SP, 12954-904",Atibaia,-23.107962,-46.57259,2,7.0,,Desconhecido,
+267260,Maxi Shopping Jundiai,Não informado,"Av. Antônio Frederico Ozanan, 6000 - Vila Rio Branco",Jundiaí,-23.170261323533296,-46.892392358941265,1,7.0,,Desconhecido,"R$ 1,6 / kWh"
