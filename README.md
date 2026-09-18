@@ -2,6 +2,10 @@
 
 Projeto integrador de visualização de dados voltado à análise econômica de veículos a combustão, híbridos e elétricos no contexto de motoristas de aplicativo na Região Metropolitana de São Paulo (RMSP).
 
+## Roadmap e acompanhamento
+
+O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pendentes possuem GitHub Issues com prioridade, dependências e critérios de conclusão. Conforme o desenvolvimento avançar, o roadmap e as Issues devem ser atualizados para manter o histórico do que foi concluído e do que ainda falta.
+
 ## Organização do pipeline
 
 - `extrair_bases.py`: processa bases baixadas (ANEEL, ANP, IBGE, INMETRO, SENATRAN, OD 2023, ABVE e regras Uber arquivadas).
