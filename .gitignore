@@ -1,9 +1,16 @@
-# Ambiente virtual do Python (essencial ignorar)
+# Ambiente virtual / Python
 .venv/
+venv/
 __pycache__/
 *.pyc
 
-# Pastas com dados brutos pesados (Excel, CSV, PDF, Shapefiles)
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+APIS.txt
+
+# Dados brutos pesados - devem ser obtidos das fontes documentadas
 ABVE/
 ANEEL/
 ANP/
@@ -14,12 +21,14 @@ ORIGEM_E_DESTINO*/
 SENATRAN/
 UBER/
 
+# Cache local do pipeline (reconstruível)
+dados_cache/
 
-# Anotações temporárias e chaves de API
-APIS.txt
+# Relatórios locais gerados pelo explorar.py
+dados_relatorios/
+
+# Temporários / sistema
 *.txt
-
-# Arquivos temporários do sistema e do Excel
 ~$*.xlsx
 .DS_Store
 Thumbs.db
