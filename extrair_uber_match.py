@@ -54,9 +54,13 @@ def _links_ofertas(texto: str) -> list[str]:
     encontrados: list[str] = []
 
     def adicionar(href: str) -> None:
-        if not re.search(r"/offer/[A-Za-z0-9_-]+", href):
+        achado = re.search(r"/offer/([A-Za-z0-9_-]+)", href)
+        if not achado:
             return
-        absoluto = urljoin(BASE_URL, href.split("?")[0])
+        # A rota localizada /pt-BR/offer/... pode responder 404 para
+        # clientes HTTP simples, embora funcione no navegador. A rota
+        # canônica sem locale é mais estável para a coleta automatizada.
+        absoluto = f"{BASE_URL}/offer/{achado.group(1)}"
         if absoluto not in encontrados:
             encontrados.append(absoluto)
 
@@ -157,6 +161,18 @@ def indexar_paginas_categoria(
     return indice, avisos
 
 
+def _variantes_url_oferta(url: str) -> list[str]:
+    achado = re.search(r"/offer/([A-Za-z0-9_-]+)", url)
+    if not achado:
+        return [url]
+
+    oferta_id = achado.group(1)
+    return [
+        f"{BASE_URL}/offer/{oferta_id}",
+        f"{BASE_URL}/pt-BR/offer/{oferta_id}",
+    ]
+
+
 class ClienteUberMatch:
     def __init__(self, intervalo: float = 0.4, tentativas: int = 4):
         self.session = requests.Session()
@@ -175,31 +191,61 @@ class ClienteUberMatch:
         self.ultima_requisicao = 0.0
 
     def baixar(self, url: str) -> str:
-        for tentativa in range(self.tentativas):
-            espera = self.intervalo - (
-                time.monotonic() - self.ultima_requisicao
-            )
-            if espera > 0:
-                time.sleep(espera)
-            try:
-                resposta = self.session.get(url, timeout=30)
-                self.ultima_requisicao = time.monotonic()
+        ultimo_erro: Exception | None = None
 
-                if resposta.status_code == 429:
-                    time.sleep(min(30, 2 ** (tentativa + 1)))
-                    continue
-
-                resposta.raise_for_status()
-                resposta.encoding = (
-                    resposta.apparent_encoding or resposta.encoding
+        for variante in _variantes_url_oferta(url):
+            for tentativa in range(self.tentativas):
+                espera = self.intervalo - (
+                    time.monotonic() - self.ultima_requisicao
                 )
-                return resposta.text
-            except requests.RequestException:
-                if tentativa == self.tentativas - 1:
-                    raise
-                time.sleep(min(10, 1.5 ** (tentativa + 1)))
+                if espera > 0:
+                    time.sleep(espera)
 
-        raise RuntimeError(f"Não foi possível baixar {url}")
+                try:
+                    resposta = self.session.get(
+                        variante,
+                        timeout=30,
+                        headers={
+                            "Referer": (
+                                "https://earn.uber.com/pt-BR/city/"
+                                "sao-paulo-BR/458/rentals_category"
+                            ),
+                            "Accept": (
+                                "text/html,application/xhtml+xml,"
+                                "application/xml;q=0.9,image/avif,"
+                                "image/webp,*/*;q=0.8"
+                            ),
+                        },
+                    )
+                    self.ultima_requisicao = time.monotonic()
+
+                    if resposta.status_code == 404:
+                        # Tenta a próxima forma da URL. Em especial, a rota
+                        # /pt-BR/offer/... pode devolver 404 fora do navegador.
+                        ultimo_erro = requests.HTTPError(
+                            f"404 em {variante}",
+                            response=resposta,
+                        )
+                        break
+
+                    if resposta.status_code == 429:
+                        time.sleep(min(30, 2 ** (tentativa + 1)))
+                        continue
+
+                    resposta.raise_for_status()
+                    resposta.encoding = (
+                        resposta.apparent_encoding or resposta.encoding
+                    )
+                    return resposta.text
+                except requests.RequestException as exc:
+                    ultimo_erro = exc
+                    if tentativa == self.tentativas - 1:
+                        break
+                    time.sleep(min(10, 1.5 ** (tentativa + 1)))
+
+        raise RuntimeError(
+            f"Não foi possível baixar {url}. Último erro: {ultimo_erro}"
+        )
 
 
 def _linhas_visiveis(html: str) -> list[str]:
