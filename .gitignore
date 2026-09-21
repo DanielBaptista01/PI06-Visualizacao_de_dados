@@ -20,6 +20,7 @@ INMETRO/
 ORIGEM_E_DESTINO*/
 SENATRAN/
 UBER/
+UBER_MATCH/
 
 # Cache local do pipeline (reconstruível)
 dados_cache/
