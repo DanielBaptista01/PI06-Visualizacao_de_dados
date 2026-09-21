@@ -81,6 +81,8 @@ Para baixar novamente páginas já preservadas localmente:
 python extrair_uber_match.py --atualizar
 ```
 
+Se aparecer erro 404 em links `/pt-BR/offer/...`, o coletor usa automaticamente a rota canônica `/offer/...` como alternativa. Essa rota é a usada para a coleta automatizada porque a versão localizada pode responder 404 para clientes HTTP mesmo quando abre normalmente no navegador.
+
 Na validação feita com os snapshots enviados em setembro de 2026, a página geral de **Locações** continha 54 links únicos de ofertas e a página de **Compra** continha 2. O arquivo salvo como "locação com possibilidade de compra" correspondia, na prática, à categoria **Serviços** e por isso é ignorado pelo coletor.
 
 ## Segurança de APIs
