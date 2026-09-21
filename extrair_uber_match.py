@@ -76,6 +76,44 @@ def _links_ofertas(texto: str) -> list[str]:
     return encontrados
 
 
+def _periodicidade_card(texto: str, tipo: str) -> str | None:
+    base = texto.casefold()
+    if "por semana" in base or "weekly" in base:
+        return "semanal"
+    if "por mês" in base or "por mes" in base or "monthly" in base:
+        return "mensal"
+    if "por dia" in base or "daily" in base:
+        return "diaria"
+    if "uma vez" in base or "one time" in base or tipo == "compra":
+        return "unico"
+    return None
+
+
+def _metadados_cards(texto: str, tipo: str) -> dict[str, dict]:
+    soup = BeautifulSoup(texto, "html.parser")
+    saida: dict[str, dict] = {}
+
+    for card in soup.find_all("a", attrs={"data-testid": "offer-card"}, href=True):
+        achado = re.search(r"/offer/([A-Za-z0-9_-]+)", str(card.get("href")))
+        if not achado:
+            continue
+
+        oferta_id = achado.group(1)
+        preco = card.find("h6")
+        veiculo = card.find(attrs={"data-baseweb": "typo-labelsmall"})
+        locadora = card.find("p", attrs={"data-baseweb": "typo-paragraphsmall"})
+
+        preco_texto = preco.get_text(" ", strip=True) if preco else ""
+        saida[oferta_id] = {
+            "locadora_card": locadora.get_text(" ", strip=True) if locadora else "",
+            "veiculo_card": veiculo.get_text(" ", strip=True) if veiculo else "",
+            "valor_card_display": preco_texto,
+            "periodicidade_card": _periodicidade_card(preco_texto, tipo),
+        }
+
+    return saida
+
+
 def indexar_paginas_categoria(
     arquivos: list[Path],
 ) -> tuple[pd.DataFrame, list[dict]]:
@@ -87,6 +125,7 @@ def indexar_paginas_categoria(
         url_categoria = _url_original_html_salvo(texto)
         tipo = _tipo_categoria(url_categoria)
         links = _links_ofertas(texto)
+        cards = _metadados_cards(texto, tipo)
 
         if tipo == "servicos":
             avisos.append(
@@ -121,13 +160,19 @@ def indexar_paginas_categoria(
             f"'{caminho.name}'."
         )
         for url in links:
+            oferta_id = url.rstrip("/").split("/")[-1]
+            card = cards.get(oferta_id, {})
             linhas.append(
                 {
                     "tipo_oferta_fonte": tipo,
                     "url_categoria_origem": url_categoria,
                     "arquivo_categoria_origem": str(caminho),
                     "url_oferta": url,
-                    "id_publico_oferta": url.rstrip("/").split("/")[-1],
+                    "id_publico_oferta": oferta_id,
+                    "locadora_card": card.get("locadora_card", ""),
+                    "veiculo_card": card.get("veiculo_card", ""),
+                    "valor_card_display": card.get("valor_card_display", ""),
+                    "periodicidade_card": card.get("periodicidade_card"),
                 }
             )
 
@@ -154,6 +199,18 @@ def indexar_paginas_categoria(
                     "url_categoria_origem": lambda s: ";".join(sorted(set(s))),
                     "arquivo_categoria_origem": lambda s: ";".join(
                         sorted(set(s))
+                    ),
+                    "locadora_card": lambda s: next(
+                        (v for v in s if str(v).strip()), ""
+                    ),
+                    "veiculo_card": lambda s: next(
+                        (v for v in s if str(v).strip()), ""
+                    ),
+                    "valor_card_display": lambda s: next(
+                        (v for v in s if str(v).strip()), ""
+                    ),
+                    "periodicidade_card": lambda s: next(
+                        (v for v in s if str(v).strip()), None
                     ),
                 }
             )
@@ -692,6 +749,10 @@ def coletar(
             parte.casefold()
             for parte in caminho.parts
         }
+        and not any(
+            parte.casefold().endswith("_files")
+            for parte in caminho.parts
+        )
     )
     if not arquivos:
         raise FileNotFoundError(
@@ -758,6 +819,46 @@ def coletar(
                 url,
                 tipo_principal,
             )
+
+            # Os cards da página geral são a fonte mais estável para
+            # locadora, nome exibido, preço de vitrine e periodicidade.
+            # As páginas individuais complementam caução, itens inclusos,
+            # requisitos e descrição.
+            locadora_card = str(row.get("locadora_card") or "").strip()
+            veiculo_card = str(row.get("veiculo_card") or "").strip()
+            valor_card_display = str(
+                row.get("valor_card_display") or ""
+            ).strip()
+            periodicidade_card = row.get("periodicidade_card")
+
+            if locadora_card:
+                detalhe["locadora"] = locadora_card
+
+            veiculo_atual = str(detalhe.get("veiculo") or "").strip()
+            if veiculo_card and (
+                not veiculo_atual
+                or "uber match" in veiculo_atual.casefold()
+                or "ganhe com a plataforma" in veiculo_atual.casefold()
+            ):
+                detalhe["veiculo"] = veiculo_card
+
+            if periodicidade_card:
+                detalhe["periodicidade_valor"] = periodicidade_card
+
+            detalhe["valor_card_display"] = valor_card_display
+
+            if detalhe.get("valor_reais") is None and valor_card_display:
+                detalhe["valor_reais"] = _dinheiro_para_float(
+                    _primeiro_dinheiro(valor_card_display)
+                )
+
+            semanal, mensal = _equivalentes(
+                detalhe.get("valor_reais"),
+                detalhe.get("periodicidade_valor"),
+            )
+            detalhe["valor_semanal_equivalente"] = semanal
+            detalhe["valor_mensal_equivalente"] = mensal
+
             detalhe["tipos_oferta_fonte"] = tipos
             detalhe["url_categoria_origem"] = row[
                 "url_categoria_origem"
@@ -795,12 +896,15 @@ def coletar(
         encoding="utf-8-sig",
     )
 
+    caminho_falhas = OUTPUT_DIR / ARQUIVO_FALHAS
     if falhas:
         pd.DataFrame(falhas).to_csv(
-            OUTPUT_DIR / ARQUIVO_FALHAS,
+            caminho_falhas,
             index=False,
             encoding="utf-8-sig",
         )
+    elif caminho_falhas.exists():
+        caminho_falhas.unlink()
 
     registrar_coleta(
         "UBER_MATCH",
