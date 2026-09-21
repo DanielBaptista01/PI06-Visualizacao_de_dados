@@ -16,6 +16,36 @@ O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pe
 - `explorar.py`: gera catálogo e relatório de qualidade/estrutura das fontes.
 - `pipeline_utils.py`: funções compartilhadas de normalização, localização de arquivos e proveniência.
 
+## Preparação do ambiente Python
+
+As bibliotecas Python não ficam armazenadas no GitHub. Cada computador precisa instalar as dependências **uma vez por ambiente** usando o arquivo `requirements.txt`.
+
+No Windows PowerShell, a configuração recomendada é:
+
+```powershell
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Depois disso, não é necessário reinstalar `requests`, `pandas` ou as demais bibliotecas a cada execução. Em um novo terminal, basta reativar o ambiente:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Se outra pessoa clonar o repositório em outro computador, ela também deverá executar `pip install -r requirements.txt` no próprio ambiente. Se o `requirements.txt` for alterado no futuro, rode o comando novamente para instalar ou atualizar as dependências necessárias.
+
+Para confirmar que o ambiente está usando as bibliotecas corretamente:
+
+```powershell
+python -c "import numpy; import pandas; import requests; print('Ambiente OK')"
+```
+
+A pasta `.venv/` é local e está ignorada pelo Git, portanto não deve ser enviada ao repositório.
+
 ## Execução
 
 ```bash
