@@ -11,6 +11,7 @@ O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pe
 - `extrair_bases.py`: processa bases baixadas (ANEEL, ANP, IBGE, INMETRO, SENATRAN, OD 2023, ABVE e regras Uber arquivadas).
 - `extrair_apis.py`: coleta APIs externas. Atualmente contém Open Charge Map.
 - `extrair_fipe.py`: pipeline FIPE incremental com mapeamento persistente, cache e checkpoint.
+- `extrair_uber_match.py`: lê snapshots HTML do Uber Match, descobre as ofertas e coleta os detalhes de locação/compra.
 - `extrair.py`: orquestrador.
 - `explorar.py`: gera catálogo e relatório de qualidade/estrutura das fontes.
 - `pipeline_utils.py`: funções compartilhadas de normalização, localização de arquivos e proveniência.
@@ -20,6 +21,7 @@ O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pe
 ```bash
 pip install -r requirements.txt
 python extrair.py bases
+python extrair.py uber-match
 python extrair.py apis
 python extrair.py fipe
 python explorar.py
@@ -30,6 +32,56 @@ Para executar tudo em sequência:
 ```bash
 python extrair.py tudo
 ```
+
+## Uber Match — locação e compra
+
+Os HTMLs gerais do Uber Match devem ser mantidos **localmente**, fora do GitHub, como evidência da fonte. Crie uma pasta como:
+
+```text
+UBER_MATCH/
+└── 2026-09/
+    ├── uber_match_sao_paulo_locacoes.html
+    └── uber_match_sao_paulo_compra.html
+```
+
+O diretório `UBER_MATCH/` está no `.gitignore`.
+
+Não é necessário salvar manualmente cada oferta individual. O coletor:
+
+1. lê os HTMLs gerais salvos no computador;
+2. encontra todos os links `/offer/...`;
+3. ignora automaticamente páginas salvas da categoria **Serviços**;
+4. acessa as ofertas individuais de forma sequencial e com espera entre requisições;
+5. preserva cada página de detalhe localmente em `UBER_MATCH/<data>/detalhes/`;
+6. extrai preço, periodicidade, locadora, veículo, categorias Uber, caução, quilometragem, itens incluídos e condições;
+7. salva a tabela normalizada em `dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv`;
+8. registra falhas/avisos em `dados_limpos/17_UBER_MATCH_FALHAS_SP.csv`, quando existirem.
+
+Execução:
+
+```bash
+python extrair.py uber-match
+```
+
+ou diretamente:
+
+```bash
+python extrair_uber_match.py
+```
+
+Para apenas validar os HTMLs e listar links sem acessar cada oferta:
+
+```bash
+python extrair_uber_match.py --somente-indexar
+```
+
+Para baixar novamente páginas já preservadas localmente:
+
+```bash
+python extrair_uber_match.py --atualizar
+```
+
+Na validação feita com os snapshots enviados em setembro de 2026, a página geral de **Locações** continha 54 links únicos de ofertas e a página de **Compra** continha 2. O arquivo salvo como "locação com possibilidade de compra" correspondia, na prática, à categoria **Serviços** e por isso é ignorado pelo coletor.
 
 ## Segurança de APIs
 
