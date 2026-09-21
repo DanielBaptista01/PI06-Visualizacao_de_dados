@@ -358,11 +358,17 @@ def _cadencia(
 ) -> str | None:
     mapa = [
         ("aluguel semanal", "semanal"),
+        ("weekly rental", "semanal"),
         ("aluguel mensal", "mensal"),
+        ("monthly rental", "mensal"),
         ("aluguel diário", "diaria"),
+        ("daily rental", "diaria"),
         ("semanal", "semanal"),
+        ("weekly", "semanal"),
         ("mensal", "mensal"),
+        ("monthly", "mensal"),
         ("por dia", "diaria"),
+        ("per day", "diaria"),
     ]
 
     for linha in linhas:
@@ -478,6 +484,29 @@ def _bool_texto(
     return any(termo.casefold() in base for termo in termos)
 
 
+def _secao_alias(
+    linhas: list[str],
+    inicios: list[str],
+    fins: list[str],
+) -> list[str]:
+    for inicio in inicios:
+        trecho = _secao(linhas, inicio, fins)
+        if trecho:
+            return trecho
+    return []
+
+
+def _valor_apos_alias(
+    linhas: list[str],
+    marcadores: list[str],
+) -> str | None:
+    for marcador in marcadores:
+        valor = _valor_apos(linhas, marcador)
+        if valor:
+            return valor
+    return None
+
+
 def extrair_detalhe(
     html: str,
     url: str,
@@ -486,51 +515,93 @@ def extrair_detalhe(
     soup = BeautifulSoup(html, "html.parser")
     linhas = _linhas_visiveis(html)
 
-    h1 = soup.find("h1")
-    veiculo = (
-        h1.get_text(" ", strip=True)
-        if h1
-        else (linhas[0] if linhas else None)
+    h1s = [
+        tag.get_text(" ", strip=True)
+        for tag in soup.find_all("h1")
+        if tag.get_text(" ", strip=True)
+    ]
+    veiculo = next(
+        (
+            titulo
+            for titulo in h1s
+            if titulo.casefold() not in {"uber match", "uber"}
+        ),
+        None,
     )
+    if not veiculo:
+        veiculo = linhas[0] if linhas else None
 
     locadora = None
     for linha in linhas:
-        if linha.casefold().startswith("listado por "):
+        base = linha.casefold()
+        if base.startswith("listado por "):
             locadora = linha[len("Listado por ") :].strip()
             break
+        if base.startswith("listed by "):
+            locadora = linha[len("Listed by ") :].strip()
+            break
 
-    servicos = _secao(
+    fins_gerais = [
+        "Aluguel semanal",
+        "Weekly rental",
+        "Aluguel mensal",
+        "Monthly rental",
+        "Aluguel diário",
+        "Daily rental",
+        "Inclui",
+        "Includes",
+        "Descrição",
+        "Description",
+        "Requisitos",
+        "Requirements",
+        "Aviso legal",
+        "Disclaimer",
+    ]
+
+    servicos = _secao_alias(
         linhas,
-        "Serviços elegíveis",
-        [
-            "Aluguel semanal",
-            "Aluguel mensal",
-            "Aluguel diário",
-            "Inclui",
-            "Descrição",
-            "Requisitos",
-            "Aviso legal",
-        ],
+        ["Serviços elegíveis", "Eligible services"],
+        fins_gerais,
     )
     categorias_uber = servicos[0] if servicos else None
 
-    inclusos = _secao(
+    inclusos = _secao_alias(
         linhas,
-        "Inclui",
-        ["Descrição", "Requisitos", "Aviso legal"],
+        ["Inclui", "Includes"],
+        [
+            "Descrição",
+            "Description",
+            "Requisitos",
+            "Requirements",
+            "Aviso legal",
+            "Disclaimer",
+        ],
     )
-    descricao = _secao(
+    descricao = _secao_alias(
         linhas,
-        "Descrição",
-        ["Requisitos", "Aviso legal"],
+        ["Descrição", "Description"],
+        [
+            "Requisitos",
+            "Requirements",
+            "Aviso legal",
+            "Disclaimer",
+        ],
     )
-    requisitos = _secao(
+    requisitos = _secao_alias(
         linhas,
-        "Requisitos",
-        ["Falar com a equipe de suporte", "Aviso legal"],
+        ["Requisitos", "Requirements"],
+        [
+            "Falar com a equipe de suporte",
+            "Contact support",
+            "Aviso legal",
+            "Disclaimer",
+        ],
     )
 
-    valor_display = _valor_apos(linhas, "Custo do aluguel")
+    valor_display = _valor_apos_alias(
+        linhas,
+        ["Custo do aluguel", "Rental cost"],
+    )
     if not valor_display:
         candidatos = [_primeiro_dinheiro(linha) for linha in linhas]
         valor_display = next(
@@ -574,11 +645,11 @@ def extrair_detalhe(
         "sem_limite_quilometragem": sem_limite_km,
         "seguro_incluso": _bool_texto(
             "\n".join(inclusos),
-            ["seguro", "proteção"],
+            ["seguro", "proteção", "insurance", "vehicle insurance"],
         ),
         "manutencao_inclusa": _bool_texto(
             "\n".join(inclusos),
-            ["manutenção"],
+            ["manutenção", "maintenance"],
         ),
         "ipva_incluso": _bool_texto(
             "\n".join(inclusos + descricao),
@@ -586,11 +657,16 @@ def extrair_detalhe(
         ),
         "carro_reserva_incluso": _bool_texto(
             "\n".join(inclusos + descricao),
-            ["carro reserva"],
+            ["carro reserva", "replacement car"],
         ),
         "opcao_compra": _bool_texto(
             "\n".join(inclusos + descricao),
-            ["opção de compra", "possibilidade de compra"],
+            [
+                "opção de compra",
+                "possibilidade de compra",
+                "option to purchase",
+                "purchase option",
+            ],
         ),
         "itens_inclusos": " | ".join(dict.fromkeys(inclusos)),
         "descricao": " ".join(dict.fromkeys(descricao)),
