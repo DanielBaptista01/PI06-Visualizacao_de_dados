@@ -457,6 +457,65 @@ def _equivalentes(
     return None, None
 
 
+def _avaliar_qualidade_oferta(detalhe: dict) -> dict:
+    motivos: list[str] = []
+
+    tipo = str(detalhe.get("tipo_oferta_fonte") or "").casefold()
+    locadora = str(detalhe.get("locadora") or "").strip()
+    veiculo = str(detalhe.get("veiculo") or "").strip()
+    periodicidade = str(
+        detalhe.get("periodicidade_valor") or ""
+    ).casefold()
+    valor = detalhe.get("valor_reais")
+    card = str(detalhe.get("valor_card_display") or "").strip()
+
+    valor_card_reais = None
+    if "r$" in card.casefold():
+        dinheiro_card = _primeiro_dinheiro(card)
+        valor_card_reais = _dinheiro_para_float(dinheiro_card)
+
+    if not locadora:
+        motivos.append("locadora_ausente")
+    if not veiculo or "uber match" in veiculo.casefold():
+        motivos.append("veiculo_ausente_ou_generico")
+    if not periodicidade:
+        motivos.append("periodicidade_ausente")
+
+    if "aluguel" in tipo and periodicidade == "unico":
+        motivos.append("aluguel_com_pagamento_unico")
+
+    if card and "us$" in card.casefold():
+        motivos.append("moeda_card_nao_brl")
+
+    if valor is None or pd.isna(valor):
+        motivos.append("preco_numerico_ausente")
+    elif float(valor) <= 0:
+        motivos.append("preco_nao_positivo")
+
+    divergencia_pct = None
+    if (
+        valor_card_reais is not None
+        and valor is not None
+        and not pd.isna(valor)
+        and float(valor_card_reais) > 0
+    ):
+        divergencia_pct = abs(
+            float(valor) - float(valor_card_reais)
+        ) / float(valor_card_reais)
+        if divergencia_pct > 0.05:
+            motivos.append("preco_card_detalhe_divergente")
+
+    revisar = bool(motivos)
+    return {
+        "valor_card_reais": valor_card_reais,
+        "divergencia_valor_card_detalhe_pct": divergencia_pct,
+        "revisar_oferta": revisar,
+        "status_qualidade": "revisar" if revisar else "ok",
+        "motivos_revisao": ";".join(motivos),
+        "apto_modelo_economico": not revisar,
+    }
+
+
 def _regex_dinheiro_contexto(
     texto: str,
     palavra: str,
@@ -858,6 +917,8 @@ def coletar(
             )
             detalhe["valor_semanal_equivalente"] = semanal
             detalhe["valor_mensal_equivalente"] = mensal
+
+            detalhe.update(_avaliar_qualidade_oferta(detalhe))
 
             detalhe["tipos_oferta_fonte"] = tipos
             detalhe["url_categoria_origem"] = row[
