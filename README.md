@@ -16,6 +16,34 @@ O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pe
 - `explorar.py`: gera catálogo e relatório de qualidade/estrutura das fontes.
 - `pipeline_utils.py`: funções compartilhadas de normalização, localização de arquivos e proveniência.
 
+## Preparação do ambiente Python
+
+Em um computador novo, as bibliotecas do projeto precisam ser instaladas **uma vez por ambiente**. O arquivo `requirements.txt` já lista as dependências necessárias, como `pandas`, `requests` e `beautifulsoup4`.
+
+No Windows PowerShell:
+
+```powershell
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Depois disso, não é necessário instalar `requests` ou os outros pacotes toda vez. Em um novo terminal, basta reativar o ambiente:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Para conferir rapidamente:
+
+```powershell
+python -c "import pandas; import requests; from bs4 import BeautifulSoup; print('Ambiente OK')"
+```
+
+A pasta `.venv/` é local e não deve ser enviada ao GitHub.
+
 ## Execução
 
 ```bash
@@ -84,6 +112,30 @@ python extrair_uber_match.py --atualizar
 Se aparecer erro 404 em links `/pt-BR/offer/...`, o coletor usa automaticamente a rota canônica `/offer/...` como alternativa. Essa rota é a usada para a coleta automatizada porque a versão localizada pode responder 404 para clientes HTTP mesmo quando abre normalmente no navegador.
 
 Na validação feita com os snapshots enviados em setembro de 2026, a página geral de **Locações** continha 54 links únicos de ofertas e a página de **Compra** continha 2. O arquivo salvo como "locação com possibilidade de compra" correspondia, na prática, à categoria **Serviços** e por isso é ignorado pelo coletor.
+
+### Fluxo rápido para gerar os dados do Uber Match
+
+Depois de instalar as dependências, coloque os HTMLs gerais salvos do Uber Match dentro de `UBER_MATCH/<ano-mês>/` e, a partir da pasta principal do projeto, execute:
+
+```powershell
+python extrair.py uber-match
+```
+
+O pipeline lê os HTMLs gerais, acessa ou reaproveita do cache as páginas individuais e grava os resultados em:
+
+```text
+dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv
+dados_limpos/17_UBER_MATCH_FALHAS_SP.csv  # somente quando houver aviso/falha
+```
+
+A tabela de ofertas também recebe campos de validação antes de ser usada no modelo econômico:
+
+- `revisar_oferta` e `status_qualidade`;
+- `motivos_revisao`;
+- `apto_modelo_economico`;
+- `valor_card_reais` e divergência entre preço do card e preço da página individual, quando ambos existem.
+
+Ofertas com preço ausente, moeda inesperada, aluguel marcado como pagamento único, campos essenciais ausentes ou divergência relevante de preço continuam preservadas no CSV, mas são marcadas para revisão em vez de serem excluídas silenciosamente.
 
 ## Segurança de APIs
 
