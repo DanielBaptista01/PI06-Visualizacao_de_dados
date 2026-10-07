@@ -89,12 +89,12 @@ Não se deve apresentar uma variável de `analytics` como se tivesse sido fornec
 
 ## Proveniência
 
-Cada arquivo migrado pode gerar um registro em `metadata.coletas`, contendo:
+Cada arquivo efetivamente enviado ao Storage pode gerar um registro em `metadata.coletas`, contendo:
 
 - fonte;
 - data da coleta;
 - data ou referência temporal do dado;
-- origem local/URL;
+- origem relativa do arquivo;
 - caminho no Storage;
 - SHA-256;
 - tamanho do arquivo;
@@ -102,7 +102,7 @@ Cada arquivo migrado pode gerar um registro em `metadata.coletas`, contendo:
 - status;
 - observações e metadados extras.
 
-O manifesto CSV atual continua útil durante a transição, mas o destino definitivo da proveniência é `metadata.coletas`.
+Uma nova execução que encontre o mesmo objeto com o mesmo SHA-256 faz `SKIP` e não cria uma coleta duplicada. O manifesto CSV atual continua útil durante a transição, mas o destino definitivo da proveniência é `metadata.coletas`.
 
 ## Configuração local
 
@@ -144,11 +144,15 @@ Teste banco e Storage juntos:
 python infra_check.py
 ```
 
+O diagnóstico só retorna sucesso quando PostgreSQL, PostGIS e Storage estão acessíveis.
+
 Liste objetos no bucket:
 
 ```powershell
 python storage_utils.py listar --prefixo raw/
 ```
+
+A listagem usa paginação e não fica limitada aos primeiros mil objetos.
 
 ## Migração RAW
 
@@ -164,7 +168,7 @@ Depois de revisar os destinos:
 python migrar_raw.py --origem "C:\caminho\ANP" --fonte anp --prefixo raw/anp/2026/08 --referencia 2026-08
 ```
 
-A migração não apaga a origem local.
+A migração não apaga a origem local. Por padrão, um objeto existente com conteúdo diferente interrompe a execução; `--sobrescrever` só deve ser usado após revisão explícita.
 
 ## Compartilhamento com a equipe
 
