@@ -6,3 +6,6 @@ geopandas>=1.0
 pyogrio>=0.9
 pyreadstat>=1.2
 shapely>=2.0
+python-dotenv>=1.0
+psycopg[binary]>=3.2
+boto3>=1.35
