@@ -17,7 +17,9 @@ CREATE TABLE IF NOT EXISTS metadata.fontes (
     periodicidade TEXT,
     url_principal TEXT,
     ativo BOOLEAN NOT NULL DEFAULT TRUE,
-    criado_em TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    criado_em TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    CONSTRAINT ck_fontes_codigo_nao_vazio CHECK (BTRIM(codigo) <> ''),
+    CONSTRAINT ck_fontes_nome_nao_vazio CHECK (BTRIM(nome) <> '')
 );
 
 CREATE TABLE IF NOT EXISTS metadata.coletas (
@@ -33,7 +35,10 @@ CREATE TABLE IF NOT EXISTS metadata.coletas (
     registros BIGINT,
     status TEXT NOT NULL DEFAULT 'ok',
     observacao TEXT,
-    extras JSONB NOT NULL DEFAULT '{}'::jsonb
+    extras JSONB NOT NULL DEFAULT '{}'::jsonb,
+    CONSTRAINT ck_coletas_tamanho_nao_negativo CHECK (tamanho_bytes IS NULL OR tamanho_bytes >= 0),
+    CONSTRAINT ck_coletas_registros_nao_negativo CHECK (registros IS NULL OR registros >= 0),
+    CONSTRAINT ck_coletas_sha256 CHECK (sha256 IS NULL OR sha256 ~ '^[0-9a-fA-F]{64}$')
 );
 
 CREATE INDEX IF NOT EXISTS idx_coletas_fonte_data
