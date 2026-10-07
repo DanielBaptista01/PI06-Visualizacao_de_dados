@@ -35,6 +35,16 @@ A cópia do OneDrive também contém alguns arquivos do projeto, como `.env.exam
 | relatório/manifesto | `metadata` no PostgreSQL + relatório local | proveniência consultável |
 | código | GitHub | não duplicar como fonte oficial no Storage |
 
+## Regra de transição
+
+O inventário do OneDrive é uma fotografia da origem atual, não a arquitetura definitiva. Durante a migração:
+
+1. o arquivo original continua no OneDrive até a cópia para Storage ser validada;
+2. o upload RAW recebe SHA-256;
+3. a proveniência é registrada no banco;
+4. só depois a equipe passa a tratar o Storage como origem operacional daquela cópia;
+5. não é necessário apagar a versão do OneDrive para concluir a migração.
+
 ## Próxima validação do inventário
 
 Antes da migração completa, cada pasta de fonte deve receber uma ficha com:
