@@ -6,7 +6,7 @@ Projeto integrador de visualização de dados voltado à análise econômica de 
 
 O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pendentes possuem GitHub Issues com prioridade, dependências e critérios de conclusão.
 
-A arquitetura de armazenamento e banco está documentada em [docs/ARQUITETURA_DADOS.md](docs/ARQUITETURA_DADOS.md).
+A arquitetura de armazenamento e banco está documentada em [docs/ARQUITETURA_DADOS.md](docs/ARQUITETURA_DADOS.md). O inventário inicial da pasta compartilhada está em [docs/INVENTARIO_DADOS.md](docs/INVENTARIO_DADOS.md).
 
 ## Organização do pipeline
 
