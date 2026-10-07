@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import mimetypes
 import os
+from functools import lru_cache
 from pathlib import Path
 from typing import Iterator
 
@@ -29,6 +30,7 @@ def bucket() -> str:
     return _obrigatoria("S3_BUCKET")
 
 
+@lru_cache(maxsize=1)
 def cliente_storage():
     return boto3.client(
         "s3",
@@ -62,13 +64,39 @@ def iterar_arquivos(raiz: Path) -> Iterator[Path]:
 
 
 def objeto_existe(chave: str) -> dict | None:
+    """Retorna metadados do objeto quando a chave existe.
+
+    Faz uma listagem exata antes do HEAD porque alguns clientes/endpoints S3
+    podem responder 400 quando ``head_object`` é a primeira chamada da sessão.
+    A listagem também permite distinguir objeto ausente de erro real de acesso.
+    """
     client = cliente_storage()
+    chave = normalizar_chave(chave)
+
+    resposta = client.list_objects_v2(
+        Bucket=bucket(),
+        Prefix=chave,
+        MaxKeys=1,
+    )
+    encontrados = resposta.get("Contents", []) or []
+    if not any(obj.get("Key") == chave for obj in encontrados):
+        return None
+
     try:
-        return client.head_object(Bucket=bucket(), Key=normalizar_chave(chave))
+        return client.head_object(Bucket=bucket(), Key=chave)
     except ClientError as exc:
         codigo = str(exc.response.get("Error", {}).get("Code", ""))
-        if codigo in {"404", "NoSuchKey", "NotFound"}:
+        status = exc.response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+        if codigo in {"404", "NoSuchKey", "NotFound"} or status == 404:
             return None
+        if codigo == "400" or status == 400:
+            # Fallback compatível com endpoints S3 que falham no HEAD mesmo
+            # após a chave ter sido confirmada pela listagem.
+            resposta_get = client.get_object(Bucket=bucket(), Key=chave)
+            corpo = resposta_get.get("Body")
+            if corpo is not None:
+                corpo.close()
+            return resposta_get
         raise
 
 
