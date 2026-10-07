@@ -118,15 +118,19 @@ def upload_arquivo(
 
 def listar(prefixo: str = "") -> list[dict]:
     client = cliente_storage()
-    resposta = client.list_objects_v2(
-        Bucket=bucket(), Prefix=normalizar_chave(prefixo), MaxKeys=1000
-    )
-    return resposta.get("Contents", []) or []
+    paginator = client.get_paginator("list_objects_v2")
+    objetos: list[dict] = []
+    for pagina in paginator.paginate(
+        Bucket=bucket(),
+        Prefix=normalizar_chave(prefixo),
+    ):
+        objetos.extend(pagina.get("Contents", []) or [])
+    return objetos
 
 
 def testar_storage() -> dict[str, str | int]:
     objetos = listar("")
-    return {"bucket": bucket(), "objetos_primeira_pagina": len(objetos)}
+    return {"bucket": bucket(), "objetos": len(objetos)}
 
 
 def main() -> None:
@@ -139,10 +143,7 @@ def main() -> None:
 
     if args.acao == "testar":
         info = testar_storage()
-        print(
-            f"Storage OK | bucket={info['bucket']} | "
-            f"objetos_primeira_pagina={info['objetos_primeira_pagina']}"
-        )
+        print(f"Storage OK | bucket={info['bucket']} | objetos={info['objetos']}")
     elif args.acao == "listar":
         for obj in listar(args.prefixo):
             print(f"{obj['Key']}\t{obj['Size']}")
