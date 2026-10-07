@@ -12,6 +12,12 @@ def chave_destino(arquivo: Path, raiz: Path, prefixo: str) -> str:
     return normalizar_chave(f"{prefixo}/{relativo}")
 
 
+def origem_relativa(arquivo: Path, raiz: Path) -> str:
+    if raiz.is_file():
+        return arquivo.name
+    return arquivo.relative_to(raiz).as_posix()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Migra arquivos brutos para Object Storage sem apagar a origem local."
@@ -42,7 +48,7 @@ def main() -> None:
         chave = chave_destino(arquivo, raiz, args.prefixo)
         sha = sha256_arquivo(arquivo)
         if args.dry_run:
-            print(f"DRY-RUN\t{arquivo}\t->\ts3://{bucket()}/{chave}\t{sha}")
+            print(f"DRY-RUN\t{origem_relativa(arquivo, raiz)}\t->\ts3://{bucket()}/{chave}\t{sha}")
             continue
 
         resultado = upload_arquivo(
@@ -54,10 +60,10 @@ def main() -> None:
             f"{'UPLOAD' if resultado['enviado'] else 'SKIP'}\t{arquivo.name}\t->\t{chave}"
         )
 
-        if not args.sem_banco:
+        if not args.sem_banco and bool(resultado["enviado"]):
             registrar_coleta_db(
                 codigo_fonte=args.fonte,
-                origem=str(arquivo),
+                origem=origem_relativa(arquivo, raiz),
                 caminho_storage=f"s3://{bucket()}/{chave}",
                 sha256=str(resultado["sha256"]),
                 tamanho_bytes=int(resultado["tamanho_bytes"]),
