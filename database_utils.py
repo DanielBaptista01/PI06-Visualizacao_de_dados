@@ -120,6 +120,11 @@ def main() -> None:
         print("DDL aplicado com sucesso.")
 
     info = testar_conexao()
+    if not info["postgis_instalado"]:
+        raise RuntimeError(
+            "PostgreSQL respondeu, mas a extensão PostGIS não está instalada. "
+            "Execute 'python database_utils.py init' com uma conexão que possa habilitar a extensão."
+        )
     print(
         "Conexão OK | "
         f"database={info['database']} | usuário={info['usuario']} | "
