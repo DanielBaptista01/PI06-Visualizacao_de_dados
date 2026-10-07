@@ -4,7 +4,7 @@ Este arquivo é a visão geral do PI. As tarefas executáveis ficam em **GitHub 
 
 ## Convenção de prioridade
 
-- **Alta**: bloqueia ou influencia diretamente o modelo econômico, o banco ou a entrega.
+- **Alta**: bloqueia ou influencia diretamente a infraestrutura, o modelo econômico ou a entrega.
 - **Média**: importante, mas depende de etapas anteriores ou pode ser feita depois do núcleo.
 - **Baixa**: melhoria opcional ou exploração futura.
 
@@ -40,26 +40,58 @@ Este arquivo é a visão geral do PI. As tarefas executáveis ficam em **GitHub 
 | Alterar ABVE de Município de São Paulo para RMSP | Alta | ✅ |
 | Criar FIPE incremental com cache/checkpoint | Alta | ✅ |
 | Remover chave OCM do código | Alta | ✅ |
-| Criar manifesto de proveniência | Alta | ✅ |
+| Criar manifesto de proveniência local | Alta | ✅ |
 | Melhorar `explorar.py` para catálogo/qualidade | Média | ✅ |
-| Documentar PostgreSQL/PostGIS como destino futuro | Média | ✅ |
 
-## Fase 3 — Validação técnica da refatoração
+## Fase 3 — Infraestrutura e organização definitiva dos dados
+
+| Tarefa | Prioridade | Status | Issue |
+|---|---|---|---|
+| Modelar PostgreSQL + PostGIS, Storage e proveniência compartilhada | Alta | 🔄 | [#10](https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados/issues/10) |
+
+Arquitetura adotada:
+
+```text
+GitHub -> código, documentação e DDL
+Object Storage -> arquivos RAW originais
+PostgreSQL/PostGIS -> dados estruturados, históricos e geográficos
+metadata.coletas -> proveniência consultável
+```
+
+O OneDrive atual é a origem de transição dos arquivos já coletados. A fase só deve ser considerada concluída quando outro computador conseguir acessar o mesmo Storage e banco, validar a conexão e reproduzir uma carga sem depender de arquivos enviados manualmente.
+
+### Entregáveis desta fase
+
+- [x] utilitário de conexão PostgreSQL/PostGIS;
+- [x] utilitário de Object Storage compatível com S3;
+- [x] migração RAW não destrutiva com SHA-256;
+- [x] verificação conjunta de banco e Storage;
+- [x] DDL inicial versionado;
+- [x] documentação da arquitetura e configuração;
+- [ ] criar/configurar o projeto de nuvem sob controle da equipe;
+- [ ] executar a primeira carga piloto em Storage + PostgreSQL;
+- [ ] validar acesso por um segundo computador/usuário;
+- [ ] migrar gradualmente as fontes existentes.
+
+## Fase 4 — Validação técnica da coleta
 
 | Tarefa | Prioridade | Status | Issue |
 |---|---|---|---|
 | Configurar nova chave OCM e rodar pipeline completo | Alta | 🔜 | [#3](https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados/issues/3) |
 | Validar matching Uber × INMETRO × FIPE × SENATRAN | Alta | 🔜 | [#4](https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados/issues/4) |
 
-## Fase 4 — Modelo mestre de veículos
+## Fase 5 — Cruzamentos e modelo mestre de veículos
 
 | Tarefa | Prioridade | Status | Issue |
 |---|---|---|---|
+| Formalizar chaves/granularidades dos cruzamentos | Alta | 🔜 | — |
 | Criar tabela mestre de veículos | Alta | ⬜ | [#5](https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados/issues/5) |
 
 A tabela mestre deverá consolidar, quando disponível: marca, modelo, versão, ano, propulsão, categoria Uber, eficiência INMETRO, preço FIPE, presença na frota SENATRAN e informações ABVE.
 
-## Fase 5 — Modelo econômico
+Os cruzamentos devem ser definidos como `pergunta -> variável -> fonte -> granularidade -> chave -> variável derivada`, evitando merges globais sem finalidade analítica.
+
+## Fase 6 — Modelo econômico
 
 | Tarefa | Prioridade | Status | Issue |
 |---|---|---|---|
@@ -75,18 +107,9 @@ A tabela mestre deverá consolidar, quando disponível: marca, modelo, versão, 
 - seguro;
 - IPVA/licenciamento;
 - preço efetivo de recarga pública;
-- aluguel de veículo para motorista de aplicativo;
 - trânsito/tempo de deslocamento, apenas se demonstrar relevância material.
 
 Enquanto a receita não tiver fonte observável adequada, o projeto deve distinguir **custo operacional / ponto de equilíbrio** de **lucro observado**.
-
-## Fase 6 — Banco de dados
-
-| Tarefa | Prioridade | Status | Issue |
-|---|---|---|---|
-| Modelar PostgreSQL + PostGIS e proveniência | Alta | ⬜ | [#10](https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados/issues/10) |
-
-A arquitetura deve separar dados fixos, séries históricas, dimensões de veículos/regiões e metadados de origem/coleta.
 
 ## Fase 7 — Automação
 
@@ -121,7 +144,7 @@ O frontend não deve depender diretamente de Excel/CSV em produção.
 |---|---|---|---|
 | Desenvolver narrativa e mapa interativo da RMSP | Alta | ⬜ | [#13](https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados/issues/13) |
 
-A proposta atual considera narrativa em scroll, mapa por Zona OD e comparação de cenários/veículos.
+A proposta atual considera narrativa em scroll, mapa por Zona OD e comparação de cenários/veículos. A visualização vem depois da validação do modelo analítico.
 
 ## Fase 10 — Qualidade, documentação e entrega
 
@@ -133,16 +156,17 @@ A proposta atual considera narrativa em scroll, mapa por Zona OD e comparação 
 
 ## Ordem recomendada de execução
 
-1. Issue #3 — validar o pipeline completo.
-2. Issue #4 — validar o matching de veículos.
-3. Issue #5 — criar a tabela mestre de veículos.
-4. Issues #6 e #7 — fechar custos e metodologia econômica.
-5. Issues #8 e #9 — complementar fontes e cenário de aluguel.
-6. Issue #10 — consolidar o banco PostgreSQL/PostGIS.
-7. Issue #11 — automatizar atualizações.
-8. Issue #12 — criar a API/backend.
-9. Issue #13 — construir a visualização final.
-10. Issue #14 — testes, documentação e publicação.
+1. Issue #10 — concluir infraestrutura compartilhada e primeira carga piloto.
+2. Issue #3 — validar pipeline completo com credenciais/configuração atualizadas.
+3. Issue #4 — validar matching de veículos.
+4. Formalizar o mapa de cruzamentos e granularidades.
+5. Issue #5 — criar a tabela mestre de veículos.
+6. Issues #6 e #7 — fechar custos e metodologia econômica.
+7. Issues #8 e #9 — complementar fontes e cenário de aluguel.
+8. Issue #11 — automatizar atualizações.
+9. Issue #12 — criar a API/backend.
+10. Issue #13 — construir a visualização final.
+11. Issue #14 — testes, documentação e publicação.
 
 ## Como manter este roadmap
 
@@ -153,4 +177,4 @@ Sempre que uma tarefa avançar:
 3. fechar a Issue quando os critérios de conclusão forem atendidos;
 4. abrir nova Issue somente quando surgir uma tarefa realmente nova.
 
-Assim o histórico do GitHub passa a mostrar tanto **o que foi feito** quanto **o que ainda falta**.
+Assim o histórico do GitHub mostra tanto **o que foi feito** quanto **o que ainda falta**.
