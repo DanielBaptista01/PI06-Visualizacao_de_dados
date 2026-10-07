@@ -8,21 +8,26 @@ def main() -> None:
     erros = []
     try:
         info_db = testar_conexao()
+        if not info_db["postgis_instalado"]:
+            raise RuntimeError(
+                "PostgreSQL acessível, mas PostGIS não está instalado. "
+                "Execute 'python database_utils.py init'."
+            )
         print(
-            "[OK] PostgreSQL | "
+            "[OK] PostgreSQL/PostGIS | "
             f"database={info_db['database']} | "
-            f"PostGIS={'sim' if info_db['postgis_instalado'] else 'não'}"
+            f"versão={info_db['postgres_version']}"
         )
     except Exception as exc:  # diagnóstico de configuração
-        erros.append(f"PostgreSQL: {exc}")
-        print(f"[ERRO] PostgreSQL | {exc}")
+        erros.append(f"PostgreSQL/PostGIS: {exc}")
+        print(f"[ERRO] PostgreSQL/PostGIS | {exc}")
 
     try:
         info_storage = testar_storage()
         print(
             "[OK] Storage | "
             f"bucket={info_storage['bucket']} | "
-            f"objetos={info_storage['objetos_primeira_pagina']}"
+            f"objetos={info_storage['objetos']}"
         )
     except Exception as exc:  # diagnóstico de configuração
         erros.append(f"Storage: {exc}")
