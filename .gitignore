@@ -28,6 +28,12 @@ dados_cache/
 # Relatórios locais gerados pelo explorar.py
 dados_relatorios/
 
+# Dumps/exportações locais de banco e Storage
+*.dump
+*.backup
+*.sql.gz
+storage_export/
+
 # Temporários / sistema
 *.txt
 ~$*.xlsx
