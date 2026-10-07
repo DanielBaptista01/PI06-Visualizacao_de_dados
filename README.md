@@ -4,7 +4,9 @@ Projeto integrador de visualização de dados voltado à análise econômica de 
 
 ## Roadmap e acompanhamento
 
-O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pendentes possuem GitHub Issues com prioridade, dependências e critérios de conclusão. Conforme o desenvolvimento avançar, o roadmap e as Issues devem ser atualizados para manter o histórico do que foi concluído e do que ainda falta.
+O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pendentes possuem GitHub Issues com prioridade, dependências e critérios de conclusão.
+
+A arquitetura de armazenamento e banco está documentada em [docs/ARQUITETURA_DADOS.md](docs/ARQUITETURA_DADOS.md).
 
 ## Organização do pipeline
 
@@ -14,11 +16,16 @@ O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pe
 - `extrair_uber_match.py`: lê snapshots HTML do Uber Match, descobre as ofertas e coleta os detalhes de locação/compra.
 - `extrair.py`: orquestrador.
 - `explorar.py`: gera catálogo e relatório de qualidade/estrutura das fontes.
-- `pipeline_utils.py`: funções compartilhadas de normalização, localização de arquivos e proveniência.
+- `pipeline_utils.py`: funções compartilhadas de normalização, localização de arquivos e proveniência local.
+- `database_utils.py`: conexão PostgreSQL/PostGIS, inicialização do DDL e proveniência no banco.
+- `storage_utils.py`: acesso ao Object Storage compatível com S3.
+- `migrar_raw.py`: migração não destrutiva de arquivos RAW para o Storage.
+- `infra_check.py`: teste conjunto de banco e Storage.
+- `db/001_init.sql`: DDL inicial versionado.
 
 ## Preparação do ambiente Python
 
-Em um computador novo, as bibliotecas do projeto precisam ser instaladas **uma vez por ambiente**. O arquivo `requirements.txt` já lista as dependências necessárias, como `pandas`, `requests` e `beautifulsoup4`.
+Em um computador novo, as bibliotecas do projeto precisam ser instaladas **uma vez por ambiente**.
 
 No Windows PowerShell:
 
@@ -27,10 +34,10 @@ python -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-Depois disso, não é necessário instalar `requests` ou os outros pacotes toda vez. Em um novo terminal, basta reativar o ambiente:
+Em um novo terminal, basta reativar o ambiente:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -39,15 +46,80 @@ Depois disso, não é necessário instalar `requests` ou os outros pacotes toda 
 Para conferir rapidamente:
 
 ```powershell
-python -c "import pandas; import requests; from bs4 import BeautifulSoup; print('Ambiente OK')"
+python -c "import pandas; import requests; import psycopg; import boto3; from bs4 import BeautifulSoup; print('Ambiente OK')"
 ```
 
 A pasta `.venv/` é local e não deve ser enviada ao GitHub.
 
-## Execução
+## Configuração local e segredos
 
-```bash
-pip install -r requirements.txt
+Copie o arquivo de exemplo:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Preencha no `.env` local as credenciais necessárias, incluindo `DATABASE_URL`, as variáveis `S3_*` e a chave da Open Charge Map. O `.env` real está ignorado pelo Git e **nunca deve ser versionado**.
+
+Como uma chave da Open Charge Map já esteve no histórico do repositório, a chave antiga deve permanecer revogada/rotacionada.
+
+## Infraestrutura de dados
+
+A arquitetura adotada separa responsabilidades:
+
+```text
+GitHub            -> código, documentação e DDL
+Object Storage    -> arquivos RAW originais e imutáveis
+PostgreSQL        -> dados estruturados e históricos
+PostGIS           -> geometrias e consultas espaciais
+metadata.coletas  -> proveniência das cargas
+```
+
+O OneDrive atual é tratado como **origem de transição** dos arquivos já coletados. Depois da migração e validação, o pipeline deve usar Storage e PostgreSQL/PostGIS como infraestrutura compartilhada, sem depender de uma pasta específica de um computador.
+
+### Inicializar banco
+
+Depois de configurar `DATABASE_URL`:
+
+```powershell
+python database_utils.py init
+```
+
+O comando aplica `db/001_init.sql`, habilita PostGIS e cria os schemas iniciais:
+
+```text
+metadata
+core
+geo
+fato
+analytics
+```
+
+### Testar banco e Storage
+
+```powershell
+python infra_check.py
+```
+
+### Migrar um conjunto RAW
+
+Faça primeiro um dry-run:
+
+```powershell
+python migrar_raw.py --origem "C:\caminho\ANP" --fonte anp --prefixo raw/anp/2026/08 --referencia 2026-08 --dry-run
+```
+
+Depois de revisar:
+
+```powershell
+python migrar_raw.py --origem "C:\caminho\ANP" --fonte anp --prefixo raw/anp/2026/08 --referencia 2026-08
+```
+
+A origem não é apagada. O upload calcula SHA-256 e evita sobrescrever silenciosamente um objeto diferente.
+
+## Execução do pipeline de coleta/limpeza
+
+```powershell
 python extrair.py bases
 python extrair.py uber-match
 python extrair.py apis
@@ -57,13 +129,13 @@ python explorar.py
 
 Para executar tudo em sequência:
 
-```bash
+```powershell
 python extrair.py tudo
 ```
 
 ## Uber Match — locação e compra
 
-Os HTMLs gerais do Uber Match devem ser mantidos **localmente**, fora do GitHub, como evidência da fonte. Crie uma pasta como:
+Os HTMLs gerais do Uber Match devem ser mantidos fora do GitHub como evidência da fonte, por exemplo:
 
 ```text
 UBER_MATCH/
@@ -72,92 +144,42 @@ UBER_MATCH/
     └── uber_match_sao_paulo_compra.html
 ```
 
-O diretório `UBER_MATCH/` está no `.gitignore`.
+O diretório `UBER_MATCH/` está no `.gitignore`. O coletor encontra os links das ofertas, preserva páginas de detalhe, extrai os campos relevantes e gera:
 
-Não é necessário salvar manualmente cada oferta individual. O coletor:
-
-1. lê os HTMLs gerais salvos no computador;
-2. encontra todos os links `/offer/...`;
-3. ignora automaticamente páginas salvas da categoria **Serviços**;
-4. acessa as ofertas individuais de forma sequencial e com espera entre requisições;
-5. preserva cada página de detalhe localmente em `UBER_MATCH/<data>/detalhes/`;
-6. extrai preço, periodicidade, locadora, veículo, categorias Uber, caução, quilometragem, itens incluídos e condições;
-7. salva a tabela normalizada em `dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv`;
-8. registra falhas/avisos em `dados_limpos/17_UBER_MATCH_FALHAS_SP.csv`, quando existirem.
+```text
+dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv
+dados_limpos/17_UBER_MATCH_FALHAS_SP.csv  # quando houver aviso/falha
+```
 
 Execução:
-
-```bash
-python extrair.py uber-match
-```
-
-ou diretamente:
-
-```bash
-python extrair_uber_match.py
-```
-
-Para apenas validar os HTMLs e listar links sem acessar cada oferta:
-
-```bash
-python extrair_uber_match.py --somente-indexar
-```
-
-Para baixar novamente páginas já preservadas localmente:
-
-```bash
-python extrair_uber_match.py --atualizar
-```
-
-Se aparecer erro 404 em links `/pt-BR/offer/...`, o coletor usa automaticamente a rota canônica `/offer/...` como alternativa. Essa rota é a usada para a coleta automatizada porque a versão localizada pode responder 404 para clientes HTTP mesmo quando abre normalmente no navegador.
-
-Na validação feita com os snapshots enviados em setembro de 2026, a página geral de **Locações** continha 54 links únicos de ofertas e a página de **Compra** continha 2. O arquivo salvo como "locação com possibilidade de compra" correspondia, na prática, à categoria **Serviços** e por isso é ignorado pelo coletor.
-
-### Fluxo rápido para gerar os dados do Uber Match
-
-Depois de instalar as dependências, coloque os HTMLs gerais salvos do Uber Match dentro de `UBER_MATCH/<ano-mês>/` e, a partir da pasta principal do projeto, execute:
 
 ```powershell
 python extrair.py uber-match
 ```
 
-O pipeline lê os HTMLs gerais, acessa ou reaproveita do cache as páginas individuais e grava os resultados em:
+Para apenas validar os HTMLs e listar links sem acessar cada oferta:
 
-```text
-dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv
-dados_limpos/17_UBER_MATCH_FALHAS_SP.csv  # somente quando houver aviso/falha
+```powershell
+python extrair_uber_match.py --somente-indexar
 ```
 
-A tabela de ofertas também recebe campos de validação antes de ser usada no modelo econômico:
+Para baixar novamente páginas já preservadas localmente:
 
-- `revisar_oferta` e `status_qualidade`;
-- `motivos_revisao`;
-- `apto_modelo_economico`;
-- `valor_card_reais` e divergência entre preço do card e preço da página individual, quando ambos existem.
-
-Ofertas com preço ausente, moeda inesperada, aluguel marcado como pagamento único, campos essenciais ausentes ou divergência relevante de preço continuam preservadas no CSV, mas são marcadas para revisão em vez de serem excluídas silenciosamente.
-
-## Segurança de APIs
-
-A chave da Open Charge Map não fica mais no código. Defina:
-
-```bash
-export OPEN_CHARGE_MAP_API_KEY="..."
+```powershell
+python extrair_uber_match.py --atualizar
 ```
 
-Use `.env.example` apenas como modelo. Como uma chave já esteve versionada no histórico do repositório, ela deve ser revogada/rotacionada no provedor.
+A tabela de ofertas inclui validações como `revisar_oferta`, `status_qualidade`, `motivos_revisao`, `apto_modelo_economico`, `valor_card_reais` e divergência entre preço do card e página individual. Registros problemáticos são preservados e marcados para revisão, não excluídos silenciosamente.
 
 ## Pesquisa OD 2023
 
-O pipeline deixa de concatenar planilhas heterogêneas. Ele procura `Banco2023_divulgacao_190225.sav` ou `.dbf`, filtra `MODOPRIN = 12` (táxi não convencional/aplicativo) e gera:
+O pipeline procura `Banco2023_divulgacao_190225.sav` ou `.dbf`, filtra `MODOPRIN = 12` e gera:
 
-- `dados_limpos/07_OD2023_APP_MICRODADOS.csv`
-- `dados_limpos/07_OD2023_APP_ZONA_HORA.csv`
+- `dados_limpos/07_OD2023_APP_MICRODADOS.csv`;
+- `dados_limpos/07_OD2023_APP_ZONA_HORA.csv`;
 - `dados_limpos/07_OD2023_ZONAS.geojson`, quando `Zonas_2023.shp` estiver disponível.
 
-A distância da OD é tratada explicitamente como **distância em linha reta**, evitando confundi-la com distância real percorrida. Médias agregadas de duração e distância são ponderadas por `FE_VIA`.
-
-O Shape é reprojetado para EPSG:4326 para uso em mapas web e joins por latitude/longitude.
+A distância da OD é tratada explicitamente como **distância em linha reta**. Médias agregadas de duração e distância são ponderadas por `FE_VIA`. O Shape é reprojetado para EPSG:4326 para uso em mapas web e joins por latitude/longitude.
 
 ## IBGE e RMSP
 
@@ -165,64 +187,33 @@ Quando o Shape municipal estiver presente, o pipeline recorta os municípios da 
 
 ## SENATRAN
 
-Os arquivos não são mais concatenados como se possuíssem o mesmo esquema. São separados por assunto/granularidade: combustível, marca/modelo, ano, potência, CEP e tipo de veículo.
+Os arquivos não são concatenados como se possuíssem o mesmo esquema. São separados por assunto/granularidade: combustível, marca/modelo, ano, potência, CEP e tipo de veículo.
 
 ## FIPE
 
 A primeira execução cria um mapeamento persistente Uber → FIPE em `dados_cache/fipe_mapeamento.csv`. Nas próximas execuções o matching é reutilizado e só os preços precisam ser atualizados.
 
-Há:
-- cache do catálogo;
-- checkpoint após cada consulta;
-- retomada depois de interrupção;
-- backoff para HTTP 429;
-- marcação de matches fracos para revisão;
-- filtro preliminar por modelos presentes no INMETRO quando isso é seguro.
+Há cache do catálogo, checkpoint, retomada, backoff para HTTP 429, marcação de matches fracos e filtro preliminar por modelos presentes no INMETRO quando isso é seguro.
 
 Para refazer o matching:
 
-```bash
+```powershell
 python extrair_fipe.py --remapear
 ```
 
 Para revisar apenas o mapeamento:
 
-```bash
+```powershell
 python extrair_fipe.py --somente-mapear
 ```
 
 ## Proveniência e reprodutibilidade
 
-Cada processamento registra um evento em `dados_relatorios/manifesto_coletas.csv`, com:
-- fonte;
-- data/hora da coleta;
-- data de referência;
-- arquivo/URL de origem;
-- arquivo de destino;
-- quantidade de registros;
-- SHA-256 do arquivo bruto, quando aplicável;
-- observações e metadados extras.
+Durante a transição, o pipeline continua registrando eventos em `dados_relatorios/manifesto_coletas.csv`. A infraestrutura nova acrescenta `metadata.fontes` e `metadata.coletas` no PostgreSQL para tornar a proveniência consultável e compartilhada.
 
-Isso permite documentar **de onde o dado veio, quando foi coletado e qual arquivo gerou o derivado**.
+Entre os metadados preservados estão fonte, data/hora da coleta, data de referência, origem, caminho no Storage, quantidade de registros, SHA-256, status e metadados extras.
 
-Os dados brutos pesados permanecem fora do Git. O repositório deve guardar:
-1. código;
-2. documentação de fonte;
-3. arquivos processados leves quando fizer sentido;
-4. metadados de proveniência.
-
-## Próxima etapa: armazenamento
-
-A recomendação para o site é carregar os dados processados em **PostgreSQL + PostGIS**. Os arquivos fixos (OD, IBGE, INMETRO etc.) podem entrar como tabelas versionadas; dados recorrentes (ANP, ANEEL, FIPE, OCM etc.) devem preservar `data_referencia` e `data_coleta`.
-
-O site/API então consulta o banco, enquanto o GitHub continua sendo a fonte do código e da documentação da coleta — não o banco operacional.
-
-Uma estrutura futura pode separar:
-- `fontes`: catálogo das fontes e URLs;
-- `execucoes_coleta`: histórico, hash, versão e timestamps;
-- tabelas dimensionais de veículos e regiões;
-- tabelas históricas de preços/tarifas;
-- tabelas geográficas PostGIS para municípios, Zonas OD e eletropostos.
+Os dados brutos pesados permanecem fora do Git. O repositório guarda código, documentação, DDL, arquivos processados leves quando fizer sentido e metadados de proveniência.
 
 ## Validação já realizada nesta refatoração
 
