@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import mimetypes
 import os
+import unicodedata
 from functools import lru_cache
 from pathlib import Path
 from typing import Iterator
@@ -51,7 +52,21 @@ def sha256_arquivo(caminho: Path) -> str:
 
 
 def normalizar_chave(chave: str) -> str:
-    return "/".join(parte for parte in chave.replace("\\", "/").split("/") if parte)
+    """Normaliza a chave S3 sem alterar o arquivo de origem.
+
+    Mantém a estrutura de pastas, remove acentos e outros caracteres Unicode
+    que podem causar rejeição em endpoints compatíveis com S3. O caminho
+    original continua preservado na proveniência registrada pelo migrador.
+    """
+    partes_normalizadas: list[str] = []
+    for parte in chave.replace("\\", "/").split("/"):
+        if not parte:
+            continue
+        parte_ascii = unicodedata.normalize("NFKD", parte).encode(
+            "ascii", "ignore"
+        ).decode("ascii")
+        partes_normalizadas.append(parte_ascii)
+    return "/".join(partes_normalizadas)
 
 
 def iterar_arquivos(raiz: Path) -> Iterator[Path]:
