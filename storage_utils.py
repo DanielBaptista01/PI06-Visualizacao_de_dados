@@ -105,8 +105,6 @@ def objeto_existe(chave: str) -> dict | None:
         if codigo in {"404", "NoSuchKey", "NotFound"} or status == 404:
             return None
         if codigo == "400" or status == 400:
-            # Fallback compatível com endpoints S3 que falham no HEAD mesmo
-            # após a chave ter sido confirmada pela listagem.
             resposta_get = client.get_object(Bucket=bucket(), Key=chave)
             corpo = resposta_get.get("Body")
             if corpo is not None:
@@ -157,6 +155,22 @@ def upload_arquivo(
         "enviado": True,
         "motivo": "upload",
     }
+
+
+def baixar_arquivo(
+    chave: str,
+    destino: str | Path,
+    *,
+    sobrescrever: bool = False,
+) -> Path:
+    """Baixa um objeto para uso temporário/local do pipeline."""
+    chave = normalizar_chave(chave)
+    destino = Path(destino).expanduser().resolve()
+    if destino.exists() and not sobrescrever:
+        return destino
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    cliente_storage().download_file(bucket(), chave, str(destino))
+    return destino
 
 
 def listar(prefixo: str = "") -> list[dict]:
