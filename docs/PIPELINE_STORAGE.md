@@ -69,6 +69,33 @@ O modo Storage reconhece atualmente:
 - Uber: `raw/uber/`;
 - Uber Match: `raw/uber_match/`.
 
+## ANEEL e arquivos compactados
+
+O CSV oficial de tarifas da ANEEL pode ultrapassar o limite de tamanho de arquivo do plano Free do Storage. Nesse caso, o RAW pode ser armazenado compactado, sem filtrar ou alterar as linhas da fonte.
+
+O processador da ANEEL aceita atualmente:
+
+- `.xlsx`;
+- `.csv`;
+- `.csv.gz`;
+- `.zip` contendo um único CSV.
+
+Exemplo recomendado para uma atualização publicada em 8 de outubro de 2026:
+
+```text
+raw/aneel/2026/10/08/tarifas-homologadas-distribuidoras-energia-eletrica.csv.gz
+```
+
+ou, se a compactação tiver sido feita pelo recurso ZIP do Windows:
+
+```text
+raw/aneel/2026/10/08/tarifas-homologadas-distribuidoras-energia-eletrica.zip
+```
+
+O pipeline lê o conteúdo compactado diretamente; não é necessário converter o arquivo para Excel nem filtrar o RAW antes do upload.
+
+A base oficial de tarifas homologadas não expõe uma coluna de UF no esquema atual. Por isso, o processamento preserva os registros quando não houver campo de UF e registra essa condição na proveniência. O recorte correto para as distribuidoras que atendem a RMSP deve ser tratado em etapa analítica específica.
+
 ## Atualização dos arquivos RAW
 
 O método recomendado continua sendo `migrar_raw.py`, porque ele calcula SHA-256 e registra a proveniência em `metadata.coletas`.

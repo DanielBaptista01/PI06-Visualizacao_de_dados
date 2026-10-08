@@ -54,15 +54,65 @@ def _filtrar_rmsp(df: pd.DataFrame, municipios: set[str]) -> pd.DataFrame:
     return df.loc[df[col].astype(str).map(normalizar_texto).isin(municipios)].copy()
 
 
+def _ler_aneel(origem: Path) -> pd.DataFrame:
+    """Lê a base de tarifas ANEEL em XLSX, CSV, CSV.GZ ou ZIP.
+
+    Os formatos compactados são preservados no RAW e lidos diretamente pelo
+    pandas, sem descompactar ou alterar o arquivo original no Storage.
+    """
+    nome = origem.name.lower()
+    if nome.endswith(".xlsx"):
+        return pd.read_excel(origem)
+
+    if nome.endswith((".csv", ".csv.gz", ".zip")):
+        ultimo_erro: Exception | None = None
+        for separador in (";", ","):
+            for encoding in ("utf-8-sig", "latin1"):
+                try:
+                    df = pd.read_csv(
+                        origem,
+                        sep=separador,
+                        encoding=encoding,
+                        compression="infer",
+                        low_memory=False,
+                    )
+                    if len(df.columns) > 1:
+                        return df
+                except Exception as exc:
+                    ultimo_erro = exc
+        if ultimo_erro:
+            raise ultimo_erro
+        raise ValueError(f"ANEEL: não foi possível identificar o CSV em {origem.name}")
+
+    raise ValueError(f"ANEEL: formato não suportado: {origem.name}")
+
+
 def processar_aneel() -> None:
-    origem = localizar_primeiro(["ANEEL/data.xlsx", "ANEEL/**/*.xlsx"])
+    origem = localizar_primeiro([
+        "ANEEL/data.xlsx",
+        "ANEEL/**/*.csv.gz",
+        "ANEEL/**/*.zip",
+        "ANEEL/**/*.csv",
+        "ANEEL/**/*.xlsx",
+    ])
     if not origem:
         print("ANEEL: arquivo não encontrado.")
         return
-    df = _filtrar_uf_sp(pd.read_excel(origem))
+
+    df_original = _ler_aneel(origem)
+    df = _filtrar_uf_sp(df_original)
+    filtrou_uf = len(df) < len(df_original)
     destino = salvar_csv(df, "02_ANEEL_SP.csv")
-    registrar_coleta("ANEEL", origem, destino, len(df), observacao="Tarifas filtradas para SP")
-    print(f"ANEEL: {len(df):,} registros -> {destino}")
+    observacao = (
+        "Tarifas filtradas para SP"
+        if filtrou_uf
+        else "Tarifas ANEEL processadas; filtro de UF não aplicado porque a fonte não expõe UF explicitamente"
+    )
+    registrar_coleta("ANEEL", origem, destino, len(df), observacao=observacao)
+    print(
+        f"ANEEL: {len(df):,} registros -> {destino} "
+        f"| origem={origem.name}"
+    )
 
 
 def processar_anp() -> None:
