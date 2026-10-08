@@ -12,6 +12,7 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
+DATA_ROOT = Path(os.getenv("PI_DATA_ROOT", ROOT)).expanduser().resolve()
 OUTPUT_DIR = Path(os.getenv("PI_OUTPUT_DIR", ROOT / "dados_limpos"))
 CACHE_DIR = Path(os.getenv("PI_CACHE_DIR", ROOT / "dados_cache"))
 REPORT_DIR = Path(os.getenv("PI_REPORT_DIR", ROOT / "dados_relatorios"))
@@ -47,7 +48,7 @@ def localizar_coluna(df: pd.DataFrame, candidatos: list[str], contem: bool = Fal
 
 def localizar_primeiro(padroes: list[str]) -> Path | None:
     for padrao in padroes:
-        itens = sorted(ROOT.glob(padrao))
+        itens = sorted(DATA_ROOT.glob(padrao))
         if itens:
             return itens[0]
     return None
@@ -56,7 +57,7 @@ def localizar_primeiro(padroes: list[str]) -> Path | None:
 def localizar_todos(padroes: list[str]) -> list[Path]:
     vistos, saida = set(), []
     for padrao in padroes:
-        for item in sorted(ROOT.glob(padrao)):
+        for item in sorted(DATA_ROOT.glob(padrao)):
             item = item.resolve()
             if item not in vistos:
                 vistos.add(item)
@@ -79,6 +80,24 @@ def salvar_csv(df: pd.DataFrame, nome: str) -> Path:
     return destino
 
 
+def _origem_storage(origem_path: Path) -> str | None:
+    manifesto = os.getenv("PI_STORAGE_MANIFEST", "").strip()
+    if not manifesto:
+        return None
+    caminho_manifesto = Path(manifesto)
+    if not caminho_manifesto.exists():
+        return None
+    try:
+        mapa = json.loads(caminho_manifesto.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    chave = mapa.get(str(origem_path.resolve()))
+    if not chave:
+        return None
+    bucket = os.getenv("S3_BUCKET", "").strip()
+    return f"s3://{bucket}/{chave}" if bucket else f"s3:///{chave}"
+
+
 def registrar_coleta(
     fonte: str,
     origem: str | Path | None,
@@ -90,11 +109,17 @@ def registrar_coleta(
 ) -> None:
     manifesto = REPORT_DIR / "manifesto_coletas.csv"
     origem_path = Path(origem) if origem and not str(origem).startswith("http") else None
+    origem_registro = str(origem or "")
+    if origem_path and origem_path.exists() and origem_path.is_file():
+        origem_storage = _origem_storage(origem_path)
+        if origem_storage:
+            origem_registro = origem_storage
+
     linha = {
         "fonte": fonte,
         "data_coleta_utc": datetime.now(timezone.utc).isoformat(),
         "data_referencia": data_referencia or "",
-        "origem": str(origem or ""),
+        "origem": origem_registro,
         "destino": str(destino or ""),
         "registros": "" if registros is None else registros,
         "sha256_origem": sha256_arquivo(origem_path) if origem_path and origem_path.exists() and origem_path.is_file() else "",
