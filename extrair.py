@@ -18,6 +18,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from dotenv import load_dotenv
+load_dotenv()
 
 def _executar(grupo: str, workspace: Path | None = None) -> None:
     if grupo in {"bases", "tudo"}:

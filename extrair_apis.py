@@ -59,15 +59,29 @@ def coletar_open_charge_map() -> None:
         conexoes = item.get("Connections") or []
         operador = item.get("OperatorInfo") or {}
         status = item.get("StatusType") or {}
+        
         potencias = [c.get("PowerKW") for c in conexoes if c.get("PowerKW") is not None]
-        conectores = sorted({
-            (c.get("ConnectionType") or {}).get("Title", "Desconhecido")
-            for c in conexoes if c.get("ConnectionType")
-        })
+        
+        conectores = set()
+        for c in conexoes:
+            conn_type = c.get("ConnectionType") or {}
+            titulo_conector = (
+                conn_type.get("Title") or 
+                c.get("ConnectionTypeName") or 
+                conn_type.get("Name")
+            )
+            if titulo_conector:
+                conectores.add(str(titulo_conector).strip())
+
+        # Extração tratada para evitar nulos desnecessários
+        op_nome = operador.get("Title") if isinstance(operador, dict) else (str(operador) if operador else "Não informada")
+        status_nome = status.get("Title") if isinstance(status, dict) else "Desconhecido"
+        custo = item.get("UsageCost")
+
         registros.append({
             "id_posto": item.get("ID"),
             "titulo": endereco.get("Title"),
-            "operadora": operador.get("Title"),
+            "operadora": op_nome if op_nome != "nan" else "Não informada",
             "logradouro": endereco.get("AddressLine1"),
             "cidade": endereco.get("Town"),
             "estado_provincia": endereco.get("StateOrProvince"),
@@ -76,9 +90,9 @@ def coletar_open_charge_map() -> None:
             "longitude": endereco.get("Longitude"),
             "qtd_conexoes": len(conexoes),
             "potencia_max_kw": max(potencias) if potencias else None,
-            "tipos_conectores": ", ".join(conectores),
-            "status_cadastral": status.get("Title"),
-            "custo_uso_informado": item.get("UsageCost"),
+            "tipos_conectores": ", ".join(sorted(conectores)) if conectores else "Não informado",
+            "status_cadastral": status_nome,
+            "custo_uso": custo if custo else "Não informado",
             "data_coleta": date.today().isoformat(),
         })
 
@@ -86,14 +100,15 @@ def coletar_open_charge_map() -> None:
     if not df.empty:
         df = df.dropna(subset=["latitude", "longitude"]).drop_duplicates(subset=["id_posto"], keep="last")
     df, recortado = _recortar_rmsp(df)
+    
     destino = salvar_csv(df, "10_OPEN_CHARGE_MAP_SP.csv")
     registrar_coleta(
         "OPEN_CHARGE_MAP", OCM_URL, destino, len(df), data_referencia=date.today().isoformat(),
-        observacao="Raio de 100 km + recorte pelas Zonas OD 2023" if recortado else "Raio de 100 km; sem recorte espacial",
+        observacao="Raio de 100 km + recorte pelas Zonas OD 2023 (vazios tratados)" if recortado else "Raio de 100 km",
     )
-    print(f"Open Charge Map: {len(df):,} pontos -> {destino}")
+    print(f"Open Charge Map: {len(df):,} pontos limpos -> {destino}")
 
-
+# ---> CERTIFIQUE-SE DE QUE ESTA PARTE EXISTE NO FINAL DO ARQUIVO <---
 def executar_apis() -> None:
     coletar_open_charge_map()
 

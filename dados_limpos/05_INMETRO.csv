@@ -1,4 +1,4 @@
-﻿Column1,Column2,Column3,Column4,Column5,Column6,Column7,Column8,Column9,Column10,Column11,Column12,Column13,Column14,Column15,Column16,Column17,Column18,Column19,Column20,Column21,Column22,Column23,Column24,Column25,Column26,Column27,Column28,Column29,Column30,Column31,Column32,Column33,Column34,Column35,Column36,Column37,Column38,Column39,Column40
+﻿column1,column2,column3,column4,column5,column6,column7,column8,column9,column10,column11,column12,column13,column14,column15,column16,column17,column18,column19,column20,column21,column22,column23,column24,column25,column26,column27,column28,column29,column30,column31,column32,column33,column34,column35,column36,column37,column38,column39,column40
 ,,,,,Tipo de,"Transmissão
 Velocidades
 (nº)",Ar,"Direção
@@ -256,12 +256,8 @@ Grande,AUDI,A3 Sedan,Performance Black,2.0 - 16V,Combustão,DCT-7,S,E,G,11,154,0
 Grande,AUDI,RS3 Sedan,-,2.5 - 20V,Combustão,DCT-7,S,E,G,33,242,0,A,\,203,167,\,\,\,\,"7,3","9,9","8,3",\,\,\,\,"2,70",\,E,E,-,,,,,,,
 Grande,AUDI,RS3 Sedan,Track,2.5 - 20V,Combustão,DCT-7,S,E,G,33,242,0,A,\,203,167,\,\,\,\,"7,3","9,9","8,3",\,\,\,\,"2,70",\,E,E,-,,,,,,,
 Grande,AUDI,Q3 SUV,Launch edition (ed.0),2.0 - 16V,Combustão,DCT-7,S,E,G,22,74,0,A,\,190,157,\,\,\,\,"8,0","9,8","8,7",\,\,\,\,"2,54",\,E,D,-,,,,,,,
-Grande,AUDI,Q3 SUV,Launch edition (ed.0),2.0 - 16V,Combustão,DCT-7,S,E,G,22,74,0,A,\,190,157,\,\,\,\,"8,0","9,8","8,7",\,\,\,\,"2,54",\,E,D,-,,,,,,,
-Grande,AUDI,Q3 Sportback,Launch edition (ed.0),2.0 - 16V,Combustão,DCT-7,S,E,G,22,75,0,A,\,190,156,\,\,\,\,"8,0","9,9","8,7",\,\,\,\,"2,53",\,E,D,-,,,,,,,
 Grande,AUDI,Q3 Sportback,Launch edition (ed.0),2.0 - 16V,Combustão,DCT-7,S,E,G,22,75,0,A,\,190,156,\,\,\,\,"8,0","9,9","8,7",\,\,\,\,"2,53",\,E,D,-,,,,,,,
 Grande,AUDI,Q3 SUV,Launch edition,2.0 - 16V,Combustão,DCT-7,S,E,G,18,67,0,A,\,190,156,\,\,\,\,"8,2","9,6","8,8",\,\,\,\,"2,52",\,E,D,-,,,,,,,
-Grande,AUDI,Q3 SUV,Launch edition,2.0 - 16V,Combustão,DCT-7,S,E,G,18,67,0,A,\,190,156,\,\,\,\,"8,2","9,6","8,8",\,\,\,\,"2,52",\,E,D,-,,,,,,,
-Grande,AUDI,Q3 Sportback,Launch edition,2.0 - 16V,Combustão,DCT-7,S,E,G,25,58,0,A,\,190,156,\,\,\,\,"8,2","9,5","8,8",\,\,\,\,"2,52",\,E,D,-,,,,,,,
 Grande,AUDI,Q3 Sportback,Launch edition,2.0 - 16V,Combustão,DCT-7,S,E,G,25,58,0,A,\,190,156,\,\,\,\,"8,2","9,5","8,8",\,\,\,\,"2,52",\,E,D,-,,,,,,,
 Grande,BMW,iX1,xDrive30,Elétrico,Elétrico,A,S,E,E,0,0,0,A,\,0,0,0,\,\,\,\,\,\,"35,7","32,0",\,\,"0,60",324,A,A,-,,,,,,,
 Grande,BMW,iX1,eDrive20,Elétrico,Elétrico,A,S,E,E,0,0,0,A,\,0,0,\,\,\,\,\,\,\,"37,4","36,1",\,\,"0,55",345,A,A,-,,,,,,,
@@ -503,14 +499,11 @@ Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO HA,1.5T -16V,Híbrido,CVT
 Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO,1.5T -16V,Combustão,CVT,S,E,F,37,124,4,B,0,153,126,\,"6,6","8,0","7,1","10,0","11,7","10,7",\,\,\,\,"2,08",\,E,D,-,,,,,,,
 Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,SPORT,1.5T -16V,Combustão,CVT,S,E,F,37,124,4,B,0,153,126,\,"6,6","8,0","7,1","10,0","11,7","10,7",\,\,\,\,"2,08",\,E,D,-,,,,,,,
 Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO,1.5T -16V,Combustão,CVT,S,E,F,37,124,4,B,0,153,126,\,"6,6","8,0","7,1","10,0","11,7","10,7",\,\,\,\,"2,08",\,E,D,,,,,,,,
-Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,SPORT,1.5T -16V,Combustão,CVT,S,E,F,37,124,4,B,0,153,126,\,"6,6","8,0","7,1","10,0","11,7","10,7",\,\,\,\,"2,08",\,E,D,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,TRACKER,LT,1.0T - 12V,Combustão,A-6,S,E,F,19,168,3,A,0,131,108,\,"8,1","9,9","8,8","11,5","13,8","12,4",\,\,\,\,"1,72",\,B,C,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,TRACKER,LTZ,1.0T - 12V,Combustão,A-6,S,E,F,19,168,3,A,0,131,108,\,"8,1","9,9","8,8","11,5","13,8","12,4",\,\,\,\,"1,72",\,B,C,[image] -,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,TRACKER,AT,1.0T - 12V,Combustão,A-6,S,E,F,19,168,3,A,0,131,108,\,"8,1","9,9","8,8","11,5","13,8","12,4",\,\,\,\,"1,72",\,B,C,-,,,,,,,
-Utilitário Esportivo Compacto,CHEVROLET,TRACKER,LT,1.0T - 12V,Combustão,A-6,S,E,F,19,168,3,A,0,131,108,\,"8,1","9,9","8,8","11,5","13,8","12,4",\,\,\,\,"1,72",\,B,C,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,TRACKER,LTZ,1.0T - 12V,Combustão,A-6,S,E,F,19,168,3,A,0,131,108,\,"8,1","9,9","8,8","11,5","13,8","12,4",\,\,\,\,"1,72",\,B,C,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,TRACKER,RS,1.2T - 12V,Combustão,A-6,S,E,F,18,139,2,A,0,135,111,\,"7,6","9,7","8,4","11,0","13,7","12,1",\,\,\,\,"1,80",\,C,C,-,,,,,,,
-Utilitário Esportivo Compacto,CHEVROLET,TRACKER,PREMIER,1.2T - 12V,Combustão,A-6,S,E,F,18,139,2,A,0,135,111,\,"7,6","9,7","8,4","11,0","13,7","12,1",\,\,\,\,"1,80",\,C,C,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,TRACKER,PREMIER,1.2T - 12V,Combustão,A-6,S,E,F,18,139,2,A,0,135,111,\,"7,6","9,7","8,4","11,0","13,7","12,1",\,\,\,\,"1,80",\,C,C,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,SONIC,10T AT PR,1.0T - 12V,Combustão,A-6,S,E,F,25,196,3,A,0,122,101,\,"8,4","10,4","9,2","12,1","14,8","13,2",\,\,\,\,"1,63",\,A,C,-,,,,,,,
 Utilitário Esportivo Compacto,CHEVROLET,SONIC,10T AT RS,1.0T - 12V,Combustão,A-6,S,E,F,25,196,3,A,0,122,101,\,"8,4","10,4","9,2","12,1","14,8","13,2",\,\,\,\,"1,63",\,A,C,-,,,,,,,
@@ -538,7 +531,6 @@ Utilitário Esportivo Compacto,CITROEN,AIRCROSS,7 SH,1.0T-12V,Combustão,CVT-7,S
 Utilitário Esportivo Compacto,FIAT,ARGO,TREKKING 1.3,1.3-8V,Combustão,M-5,S,E,F,39,334,4,B,0,118,97,\,"8,9","10,2","9,5","12,9","14,7","13,6",\,\,\,\,"1,57",\,A,C,-,,,,,,,
 Utilitário Esportivo Compacto,FIAT,ARGO,ENDUR 1.3 MT,1.3-8V,Combustão,M-5,S,E,F,39,334,4,B,0,118,97,\,"8,9","10,2","9,5","12,9","14,7","13,6",\,\,\,\,"1,57",\,A,C,-,,,,,,,
 Utilitário Esportivo Compacto,FIAT,ARGO,TREKKING 1.3AT,1.3-8V,Combustão,CVT-7,S,E,F,37,297,4,B,0,120,99,\,"9,0","10,3","9,5","12,8","14,3","13,5",\,\,\,\,"1,58",\,A,C,-,,,,,,,
-,,,,,,Velocidades,,Direção,Combustível,,,,Emissões no Escapamento,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,Tipo de,( n º),,Assistida,,,,,,,,,,,,,,,,,Quilometragem por Litro,,,,,,,,,,,,,,Selo
 ,,,,,Propulsão,Manual,Ar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Autonomia,Classificação,,CONPET
 ,,,,,,(M),Cond.,Hidráulica,Etanol,,Poluentes,,,,,,,,Gás Efeito Estufa,,,,,,,,,,,,,,,,Consumo,no modo,PBE,,de
@@ -651,7 +643,6 @@ Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,PRO HA,1.5T -16V,Híbrido,CVT - 
 Utilitário Esportivo Grande,CAOACHANGAN,CS75,INFINITY (LEV4),1.5 FLEX -16V,Combustão,A-8,S,E,F,25,64,3,A,0,146,,,,120,\,"7,2","8,5","7,8","10,5","12,3",,,,,"11,2",\,\,\,\,"1,94",\,C,C,-
 Utilitário Esportivo Grande,CAOACHANGAN,UNI-T,INFINITY (LEV4),1.5 FLEX -16V,Combustão,DCT-7,S,E,F,26,74,2,A,0,145,,,,119,\,"7,1","8,6","7,7","10,5","12,4",,,,,"11,3",\,\,\,\,"1,95",\,C,C,-
 Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,SPORT,1.5T - 16V,Combustão,CVT -9,S,E,F,42,175,2,B,0,150,,,,123,\,"6,6","7,9","7,2","10,3","11,8",,,,,"10,9",\,\,\,\,"2,05",\,D,C,-
-Utilitário Esportivo Grande,CAOA CHERY,TIGGO 8,16TA,1.6T - 16V,Combustão,DCT-7,S,E,G,28,131,1,A,\,149,,,,123,\,\,\,\,"10,0","12,5",,,,,"11,0",\,\,\,\,"1,99",\,C,C,-
 Utilitário Esportivo Grande,GAC,GS3,ELITE,1.5-16V,Combustão,DCT-7,S,E,G,35,228,1,A,\,151,,,,125,\,\,\,\,"10,2","11,6",,,,,"10,8",\,\,\,\,"2,02",\,D,C,-
 Utilitário Esportivo Grande,GAC,GS3,ELITE PLUS,1.5-16V,Combustão,DCT-7,S,E,G,35,228,1,A,\,151,,,,125,\,\,\,\,"10,2","11,6",,,,,"10,8",\,\,\,\,"2,02",\,D,C,-
 Utilitário Esportivo Grande,GAC,GS4,PREMIUM,2.0-16V,Híbrido,DHT-2,S,E,G,24,117,1,A,\,123,,,,101,\,\,\,\,"14,1","11,8",,,,,"13,0",\,\,\,\,"1,64",\,A,C,-
@@ -670,13 +661,11 @@ Utilitário Esportivo Grande,GWM,HAVAL H6,HEV2 FLEX,1.5-16V,Híbrido,DHT-1A - 2,
 Utilitário Esportivo Grande,GWM,WEY,07,1.5 - 16V,Plug-in,A-4,S,E,G,36,21,2,A,\,163,,,,134,7,\,\,\,"10,8","9,1",,,,,"10,0","25,9","22,8",\,\,"0,83",128,A,A,SIM
 Utilitário Esportivo Grande,GWM,WEY,07 DARK ED.,1.5 - 16V,Plug-in,DHT-4,S,E,G,36,21,2,A,\,163,,,,134,7,\,\,\,"10,8","9,1",,,,,"10,0","25,9","22,8",\,\,"0,83",128,A,A,SIM
 Utilitário Esportivo Grande,HONDA,CR-V,TOURING,2.0-16V,Híbrido,CVT,S,E,G,12,79,0,A,\,123,,,,102,\,\,\,\,"14,1","11,8",,,,,"13,0",\,\,\,\,"1,65",\,A,C,-
-,,,,,,Velocidades,,Direção,Combustível,,,,Emissões no Escapamento,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,( n º),,Assistida,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,Tipo de,,,,,,,,,,,,,,,,,Quilometragem por Litro,,,,,,,,,,Selo,,,,,,,
 ,,,,,,Manual,Ar,,,,Poluentes,,,,,Gás Efeito Estufa,,,,,,,,,,,,,,Classificação,,CONPET,,,,,,,
 ,,,,,Propulsão,(M),Cond.,Hidráulica,Etanol,,,,,,,,,,,,,,,,,,,Consumo,Autonomia,PBE,,de,,,,,,,
 ,,,,,,Automática,,(H),(E),,,,,,,,,,,,,,,,,,,Energético,no modo,,,Eficiência,,,,,,,
-Categoria,Marca,Modelo,Versão,Motor,Combustão,(A),,Mecânica,Gasolina,,,,,,,Gasolina,,,,,,Gasolina,,,,,,,Elétrico,,,Energética,,,,,,,
 ,,,,,,Automática Dupla,,(M),(G),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,Híbrido,Embreagem (DCT),,Elétrica,Flex,,,,,Etanol,,ou,VEHP,,Etanol,,,ou,,,Modo Elétrico (km/lequivalente),,,(MJ/km),,,,((A+B).A),,,,,,,
 ,,,,,Plug-in,Automatizada,,(E),(F),,,,Redução,,,Diesel,,,,,,Diesel,,,,,,,(km),,,,,,,,,,
@@ -795,8 +784,6 @@ Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 AWD PLUS,2.0-16V,Plug-in,A,S,E,G,
 Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 AWD ULT,2.0-16V,Plug-in,A,S,E,G,2,58,1,A,\,42,34,2,\,\,\,"9,4","9,3","9,4","24,1","21,9",\,\,"0,88",47,A,A,SIM,,,,,,,
 Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 AWD ULTD,2.0-16V,Plug-in,A,S,E,G,2,58,1,A,\,42,34,2,\,\,\,"9,4","9,3","9,4","24,1","21,9",\,\,"0,88",47,A,A,SIM,,,,,,,
 Utilitário Esportivo Grande 4x4,VOLVO,XC90,AWD ULT BLA,2.0-16V,Plug-in,A,S,E,G,2,58,1,A,\,42,34,2,\,\,\,"9,4","9,3","9,4","24,1","21,9",\,\,"0,88",47,A,A,SIM,,,,,,,
-,,,,,,Transmissão,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,Velocidades,,Direção,Combustível,,,,Emissões no Escapamento,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,Tipo de,(nº),,Assistida,,,,,,,,,,,,,,Quilometragem por Litro,,,,,,,,,,,,,,Selo,,,
 ,,,,,,Manual,Ar,,,,,,,,,,,,,,,,,,,,,,,,,,,Classificação,,CONPET,,,
 ,,,,,Propulsão,(M),Cond.,Hidráulica,Etanol,,Poluentes,,,,,Gás Efeito Estufa,,,,,,,,,,,,,,,,Consumo,Autonomia,,,de,,,
@@ -914,8 +901,6 @@ Comercial,FORD,Transit,F35MAMA,2.0 - 16V,Combustão,M-6,S,E,D,34,49,ND,A,\,203,\
 Comercial,FORD,Transit,F38LAMA,2.0 - 16V,Combustão,M-6,S,E,D,34,49,ND,A,\,203,\,\,\,\,\,"9,8","9,7","9,8",\,,\,,,,\,\,"2,75",\,C,E,-,,,
 Comercial,FOTON,EVIEW,GRAND53,Elétrico,Elétrico,A-1,S,E,E,ND,ND,ND,A,\,-,\,\,\,\,\,\,\,\,"27,3",,"22,1",,,,\,\,"0,82",162,A,A,-,,,
 Comercial,FOTON,EWONDER,CHASSI,Elétrico,Elétrico,A-1,S,E,E,ND,ND,ND,A,\,-,\,\,\,\,\,\,\,\,"43,3",,"28,3",,,,\,\,"0,58",189,A,A,-,,,
-,,,,,,Transmissão,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,Velocidades,,Direção,Combustível,,,,Emissões no Escapamento,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,Tipo de,(nº),,Assistida,,,,,,,,,,,,,,,,,Quilometragem por Litro,,,,,,,,,,,,,,Selo
 ,,,,,,,Ar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Classificação,,CONPET
 ,,,,,Propulsão,,Cond.,,,,,,,,,,,,,,,,,,,,,,,,,,,,Consumo,Autonomia,PBE,,de
@@ -999,7 +984,6 @@ Picape,CHEVROLET,S10,Z71,2.8 - 16V,Combustão,A-8,S,E,D,34,28,ND,A,\,212,,,,212,
 Picape,CHEVROLET,S10,HC DD4A,2.8 - 16V,Combustão,A-8,S,E,D,39,29,ND,A,\,202,,,,202,\,\,\,\,"8,8","11,9",,,,,"9,9",\,\,\,\,"2,73",\,D,E,-
 Picape,CHEVROLET,S10,LTZ DD4A,2.8 - 16V,Combustão,A-8,S,E,D,39,29,ND,A,\,202,,,,202,\,\,\,\,"8,8","11,9",,,,,"9,9",\,\,\,\,"2,73",\,D,E,-
 Picape,CHEVROLET,S10,WT DD4A,2.8 - 16V,Combustão,A-8,S,E,D,39,29,ND,A,\,202,,,,202,\,\,\,\,"8,8","11,9",,,,,"9,9",\,\,\,\,"2,73",\,D,E,-
-Picape,CHEVROLET,S10,LTZ DD4A,2.8 - 16V,Combustão,A-8,S,E,D,39,29,ND,A,\,202,,,,202,\,\,\,\,"8,8","11,9",,,,,"9,9",\,\,\,\,"2,73",\,D,E,-
 Picape,CHEVROLET,S10,WT DS4,2.8 - 16V,Combustão,M-6,S,E,D,262,165,ND,B,\,185,,,,185,\,\,\,\,"10,2","11,4",,,,,"10,8",\,\,\,\,"2,50",\,B,D,-
 Picape,CHEVROLET,S10,WT DS4C,2.8 - 16V,Combustão,M-6,S,E,D,262,165,ND,B,\,185,,,,185,\,\,\,\,"10,2","11,4",,,,,"10,8",\,\,\,\,"2,50",\,B,D,-
 Picape,CHEVROLET,S10,WT DD4,2.8 - 16V,Combustão,M-6,S,E,D,226,83,ND,B,\,186,,,,186,\,\,\,\,"10,2","11,4",,,,,"10,7",\,\,\,\,"2,52",\,C,D,-
@@ -1037,8 +1021,6 @@ Picape,FORD,Nova Ranger 4x4,XL,2.0 - 16V,Combustão,A-6,S,E,D,85,57,ND,A,\,201,,
 Picape,FORD,Maverick,Lariat Hybrid,2.5 - 16V,Híbrido,eCVT,S,E,G,11,119,"0,375",A,\,109,,,,90,\,\,\,\,"15,4","13,5",,,,,"14,5",\,\,\,\,"1,46",\,A,B,SIM
 Picape,FORD,Maverick,Lariat Black,2.0 - 16V,Combustão,A-8,S,E,G,12,140,"0,77",A,\,173,,,,142,\,\,\,\,"8,5","11,4",,,,,"9,6",\,\,\,\,"2,30",\,B,D,-
 Picape,FORD,Maverick,Tremor,2.0 - 16V,Combustão,A-8,S,E,G,11,216,"0,32",A,\,178,,,,146,\,\,\,\,"8,4","10,7",,,,,"9,3",\,\,\,\,"2,37",\,B,D,-
-,,,,,,Transmissão,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,Velocidades,,Direção,Combustível,,,,Emissões no Escapamento,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,Tipo de,(nº),Ar,Assistida,,,,,,,,,,,,,,Quilometragem por Litro,,,,,,,,Classificação,,"Selo
 CONPET",,,,,,,
 ,,,,,Propulsão,,Cond.,,,,Poluentes,,,,,Gás Efeito Estufa,,,,,,,,,,,,Consumo,Autonomia,PBE,,de,,,,,,,
@@ -1123,7 +1105,6 @@ Esportivo,BMW,M2,Coupe Track,3.0 - 24V,Combustão,A-8,S,E,G,21,209,1,A,\,209,172
 Esportivo,BMW,M4,Competition,3.0 - 24V,Combustão,A-8,S,E,G,11,210,0,A,\,200,165,\,\,\,\,"7,4","10,0","8,4",\,\,\,\,"2,67",\,E,E,-,,,,,,,
 Esportivo,BMW,M4,COMP TRACK,3.0 - 24V,Combustão,A-8,S,E,G,11,210,0,A,\,200,165,\,\,\,\,"7,4","10,0","8,4",\,\,\,\,"2,67",\,E,E,-,,,,,,,
 Esportivo,BMW,M2,CUP,3.0 - 24V,Combustão,A-8,S,E,G,21,209,1,A,\,209,172,\,\,\,\,"7,2","9,3","8,0",\,\,\,\,"2,79",\,E,E,-,,,,,,,
-Esportivo,BMW,M2,CUP,3.0 - 24V,Combustão,A-8,S,E,G,21,209,1,A,\,209,172,\,\,\,\,"7,2","9,3","8,0",\,\,\,\,"2,79",\,E,E,-,,,,,,,
 Esportivo,FERRARI,296,GTB,3.0-24V,Plug-in,DCT-8,S,E,G,18,444,0,A,\,181,149,0,\,\,\,"6,3","8,4","7,1","8,9","11,9",\,\,"2,02",10,D,C,-,,,,,,,
 Esportivo,FERRARI,PUROSANGUE,--,6.5-48V,Combustão,DCT-8,S,E,G,21,222,3,A,\,366,302,\,\,\,\,"4,1","5,6","4,7",\,\,\,\,"4,88",\,E,E,-,,,,,,,
 Esportivo,FERRARI,12CILINDRI,--,6.5-48V,Combustão,DCT-8,S,E,G,16,409,2,A,\,310,255,\,\,\,\,"4,8","6,7","5,5",\,\,\,\,"4,14",\,E,E,-,,,,,,,
@@ -1155,8 +1136,6 @@ Esportivo,PORSCHE,911,TURBO S / TURBO S CA,3.6/24V,Híbrido,DCT-8,S,E,G,24,95,1,
 Esportivo,PORSCHE,911,CARRERAGTS,3.6-24V,Híbrido,DCT-8,S,E,G,33,85,1,A,\,210,173,\,\,\,\,"7,2","9,2","8,0",\,\,\,\,"2,80",\,E,E,-,,,,,,,
 Esportivo,PORSCHE,911,CAR GTS CA,3.6-24V,Híbrido,DCT-8,S,E,G,33,85,1,A,\,210,173,\,\,\,\,"7,2","9,2","8,0",\,\,\,\,"2,80",\,E,E,-,,,,,,,
 Esportivo,PORSCHE,911,SPIRIT 70,3.6-24V,Híbrido,DCT-8,S,E,G,33,85,1,A,\,210,173,\,\,\,\,"7,2","9,2","8,0",\,\,\,\,"2,80",\,E,E,-,,,,,,,
-Esportivo,PORSCHE,911,GT3 FA 90Y,4.0-32V,Combustão,M-6,S,E,G,25,93,1,A,\,289,237,\,\,\,\,"5,2","6,9","5,9",\,\,\,\,"3,86",\,E,E,-,,,,,,,
-Esportivo,PORSCHE,911,TARGA 4GTS,3.6/24V,Híbrido,DCT-8,S,E,G,14,83,1,A,\,214,176,\,\,\,\,"6,9","9,3","7,8",\,\,\,\,"2,86",\,E,E,-,,,,,,,
 Esportivo,PORSCHE,911,GT3 FA 90Y,4.0-32V,Combustão,M-6,S,E,G,25,93,1,A,\,289,237,\,\,\,\,"5,2","6,9","5,9",\,\,\,\,"3,86",\,E,E,-,,,,,,,
 Esportivo,PORSCHE,911,TARGA 4GTS,3.6/24V,Híbrido,DCT-8,S,E,G,14,83,1,A,\,214,176,\,\,\,\,"6,9","9,3","7,8",\,\,\,\,"2,86",\,E,E,-,,,,,,,
 Esportivo,PORSCHE,911,GT3 SC,4.0-32V,Combustão,M-6,S,E,G,25,93,1,A,\,289,237,\,\,\,\,"5,2","6,9","5,9",\,\,\,\,"3,86",\,E,E,-,,,,,,,

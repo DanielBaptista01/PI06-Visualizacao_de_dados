@@ -73,12 +73,17 @@ def sha256_arquivo(caminho: Path) -> str:
     return h.hexdigest()
 
 
-def salvar_csv(df: pd.DataFrame, nome: str) -> Path:
-    destino = OUTPUT_DIR / nome
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(destino, index=False, encoding="utf-8-sig")
-    return destino
-
+def salvar_csv(df, nome_arquivo):
+    # O caminho do diretório e verificações já devem estar no seu código
+    from pathlib import Path
+    pasta_destino = Path("dados_limpos")
+    pasta_destino.mkdir(exist_ok=True)
+    
+    caminho = pasta_destino / nome_arquivo
+    
+    df.to_csv(caminho, index=False, encoding='utf-8-sig')
+    
+    return caminho
 
 def _origem_storage(origem_path: Path) -> str | None:
     manifesto = os.getenv("PI_STORAGE_MANIFEST", "").strip()
