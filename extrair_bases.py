@@ -45,13 +45,35 @@ def _municipios_rmsp() -> set[str]:
         return set()
 
 
-def _filtrar_rmsp(df: pd.DataFrame, municipios: set[str]) -> pd.DataFrame:
+def _filtrar_rmsp(
+    df: pd.DataFrame,
+    municipios: set[str],
+) -> pd.DataFrame:
     if not municipios:
-        return df
-    col = localizar_coluna(df, ["MUNICIPIO", "MUNICÍPIO", "CIDADE", "NOME_MUNICIPIO"], contem=True)
+        raise ValueError(
+            "RMSP: lista de municípios vazia; "
+            "não é possível confirmar o filtro geográfico."
+        )
+
+    col = localizar_coluna(
+        df,
+        ["MUNICIPIO", "MUNICÍPIO", "CIDADE", "NOME_MUNICIPIO"],
+        contem=True,
+    )
+
     if not col:
-        return df
-    return df.loc[df[col].astype(str).map(normalizar_texto).isin(municipios)].copy()
+        raise ValueError(
+            "RMSP: coluna de município não encontrada na fonte."
+        )
+
+    mascara = df[col].astype(str).map(normalizar_texto).isin(municipios)
+
+    if not mascara.any():
+        raise ValueError(
+            "RMSP: o filtro não encontrou municípios correspondentes."
+        )
+
+    return df.loc[mascara].copy()
 
 
 def _ler_aneel(origem: Path) -> pd.DataFrame:
@@ -87,6 +109,7 @@ def _ler_aneel(origem: Path) -> pd.DataFrame:
     raise ValueError(f"ANEEL: formato não suportado: {origem.name}")
 
 
+
 def processar_aneel() -> None:
     origem = localizar_primeiro([
         "ANEEL/data.xlsx",
@@ -95,38 +118,41 @@ def processar_aneel() -> None:
         "ANEEL/**/*.csv",
         "ANEEL/**/*.xlsx",
     ])
+
     if not origem:
         print("ANEEL: arquivo não encontrado.")
         return
 
-df_original = _ler_aneel(origem)
+    df_original = _ler_aneel(origem)
 
-coluna_uf = localizar_coluna(
-    df_original,
-    ["UF", "SG_UF", "SIGLA_UF", "ESTADO"],
-    contem=True,
-)
-
-if coluna_uf:
-    df = _filtrar_uf_sp(df_original)
-    nome_saida = "02_ANEEL_SP.csv"
-    observacao = "Tarifas filtradas para SP"
-else:
-    df = df_original.copy()
-    nome_saida = "02_ANEEL_NACIONAL.csv"
-    observacao = (
-        "Fonte sem coluna explícita de UF; "
-        "não foi possível confirmar o recorte de SP"
+    coluna_uf = localizar_coluna(
+        df_original,
+        ["UF", "SG_UF", "SIGLA_UF", "ESTADO"],
+        contem=True,
     )
 
-destino = salvar_csv(df, nome_saida)
-registrar_coleta(
-    "ANEEL",
-    origem,
-    destino,
-    len(df),
-    observacao=observacao,
-)
+    if coluna_uf:
+        df = _filtrar_uf_sp(df_original)
+        nome_saida = "02_ANEEL_SP.csv"
+        observacao = "Tarifas filtradas para SP"
+    else:
+        df = df_original.copy()
+        nome_saida = "02_ANEEL_NACIONAL.csv"
+        observacao = (
+            "Fonte sem coluna explícita de UF; "
+            "não foi possível confirmar o recorte de SP"
+        )
+
+    destino = salvar_csv(df, nome_saida)
+
+    registrar_coleta(
+        "ANEEL",
+        origem,
+        destino,
+        len(df),
+        observacao=observacao,
+    )
+
 
 def processar_anp() -> None:
     arquivos = localizar_todos(["ANP/**/*.csv", "ANP/**/*.xlsx"])
@@ -157,13 +183,6 @@ def processar_anp() -> None:
     
     # Limpa espaços extras nos nomes das colunas
     df.columns = df.columns.str.strip()
-    
-    # ---> REMOVE A COLUNA DE VALOR DE COMPRA SE ELA ESTIVER VAZIA OU NULA <---
-    colunas_para_remover = ["Valor de Compra", "VALOR DE COMPRA"]
-    for col in colunas_para_remover:
-        if col in df.columns and df[col].isna().all():
-            df = df.drop(columns=[col])
-            print(f"ANP: Coluna '{col}' removida por estar 100% vazia.")
 
     destino = salvar_csv(df, "03_ANP_SP.csv")
     registrar_coleta("ANP", "múltiplos arquivos", destino, len(df), observacao=f"{len(dfs)} arquivo(s) consolidados")
@@ -179,126 +198,108 @@ def processar_ibge() -> None:
         gdf = gpd.read_file(origem)
         if "geometry" in gdf.columns:
             gdf = pd.DataFrame(gdf.drop(columns="geometry"))
-        
-        # Padroniza preenchimento de concentrações urbanas ausentes
-        if "CD_CONCURB" in gdf.columns:
-            gdf["CD_CONCURB"] = gdf["CD_CONCURB"].fillna(0)
-        if "NM_CONCURB" in gdf.columns:
-            gdf["NM_CONCURB"] = gdf["NM_CONCURB"].fillna("Não aplicável")
-
+       
         destino = salvar_csv(gdf, "04_IBGE_SP.csv")
         registrar_coleta("IBGE_SP", origem, destino, len(gdf), observacao="Tratamento de vazios em concentração urbana")
         print(f"IBGE SP: {len(gdf):,} registros -> {destino}")
     except Exception as exc:
         print(f"IBGE: erro ao processar: {exc}")
 
+
+
 def processar_inmetro() -> None:
-    arquivos = localizar_todos(["INMETRO/**/*.xlsx"])
+    # Procura o arquivo que contém a tabela organizada.
 
-    if not arquivos:
-        print("INMETRO: nenhum arquivo XLSX encontrado.")
+    from pathlib import Path
+
+  
+
+def processar_inmetro() -> None:
+
+    PASTA_INMETRO = (
+        Path(__file__).resolve().parent
+        / "INMETRO"
+    )
+
+    escolhido = (
+        PASTA_INMETRO
+        / "dados-inmetro-organizado.xlsx"
+    )
+
+    if not escolhido.exists():
+        print(f"INMETRO: arquivo não encontrado: {escolhido}")
         return
 
-    # Prioriza a planilha que contém as tabelas extraídas do PBEV.
-    escolhido = None
-    abas_tabela = []
+    print(f"INMETRO: arquivo encontrado: {escolhido}")
 
-    for origem in arquivos:
-        try:
-            xls = pd.ExcelFile(origem)
-            abas = [
-                aba for aba in xls.sheet_names
-                if re.fullmatch(r"Table\d+ \(Page \d+\)", aba)
-            ]
+    df = pd.read_excel(
+        escolhido,
+        sheet_name="Dados_organizados",
+        dtype=object,
+    )
 
-            if abas:
-                escolhido = origem
-                abas_tabela = abas
-                break
-
-        except Exception as exc:
-            print(f"INMETRO: não foi possível inspecionar {origem.name}: {exc}")
-
-    if escolhido is None:
-        print(
-            "INMETRO: não encontrei abas Table... (Page ...). "
-            "Não gerei uma tabela supostamente limpa."
-        )
-        return
+    # Continue aqui com o restante do processamento.
 
     print(f"INMETRO: fonte selecionada: {escolhido}")
-    registros = []
 
-    colunas_base = [
+    # Lê a tabela já organizada.
+    df = pd.read_excel(
+        escolhido,
+        sheet_name="Dados_organizados",
+        dtype=object,
+    )
+
+    # Padroniza espaços nos nomes das colunas.
+    df.columns = [str(col).strip() for col in df.columns]
+
+    # Verifica se as principais colunas existem.
+    colunas_esperadas = [
         "categoria",
         "marca",
         "modelo",
         "versao",
         "motor",
         "tipo_propulsao",
-        "transmissao",
-        "ar_condicionado",
-        "direcao_assistida",
-        "combustivel",
+        "consumo_energetico_mj_km",
+        "autonomia_eletrica_km",
+        "linha_origem_excel",
     ]
 
-    for aba in abas_tabela:
-        bruto = pd.read_excel(
-            escolhido,
-            sheet_name=aba,
-            header=None,
-            dtype=object,
-        )
+    faltantes = [
+        coluna
+        for coluna in colunas_esperadas
+        if coluna not in df.columns
+    ]
 
-        for indice, linha in bruto.iterrows():
-            # As linhas de veículos precisam ter categoria, marca,
-            # modelo e versão. Isso elimina boa parte dos cabeçalhos.
-            primeiros = linha.iloc[:4]
-
-            if primeiros.isna().any():
-                continue
-
-            categoria, marca, modelo, versao = [
-                normalizar_texto(v) for v in primeiros.tolist()
-            ]
-
-            if (
-                categoria in {"CATEGORIA", "COLUMN1", ""}
-                or marca in {"MARCA", "COLUMN2", ""}
-                or modelo in {"MODELO", "COLUMN3", ""}
-                or versao in {"VERSAO", "COLUMN4", ""}
-            ):
-                continue
-
-            registro = {
-                "_aba_origem": aba,
-                "_linha_origem": int(indice) + 1,
-            }
-
-            for posicao, nome in enumerate(colunas_base):
-                registro[nome] = linha.iloc[posicao]
-
-            # Preserva os demais valores sem inventar nomes técnicos
-            # para colunas cuja posição varia entre as páginas.
-            for posicao in range(10, len(linha)):
-                registro[f"campo_bruto_{posicao:02d}"] = linha.iloc[posicao]
-
-            registros.append(registro)
-
-    if not registros:
-        print("INMETRO: nenhuma linha de veículo reconhecida.")
+    if faltantes:
+        print("INMETRO: faltam colunas esperadas:", faltantes)
         return
 
-    df = pd.DataFrame(registros)
+    # Exibe os nomes das colunas para conferência.
+    print("\nINMETRO: colunas encontradas:")
+    for coluna in df.columns:
+        print(f" - {coluna}")
 
-    # Não remove duplicatas automaticamente: primeiro precisamos
-    # distinguir duplicação real de repetição/extração da fonte.
+    # Conta registros que pertencem a grupos com chave repetida.
     duplicadas = df.duplicated(
-        subset=["marca", "modelo", "versao", "motor", "tipo_propulsao"],
+        subset=[
+            "marca",
+            "modelo",
+            "versao",
+            "motor",
+            "tipo_propulsao",
+        ],
         keep=False,
     ).sum()
 
-    destino = salvar_csv(df, "05_INMETRO_BRUTO_VALIDACAO.csv")
+    # Conta valores vazios, sem substituí-los.
+    vazios = df.isna().sum()
+
+    print("\nINMETRO: valores vazios por coluna:")
+    print(vazios[vazios > 0])
+
+    # Salva a tabela tratada.
+    destino = salvar_csv(df, "05_INMETRO_ORGANIZADO.csv")
 
     registrar_coleta(
         "INMETRO_PBEV",
@@ -306,17 +307,20 @@ def processar_inmetro() -> None:
         destino,
         len(df),
         observacao=(
-            "Extração das abas por página; campos técnicos brutos preservados; "
-            f"{duplicadas} linhas pertencem a grupos com chave de veículo repetida; "
-            "mapeamento de consumo/autonomia pendente de validação"
+            "Leitura da aba Dados_organizados; "
+            "nomes de colunas padronizados; "
+            "valores vazios e marcadores originais preservados; "
+            f"{duplicadas} linhas pertencem a grupos com chave repetida."
         ),
     )
 
-    print(f"INMETRO: {len(df):,} registros extraídos -> {destino}")
-    print(f"INMETRO: {duplicadas:,} linhas em grupos com chave repetida.")
     print(
-        "Atenção: os campos campo_bruto_* ainda não estão prontos "
-        "para cálculos de consumo ou autonomia."
+        f"\nINMETRO: {len(df):,} registros processados "
+        f"-> {destino}"
+    )
+    print(
+        f"INMETRO: {duplicadas:,} linhas em grupos "
+        "com chave repetida."
     )
 
 def _grupo_senatran(nome: str) -> str:
@@ -336,30 +340,79 @@ def _grupo_senatran(nome: str) -> str:
     return "outros"
 
 
+
 def processar_senatran() -> None:
     arquivos = localizar_todos(["SENATRAN/**/*.xlsx"])
+
     if not arquivos:
         print("SENATRAN: arquivos não encontrados.")
         return
+
     grupos: dict[str, list[pd.DataFrame]] = {}
-    nomes: dict[str, list[str]] = {}
-    
+
     for origem in arquivos:
         try:
             grupo = _grupo_senatran(origem.name)
-            
-            # Pula as linhas de cabeçalho descritivo se for a tabela de tipo de veículo
+            nome = origem.stem.lower()
+
+            # TRATAMENTO ESPECÍFICO DA FROTA POR TIPO DE VEÍCULO
             if grupo == "tipo_veiculo":
-                df = pd.read_excel(origem, skiprows=3)
+
+                # Aceita somente a planilha municipal.
+                if "por_municipio_e_tipo" not in nome:
+                    print(
+                        f"SENATRAN: arquivo ignorado em tipo_veiculo: "
+                        f"{origem.name}"
+                    )
+                    continue
+
+                print(
+                    f"SENATRAN: utilizando tabela municipal: "
+                    f"{origem.name}"
+                )
+
+                # Os cabeçalhos estão na terceira linha do Excel.
+                df = pd.read_excel(
+                    origem,
+                    sheet_name=0,
+                    header=2,
+                    dtype=object,
+                )
+
+                # Padroniza os nomes das colunas.
+                df.columns = [
+                    str(col).strip().upper()
+                    for col in df.columns
+                ]
+
+                # Confere a estrutura da tabela.
+                if not {"UF", "MUNICIPIO"}.issubset(df.columns):
+                    raise ValueError(
+                        "Cabeçalhos UF e MUNICIPIO não encontrados."
+                    )
+
+                # Mantém somente os municípios de São Paulo.
+                df = df[
+                    df["UF"]
+                    .astype("string")
+                    .str.strip()
+                    .str.upper()
+                    .eq("SP")
+                ].copy()
+
+            # TRATAMENTO DOS DEMAIS ARQUIVOS
             else:
                 df = pd.read_excel(origem)
-                
-            df = _filtrar_uf_sp(df)
+                df = _filtrar_uf_sp(df)
+
             df["_arquivo_origem"] = origem.name
+
             grupos.setdefault(grupo, []).append(df)
-            nomes.setdefault(grupo, []).append(origem.name)
+
         except Exception as exc:
-            print(f"SENATRAN: erro em {origem.name}: {exc}")
+            print(
+                f"SENATRAN: erro em {origem.name}: {exc}"
+            )
 
     saidas = {
         "tipo_veiculo": "06_SENATRAN_TIPO_VEICULO_SP.csv",
@@ -370,20 +423,67 @@ def processar_senatran() -> None:
         "cep": "06_SENATRAN_CEP_SP.csv",
         "outros": "06_SENATRAN_OUTROS_SP.csv",
     }
-    
+
     for grupo, dfs in grupos.items():
+
         if grupo not in saidas:
             continue
-        final = pd.concat(dfs, ignore_index=True, sort=False)
-        
-        # Remove colunas Unnamed e colunas totalmente nulas
-        final = final.loc[:, ~final.columns.astype(str).str.contains('^Unnamed', case=False, na=False)]
-        final = final.dropna(how='all', axis=1)
-        final = final.dropna(subset=["UF", "Município"] if "UF" in final.columns and "Município" in final.columns else [])
-        
+
+        final = pd.concat(
+            dfs,
+            ignore_index=True,
+            sort=False,
+        )
+
+        # Remove colunas vazias e Unnamed.
+        final = final.loc[
+            :,
+            ~final.columns.astype(str).str.contains(
+                "^Unnamed",
+                case=False,
+                na=False,
+            )
+        ]
+
+        final = final.dropna(how="all", axis=1)
+
+        # Remove registros sem identificação geográfica,
+        # quando essas colunas estiverem disponíveis.
+        col_uf = next(
+            (c for c in final.columns
+             if str(c).strip().upper() == "UF"),
+            None,
+        )
+
+        col_municipio = next(
+            (c for c in final.columns
+             if str(c).strip().upper() in
+             {"MUNICIPIO", "MUNICÍPIO"}),
+            None,
+        )
+
+        if col_uf and col_municipio:
+            final = final.dropna(
+                subset=[col_uf, col_municipio]
+            )
+
         destino = salvar_csv(final, saidas[grupo])
-        registrar_coleta(f"SENATRAN_{grupo.upper()}", "múltiplos arquivos", destino, len(final), observacao="Limpeza de colunas vazias e Unnamed")
-        print(f"SENATRAN/{grupo}: {len(final):,} registros limpos -> {destino}")
+
+        registrar_coleta(
+            f"SENATRAN_{grupo.upper()}",
+            "múltiplos arquivos",
+            destino,
+            len(final),
+            observacao=(
+                "Leitura com cabeçalhos específicos por fonte; "
+                "frota municipal separada da frota estadual/nacional."
+            ),
+        )
+
+        print(
+            f"SENATRAN/{grupo}: "
+            f"{len(final):,} registros -> {destino}"
+        )
 
 
 def _ler_od(origem: Path) -> pd.DataFrame:
@@ -400,50 +500,84 @@ def _ler_od(origem: Path) -> pd.DataFrame:
     return pyogrio.read_dataframe(origem, columns=colunas)
 
 def processar_od() -> None:
-    # 1. Procura o arquivo de microdados .sav ou .dbf nas pastas de origem
     origem = localizar_primeiro([
         "ORIGEM_E_DESTINO*/**/Banco2023_divulgacao_190225.sav",
         "**/Banco2023_divulgacao_190225.sav",
         "ORIGEM_E_DESTINO*/**/Banco2023_divulgacao_190225.dbf",
         "**/Banco2023_divulgacao_190225.dbf",
     ])
-    
+
     if not origem:
         print("OD 2023: microdados .sav/.dbf não encontrados.")
         return
 
     print(f"OD 2023: Lendo microdados de {origem.name}...")
-    
-    # 2. Lê usando a biblioteca apropriada (pyreadstat para .sav ou pyogrio para .dbf)
+
+    # Lê o arquivo uma única vez
     if origem.suffix.lower() == ".sav":
         import pyreadstat
-        df, _ = pyreadstat.read_sav(origem)
+        df, metadata = pyreadstat.read_sav(origem)
+
     else:
         import pyogrio
         df = pyogrio.read_dataframe(origem)
+
         if "geometry" in df.columns:
             df = pd.DataFrame(df.drop(columns="geometry"))
 
-    # 3. Normaliza os nomes das colunas para letras maiúsculas para evitar erros de busca
-    df.columns = [c.upper() for c in df.columns]
+    # Padroniza os nomes das colunas
+    df.columns = [str(c).strip().upper() for c in df.columns]
 
-    # 4. Filtra as viagens por aplicativo (MODOPRIN == 12)
-    if "MODOPRIN" in df.columns:
-        app = df.loc[pd.to_numeric(df["MODOPRIN"], errors="coerce") == 12].copy()
-    else:
-        print("Aviso: coluna MODOPRIN não encontrada. Mantendo base completa.")
-        app = df.copy()
+    # Diagnóstico antes de qualquer filtro
+    print("\n=== DIAGNÓSTICO OD 2023 ===")
+    print("Total de colunas:", len(df.columns))
+    print("MODOPRIN existe?", "MODOPRIN" in df.columns)
+    print("Colunas disponíveis:")
+    print(df.columns.tolist())
 
-    # 5. Salva diretamente como o novo CSV limpo na pasta dados_limpos/
-    # (Isso vai substituir o arquivo antigo problemático)
+    candidatas = [
+        c for c in df.columns
+        if "MOD" in c or "PRIN" in c or "MODO" in c
+    ]
+
+    print("\nPossíveis colunas relacionadas ao modo:")
+    print(candidatas)
+    print("============================\n")
+
+    if "MODOPRIN" not in df.columns:
+        raise ValueError(
+            "OD 2023: MODOPRIN não encontrada. "
+            "Verifique as colunas apresentadas no diagnóstico."
+        )
+
+    # Filtra viagens por aplicativo
+    app = df.loc[
+        pd.to_numeric(df["MODOPRIN"], errors="coerce") == 12
+    ].copy()
+
+    print("\n=== VALIDAÇÃO DA OD FILTRADA ===")
+    print("Total de viagens:", len(app))
+    print("MODOPRIN:")
+    print(app["MODOPRIN"].value_counts(dropna=False))
+    print("FE_VIA preenchido:", app["FE_VIA"].notna().sum())
+    print("FE_VIA ausente:", app["FE_VIA"].isna().sum())
+    print("Soma dos fatores de expansão:", app["FE_VIA"].sum())
+    print("================================")
+
     destino = salvar_csv(app, "07_ORIGEM_DESTINO.csv")
-    
+
     registrar_coleta(
-        "METRO_OD2023", origem, destino, len(app), data_referencia="2023",
+        "METRO_OD2023",
+        origem,
+        destino,
+        len(app),
+        data_referencia="2023",
         observacao="Microdados OD 2023 filtrados para aplicativo (MODOPRIN=12)"
     )
-    print(f"OD 2023: {len(app):,} registros processados -> {destino}")
 
+    print(
+        f"OD 2023: {len(app):,} registros processados -> {destino}"
+    )
    
 
 def processar_abve() -> None:
