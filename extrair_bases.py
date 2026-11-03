@@ -580,28 +580,124 @@ def processar_od() -> None:
     )
    
 
-def processar_abve() -> None:
-    municipios = _municipios_rmsp()
-    fontes = {
-        "11_ABVE_VENDAS_RMSP.csv": ["ABVE/**/dados_limpos_11_ABVE_VENDAS_MUNICIPIOS.csv", "**/dados_limpos_11_ABVE_VENDAS_MUNICIPIOS.csv"],
-        "15_ABVE_ELETROPOSTOS_RMSP.csv": ["ABVE/**/dados_limpos_15_ABVE_ELETROPOSTOS*.csv", "**/dados_limpos_15_ABVE_ELETROPOSTOS*.csv"],
-        "16_ABVE_VENDAS_MHEV_RMSP.csv": ["ABVE/**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv", "**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv"],
-    }
-    for nome_saida, padroes in fontes.items():
-        origem = localizar_primeiro(padroes)
-        if not origem:
-            print(f"ABVE: fonte para {nome_saida} não localizada.")
-            continue
-        df = _filtrar_rmsp(pd.read_csv(origem), municipios)
-        destino = salvar_csv(df, nome_saida)
-        registrar_coleta("ABVE", origem, destino, len(df), observacao="Filtro RMSP via municípios das Zonas OD 2023")
-        print(f"ABVE: {len(df):,} registros -> {destino}")
 
-    origem_modelos = localizar_primeiro(["ABVE/**/dados_limpos_14_ABVE_VENDAS_POR_MODELO.csv", "**/dados_limpos_14_ABVE_VENDAS_POR_MODELO.csv"])
-    if origem_modelos:
-        df = pd.read_csv(origem_modelos)
-        destino = salvar_csv(df, "14_ABVE_VENDAS_POR_MODELO.csv")
-        registrar_coleta("ABVE_MODELOS", origem_modelos, destino, len(df))
+def processar_abve() -> None:
+    """
+    Processa os arquivos da ABVE.
+
+    Arquivos utilizados:
+    1. abve_resumo_tecnologia.csv
+    2. dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv
+    3. dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv
+    4. abve_vendas_modelos.csv
+    5. dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv
+
+    Os arquivos municipais recebem o filtro da RMSP.
+    Os arquivos consolidados são mantidos sem esse filtro.
+    """
+
+    # Obtém a lista de municípios da Região Metropolitana
+    municipios = _municipios_rmsp()
+
+    # Arquivos de entrada e respectivos nomes de saída.
+    # O terceiro elemento indica se deve aplicar o filtro RMSP.
+
+    fontes = [
+        {
+            "nome_saida": "abve_resumo_tecnologia.csv",
+            "padroes": [
+                "ABVE/**/abve_resumo_tecnologia.csv",
+                "**/abve_resumo_tecnologia.csv"
+            ],
+            "filtrar_rmsp": False
+        },
+
+        {
+            "nome_saida": "15_ABVE_ELETROPOSTOS_RMSP.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv",
+                "**/dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv"
+            ],
+            "filtrar_rmsp": True
+        },
+
+        {
+            "nome_saida": "16_ABVE_VENDAS_MHEV_RMSP.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv",
+                "**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv"
+            ],
+            "filtrar_rmsp": True
+        },
+
+        {
+            # O arquivo 14 possui este nome na pasta:
+            # abve_vendas_modelos.csv
+            "nome_saida": "14_ABVE_VENDAS_POR_MODELO.csv",
+            "padroes": [
+                "ABVE/**/abve_vendas_modelos.csv",
+                "**/abve_vendas_modelos.csv"
+            ],
+            "filtrar_rmsp": False
+        },
+
+        {
+            "nome_saida": "17_ABVE_EVOLUCAO_ELETROPOSTOS_RMSP.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv",
+                "**/dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv"
+            ],
+            "filtrar_rmsp": True
+        }
+    ]
+
+    # Percorre todos os arquivos da ABVE
+    for fonte in fontes:
+
+        nome_saida = fonte["nome_saida"]
+        padroes = fonte["padroes"]
+
+        print(f"\nProcessando: {nome_saida}")
+
+        # Localiza o arquivo original
+        origem = localizar_primeiro(padroes)
+
+        # Verifica se o arquivo foi encontrado
+        if not origem:
+            print(f"ABVE: arquivo não localizado: {nome_saida}")
+            continue
+
+        # Lê o arquivo CSV
+        df = pd.read_csv(origem)
+
+        # Aplica o filtro da Região Metropolitana de São Paulo
+        # somente nos arquivos que possuem dados municipais.
+        if fonte["filtrar_rmsp"]:
+            df = _filtrar_rmsp(df, municipios)
+
+        # Salva o arquivo processado
+        destino = salvar_csv(df, nome_saida)
+
+        # Registra as informações da coleta
+        registrar_coleta(
+            "ABVE",
+            origem,
+            destino,
+            len(df),
+            observacao=(
+                "Filtro RMSP via municípios das Zonas OD 2023"
+                if fonte["filtrar_rmsp"]
+                else "Dados originais sem filtro municipal"
+            )
+        )
+
+        # Exibe o resultado
+        print(
+            f"ABVE: {len(df):,} registros -> {destino}"
+        )
+
+    print("\nProcessamento dos arquivos ABVE finalizado!")
+
 
 
 def processar_uber() -> None:
