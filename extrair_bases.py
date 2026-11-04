@@ -583,6 +583,296 @@ def processar_od() -> None:
 
 def processar_abve() -> None:
     """
+    Processa as bases da ABVE.
+
+    - Filtra por RMSP as bases que possuem dados municipais.
+    - Preserva bases nacionais e estaduais sem filtro municipal.
+    - Mantém separadas as vendas acumuladas e mensais.
+    - Registra a origem e a quantidade de registros processados.
+    """
+
+    municipios = _municipios_rmsp()
+
+    # ---------------------------------------------------------
+    # 1. CONFIGURAÇÃO DAS FONTES
+    # ---------------------------------------------------------
+
+    fontes = [
+        {
+            "saida": "abve_resumo_tecnologia.csv",
+            "padroes": [
+                "ABVE/**/abve_resumo_tecnologia.csv",
+                "**/abve_resumo_tecnologia.csv",
+            ],
+            "filtro_rmsp": True,
+            "observacao": "Resumo de tecnologias ABVE.",
+        },
+
+        {
+            "saida": "11_ABVE_VENDAS_MUNICIPIOS_RMSP.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_11_ABVE_VENDAS_MUNICIPIOS.csv",
+                "**/dados_limpos_11_ABVE_VENDAS_MUNICIPIOS.csv",
+            ],
+            "filtro_rmsp": True,
+            "observacao": "Vendas por município, filtradas para a RMSP.",
+        },
+
+        {
+            "saida": "14_ABVE_VENDAS_POR_MODELO.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_14_ABVE_VENDAS_POR_MODELO.csv",
+                "**/dados_limpos_14_ABVE_VENDAS_POR_MODELO.csv",
+            ],
+            "filtro_rmsp": False,
+            "observacao": (
+                "Vendas agregadas por modelo. "
+                "Sem dimensão temporal mensal."
+            ),
+        },
+
+        {
+            "saida": "abve_vendas_modelos.csv",
+            "padroes": [
+                "ABVE/**/abve_vendas_modelos.csv",
+                "**/abve_vendas_modelos.csv",
+            ],
+            "filtro_rmsp": False,
+            "observacao": "Base auxiliar de vendas por modelo.",
+        },
+
+        {
+            "saida": "15_ABVE_ELETROPOSTOS_RMSP.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv",
+                "**/dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv",
+            ],
+            "filtro_rmsp": True,
+            "observacao": (
+                "Distribuição de eletropostos por município, "
+                "filtrada para a RMSP."
+            ),
+        },
+
+        {
+            "saida": "16_ABVE_VENDAS_MHEV_BRASIL.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv",
+                "**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv",
+            ],
+            "filtro_rmsp": False,
+            "observacao": (
+                "Base nacional de vendas MHEV por município. "
+                "Mantida sem filtro RMSP."
+            ),
+        },
+
+        {
+            "saida": "17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv",
+                "**/dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv",
+            ],
+            "filtro_rmsp": False,
+            "observacao": (
+                "Série temporal de eletropostos em âmbito estadual (SP). "
+                "Não representa exclusivamente a RMSP."
+            ),
+        },
+
+        {
+            "saida": "14_ABVE_VENDAS_MODELOS_MENSAL_SP_2026.csv",
+            "padroes": [
+                "ABVE/**/dados_limpos_14_ABVE_VENDAS_MODELOS_MENSAL_SP_2026.csv",
+                "**/dados_limpos_14_ABVE_VENDAS_MODELOS_MENSAL_SP_2026.csv",
+            ],
+            "filtro_rmsp": False,
+            "mensal": True,
+            "observacao": (
+                "Vendas mensais por modelo, São Paulo capital, "
+                "janeiro a março de 2026. "
+                "Dados recuperados das capturas do Power BI."
+            ),
+        },
+    ]
+
+    # ---------------------------------------------------------
+    # 2. PROCESSAMENTO DAS FONTES
+    # ---------------------------------------------------------
+
+    for fonte in fontes:
+
+        nome_saida = fonte["saida"]
+        padroes = fonte["padroes"]
+        aplicar_filtro = fonte["filtro_rmsp"]
+
+        print(f"\nProcessando ABVE: {nome_saida}")
+
+        # Localiza o arquivo de origem
+        origem = localizar_primeiro(padroes)
+
+        if not origem:
+            print(
+                f"ABVE: fonte para {nome_saida} não localizada."
+            )
+            continue
+
+        try:
+            # Lê o CSV
+            df = pd.read_csv(origem)
+
+            if df.empty:
+                print(
+                    f"ABVE: arquivo vazio, ignorado: {origem}"
+                )
+                continue
+
+            # -------------------------------------------------
+            # 3. VALIDAÇÃO ESPECÍFICA DAS VENDAS MENSAIS
+            # -------------------------------------------------
+
+            if fonte.get("mensal", False):
+
+                colunas_obrigatorias = [
+                    "Ano",
+                    "Mes",
+                    "Data_Referencia",
+                    "Municipio",
+                    "Estado",
+                    "Modelo",
+                    "Fabricante",
+                    "Veiculos_Vendidos",
+                    "Part_Mercado_Pct",
+                ]
+
+                faltantes = [
+                    coluna
+                    for coluna in colunas_obrigatorias
+                    if coluna not in df.columns
+                ]
+
+                if faltantes:
+                    print(
+                        "ABVE: arquivo mensal não processado. "
+                        f"Colunas ausentes: {faltantes}"
+                    )
+                    continue
+
+                # Confere se Ano e Mes são numéricos
+                df["Ano"] = pd.to_numeric(
+                    df["Ano"],
+                    errors="coerce"
+                )
+
+                df["Mes"] = pd.to_numeric(
+                    df["Mes"],
+                    errors="coerce"
+                )
+
+                # Impede períodos inválidos
+                if (
+                    df["Ano"].isna().any()
+                    or df["Mes"].isna().any()
+                    or not df["Mes"].between(1, 12).all()
+                ):
+                    print(
+                        "ABVE: existem períodos inválidos "
+                        "na base mensal. Arquivo não processado."
+                    )
+                    continue
+
+                # A captura recuperada é da capital paulista
+                if not (
+                    df["Municipio"].astype(str).str.strip()
+                    .eq("São Paulo").all()
+                    and df["Estado"].astype(str).str.strip()
+                    .eq("SP").all()
+                ):
+                    print(
+                        "ABVE: abrangência geográfica inesperada "
+                        "na base mensal. Arquivo não processado."
+                    )
+                    continue
+
+            # -------------------------------------------------
+            # 4. FILTRO RMSP
+            # -------------------------------------------------
+
+            observacao = fonte["observacao"]
+
+            if aplicar_filtro:
+
+                # Só filtra se existir a coluna de município
+                if "Municipio" in df.columns:
+
+                    quantidade_antes = len(df)
+
+                    df = _filtrar_rmsp(
+                        df,
+                        municipios
+                    )
+
+                    quantidade_depois = len(df)
+
+                    observacao += (
+                        f" Filtro RMSP aplicado: "
+                        f"{quantidade_antes} registros originais; "
+                        f"{quantidade_depois} após o filtro."
+                    )
+
+                    if df.empty:
+                        print(
+                            f"ABVE: nenhum registro permaneceu "
+                            f"após o filtro RMSP em {nome_saida}."
+                        )
+                        continue
+
+                else:
+                    observacao += (
+                        " Sem filtro municipal: "
+                        "a fonte não possui coluna Municipio."
+                    )
+
+            # -------------------------------------------------
+            # 5. SALVAMENTO
+            # -------------------------------------------------
+
+            destino = salvar_csv(
+                df,
+                nome_saida
+            )
+
+            # -------------------------------------------------
+            # 6. REGISTRO DA COLETA
+            # -------------------------------------------------
+
+            registrar_coleta(
+                "ABVE",
+                origem,
+                destino,
+                len(df),
+                observacao=observacao
+            )
+
+            print(
+                f"ABVE concluído: "
+                f"{len(df):,} registros -> {destino}"
+            )
+
+        except Exception as erro:
+
+            print(
+                f"ERRO ao processar {nome_saida}: {erro}"
+            )
+
+    # ---------------------------------------------------------
+    # 7. FINALIZAÇÃO
+    # ---------------------------------------------------------
+
+    print("\n======================================")
+    print("PROCESSAMENTO ABVE FINALIZADO")
+    print("======================================")
+    """
     Processa os arquivos da ABVE.
 
     Arquivos utilizados:
