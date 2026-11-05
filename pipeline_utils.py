@@ -74,15 +74,16 @@ def sha256_arquivo(caminho: Path) -> str:
 
 
 def salvar_csv(df, nome_arquivo):
-    # O caminho do diretório e verificações já devem estar no seu código
-    from pathlib import Path
-    pasta_destino = Path("dados_limpos")
-    pasta_destino.mkdir(exist_ok=True)
-    
-    caminho = pasta_destino / nome_arquivo
-    
-    df.to_csv(caminho, index=False, encoding='utf-8-sig')
-    
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    caminho = OUTPUT_DIR / nome_arquivo
+
+    df.to_csv(
+        caminho,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
     return caminho
 
 def _origem_storage(origem_path: Path) -> str | None:
@@ -137,3 +138,51 @@ def registrar_coleta(
         if not existe:
             writer.writeheader()
         writer.writerow(linha)
+
+MAPA_COMBUSTIVEIS = {
+    # Categoria: Gasolina (Todos os motores puramente a combustão / flex / GNV tradicional)
+    "GASOLINA": "Gasolina",
+    "ALCOOL": "Gasolina",
+    "ALCOOL/GASOLINA": "Gasolina",
+    "ALCOOL/GAS NATURAL VEICULAR": "Gasolina",
+    "GASOLINA/ALCOOL/GAS NATURAL": "Gasolina",
+    "GASOLINA/GAS NATURAL VEICULAR": "Gasolina",
+    "GASOL/GAS NATURAL COMBUSTIVEL": "Gasolina",
+    "GASOGENIO": "Gasolina",
+    "GAS METANO": "Gasolina", 
+    
+    # Categoria: Híbrido (Veículos que combinam combustão + elétrico)
+    "HIBRIDO": "Híbrido",
+    "HIBRIDO PLUG-IN": "Híbrido",
+    "GASOLINA/ALCOOL/ELETRICO": "Híbrido",
+    "GASOLINA/ELETRICO": "Híbrido",
+
+    # Categoria: Elétrico (100% elétricos)
+    "ELETRICO/FONTE EXTERNA": "Elétrico",
+    "ELETRICO": "Elétrico",
+}
+
+def classificar_combustivel(valor):
+    """
+    Converte o combustível original do Senatran
+    em uma das três categorias da visualização.
+
+    Retorna None quando a classificação não estiver validada.
+    """
+
+    combustivel = normalizar_texto(valor)
+
+    if not combustivel:
+        return None
+
+    # A classificação definitiva deve usar os valores
+    # reais encontrados na planilha do Senatran.
+
+    if "HIBRIDO" in combustivel:
+        return "Híbrido"
+
+    if combustivel == "ELETRICO":
+        return "Elétrico"
+
+    # Não classificar automaticamente valores desconhecidos.
+    return MAPA_COMBUSTIVEIS.get(combustivel)

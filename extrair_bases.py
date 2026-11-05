@@ -22,7 +22,10 @@ def _filtrar_uf_sp(df: pd.DataFrame) -> pd.DataFrame:
         return df
     valores = df[coluna].astype(str).map(normalizar_texto)
     mascara = valores.isin({"SP", "SAO PAULO"})
-    return df.loc[mascara].copy() if mascara.any() else df
+    if not mascara.any():
+      raise ValueError("Nenhum registro de SP encontrado.")
+
+    return df.loc[mascara].copy()
 
 
 def _shape_zonas() -> Path | None:
@@ -204,15 +207,6 @@ def processar_ibge() -> None:
         print(f"IBGE SP: {len(gdf):,} registros -> {destino}")
     except Exception as exc:
         print(f"IBGE: erro ao processar: {exc}")
-
-
-
-def processar_inmetro() -> None:
-    # Procura o arquivo que contém a tabela organizada.
-
-    from pathlib import Path
-
-  
 
 def processar_inmetro() -> None:
 
@@ -400,13 +394,50 @@ def processar_senatran() -> None:
                     .eq("SP")
                 ].copy()
 
-            # TRATAMENTO DOS DEMAIS ARQUIVOS
             else:
                 df = pd.read_excel(origem)
                 df = _filtrar_uf_sp(df)
 
-            df["_arquivo_origem"] = origem.name
+            # Classificação específica da tabela de combustíveis.
+            if grupo == "combustivel":
+                coluna_combustivel = localizar_coluna(
+                    df,
+                    ["COMBUSTIVEL", "COMBUSTIVEL VEICULO"],
+                    contem=True,
+                )
 
+                if not coluna_combustivel:
+                    raise ValueError(
+                        f"Coluna de combustível não encontrada em {origem.name}. "
+                        f"Colunas disponíveis: {df.columns.tolist()}"
+                    )
+
+                # Diagnóstico dos valores originais.
+                print("\nCombustíveis encontrados:")
+                print(
+                    df[coluna_combustivel]
+                    .value_counts(dropna=False)
+                    .to_string()
+                )
+
+                # Preserva o combustível original.
+                df["combustivel_original"] = df[coluna_combustivel]
+
+                # Cria a categoria analítica.
+                from pipeline_utils import classificar_combustivel
+
+                df["categoria_visualizacao"] = (
+                    df[coluna_combustivel]
+                    .apply(classificar_combustivel)
+                )
+                # Mantém somente as três categorias desejadas.
+                df = df[
+                 df["categoria_visualizacao"].isin(
+                   ["Gasolina", "Híbrido", "Elétrico"]
+                   )
+                ].copy()
+
+            df["_arquivo_origem"] = origem.name
             grupos.setdefault(grupo, []).append(df)
 
         except Exception as exc:
@@ -864,131 +895,6 @@ def processar_abve() -> None:
             print(
                 f"ERRO ao processar {nome_saida}: {erro}"
             )
-
-    # ---------------------------------------------------------
-    # 7. FINALIZAÇÃO
-    # ---------------------------------------------------------
-
-    print("\n======================================")
-    print("PROCESSAMENTO ABVE FINALIZADO")
-    print("======================================")
-    """
-    Processa os arquivos da ABVE.
-
-    Arquivos utilizados:
-    1. abve_resumo_tecnologia.csv
-    2. dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv
-    3. dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv
-    4. abve_vendas_modelos.csv
-    5. dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv
-
-    Os arquivos municipais recebem o filtro da RMSP.
-    Os arquivos consolidados são mantidos sem esse filtro.
-    """
-
-    # Obtém a lista de municípios da Região Metropolitana
-    municipios = _municipios_rmsp()
-
-    # Arquivos de entrada e respectivos nomes de saída.
-    # O terceiro elemento indica se deve aplicar o filtro RMSP.
-
-    fontes = [
-        {
-            "nome_saida": "abve_resumo_tecnologia.csv",
-            "padroes": [
-                "ABVE/**/abve_resumo_tecnologia.csv",
-                "**/abve_resumo_tecnologia.csv"
-            ],
-            "filtrar_rmsp": False
-        },
-
-        {
-            "nome_saida": "15_ABVE_ELETROPOSTOS_RMSP.csv",
-            "padroes": [
-                "ABVE/**/dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv",
-                "**/dados_limpos_15_ABVE_ELETROPOSTOS_SP.csv"
-            ],
-            "filtrar_rmsp": True
-        },
-
-        {
-            "nome_saida": "16_ABVE_VENDAS_MHEV_RMSP.csv",
-            "padroes": [
-                "ABVE/**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv",
-                "**/dados_limpos_16_ABVE_VENDAS_MHEV_MUNICIPIOS.csv"
-            ],
-            "filtrar_rmsp": True
-        },
-
-        {
-            # O arquivo 14 possui este nome na pasta:
-            # abve_vendas_modelos.csv
-            "nome_saida": "14_ABVE_VENDAS_POR_MODELO.csv",
-            "padroes": [
-                "ABVE/**/abve_vendas_modelos.csv",
-                "**/abve_vendas_modelos.csv"
-            ],
-            "filtrar_rmsp": False
-        },
-
-        {
-            "nome_saida": "17_ABVE_EVOLUCAO_ELETROPOSTOS_RMSP.csv",
-            "padroes": [
-                "ABVE/**/dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv",
-                "**/dados_limpos_17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv"
-            ],
-            "filtrar_rmsp": True
-        }
-    ]
-
-    # Percorre todos os arquivos da ABVE
-    for fonte in fontes:
-
-        nome_saida = fonte["nome_saida"]
-        padroes = fonte["padroes"]
-
-        print(f"\nProcessando: {nome_saida}")
-
-        # Localiza o arquivo original
-        origem = localizar_primeiro(padroes)
-
-        # Verifica se o arquivo foi encontrado
-        if not origem:
-            print(f"ABVE: arquivo não localizado: {nome_saida}")
-            continue
-
-        # Lê o arquivo CSV
-        df = pd.read_csv(origem)
-
-        # Aplica o filtro da Região Metropolitana de São Paulo
-        # somente nos arquivos que possuem dados municipais.
-        if fonte["filtrar_rmsp"]:
-            df = _filtrar_rmsp(df, municipios)
-
-        # Salva o arquivo processado
-        destino = salvar_csv(df, nome_saida)
-
-        # Registra as informações da coleta
-        registrar_coleta(
-            "ABVE",
-            origem,
-            destino,
-            len(df),
-            observacao=(
-                "Filtro RMSP via municípios das Zonas OD 2023"
-                if fonte["filtrar_rmsp"]
-                else "Dados originais sem filtro municipal"
-            )
-        )
-
-        # Exibe o resultado
-        print(
-            f"ABVE: {len(df):,} registros -> {destino}"
-        )
-
-    print("\nProcessamento dos arquivos ABVE finalizado!")
-
-
 
 def processar_uber() -> None:
     origem = localizar_primeiro(["UBER/modelos_carros_uber.html", "UBER/**/*.html", "UBER/**/*.mht"])
