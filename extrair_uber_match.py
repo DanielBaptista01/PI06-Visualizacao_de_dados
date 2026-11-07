@@ -11,7 +11,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from pipeline_utils import OUTPUT_DIR, ROOT, registrar_coleta
+from pipeline_utils import CACHE_DIR, OUTPUT_DIR, ROOT, registrar_coleta
 
 BASE_URL = "https://earn.uber.com"
 PASTA_PADRAO = ROOT / "UBER_MATCH"
@@ -838,11 +838,7 @@ def coletar(
         )
         return indice
 
-    pasta_detalhes = (
-        pasta
-        / date.today().isoformat()
-        / "detalhes"
-    )
+    pasta_detalhes = CACHE_DIR / "uber_match_detalhes"
     pasta_detalhes.mkdir(
         parents=True,
         exist_ok=True,
@@ -949,13 +945,77 @@ def coletar(
                 f"{url} -> {exc}"
             )
 
+    
     df = pd.DataFrame(registros)
+
     destino = OUTPUT_DIR / ARQUIVO_SAIDA
+    caminho_falhas = OUTPUT_DIR / ARQUIVO_FALHAS
+
+    # Registra falhas sem destruir a tabela anterior.
+    if falhas:
+        pd.DataFrame(falhas).to_csv(
+            caminho_falhas,
+            index=False,
+            encoding="utf-8-sig",
+        )
+
+    if len(df) != len(indice):
+        raise RuntimeError(
+            "Uber Match: processamento incompleto. "
+            f"Indexadas={len(indice)}, processadas={len(df)}. "
+            "CSV anterior preservado; consulte o arquivo de falhas."
+        )
+
+    if df.empty:
+        raise RuntimeError(
+            "Uber Match: nenhuma oferta processada."
+        )
+
+    chave = "id_publico_oferta"
+
+    if df[chave].isna().any() or df[chave].duplicated().any():
+        raise ValueError(
+            "Uber Match: IDs ausentes ou duplicados."
+        )
+
+    obrigatorias = [
+        "url_oferta",
+        "tipo_oferta_fonte",
+        "locadora",
+        "veiculo",
+        "status_qualidade",
+        "apto_modelo_economico",
+    ]
+
+    ausentes = [c for c in obrigatorias if c not in df.columns]
+    if ausentes:
+        raise ValueError(
+            f"Uber Match: colunas ausentes: {ausentes}"
+        )
+
+    # Garante que a classificação de qualidade não fique vazia.
+    if df["status_qualidade"].isna().any():
+        raise ValueError(
+            "Uber Match: existem ofertas sem status de qualidade."
+        )
+
+    # Preserva um snapshot anterior antes de publicar nova coleta.
+    if destino.exists():
+        backup = CACHE_DIR / "uber_match_ofertas_anterior.csv"
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+        if not backup.exists():
+            import shutil
+            shutil.copy2(destino, backup)
+
+    temporario = destino.with_suffix(".tmp")
     df.to_csv(
-        destino,
+        temporario,
         index=False,
         encoding="utf-8-sig",
     )
+    temporario.replace(destino)
+
 
     caminho_falhas = OUTPUT_DIR / ARQUIVO_FALHAS
     if falhas:

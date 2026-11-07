@@ -139,13 +139,29 @@ def planejar_fonte(fonte: FonteStorage) -> tuple[list[tuple[str, str]], str | No
     for obj in selecionados:
         chave = str(obj["Key"])
         relativo = _relativo(chave, fonte.prefixo)
+
         if not relativo:
             continue
-        _destino_seguro(Path(tempfile.gettempdir()), fonte, relativo)
-        if chave in chaves_vistas:
-            raise ValueError(f"Chave duplicada na listagem: {chave}")
-        chaves_vistas.add(chave)
-        plano.append((chave, relativo))
+
+        # Uber Match: ignora recursos auxiliares de HTML salvo.
+        # O extrator utiliza os documentos HTML, não imagens/CSS.
+        partes = relativo.replace("\\", "/").split("/")
+
+        if fonte.codigo == "uber_match":
+            if any(
+                parte.lower().endswith("_files")
+                for parte in partes[:-1]
+            ):
+                continue
+
+            # Mantém apenas HTMLs do Uber Match.
+            if not relativo.lower().endswith(".html"):
+                continue
+            _destino_seguro(Path(tempfile.gettempdir()), fonte, relativo)
+            if chave in chaves_vistas:
+                raise ValueError(f"Chave duplicada na listagem: {chave}")
+            chaves_vistas.add(chave)
+            plano.append((chave, relativo))
     if not plano:
         raise RuntimeError(f"Nenhum arquivo valido para {fonte.codigo}")
     return plano, ref
