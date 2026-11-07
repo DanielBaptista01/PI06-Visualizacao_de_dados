@@ -286,6 +286,7 @@ def atualizar_precos(forcar_mapeamento: bool = False) -> pd.DataFrame:
     else:
         feitos = set()
     cliente = ClienteFipe()
+    referencia_alvo = None
 
     for i, (_, row) in enumerate(validos.iterrows(), start=1):
         chave = f"{row['brand_id']}:{row['model_id']}:{row['year_code']}"
@@ -303,6 +304,18 @@ def atualizar_precos(forcar_mapeamento: bool = False) -> pd.DataFrame:
             print(f"FIPE [{i}/{len(validos)}] resposta inconsistente: {chave}")
             continue
 
+        mes_resposta = str(info["referenceMonth"]).strip()
+
+        if referencia_alvo is None:
+            referencia_alvo = mes_resposta
+        elif mes_resposta != referencia_alvo:
+            print(
+                "A referência FIPE mudou: "
+                f"{referencia_alvo} -> {mes_resposta}. "
+                "Coleta interrompida para não misturar meses."
+            )
+            break
+        
         novo = pd.DataFrame([{
             "chave": chave, "brand_id": row["brand_id"], "model_id": row["model_id"],
             "year_code": row["year_code"], "criterio_ano": row["criterio_ano"],
@@ -348,9 +361,7 @@ def coletar_precos_catalogados(
         "dados_relatorios/fipe_anos_catalogados_2026.csv"
     )
     checkpoint_path = CACHE_DIR / "fipe_precos_catalogados_checkpoint.csv"
-    saida = Path(
-        "dados_relatorios/fipe_precos_catalogados_parcial_2026.csv"
-    )
+    saida = OUTPUT_DIR / "08_FIPE_VEICULOS_PARCIAL.csv"
 
     if not origem.exists():
         raise FileNotFoundError(f"Catálogo não encontrado: {origem}")
@@ -406,15 +417,35 @@ def coletar_precos_catalogados(
 
     hoje = date.today().isoformat()
 
-    ja_coletados_hoje = set(
+    # Identifica o mês de referência presente no checkpoint.
+    meses = (
+        historico["mes_referencia"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .unique()
+        .tolist()
+    )
+
+    if len(meses) > 1:
+        raise ValueError(
+            "O checkpoint contém mais de um mês FIPE. "
+            "É necessário selecionar a referência antes da coleta."
+        )
+
+    referencia_alvo = meses[0] if meses else None
+
+    ja_coletados_referencia = set(
         map(
             tuple,
             historico.loc[
-                historico["data_coleta"] == hoje,
+                historico["mes_referencia"].eq(referencia_alvo),
                 colunas_chave,
             ].to_numpy(),
         )
-    )
+    ) if referencia_alvo is not None else set()
+
+    print(f"Referência FIPE: {referencia_alvo or 'a identificar'}")
 
     cliente = ClienteFipe()
     novas_linhas = []
@@ -424,7 +455,7 @@ def coletar_precos_catalogados(
     for _, registro in anos.iterrows():
         chave = tuple(str(registro[c]) for c in colunas_chave)
 
-        if chave in ja_coletados_hoje:
+        if chave in ja_coletados_referencia:
             continue
 
         if requisicoes >= limite_requisicoes:
@@ -482,7 +513,7 @@ def coletar_precos_catalogados(
             }
 
             novas_linhas.append(novo)
-            ja_coletados_hoje.add(chave)
+            ja_coletados_referencia.add(chave)
 
             # Salva cada resultado, permitindo retomada segura.
             historico = pd.concat(
@@ -510,8 +541,13 @@ def coletar_precos_catalogados(
 
     # Exporta apenas uma cotação por chave no dia de referência.
     atual = historico.loc[
-        historico["data_coleta"] == hoje
-    ].drop_duplicates(colunas_chave, keep="last").copy()
+    historico["mes_referencia"].eq(referencia_alvo)
+    ].sort_values(
+    "data_coleta"
+    ).drop_duplicates(
+    colunas_chave,
+    keep="last"
+    ).copy()
 
     saida.parent.mkdir(parents=True, exist_ok=True)
     atual.to_csv(saida, index=False, encoding="utf-8-sig")
@@ -559,8 +595,6 @@ def main() -> None:
         default=50,
         help="Máximo de requisições de preço nesta execução."
     )
-
-    args = parser.parse_args()
 
     args = parser.parse_args()
     if args.precos_catalogados:
