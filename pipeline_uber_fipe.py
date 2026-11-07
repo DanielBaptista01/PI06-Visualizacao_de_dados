@@ -383,13 +383,16 @@ def main() -> None:
             limite_requisicoes=args.limite_requisicoes,
         )
 
-def catalogar_anos_fipe(
-    dados: pd.DataFrame,
-    limite_requisicoes: int = 50,
-) -> None:
-    """Consulta anos disponíveis na FIPE sem aprovar elegibilidade Uber."""
 
+
+def catalogar_anos_fipe(dados: pd.DataFrame, limite_requisicoes: int = 50) -> None:
+    """Cataloga anos FIPE com cache recuperável e saída auditável.
+
+    Não comprova elegibilidade Uber e não consulta preços.
+    """
     import json
+    import os
+    import tempfile
     import time
     from pathlib import Path
 
@@ -399,115 +402,215 @@ def catalogar_anos_fipe(
         raise ValueError("O limite de requisições não pode ser negativo.")
 
     cache_path = Path("dados_cache/fipe_catalogo.json")
-    saida_path = Path(
-        "dados_relatorios/fipe_anos_catalogados_2026.csv"
-    )
+    pendente_antigo = cache_path.with_suffix(".tmp")
+    saida_path = Path("dados_relatorios/fipe_anos_catalogados_2026.csv")
 
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     saida_path.parent.mkdir(parents=True, exist_ok=True)
 
+    def ler_json(caminho: Path) -> dict:
+        with caminho.open("r", encoding="utf-8") as arquivo:
+            obj = json.load(arquivo)
+
+        if not isinstance(obj, dict) or not isinstance(
+            obj.get("years"), dict
+        ):
+            raise ValueError(f"Catálogo inválido: {caminho}")
+
+        return obj
+
+    def salvar_com_seguranca(obj: dict) -> None:
+        # Cria arquivo temporário exclusivo na mesma pasta do cache.
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            suffix=".tmp",
+            prefix="fipe_catalogo_",
+            dir=cache_path.parent,
+            delete=False,
+        ) as arquivo:
+            nome_temp = Path(arquivo.name)
+            json.dump(obj, arquivo, ensure_ascii=False)
+            arquivo.flush()
+            os.fsync(arquivo.fileno())
+
+        for tentativa in range(5):
+            try:
+                os.replace(nome_temp, cache_path)
+                return
+            except PermissionError as erro:
+                if tentativa == 4:
+                    raise PermissionError(
+                        f"Windows bloqueou {cache_path}. "
+                        f"Dados pendentes preservados em {nome_temp}. "
+                        "Feche programas que estejam usando o JSON."
+                    ) from erro
+
+                time.sleep(1 + tentativa)
+
     if cache_path.exists():
-        with cache_path.open("r", encoding="utf-8") as arquivo:
-            cache = json.load(arquivo)
+        cache = ler_json(cache_path)
     else:
         cache = {"brands": None, "models": {}, "years": {}}
 
-    cache.setdefault("years", {})
+    # Recupera gravações interrompidas.
+    pendentes = (
+        [pendente_antigo] if pendente_antigo.exists() else []
+    )
+    pendentes += sorted(
+        cache_path.parent.glob("fipe_catalogo_*.tmp")
+    )
 
-    # Consultar apenas versões associadas a uma categoria
-    # efetivamente listada na fonte Uber.
-    candidatas = dados.loc[
-    dados["status_categoria"].eq("pendente")
-    & dados["status_identidade"].eq("candidato_coerente")
-   ].copy()
+    if pendentes:
+        recuperacoes = 0
 
-    versoes = candidatas[
-        ["brand_id", "model_id"]
-    ].drop_duplicates()
+        for temporario in pendentes:
+            recuperado = ler_json(temporario)
 
-    sessao = requests.Session()
-    requisicoes = 0
-    encontrados_cache = 0
-    erros = 0
+            for chave, anos in recuperado["years"].items():
+                if chave not in cache["years"]:
+                    cache["years"][chave] = anos
+                    recuperacoes += 1
 
-    for row in versoes.itertuples(index=False):
-        brand_id = str(row.brand_id)
-        model_id = str(row.model_id)
-        chave = f"{brand_id}:{model_id}"
+        if recuperacoes:
+            salvar_com_seguranca(cache)
 
-        if chave in cache["years"]:
-            encontrados_cache += 1
-            continue
+        for temporario in pendentes:
+            temporario.unlink(missing_ok=True)
 
-        if requisicoes >= limite_requisicoes:
-            break
-
-        url = (
-            "https://fipe.parallelum.com.br/api/v2/cars"
-            f"/brands/{brand_id}/models/{model_id}/years"
+        print(
+            f"Recuperadas {recuperacoes} versões "
+            "de gravações pendentes."
         )
 
-        try:
-            resposta = sessao.get(url, timeout=25)
-            requisicoes += 1
+    obrigatorias = {
+        "status_categoria",
+        "status_identidade",
+        "brand_id",
+        "model_id",
+        "marca_uber",
+        "modelo_uber",
+        "categoria_uber",
+        "modelo_fipe",
+        "ano_min_fabricacao_regra",
+    }
 
-            if resposta.status_code == 429:
-                print("Limite da API atingido. Coleta interrompida.")
+    faltantes = obrigatorias - set(dados.columns)
+    if faltantes:
+        raise ValueError(
+            f"Colunas ausentes: {sorted(faltantes)}"
+        )
+
+    candidatas = dados.loc[
+        dados["status_categoria"].eq("pendente")
+        & dados["status_identidade"].eq("candidato_coerente")
+    ].copy()
+
+    chaves = ["brand_id", "model_id"]
+    versoes = candidatas[chaves].drop_duplicates()
+
+    if versoes[chaves].isna().any().any():
+        raise ValueError(
+            "Candidatos com identificadores FIPE ausentes."
+        )
+
+    requisicoes = 0
+    encontrados = 0
+    erros = 0
+
+    sessao = requests.Session()
+
+    try:
+        for row in versoes.itertuples(index=False):
+            chave = f"{row.brand_id}:{row.model_id}"
+
+            if chave in cache["years"]:
+                encontrados += 1
+                continue
+
+            if requisicoes >= limite_requisicoes:
                 break
 
-            resposta.raise_for_status()
-            anos = resposta.json()
+            url = (
+                "https://fipe.parallelum.com.br/api/v2/cars"
+                f"/brands/{row.brand_id}/models/{row.model_id}/years"
+            )
 
-            if not isinstance(anos, list):
-                raise ValueError("Resposta FIPE não contém lista de anos.")
+            try:
+                resposta = sessao.get(url, timeout=25)
+                requisicoes += 1
 
-            cache["years"][chave] = anos
+                if resposta.status_code == 429:
+                    print(
+                        "Limite da API atingido. "
+                        "Coleta interrompida."
+                    )
+                    break
 
-            temporario = cache_path.with_suffix(".tmp")
-            with temporario.open("w", encoding="utf-8") as arquivo:
-                json.dump(cache, arquivo, ensure_ascii=False)
+                resposta.raise_for_status()
+                anos = resposta.json()
 
-            temporario.replace(cache_path)
-            time.sleep(0.25)
+                if not isinstance(anos, list) or any(
+                    not isinstance(item, dict)
+                    or not item.get("code")
+                    for item in anos
+                ):
+                    raise ValueError(
+                        f"Resposta de anos inválida: {chave}"
+                    )
 
-        except (requests.RequestException, ValueError) as erro:
-            erros += 1
-            print(f"Erro ao consultar {chave}: {erro}")
+                # Só atualiza o catálogo principal depois
+                # que a gravação em disco for bem-sucedida.
+                proposta = dict(cache)
+                proposta["years"] = dict(cache["years"])
+                proposta["years"][chave] = anos
+
+                salvar_com_seguranca(proposta)
+                cache = proposta
+
+                time.sleep(0.25)
+
+            except (requests.RequestException, ValueError) as erro:
+                erros += 1
+                print(f"Falha ao consultar {chave}: {erro}")
+
+    finally:
+        sessao.close()
 
     registros = []
 
     for row in candidatas.itertuples(index=False):
         chave = f"{row.brand_id}:{row.model_id}"
 
+        limite = pd.to_numeric(
+            row.ano_min_fabricacao_regra,
+            errors="coerce",
+        )
+
         for item in cache["years"].get(chave, []):
             codigo = str(item.get("code", ""))
-            ano_texto = codigo.split("-")[0]
+            prefixo = codigo.split("-")[0]
 
-            ano_modelo = (
-                int(ano_texto)
-                if ano_texto.isdigit() and len(ano_texto) == 4
+            ano = (
+                int(prefixo)
+                if len(prefixo) == 4 and prefixo.isdigit()
                 else None
             )
 
-            limite = pd.to_numeric(
-                row.ano_min_fabricacao_regra,
-                errors="coerce"
-            )
-
-            if codigo.split("-")[0] == "32000":
-                ano_modelo = None
+            if prefixo == "32000":
+                ano = None
                 situacao = "zero_km"
 
-            elif ano_modelo is None:
+            elif ano is None:
                 situacao = "codigo_ano_desconhecido"
 
             elif pd.isna(limite):
                 situacao = "ano_minimo_ausente"
 
-            elif ano_modelo > 2026:
+            elif ano > 2026:
                 situacao = "ano_modelo_futuro"
 
-            elif ano_modelo < limite:
+            elif ano < limite:
                 situacao = "anterior_ao_limite_de_estudo"
 
             else:
@@ -517,45 +620,58 @@ def catalogar_anos_fipe(
                 "marca_uber": row.marca_uber,
                 "modelo_uber": row.modelo_uber,
                 "categoria_uber": row.categoria_uber,
-                "brand_id": row.brand_id,
-                "model_id": row.model_id,
+                "brand_id": str(row.brand_id),
+                "model_id": str(row.model_id),
                 "modelo_fipe": row.modelo_fipe,
                 "year_code": codigo,
-                "ano_modelo_fipe": ano_modelo,
+                "ano_modelo_fipe": ano,
                 "ano_min_fabricacao_regra": limite,
                 "status_ano_catalogo": situacao,
                 "elegibilidade_uber_confirmada": False,
             })
 
-    resultado = pd.DataFrame(registros)
+    colunas = [
+        "marca_uber", "modelo_uber", "categoria_uber",
+        "brand_id", "model_id", "modelo_fipe",
+        "year_code", "ano_modelo_fipe",
+        "ano_min_fabricacao_regra", "status_ano_catalogo",
+        "elegibilidade_uber_confirmada",
+    ]
 
-    if not resultado.empty:
-        chaves = [
-            "marca_uber",
-            "modelo_uber",
-            "categoria_uber",
-            "brand_id",
-            "model_id",
-            "year_code",
-        ]
+    resultado = pd.DataFrame(registros, columns=colunas)
 
-        if resultado.duplicated(chaves).any():
-            raise ValueError("Foram encontrados anos FIPE duplicados.")
+    chave_linha = [
+        "marca_uber", "modelo_uber", "categoria_uber",
+        "brand_id", "model_id", "year_code",
+    ]
+
+    if resultado.duplicated(chave_linha).any():
+        raise ValueError(
+            "Foram encontrados anos FIPE duplicados."
+        )
 
     resultado.to_csv(
         saida_path,
         index=False,
-        encoding="utf-8-sig"
+        encoding="utf-8-sig",
     )
 
-    print(f"Versões distintas na fila: {len(versoes)}")
-    print(f"Encontradas no cache: {encontrados_cache}")
+    faltam = len(versoes) - sum(
+        f"{row.brand_id}:{row.model_id}" in cache["years"]
+        for row in versoes.itertuples(index=False)
+    )
+
+    print(f"Versões na fila: {len(versoes)}")
+    print(f"Encontradas no cache: {encontrados}")
     print(f"Novas requisições: {requisicoes}")
     print(f"Erros: {erros}")
+    print(f"Versões sem catálogo: {faltam}")
     print(f"Linhas de anos catalogados: {len(resultado)}")
     print(f"Arquivo gerado: {saida_path}")
-    print("ATENÇÃO: os anos FIPE não comprovam elegibilidade Uber.")
-
+    print(
+        "ATENÇÃO: anos FIPE não comprovam "
+        "elegibilidade Uber."
+    )
 
 if __name__ == '__main__':
     main()

@@ -60,3 +60,47 @@ Antes da migração completa, cada pasta de fonte deve receber uma ficha com:
 - tabela PostgreSQL/PostGIS correspondente, quando definida.
 
 A migração deve começar por uma fonte pequena, em modo `--dry-run`, e só depois avançar para bases maiores.
+
+
+## Situação da base FIPE — novembro de 2026
+
+**Status:** coleta parcial validada estruturalmente.
+
+### Origem
+- Fonte de consulta: API FIPE Parallelum v2.
+- Referência dos preços: novembro de 2026.
+- Arquivo tratado: `dados_limpos/08_FIPE_VEICULOS_PARCIAL.csv`.
+- Histórico: `dados_cache/fipe_precos_catalogados_checkpoint.csv`.
+- Catálogo: `dados_cache/fipe_catalogo.json`.
+
+### Cobertura
+- Versões candidatas coerentes identificadas: 4.969.
+- Versões sem catálogo de anos: 56.
+- Combinações versão/ano no recorte: 6.954.
+- Combinações com preço: 489.
+- Combinações sem preço: 6.465.
+- Cobertura do recorte catalogado: 7,03%.
+
+### Qualidade
+- Duplicatas nas combinações coletadas: 0.
+- Identificadores ausentes: 0.
+- Campos obrigatórios ausentes: 0.
+- Preços inválidos na validação monetária: 0.
+- Referência mensal: novembro de 2026.
+
+### Limitações
+A coleta foi interrompida devido à limitação de acesso
+à API. A base não representa o universo completo de
+veículos ou versões FIPE.
+
+A associação entre modelos Uber e FIPE é preliminar.
+Os preços não comprovam elegibilidade para categorias
+UberX, Comfort, Black ou Electric.
+
+Os registros faltantes não são convertidos em zero.
+
+### Situação da entrega
+A base FIPE parcial está disponível para análises
+exploratórias, desde que a cobertura limitada seja
+informada e que não sejam feitas generalizações
+estatísticas para todo o universo de veículos.

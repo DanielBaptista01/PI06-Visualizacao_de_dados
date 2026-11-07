@@ -36,6 +36,8 @@ class ClienteFipe:
                 resposta = self.session.get(url, timeout=20)
                 self.ultima = time.monotonic()
                 if resposta.status_code == 429:
+                    if tentativa == self.tentativas - 1:
+                        resposta.raise_for_status()
                     time.sleep(min(30, 2 ** tentativa))
                     continue
                 resposta.raise_for_status()
@@ -529,16 +531,40 @@ def coletar_precos_catalogados(
                 encoding="utf-8-sig",
             )
 
-        except (requests.RequestException, ValueError) as exc:
+        except requests.HTTPError as exc:
             falhas += 1
-            print(f"Falha FIPE {chave}: {exc}")
+            status = (
+                exc.response.status_code
+                if exc.response is not None
+                else None
+            )
 
-            if isinstance(exc, requests.HTTPError):
-                resposta = exc.response
-                if resposta is not None and resposta.status_code == 429:
-                    print("Cota da API atingida. Interrompendo coleta.")
-                    break
+            print(
+                f"Falha HTTP FIPE {chave}: "
+                f"status={status} | {exc}"
+            )
 
+            if status == 429:
+                print(
+                    "Limite de requisições atingido. "
+                    "Checkpoint preservado. "
+                    "Interrompendo este lote."
+                )
+                break
+        except requests.RequestException as exc:
+            falhas += 1
+            print(f"Falha de conexão FIPE {chave}: {exc}")
+            break
+
+        except ValueError as exc:
+            falhas += 1
+            print(f"Resposta FIPE inválida {chave}: {exc}")
+            continue
+
+        except RuntimeError as exc:
+            falhas += 1
+            print(f"Erro FIPE {chave}: {exc}")
+            break
     # Exporta apenas uma cotação por chave no dia de referência.
     atual = historico.loc[
     historico["mes_referencia"].eq(referencia_alvo)
