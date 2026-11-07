@@ -190,33 +190,49 @@ def processar_anp() -> None:
     print(f"ANP: {len(df):,} registros -> {destino}")
     
 def processar_ibge() -> None:
-    origem = localizar_primeiro(["IBGE*/**/*.shp", "IBGE*/**/*.dbf", "**/*.shp"])
-    if not origem:
-        print("IBGE: arquivo não encontrado.")
-        return
-    try:
-        import geopandas as gpd
-        gdf = gpd.read_file(origem)
-        if "geometry" in gdf.columns:
-            gdf = pd.DataFrame(gdf.drop(columns="geometry"))
-       
-        destino = salvar_csv(gdf, "04_IBGE_SP.csv")
-        registrar_coleta("IBGE_SP", origem, destino, len(gdf), observacao="Tratamento de vazios em concentração urbana")
-        print(f"IBGE SP: {len(gdf):,} registros -> {destino}")
-    except Exception as exc:
-        print(f"IBGE: erro ao processar: {exc}")
+    origem = localizar_primeiro([
+        "IBGE*/**/*.shp",
+        "IBGE*/**/*.dbf",
+    ])
+
+    if origem is None:
+        raise FileNotFoundError(
+            "IBGE: Shapefile ou DBF não encontrado."
+        )
+
+    import geopandas as gpd
+
+    gdf = gpd.read_file(origem)
+    df = pd.DataFrame(
+        gdf.drop(columns="geometry", errors="ignore")
+    )
+
+    destino = salvar_csv(df, "04_IBGE_SP.csv")
+
+    registrar_coleta(
+        "IBGE_SP",
+        origem,
+        destino,
+        len(df),
+        observacao="Atributos da base geográfica IBGE",
+    )
+
+    print(f"IBGE: {len(df)} registros -> {destino}")
 
 def processar_inmetro() -> None:
 
-    PASTA_INMETRO = (
-        Path(__file__).resolve().parent
-        / "INMETRO"
-    )
+    escolhido = localizar_primeiro([
+        "INMETRO/**/dados-inmetro-organizado.xlsx",
+        "INMETRO/**/dados-inmetro.xlsx",
+    ])
 
-    escolhido = (
-        PASTA_INMETRO
-        / "dados-inmetro-organizado.xlsx"
-    )
+    if escolhido is None:
+        raise FileNotFoundError(
+            "INMETRO: planilha não encontrada na origem selecionada."
+        )
+
+    print(f"INMETRO: fonte selecionada: {escolhido}")
+
 
     if not escolhido.exists():
         print(f"INMETRO: arquivo não encontrado: {escolhido}")
@@ -226,7 +242,7 @@ def processar_inmetro() -> None:
 
     df = pd.read_excel(
         escolhido,
-        sheet_name="Dados_organizados",
+        sheet_name="Dados-inmetro-organizado",
         dtype=object,
     )
 
@@ -237,7 +253,7 @@ def processar_inmetro() -> None:
     # Lê a tabela já organizada.
     df = pd.read_excel(
         escolhido,
-        sheet_name="Dados_organizados",
+        sheet_name="Dados-inmetro-organizado",
         dtype=object,
     )
 
@@ -946,16 +962,31 @@ def processar_uber() -> None:
 
 def executar_bases() -> None:
     tarefas = [
-        processar_aneel, processar_anp, processar_ibge, processar_inmetro,
-        processar_senatran, processar_od, processar_abve, processar_uber,
+        processar_aneel,
+        processar_anp,
+        processar_ibge,
+        processar_inmetro,
+        processar_senatran,
+        processar_od,
+        processar_abve,
+        processar_uber,
     ]
+
+    falhas = []
+
     for tarefa in tarefas:
         print(f"\n=== {tarefa.__name__} ===")
+
         try:
             tarefa()
         except Exception as exc:
-            print(f"Falha em {tarefa.__name__}: {exc}")
+            falhas.append(f"{tarefa.__name__}: {exc}")
+            print(f"[ERRO] {tarefa.__name__}: {exc}")
 
+    if falhas:
+        raise RuntimeError(
+            "O processamento de bases terminou com falhas:\n"
+            + "\n".join(falhas)
+        )
 
-if __name__ == "__main__":
-    executar_bases()
+    print("\nProcessamento concluído sem exceções nas tarefas.")
