@@ -1,0 +1,14 @@
+{
+  "gerado_em_utc": "2026-11-07T16:19:13.247756+00:00",
+  "versao_tabelas_mestres": "20261107T150640Z_fd637316",
+  "cenarios_total": 3,
+  "cenarios_completos": 0,
+  "observacoes": [
+    "Não é lucro observado: modelo condicional aos parâmetros declarados.",
+    "Receita é em R$/hora online, não em hora de corrida.",
+    "Análise de sensibilidade varia receita, mantendo custos fixos.",
+    "Apenas cenários com todos os campos obrigatórios recebem resultado final.",
+    "Custos fixos/variáveis são uma classificação para análise, não novos valores de fonte.",
+    "Impostos sobre a atividade e custo de oportunidade podem permanecer fora do modelo."
+  ]
+}

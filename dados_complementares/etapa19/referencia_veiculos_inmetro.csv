@@ -1,0 +1,972 @@
+﻿veiculo_id_inmetro,marca,modelo,versao,tipo_propulsao,consumo_energetico_mj_km_num,consumo_eletrico_kwh_km_referencia,observacao
+INMETRO:1,BYD,DOLPHIN MINI,GS EV,Elétrico,0.41,0.11388888888888887,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:2,BYD,DOLPHIN MINI,GS 5 EV,Elétrico,0.41,0.11388888888888887,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:3,BYD,DOLPHIN MINI,GL 5 EV,Elétrico,0.39,0.10833333333333334,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:4,FIAT,500E,ICON,Elétrico,0.46,0.12777777777777777,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:5,FIAT,MOBI,TREKKING,Combustão,1.46,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:6,FIAT,MOBI,LIKE,Combustão,1.4,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:7,JAC,e-JS1,e-JS1,Elétrico,0.5,0.1388888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:8,JAC,e-JS1,e-JS1 EXT,Elétrico,0.5,0.1388888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:9,RENAULT,E-KWID,INTENS,Elétrico,0.44,0.12222222222222222,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:10,FIAT,ARGO,1.0,Combustão,1.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:11,FIAT,ARGO,DRIVE 1.0,Combustão,1.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:12,FIAT,ARGO,DRIVE 1.3 AT,Combustão,1.58,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:13,Hyundai,HB20,Sense,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:14,Hyundai,HB20,Comfort,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:15,Hyundai,HB20,Limited,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:16,Hyundai,HB20,Limited,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:17,Hyundai,HB20,Platinum,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:18,MINI,Cooper,E,Elétrico,0.46,0.12777777777777777,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:19,MINI,Cooper,SE,Elétrico,0.48,0.13333333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:20,MINI,JCW,3P,Combustão,1.81,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:21,MINI,Cooper,S CABRIO,Combustão,1.73,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:22,MINI,JCW,CABRIO,Combustão,1.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:23,MINI,JCW-E,3P,Elétrico,0.48,0.13333333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:24,MINI,Cooper,S 3P EXCLUSIVE,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:25,MINI,Cooper,S 3P SPORT,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:26,MINI,Cooper,S 3P TOP,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:27,PEUGEOT,208,ACTIVE MT,Combustão,1.49,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:28,PEUGEOT,208,ACTIV T200,Combustão,1.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:29,PEUGEOT,208,STYLE MT,Combustão,1.49,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:30,PEUGEOT,208,ALLUR T200,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:31,PEUGEOT,208,GT T200,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:32,PEUGEOT,208,GT HYBRID,Híbrido,1.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:33,PEUGEOT,E-208,GT,Elétrico,0.59,0.1638888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:34,AUDI,A3 Spotback,Peformance,Combustão,1.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:35,AUDI,A3 Spotback,Performance Black,Combustão,1.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:36,BMW,M135,xDrive,Combustão,2.02,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:37,BYD,DOLPHIN,GS 180EV,Elétrico,0.42,0.11666666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:38,BYD,DOLPHIN,PLUS 310EV,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:39,BYD,DOLPHIN,SE 290EV,Elétrico,0.49,0.1361111111111111,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:40,BYD,YUAN PRO,GS 290EV,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:41,CHEVROLET,ONIX,LTZ,Combustão,1.59,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:42,CHEVROLET,ONIX,PREMIER,Combustão,1.59,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:43,CHEVROLET,ONIX,RS,Combustão,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:44,CHEVROLET,ONIX,MT,Combustão,1.38,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:45,CHEVROLET,ONIX,LT,Combustão,1.59,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:46,CHEVROLET,ONIX,MT,Combustão,1.45,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:47,CHEVROLET,ONIX,AT,Combustão,1.59,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:48,CHEVROLET,ONIX,10TAT HB ALC,Combustão,1.55,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:49,CHEVROLET,ONIX,10TAT LT1 ALC,Combustão,1.55,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:50,CHEVROLET,ONIX,10TAT LTZ ALC,Combustão,1.55,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:51,CHEVROLET,ONIX,10TAT PR2 ALC,Combustão,1.55,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:52,CHEVROLET,ONIX PLUS,LTZ,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:53,CHEVROLET,ONIX PLUS,PREMIER,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:54,CHEVROLET,ONIX PLUS,MT,Combustão,1.44,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:55,CHEVROLET,ONIX PLUS,LT,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:56,CHEVROLET,ONIX PLUS,MT,Combustão,1.39,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:57,CHEVROLET,ONIX PLUS,AT,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:58,CHEVROLET,ONIX PLUS,10TAT NB ALC,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:59,CHEVROLET,ONIX PLUS,10TAT LT1 ALC,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:60,CHEVROLET,ONIX PLUS,10TAT LTZ ALC,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:61,CHEVROLET,ONIX PLUS,10TAT PR2 ALC,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:62,CHEVROLET,SPARK EUV,ACTIV,Elétrico,0.5,0.1388888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:63,CHEVROLET,SPIN,1.8L AT,Combustão,1.92,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:64,CHEVROLET,SPIN,1.8L MT LT,Combustão,1.85,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:65,CHEVROLET,SPIN,1.8L AT LTZ5,Combustão,1.92,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:66,FIAT,CRONOS,1.0,Combustão,1.46,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:67,FIAT,CRONOS,DRIVE 1.0,Combustão,1.46,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:68,FIAT,CRONOS,DRIVE1.3AT,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:69,FIAT,CRONOS,PREC 1.3AT,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:70,FIAT,CRONOS,DRIVE 1.3,Combustão,1.49,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:71,GEELY,EX2,MAX,Elétrico,0.39,0.10833333333333334,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:72,GEELY,EX2,PRO,Elétrico,0.39,0.10833333333333334,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:73,GWM,ORA 03,BEV58 C,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:74,GWM,ORA 03,GT BEV63,Elétrico,0.54,0.15,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:75,GWM,ORA 03,SKIN BEV48,Elétrico,0.52,0.14444444444444446,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:76,GWM,ORA 03,BEV58,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:77,HONDA,CITY,LX,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:78,HONDA,CITY,EX,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:79,HONDA,CITY,EXL,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:80,HONDA,CITY,TOURING,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:81,HONDA,CITY HATCH,LX,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:82,HONDA,CITY HATCH,EX,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:83,HONDA,CITY HATCH,EXL,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:84,HONDA,CITY HATCH,TOURING,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:85,HONDA,CITY HATCH,TOURING SPORT,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:86,HONDA,HR-V,EX,Combustão,1.63,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:87,HONDA,HR-V,EXL,Combustão,1.63,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:88,HONDA,HR-V,ADVANCE,Combustão,1.78,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:89,HONDA,HR-V,TOURING,Combustão,1.78,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:90,HONDA,HR-V (mod. 26),ADVANCE,Combustão,1.78,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:91,HONDA,HR-V (mod. 26),TOURING,Combustão,1.78,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:92,HYUNDAI,HB20S,Comfort,Combustão,1.47,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:93,HYUNDAI,HB20S,Limited,Combustão,1.47,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:94,HYUNDAI,HB20S,Limited,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:95,HYUNDAI,HB20S,Platinum,Combustão,1.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:96,HYUNDAI,KONA,Ultimate,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:97,HYUNDAI,KONA,Signature,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:98,HYUNDAI,I20,Comfort,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:99,HYUNDAI,I20,Limited,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:100,HYUNDAI,I20,Sense,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:101,HYUNDAI,I20,Comfort,Combustão,1.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:102,HYUNDAI,I20,Limited,Combustão,1.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:103,HYUNDAI,I20,Sense,Combustão,1.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:104,HYUNDAI,I20,Action,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:105,HYUNDAI,I20,Comfort,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:106,HYUNDAI,I20,Limited,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:107,HYUNDAI,I20,Limited Plus,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:108,HYUNDAI,I20,Platinum,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:109,HYUNDAI,I20,Xline,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:110,HYUNDAI,I20,Platinum Plus,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:111,HYUNDAI,I20,Ultimate,Combustão,1.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:112,JAC,e-JS4,e-JS4,Elétrico,0.47,0.13055555555555554,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:113,KIA,NIRO,HEV 1.6 EX,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:114,KIA,NIRO,HEV 1.6 LX,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:115,KIA,NIRO,HEV 1.6 SX,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:116,KIA,NIRO,HEV 1.6 SX RIOPEN,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:117,MG,MG4,64 KWH COM,Elétrico,0.5,0.1388888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:118,MG,MG4,64 KWH LUX,Elétrico,0.5,0.1388888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:119,MG,MG4,64 KWH AWD,Elétrico,0.59,0.1638888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:120,MINI,Cooper,S 5P EXCLUSIVE,Combustão,1.71,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:121,MINI,Cooper,S 5P TOP,Combustão,1.71,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:122,MINI,Aceman,E,Elétrico,0.46,0.12777777777777777,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:123,MINI,Aceman,SE,Elétrico,0.52,0.14444444444444446,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:124,MINI,JCW-E,ACEMAN,Elétrico,0.5,0.1388888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:125,NISSAN,Versa,SENSE CVT,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:126,NISSAN,Versa,ADVNC CVT,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:127,NISSAN,Versa,EXCL CVT,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:128,NISSAN,Versa,SR CVT,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:129,PEUGEOT,E2008,GT,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:130,RENAULT,MÉGANE,E-TECH,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:131,SUZUKI,e-Vitara,4STY 2WD,Elétrico,0.54,0.15,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:132,SUZUKI,e-Vitara,4STY 4WD,Elétrico,0.58,0.1611111111111111,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:133,TOYOTA,GR YARIS,8AT,Combustão,2.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:134,TOYOTA,GR YARIS,6MT,Combustão,2.39,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:135,VOLVO,EX30,E40 CORE,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:136,VOLVO,EX30,E40 PLUS,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:137,VOLVO,EX30,E60 ULTRA,Elétrico,0.52,0.14444444444444446,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:138,VOLVO,EX30,E60 PLUS,Elétrico,0.52,0.14444444444444446,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:139,VOLVO,EX30,E60 CORE,Elétrico,0.52,0.14444444444444446,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:140,VOLVO,EX30,TWIN ULTRA,Elétrico,0.62,0.17222222222222222,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:141,VW,GOLF,GOLF GTI,Combustão,2.0,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:142,VW,VIRTUS,COMFORTLINE 200TSI AUT,Combustão,1.64,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:143,VW,VIRTUS,HIGHLINE 200TSI AUT,Combustão,1.64,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:144,VW,VIRTUS,TSI AUTOMÁTICO,Combustão,1.62,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:145,VW,VIRTUS,TSI MECÂNICO,Combustão,1.49,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:146,VW,VIRTUS,SENSE TSI MECÂNICO,Combustão,1.49,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:147,VW,VIRTUS,EXCLUSIVE 250TSI AUT,Combustão,1.7,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:148,VW,POLO,COMFORTLINE TSI AUT,Combustão,1.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:149,VW,POLO,SENSE TSI AUTOMÁTICO,Combustão,1.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:150,VW,POLO,HIGHLINE TSI AUTOMÁTICO,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:151,VW,POLO,MPI,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:152,VW,POLO,TRACK 1.0 MPI,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:153,VW,POLO,TRACK ROBUST 1.0 MPI,Combustão,1.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:154,VW,TERA,MPI,Combustão,1.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:155,AUDI,A3 Sedan,Advanced,Combustão,1.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:156,AUDI,A3 Sedan,Performance,Combustão,1.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:157,AUDI,A3 Sedan,Performance Black,Combustão,1.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:158,AUDI,RS3 Sedan,-,Combustão,2.7,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:159,AUDI,RS3 Sedan,Track,Combustão,2.7,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:160,AUDI,Q3 SUV,Launch edition (ed.0),Combustão,2.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:161,AUDI,Q3 SUV,Launch edition (ed.0),Combustão,2.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:162,AUDI,Q3 Sportback,Launch edition (ed.0),Combustão,2.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:163,AUDI,Q3 Sportback,Launch edition (ed.0),Combustão,2.53,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:164,AUDI,Q3 SUV,Launch edition,Combustão,2.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:165,AUDI,Q3 SUV,Launch edition,Combustão,2.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:166,AUDI,Q3 Sportback,Launch edition,Combustão,2.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:167,AUDI,Q3 Sportback,Launch edition,Combustão,2.52,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:168,BMW,iX1,xDrive30,Elétrico,0.6,0.16666666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:169,BMW,iX1,eDrive20,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:170,BMW,iX2,xDrive30 MSP,Elétrico,0.59,0.1638888888888889,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:171,BMW,220,-,Combustão,1.7,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:172,BMW,220,MSP,Combustão,1.7,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:173,BMW,M235,xDrive,Combustão,2.16,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:174,BMW,X2,M35i,Combustão,2.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:175,BYD,ATTO 2,GS DM FLEX,Plug-in,0.51,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:176,BYD,ATTO 2,GL DM FLEX,Plug-in,0.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:177,BYD,YUAN PLUS,GS 560EV,Elétrico,0.58,0.1611111111111111,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:178,CAOA CHERY,TIGGO 7,PHEV,Plug-in,0.62,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:179,CAOA CHERY,TIGGO 7,PHEV,Plug-in,0.59,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:180,GAC,AION Y,PREMIUM,Elétrico,0.57,0.15833333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:181,GAC,AION Y,ELITE,Elétrico,0.57,0.15833333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:182,GAC,AION UT,ELITE,Elétrico,0.57,0.15833333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:183,GAC,AION UT,PREMIUM,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:184,GWM,ORA,5,Elétrico,0.49,0.1361111111111111,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:185,HONDA,CIVIC HYBRID,TOURING,Híbrido,1.21,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:186,HONDA,ZR-V,TOURING,Combustão,1.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:187,JAECOO,7,PRESTIGE,Plug-in,0.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:188,JAECOO,7,LUXURY,Plug-in,0.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:189,LEXUS,UX 300H,UX 300H,Híbrido,1.29,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:190,Mercedes-Benz,AMG A45S 4M,,Combustão,2.4,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:191,Mercedes-Benz,GLA200,AMG LINE,Híbrido,1.83,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:192,Mercedes-Benz,GLA200,PROGRESSIVE,Híbrido,1.83,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:193,Mercedes-Benz,AMG GLA35 4M,,Híbrido,2.29,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:194,MG,S5,EV 62KWH LUX,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:195,MG,S5,EV 62KWH COM,Elétrico,0.51,0.14166666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:196,MG,MG4,URB EV54KWH COM,Elétrico,0.42,0.11666666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:197,MG,MG4,URB EV54KWH LUX,Elétrico,0.42,0.11666666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:198,MG,MG4,URB EV43KWH COM,Elétrico,0.4,0.11111111111111112,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:199,MG,MG4,URB EV43KWH LUX,Elétrico,0.4,0.11111111111111112,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:200,MINI,Countryman,SE EXCLUSIVE,Elétrico,0.61,0.16944444444444443,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:201,MINI,Countryman,SE TOP,Elétrico,0.61,0.16944444444444443,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:202,MINI,JCW,COUNTRYMAN,Combustão,2.12,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:203,MINI,JCW,COUNTRYMAN EX,Combustão,2.12,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:204,Nissan,Sentra,SEN CVT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:205,Nissan,Sentra,ADV CVT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:206,Nissan,Sentra,EXC CVT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:207,OMODA,E5,--,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:208,OMODA,5,HEV COMFORT,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:209,OMODA,5,HEV LUXURY,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:210,OMODA,5,HEV PRESTIGE,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:211,TOYOTA,COROLLA,ALTIS HV,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:212,TOYOTA,COROLLA,APREMIUMH,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:213,TOYOTA,COROLLA,GLI HEV,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:214,TOYOTA,COROLLA,COROLLA ALTIS 20,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:215,TOYOTA,COROLLA,COROLLA GLI 20,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:216,TOYOTA,COROLLA,COROLLA GRS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:217,TOYOTA,COROLLA,COROLLA XEI 20,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:218,TOYOTA,COROLLA,COROLLA GLI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:219,TOYOTA,COROLLA HB,GR R,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:220,TOYOTA,COROLLA CROSS,XRV HYBRID,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:221,TOYOTA,COROLLA CROSS,XRX HYBRID,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:222,TOYOTA,COROLLA CROSS,XR 20,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:223,TOYOTA,COROLLA CROSS,XRE 20,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:224,TOYOTA,COROLLA CROSS,XRX 20,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:225,TOYOTA,COROLLA CROSS,GRS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:226,VOLVO,EC40,6 CORE,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:227,VOLVO,EC40,6 PLUS,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:228,VOLVO,EC40,6 ULTRA,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:229,VOLVO,EC40,8 CORE,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:230,VOLVO,EC40,8 PLUS,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:231,VOLVO,EC40,8 ULTRA,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:232,VOLVO,EC40,PERF BLACK,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:233,VOLVO,EC40,PERF ULTRA,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:234,AUDI,A5,Performance S Edition,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:235,AUDI,A5 Avant,S line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:236,AUDI,A5 Sedan,S line (ed.0),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:237,AUDI,A5 Sedan,S line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:238,AUDI,RS 6 Avant,Performance,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:239,AUDI,A6 Avant e-tron,S line,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:240,AUDI,A6 e-tron,Performance black,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:241,AUDI,Q5 SUV,Advanced,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:242,AUDI,Q5 SUV,S line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:243,AUDI,Q5 Sportback,Advanced,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:244,AUDI,Q5 Sportback,S line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:245,AUDI,SQ5 SUV,-,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:246,AUDI,SQ5 Sportback,-,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:247,AUDI,Q6 e-tron Quattro,Performance,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:248,AUDI,Q6 e-tron Quattro,Performance black,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:249,AUDI,Q6 e-tron RWD,Performance,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:250,AUDI,Q6 Sportback e-tron Quattro,Performance black,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:251,AUDI,SQ6 Sportback e-tron Quattro,-,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:252,AUDI,Q7,S Line,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:253,AUDI,Q8 Sportback,Performance Black,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:254,AUDI,RSQ8,Performance,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:255,AUDI,Q6 e-tron Quattro,Dynamic,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:256,AUDI,Q6 e-tron Quattro,S line,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:257,AUDI,Q6 Sportback e-tron Quattro,S line,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:258,AUDI,SQ6 Sportback e-tron Quattro,-,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:259,AUDI,A6 e-tron,S line,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:260,AUDI,RS e-tron GT,Performance,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:261,BMW,420i,Cabrio,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:262,BMW,530e,M SPORT,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:263,BMW,320i,M Sport Flex,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:264,BMW,320i,Sport GP Flex,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:265,BMW,320i,GP Flex,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:266,BMW,320i,Active Flex,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:267,BMW,330e,-,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:268,BMW,i7,xDrive60,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:269,BMW,I5,M60,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:270,BMW,IX,xDrive 50,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:271,BMW,iX3,50 XDRIVE MSP,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:272,BYD,ATTO 8,GS DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:273,BYD,HAN,AWD GS 680EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:274,BYD,SEAL,AWD GS 590EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:275,BYD,TAN,AWD GS 700EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:276,BYD,SONG PLUS,GS DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:277,BYD,SONG PLUS,PREM DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:278,BYD,SONG PLUS,PREM DM (MY27),Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:279,BYD,SONG PRO,GS DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:280,BYD,SONG PRO,GL DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:281,BYD,SONG PRO,GL DM FLEX,Plug-in,22.4,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:282,BYD,SONG PRO,GS DM FLEX,Plug-in,24.0,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:283,BYD,KING,GL DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:284,BYD,KING,GS DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:285,BYD,SEALION 7,GS 690EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:286,CAOA CHANGAN,AVATR 11,EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:287,CAOACHANGAN,AVATR 11,EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:288,CAOA CHERY,TIGGO 8,PHEV,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:289,CHEVROLET,BLAZER EV,RS,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:290,CHEVROLET,EQUINOX,ACTIV,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:291,CHEVROLET,EQUINOX,RS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:292,CHEVROLET,EQUINOX EV,-,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:293,CHEVROLET,CAPTIVA EV,PR,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:294,FORD,TERRITORY,Titanium,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:295,GAC,AION ES,PLUS,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:296,GAC,HYPTEC HT,ELITE,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:297,GAC,HYPTEC HT,ULTRA,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:298,GAC,AION V,ELITE,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:299,GAC,AION V,PREMIUM,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:300,Geely,EX5,MAX,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:301,Geely,EX5,PRO,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:302,Geely,EX5 EM-i,MAX / PRO,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:303,Geely,EX5 EM-i,ULTRA,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:304,HONDA,ACCORD HYBRID,TOURING,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:305,HONDA,PRELUDE,TOP,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:306,HONDA,PRELUDE,SP,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:307,Hyundai,IONIQ 5,Platinum,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:308,Hyundai,IONIQ 5,Ultimate,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:309,Hyundai,IONIQ 5,Signature,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:310,JAC,e-J7,e-J7,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:311,JETOUR,S06 DM,ADVANCE,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:312,JETOUR,S06 DM,PREMIUM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:313,KIA,EV5 2WD,AIR 2WD,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:314,KIA,EV5 2WD,LAND 2WD,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:315,LEAPMOTOR,C10,REEV,Plug-In,0.65,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:316,LEAPMOTOR,C10,Design,Elétrico,0.61,0.16944444444444443,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:317,LEAPMOTOR,B10,LIFE,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:318,LEXUS,NX350H,DYNAMIC,Híbrido,1.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:319,LEXUS,NX350H,F-SPORT,Híbrido,1.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:320,LEXUS,NX350H,LUXURY,Híbrido,1.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:321,LEXUS,NX 450H PLUG-IN,NX450H PLUG-IN,Plug-in,0.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:322,LEXUS,RX500H,F-SPORT,Híbrido,2.0,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:323,LEXUS,RX450H PLUG-IN,I/LEXUS RX450H PLUG-IN,Plug-in,0.64,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:324,LEXUS,RZ,500e,Elétrico,0.57,0.15833333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:325,Mercedes-Benz,CLA200,AMG LINE,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:326,Mercedes-Benz,CLA200,PROGRESSIVE,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:327,Mercedes-Benz,AMG CLA35 4M,,Híbrido,2.35,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:328,Mercedes-Benz,AMG CLA45S 4M,,Combustão,2.44,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:329,Mercedes-Benz,C200,AMG LINE,Híbrido,1.74,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:330,Mercedes-Benz,C300,AMG LINE,Híbrido,1.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:331,Mercedes-Benz,AMG C63S EP,F1,Plug-in,1.81,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:332,Mercedes-Benz,AMG C63S EP,,Plug-in,1.81,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:333,Mercedes-Benz,E300,EXCLUSIVE,Híbrido,1.99,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:334,Mercedes-Benz,AMG S63 EP,,Plug-in,1.18,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:335,Mercedes-Benz,GLB220 4M,AMG LINE,Híbrido,1.91,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:336,Mercedes-Benz,GLB220 4M,PROGRESSIVE,Híbrido,1.91,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:337,Mercedes-Benz,AMG GLB35 4M,,Híbrido,2.46,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:338,Mercedes-Benz,AMG GLC43,CO,Híbrido,2.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:339,Mercedes-Benz,AMG GLC63S EP,,Plug-in,2.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:340,Mercedes-Benz,AMG GLE53 4M,,Híbrido,2.81,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:341,Mercedes-Benz,AMG GLE63 S CO,Coupé,Híbrido,3.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:342,Mercedes-Benz,GLS450 4M,AMG L,Híbrido,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:343,Mercedes-Benz,EQB250+,,Elétrico,0.53,0.14722222222222223,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:344,Mercedes-Benz,AMG GLC43,,Híbrido,2.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:345,Mercedes-Benz,AMG GLC43,,Híbrido,2.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:346,Mercedes-Benz,E300,EXCLUSIVE,Híbrido,2.05,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:347,Mercedes-Benz,GLB250,EV AMGL,Elétrico,0.57,0.15833333333333333,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:348,Mitsubishi,Outlander,HPE-S E,Plug-in,0.77,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:349,Mitsubishi,Outlander,SIGNATURE E,Plug-in,0.77,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:350,OMODA,7,PHEV LUXURY,Plug-in,0.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:351,OMODA,7,PHEV PRESTIGE,Plug-in,0.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:352,PORSCHE,MACAN,S,Combustão,2.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:353,PORSCHE,MACAN,E4,Elétrico,0.6,0.16666666666666666,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:354,PORSCHE,MACAN,ETURBO,Elétrico,0.61,0.16944444444444443,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:355,PORSCHE,MACAN,E4S,Elétrico,0.61,0.16944444444444443,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:356,PORSCHE,MACAN,GTS (MY 2026),Combustão,2.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:357,PORSCHE,MACAN,,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:358,PORSCHE,MACAN,T,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:359,PORSCHE,MACAN,EGTS,Elétrico,0.61,0.16944444444444443,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:360,PORSCHE,CAYENNE,E,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:361,PORSCHE,CAYENNE,E OF,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:362,PORSCHE,CAYENNE,E C,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:363,PORSCHE,CAYENNE,E CO,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:364,RENAULT,KOLEOS,E-TECH,Híbrido,1.7,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:365,TOYOTA,RAV4,SX CONNECT,Híbrido,1.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:366,TOYOTA,RAV4,S CONNECT,Híbrido,1.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:367,TOYOTA,RAV4,SX HYBRID,Combustão,1.42,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:368,VOLVO,ES90,TWIN PE ULT,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:369,TOYOTA,RAV4,S HYBRID,Combustão,1.42,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:370,VW,JETTA,GLI,Combustão,1.9,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:371,ZEEKR,001,Flagship,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:372,ZEEKR,001,Premium,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:373,ZEEKR,7X,Flagship AWD,Elétrico,0.64,0.17777777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:374,ZEEKR,7X,Premium RWD,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:375,CAOA CHERY,TIGGO 5X,PRO HA,Híbrido,1.85,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:376,CAOA CHERY,TIGGO 5X,PRO,Combustão,2.08,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:377,CAOA CHERY,TIGGO 5X,SPORT,Combustão,2.08,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:378,CAOA CHERY,TIGGO 5X,PRO,Combustão,2.08,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:379,CAOA CHERY,TIGGO 5X,SPORT,Combustão,2.08,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:380,CHEVROLET,TRACKER,LT,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:381,CHEVROLET,TRACKER,LTZ,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:382,CHEVROLET,TRACKER,AT,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:383,CHEVROLET,TRACKER,LT,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:384,CHEVROLET,TRACKER,LTZ,Combustão,1.72,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:385,CHEVROLET,TRACKER,RS,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:386,CHEVROLET,TRACKER,PREMIER,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:387,CHEVROLET,TRACKER,PREMIER,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:388,CHEVROLET,SONIC,10T AT PR,Combustão,1.63,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:389,CHEVROLET,SONIC,10T AT RS,Combustão,1.63,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:390,CITROEN,BASALT,FEEL 1.0,Combustão,1.56,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:391,CITROEN,BASALT,LIVE 1.0,Combustão,1.56,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:392,CITROEN,BASALT,SHINE T200,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:393,CITROEN,BASALT,FL PKT200,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:394,CITROEN,BASALT,T200 DARK,Combustão,1.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:395,CITROEN,C3,FEEL 1.0,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:396,CITROEN,C3,FEEL PLUS 1.0,Combustão,1.51,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:397,CITROEN,C3,LIVE 1.0,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:398,CITROEN,C3,LIVE GO 1.0,Combustão,1.51,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:399,CITROEN,C3,LIVE PK 1.0,Combustão,1.54,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:400,CITROEN,C3,LIVE PLUS 1.0,Combustão,1.51,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:401,CITROEN,C3,XTR 1.0,Combustão,1.55,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:402,CITROEN,C3,YOU 1.0T CVT,Combustão,1.78,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:403,CITROEN,AIRCROSS,XTR 7,Combustão,1.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:404,CITROEN,AIRCROSS,XTR,Combustão,1.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:405,CITROEN,AIRCROSS,FL,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:406,CITROEN,AIRCROSS,7 FL,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:407,CITROEN,AIRCROSS,FL PK,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:408,CITROEN,AIRCROSS,7 FL PK,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:409,CITROEN,AIRCROSS,SH,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:410,CITROEN,AIRCROSS,7 SH,Combustão,1.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:411,FIAT,ARGO,TREKKING 1.3,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:412,FIAT,ARGO,ENDUR 1.3 MT,Combustão,1.57,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:413,FIAT,ARGO,TREKKING 1.3AT,Combustão,1.58,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:414,FIAT,FASTBACK,TURBO 200,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:415,FIAT,FASTBACK,AUDACE HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:416,FIAT,FASTBACK,IMPETUS HY,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:417,FIAT,FASTBACK,ABARTH 270,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:418,FIAT,FASTBACK,LIMITED ED,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:419,FIAT,PULSE,DRIVE MT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:420,FIAT,PULSE,DRIVE AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:421,FIAT,PULSE,AUDACE HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:422,FIAT,PULSE,DRIVE TF 200,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:423,FIAT,PULSE,IMPETUS HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:424,FIAT,PULSE,ABARTH 270,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:425,HONDA,WR-V,EX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:426,HONDA,WR-V,EXL,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:427,HYUNDAI,CRETA,Comfort,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:428,HYUNDAI,CRETA,Comfort Safety,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:429,HYUNDAI,CRETA,Limited,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:430,HYUNDAI,CRETA,Platinum,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:431,HYUNDAI,CRETA,N Line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:432,HYUNDAI,CRETA,Ultimate,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:433,HYUNDAI,CRETA,N-line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:434,JEEP,AVENGER,LIMITED HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:435,JEEP,AVENGER,ALTIT HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:436,JEEP,AVENGER,LONGT HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:437,JEEP,RENEGADE,ALTIT HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:438,JEEP,RENEGADE,ALTIT T270,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:439,JEEP,RENEGADE,ALTIT T270 (MY27),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:440,JEEP,RENEGADE,LGTD T270,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:441,JEEP,RENEGADE,LONGIT HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:442,JEEP,RENEGADE,SAHARA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:443,JEEP,RENEGADE,SAHARA HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:444,JEEP,RENEGADE,SPORT FLEX (MY27),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:445,JEEP,RENEGADE,SPORT T270 (MY27),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:446,JEEP,RENEGADE,SPT T FLEX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:447,JEEP,RENEGADE,SPT TURBO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:448,NISSAN,Kicks,SENSE AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:449,NISSAN,Kicks,ADVANCE AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:450,NISSAN,Kicks,EXCLUSIV AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:451,NISSAN,Kicks,PLATINUM AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:452,NISSAN,Kait,SENSE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:453,NISSAN,Kait,ADVANCE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:454,NISSAN,Kait,EXCLUSIVE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:455,NISSAN,Kait,SENSE B CVT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:456,NISSAN,Kait,ACTIVE CVT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:457,NISSAN,Kait,ADV B CVT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:458,PEUGEOT,2008,ACT T200,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:459,PEUGEOT,2008,ALLU T200,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:460,PEUGEOT,2008,GT T200,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:461,PEUGEOT,2008,GT HYBRID,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:462,RENAULT,KWID,ZEN 2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:463,RENAULT,KWID,INTENSE 2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:464,RENAULT,KWID,OUTSIDER 2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:465,RENAULT,KWID,INTENSE BITON,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:466,RENAULT,KWID,ICONIC 2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:467,RENAULT,KWID,LIFE 2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:468,RENAULT,KARDIAN,TECH AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:469,RENAULT,KARDIAN,ICO AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:470,RENAULT,KARDIAN,10T AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:471,RENAULT,KARDIAN,EVO AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:472,RENAULT,KARDIAN,EVO MT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:473,TOYOTA,YARIS CROSS FLEX,XR FLEX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:474,TOYOTA,YARIS CROSS FLEX,XRE FLEX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:475,TOYOTA,YARIS CROSS FLEX,XRX FLEX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:476,TOYOTA,YARIS CROSS,XRX-HYBRID,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:477,TOYOTA,YARIS CROSS,XRE-HYBRID,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:478,VW,T CROSS,HIGHLINE 250TSI AUTOMÁTICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:479,VW,T CROSS,"COMFORTLINE 200TSI
+AUTOMATICO",Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:480,VW,T CROSS,"COMFORTLINE 200TSI
+AUTOMATICO",Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:481,VW,T CROSS,200TSI AUTOMATICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:482,VW,T CROSS,200TSI AUTOMATICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:483,VW,T CROSS,SENSE 200TSI AUTOMATICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:484,VW,T CROSS,SENSE 200TSI AUTOMATICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:485,VW,NIVUS,HIGHLINE 200TSI AUTOMÁTICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:486,VW,NIVUS,COMFORTLINE 200TSI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:487,VW,T CROSS,EXTREME 250TSI AUTOMÁTICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:488,VW,NIVUS,GTS 1.4TSI AUTOMÁTICO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:489,VW,TERA,COMFORT TSI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:490,VW,TERA,HIGH TSI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:491,VW,TERA,TSI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:492,VOLVO,EX30,CROSSC PLUS,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:493,VOLVO,EX30,C COUNTRY,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:494,BMW,X1,S20i X Line,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:495,BMW,X1,S20i M Sport,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:496,BMW,X1,S20i GP,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:497,BMW,X2,xDrive20i MSP,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:498,BYD,YUAN PLUS,GL310 EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:499,BYD,YUAN PLUS,GS310 EV,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:500,CAOA CHANGAN,Uni-T,INFINITY (LEV4),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:501,CAOA CHERY,TIGGO 7,PRO 16TA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:502,CAOA CHERY,TIGGO 7,PRO HA,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:503,CAOA CHERY,TIGGO 7,SPORT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:504,CAOA CHERY,TIGGO 8,16TA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:505,CAOA CHERY,TIGGO 8,PHEV,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:506,CAOA CHERY,TIGGO 7,PRO 16TA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:507,CAOA CHERY,TIGGO 7,PRO HA,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:508,CAOACHANGAN,CS75,INFINITY (LEV4),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:509,CAOACHANGAN,UNI-T,INFINITY (LEV4),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:510,CAOA CHERY,TIGGO 7,SPORT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:511,CAOA CHERY,TIGGO 8,16TA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:512,GAC,GS3,ELITE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:513,GAC,GS3,ELITE PLUS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:514,GAC,GS4,PREMIUM,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:515,GAC,GS4,ELITE,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:516,GWM,HAVAL H6,HEV ONE (MY26),Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:517,GWM,HAVAL H6,HEV2 (MY26),Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:518,GWM,HAVAL H6,PHEV19 (MY26),Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:519,GWM,HAVAL H6,PHEV35 (MY26),Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:520,GWM,HAVAL H6,GT (MY26),Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:521,GWM,HAVAL H6,HEV ESP,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:522,GWM,HAVAL H6,PHEV19 FF,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:523,GWM,HAVAL H6,PHEV35 FF,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:524,GWM,HAVAL H6,GT FF,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:525,GWM,HAVAL H6,HEV1 FLEX,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:526,GWM,HAVAL H6,HEV2 FLEX,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:527,GWM,WEY,07,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:528,GWM,WEY,07 DARK ED.,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:529,HONDA,CR-V,TOURING,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:530,JEEP,COMMANDER,LIM 7 270,Combustão,2.05,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:531,JEEP,COMMANDER,LON 7 270,Combustão,2.05,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:532,JEEP,COMMANDER,OVE 7 270,Combustão,2.05,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:533,JEEP,COMMANDER,LMTD HYB,Híbrido,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:534,JEEP,COMMANDER,OVER HYB,Híbrido,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:535,JEEP,COMPASS,LIMITED T,Combustão,1.97,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:536,JEEP,COMPASS,LONGITUDE T,Combustão,1.97,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:537,JEEP,COMPASS,SERIE S T,Combustão,1.97,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:538,JEEP,COMPASS,SPORT T,Combustão,1.97,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:539,JETOUR,T1 I-DM,ADVANCE,Plug-in,0.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:540,JETOUR,T1 I-DM,PREMIUM,Plug-in,0.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:541,JETOUR,T2 I-DM,ADVANCE,Plug-in,0.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:542,JETOUR,T2 I-DM,PREMIUM,Plug-in,0.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:543,KIA,SPORTAGE,TMHEV EX,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:544,KIA,SPORTAGE,TMHEV LX,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:545,KIA,SPORTAGE,TMHEV SX,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:546,KIA,SPORTAGE,TMHEV GT,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:547,KIA,SPORTAGE,TMHEV EXP,Híbrido,1.68,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:548,MITSUBISHI,Eclipse Cross,RUSH,Combustão,2.03,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:549,MITSUBISHI,Eclipse Cross,HPE,Combustão,2.03,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:550,MITSUBISHI,Eclipse Cross,HPE BLACK,Combustão,2.03,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:551,MITSUBISHI,Eclipse Cross,HPE-S,Combustão,2.03,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:552,RENAULT,DUSTER,DUSTER ICO16 CVT,Combustão,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:553,RENAULT,DUSTER,DUSTER ICOP CVT,Combustão,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:554,RENAULT,DUSTER,DUSTERINT16 CVT,Combustão,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:555,RENAULT,DUSTER,DUSTER INTP CVT,Combustão,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:556,RENAULT,DUSTER,DUSTER LIF16 CVT,Combustão,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:557,RENAULT,DUSTER,DUSTER ZEN16 CVT,Combustão,1.94,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:558,RENAULT,DUSTER,DUSTER INT 16,Combustão,1.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:559,RENAULT,DUSTER,DUSTER INTP MT,Combustão,1.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:560,RENAULT,DUSTER,DUSTER ZEN 16,Combustão,1.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:561,RENAULT,DUSTER,DUSTER ICO TCE,Combustão,1.89,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:562,RENAULT,DUSTER,DUSTER ICOUT TCE,Combustão,1.89,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:563,RENAULT,DUSTER,DUSTER ZEN13TCE,Combustão,1.89,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:564,RENAULT,BOREAL,EVO,Combustão,1.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:565,RENAULT,BOREAL,TECH,Combustão,1.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:566,RENAULT,BOREAL,ICO,Combustão,1.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:567,VOLVO,EX40,6 CORE,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:568,VOLVO,EX40,6 PLUS,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:569,VOLVO,EX40,6 ULTRA,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:570,VW,TAOS,HIGHLINE 250TSI AUTOMÁTICO,Combustão,1.81,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:571,VW,TAOS,"COMFORTLINE 250TSI
+AUTOMÁTICO",Combustão,1.81,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:572,ZEEKR,X,Premium,Elétrico,0.55,0.1527777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:573,BMW,X3,M50i,Híbrido,2.16,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:574,BMW,X3,30 XDRIVE,Híbrido,1.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:575,BMW,X5,xDrive50e MSP,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:576,BMW,X5,xDrive50e XLINE,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:577,BMW,X6,xDrive40i MSP,Híbrido,2.33,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:578,BMW,X6,40I MSP DARK ED,Híbrido,2.33,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:579,BMW,X7,xDrive40i,Híbrido,2.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:580,GAC,GS9,ULTRA,Plug-in,0.74,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:581,HYUNDAI,PALISADE,Signature,Combustão,2.9,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:582,JETOUR,T2 I-DM,PRM 4X4,Plug-in,0.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:583,MERCEDES-BENZ,GLC300 4M,,Híbrido,2.11,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:584,MERCEDES-BENZ,GLC300 4M,CO,Híbrido,2.11,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:585,MERCEDES-BENZ,GLE450D,AMGL,Híbrido,2.32,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:586,MERCEDES-BENZ,GLE450D,CO AMGL,Híbrido,2.32,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:587,MITSUBISHI,Eclipse Cross,HPE-S S-AWC,Combustão,2.03,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:588,MITSUBISHI,Eclipse Cross,HPE-S BLACK S-AWC,Combustão,2.03,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:589,PORSCHE,CAYENNE,GT COUPE,Combustão,3.44,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:590,PORSCHE,CAYENNE,PHEV,Plug-in,1.04,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:591,PORSCHE,CAYENNE,CP PHE,Plug-in,1.04,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:592,PORSCHE,CAYENNE,CPH BE,Plug-in,1.04,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:593,PORSCHE,CAYENNE,PH BE,Plug-in,1.04,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:594,PORSCHE,CAYENNE,COUPE,Combustão,2.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:595,PORSCHE,CAYENNE,V6,Combustão,2.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:596,PORSCHE,CAYENNE,T PHEV,Plug-in,1.01,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:597,PORSCHE,CAYENNE,TCPHEV,Plug-in,1.01,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:598,PORSCHE,CAYENNE,GTP,Combustão,3.34,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:599,PORSCHE,CAYENNE,GTS CP,Combustão,3.34,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:600,PORSCHE,CAYENNE,S,Combustão,3.33,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:601,PORSCHE,CAYENNE,S CP,Combustão,3.33,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:602,PORSCHE,CAYENNE,S PHEV,Plug-in,0.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:603,PORSCHE,CAYENNE,SCPHEV,Plug-in,0.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:604,PORSCHE,CAYENNE,SCPHBE,Plug-in,0.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:605,PORSCHE,CAYENNE,SPH BE,Plug-in,0.98,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:606,PORSCHE,CAYENNE,E,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:607,PORSCHE,CAYENNE,E OF,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:608,PORSCHE,CAYENNE,E C,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:609,PORSCHE,CAYENNE,E CO,Elétrico,0.63,0.175,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:610,PORSCHE,CAYENNE,ET,Elétrico,0.64,0.17777777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:611,PORSCHE,CAYENNE,ET C,Elétrico,0.64,0.17777777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:612,PORSCHE,CAYENNE,ET OF,Elétrico,0.64,0.17777777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:613,PORSCHE,CAYENNE,ET CO,Elétrico,0.64,0.17777777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:614,VOLVO,XC60,INSC EXPRESS,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:615,VOLVO,XC60,T8 CORE,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:616,VOLVO,XC60,T8 INSCRIPT,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:617,VOLVO,XC60,T8 MOMENTUM,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:618,VOLVO,XC60,T8 PLUS,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:619,VOLVO,XC60,T8 POLESTAR,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:620,VOLVO,XC60,T8 R-DESIGN,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:621,VOLVO,XC60,T8 ULT DARK,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:622,VOLVO,XC60,T8 ULTIMATE,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:623,VOLVO,XC60,T8 ULTRA,Plug-in,0.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:624,VOLVO,XC90,INSC EXPRESS,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:625,VOLVO,XC90,T8 CORE,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:626,VOLVO,XC90,T8 EXCELLEN,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:627,VOLVO,XC90,T8 INSCRIPT,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:628,VOLVO,XC90,T8 MOMENTUM,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:629,VOLVO,XC90,T8 PLUS,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:630,VOLVO,XC90,T8 POLESTAR,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:631,VOLVO,XC90,T8 R-DESIGN,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:632,VOLVO,XC90,T8 ULT DARK,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:633,VOLVO,XC90,T8 ULTIMATE,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:634,VOLVO,XC90,T8 ULTRA,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:635,VOLVO,XC90,T8 AWD PLUS,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:636,VOLVO,XC90,T8 AWD ULT,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:637,VOLVO,XC90,T8 AWD ULTD,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:638,VOLVO,XC90,AWD ULT BLA,Plug-in,0.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:639,VOLVO,EX90,ULTRA TWIN,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:640,VOLVO,EX90,PLUS TWIN,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:641,VOLVO,EX90,ULT TWIN PER,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:642,VOLVO,EX40,8 CORE,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:643,VOLVO,EX40,8 PLUS,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:644,VOLVO,EX40,8 ULTRA,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:645,VOLVO,EX40,PERF BLACK,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:646,VOLVO,EX40,PERF ULTRA,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:647,ZEEKR,X,Flagship,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:648,JEEP,RENEGADE,WILLYS 4x4,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:649,JEEP,RENEGADE,WILLYS 4X4T (MY27),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:650,CHEVROLET,TRAILBLAZER,HC D4A,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:651,CHEVROLET,TRAILBLAZER,LT D4A,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:652,CHEVROLET,TRAILBLAZER,HC MID,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:653,DENZA,B5,GS DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:654,FORD,BRONCO SPORT,Badlands,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:655,GWM,HAVAL H9,EXC,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:656,GWM,HAVAL H9,SELECTION,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:657,GWM,TANK 300,PHEV,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:658,GWM,TANK 300,PHEV FLEX,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:659,JEEP,COMMANDER,BLA 2.0 G,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:660,JEEP,COMMANDER,OVE 2.2 D,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:661,JEEP,COMMANDER,BLK GME (MY27),Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:662,JEEP,COMPASS,BLACKHAWK,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:663,JEEP,COMPASS,BLACKHAWK F,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:664,JEEP,WRANGLER,UNL RUBI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:665,KIA,SORENTO,EX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:666,LAND ROVER,RANGE ROVER,PHEV SV,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:667,LAND ROVER,RANGE ROVER,PHEV SE,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:668,LAND ROVER,RANGE ROVER,PHEV HSE,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:669,LAND ROVER,RANGE ROVER,PHEV AB,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:670,LAND ROVER,DEFENDER 90 D350,HSE XD,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:671,LAND ROVER,DEFENDER 130 D350,X,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:672,LAND ROVER,DEFENDER 130 D350,X7L,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:673,LAND ROVER,VELAR,PHEV AB,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:674,LAND ROVER,DEFENDER 110 D350,TROPHY,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:675,LAND ROVER,DEFENDER 110 D350,HSEXD 7L,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:676,LAND ROVER,DEFENDER 110 D350,X 7L,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:677,LAND ROVER,DISCOVERY,D350 LE,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:678,LAND ROVER,DISCOVERY,D350 TEMPEST,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:679,LAND ROVER,RANGE ROVER SPORT,PHEV S,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:680,LAND ROVER,RANGE ROVER SPORT,PHEV SE,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:681,LAND ROVER,RANGE ROVER SPORT,PHEV SED,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:682,LAND ROVER,RANGE ROVER SPORT,PHEV HSED,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:683,LAND ROVER,RANGE ROVER SPORT,PHEV AB,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:684,LAND ROVER,EVOQUE,P250FF AB,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:685,LAND ROVER,DISCOVERY SPORT,P250FF LE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:686,LAND ROVER,DISCOVERY SPORT,P250FF LE 7L,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:687,LAND ROVER,DISCOVERY SPORT,P250FF SE D,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:688,LAND ROVER,DISCOVERY SPORT,P250FF SED7L,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:689,MERCEDES-BENZ,AMG G63,MFKT,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:690,MERCEDES-BENZ,AMG G63 4M,,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:691,MERCEDES-BENZ,AMG G63 4M,GRD,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:692,TOYOTA,SW4 DIESEL 4X4,DIAMOND AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:693,TOYOTA,SW4 DIESEL 4X4,SRX PLATINUM AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:694,VW,TIGUAN,R LINE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:695,CHEVROLET,SPIN,1.8L AT LTZ,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:696,CHEVROLET,SPIN,18L AT PREMIER,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:697,KIA,CARNIVAL,HEV EX,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:698,KIA,CARNIVAL,HEV LX,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:699,KIA,CARNIVAL,HEV SX,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:700,BYD,ET3,---,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:701,CHEVROLET,ONIX,LOG,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:702,CHEVROLET,ONIX,10MT LOG,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:703,CITROEN,E-JUMPY,CARGO,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:704,CITROEN,JUMPER,COMFORT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:705,CITROEN,JUMPER,MB16,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:706,CITROEN,JUMPER,CARGOPK,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:707,CITROEN,JUMPER,FURG PK,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:708,CITROEN,JUMPER,VITRE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:709,CITROEN,JUMPER,L3H2AMB,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:710,CITROEN,JUMPY,CARGO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:711,CITROEN,JUMPY,VITRE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:712,FARIZON,V6E,--,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:713,FARIZON,SV,AIR 11M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:714,FARIZON,SV,AIR PRO11M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:715,FARIZON,SV,LUX 11M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:716,FARIZON,SV,LUX PRO11M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:717,FARIZON,SV,AIR 8M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:718,FARIZON,SV,AIR PRO 8M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:719,FARIZON,SV,LUX 8M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:720,FARIZON,SV,LUX PRO 8M3,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:721,FIAT,DUCATO,MB COMFORT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:722,FIAT,DUCATO,MB LUXO 16,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:723,FIAT,DUCATO,L3H2AMB,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:724,FIAT,DUCATO,MXCARGO13M,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:725,FIAT,DUCATO,FURGAO 13M,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:726,FIAT,DUCATO,MULTI 13M,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:727,FIAT,FIORINO,ENDURANCE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:728,FIAT,SCUDO,MULTI TD,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:729,FIAT,SCUDO,CARGO TD,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:730,FORD,E-Transit,F35MMAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:731,FORD,E-Transit,F35MAAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:732,FORD,E-Transit,F35LMAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:733,FORD,E-Transit,F35LAAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:734,FORD,E-Transit,F35EAAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:735,FORD,E-Transit,C35LBAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:736,FORD,E-Transit,C35EBAB,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:737,FORD,Transit,F35LAMA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:738,FORD,Transit,F35MMMA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:739,FORD,Transit,F35MAMA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:740,FORD,Transit,F38LAMA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:741,FOTON,EVIEW,GRAND53,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:742,FOTON,EWONDER,CHASSI,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:743,FOTON,EVIEW CONNECT,50S,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:744,FOTON,EVIEW,GRAND77,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:745,FOTON,ETOANO,PRO H,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:746,FOTON,ETOANO,PRO M,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:747,FOTON,WONDER,CS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:748,FOTON,WONDER,CHASSI,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:749,JAC,EJV5.5,CARGO,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:750,KIA,BONGO K2500 4X4 SC,HD SC 4WD,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:751,KIA,BONGO K2500 4X4 SC,HDDL 4WD,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:752,MERCEDES-BENZ,320 E SPRINTER,Furgão,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:753,MERCEDES-BENZ,320 E SPRINTER,Chassi,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:754,MERCEDES-BENZ,315CDI STREET,Furgão,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:755,MERCEDES-BENZ,315CDI STREET,Chassi,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:756,PEUGEOT,BOXER,16L LUXO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:757,PEUGEOT,BOXER,COMFORT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:758,PEUGEOT,BOXER,CARGO PK,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:759,PEUGEOT,BOXER,VIDRADA,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:760,PEUGEOT,BOXER,FURGAOPK,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:761,PEUGEOT,E-EXPERT,CARGO,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:762,PEUGEOT,EXPERT,CARGO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:763,PEUGEOT,EXPERT,VITRE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:764,PEUGEOT,PARTRAPID,BUSIPK,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:765,RENAULT,MASTER FURGÃO,FURGÃO L1,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:766,RENAULT,MASTER FURGÃO,FURGÃO L2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:767,RENAULT,MASTER FURGÃO,FURGÃO L3,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:768,RENAULT,MASTER FURGÃO,FURGÃOL1R,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:769,RENAULT,MASTER FURGÃO,FURGÃOL2R,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:770,RENAULT,MASTER FURGÃO,FURGÃOL3R,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:771,RENAULT,MASTER FUGÃO PRÓ,PRÓ L1,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:772,RENAULT,MASTER FUGÃO PRÓ,PRÓ L2,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:773,RENAULT,MASTER FUGÃO PRÓ,PRÓ L3,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:774,RENAULT,MASTER FUGÃO PRÓ,VITPRO3AC,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:775,RENAULT,MASTER FUGÃO PRÓ,VITPROL3R,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:776,RENAULT,MASTER BUS,MINIBUSL3,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:777,RENAULT,MASTER CHASSIS CABINE,CHASSICAB,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:778,RENAULT,KANGOO,ADV16,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:779,RENAULT,KANGOO,EX PRO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:780,RENAULT,KANGOO,SRT16,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:781,RENAULT,KANGOO,ETECHL2,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:782,RENAULT,E-KWID,CARGO,Elétrico,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:783,TOYOTA,HIACE,MINIBUS AT DX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:784,TOYOTA,HIACE,HIACE CARGO AT DX,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:785,CHEVROLET,MONTANA,MT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:786,CHEVROLET,MONTANA,LT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:787,CHEVROLET,MONTANA,LTZ,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:788,CHEVROLET,MONTANA,PREMIER,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:789,CHEVROLET,MONTANA,RS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:790,FIAT,STRADA,ENDURAN CS13,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:791,FIAT,STRADA,FREEDOM CS13,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:792,FIAT,STRADA,FREEDOM CD13,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:793,FIAT,STRADA,VOLCANO CD13,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:794,FIAT,STRADA,VOLCANO 13AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:795,FIAT,STRADA,ULTRA T200AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:796,FIAT,STRADA,RANCH T200AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:797,RENAULT,OROCH,Intense16M,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:798,RENAULT,OROCH,PRO 16,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:799,VW,SAVEIRO,SAVEIRO CABINE SIMPLES,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:800,VW,SAVEIRO,CABINE SIMPLES TRENDLINE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:801,VW,SAVEIRO,CABINE DUPLA ROBUST MF,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:802,VW,SAVEIRO,CABINE DUPLA EXTREME MF,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:803,BYD,SHARK,GS DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:804,BYD,SHARK,GL DM,Plug-in,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:805,CHEVROLET,S10,Z71 Cabine Dupla,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:806,CHEVROLET,S10,Z71,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:807,CHEVROLET,S10,HC DD4A,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:808,CHEVROLET,S10,LTZ DD4A,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:809,CHEVROLET,S10,WT DD4A,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:810,CHEVROLET,S10,LTZ DD4A,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:811,CHEVROLET,S10,WT DS4,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:812,CHEVROLET,S10,WT DS4C,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:813,CHEVROLET,S10,WT DD4,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:814,CHEVROLET,S10,HIGH COUNTRY Cabine Dupla,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:815,CHEVROLET,S10,LTZ Cabine Dupla,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:816,CHEVROLET,S10,WT Cabine Duple,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:817,CHEVROLET,S10,WT Cabine Simples,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:818,CHEVROLET,S10,WT Cabine Chassis,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:819,CHEVROLET,SILVERADO,HIGH COUNTRY,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:820,FIAT,TITANO,ENDURANCE,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:821,FIAT,TITANO,VOLCANO,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:822,FIAT,TITANO,RANCH,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:823,FIAT,TORO,ENDUR T270 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:824,FIAT,TORO,FREED T270 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:825,FIAT,TORO,VOLC T270 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:826,FIAT,TORO,ULTRA T270 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:827,FIAT,TORO,RANCH TD450 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:828,FIAT,TORO,VOLC TD450 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:829,FIAT,TORO,FREED TD450 AT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:830,FIAT,TORO,VOLC T270 HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:831,FIAT,TORO,ULTRA T270 HYB,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:832,FORD,Nova Ranger 4x2,Black,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:833,FORD,Nova Ranger 4x4,XL,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:834,FORD,Nova Ranger 4x4,XLS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:835,FORD,Nova Ranger 4x4,XLS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:836,FORD,Nova Ranger 4x4,LTD,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:837,FORD,Nova Ranger 4x4,XLS,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:838,FORD,Nova Ranger 4x4,XLT,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:839,FORD,Nova Ranger 4x4,LTD+,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:840,FORD,Nova Ranger 4x4,Cabine Simples,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:841,FORD,Nova Ranger 4x4,Chassis,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:842,FORD,Nova Ranger 4x4,Cabine Simples,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:843,FORD,Nova Ranger 4x4,Chassis,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:844,FORD,Nova Ranger 4x4,XL,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:845,FORD,Maverick,Lariat Hybrid,Híbrido,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:846,FORD,Maverick,Lariat Black,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:847,FORD,Maverick,Tremor,Combustão,,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:848,FORD,Nova F150,Tremor,Combustão,3.39,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:849,FORD,Nova F150,Lariat Black,Combustão,3.08,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:850,FORD,Nova F150,Lariat Chrome,Combustão,3.08,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:851,FOTON,TUNLAND,V7,Híbrido,2.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:852,FOTON,TUNLAND,V9,Híbrido,2.95,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:853,GWM,POER P30,EXC,Combustão,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:854,GWM,POER P30,TRL,Combustão,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:855,GWM,POER P30,EXC (MY27),Combustão,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:856,GWM,POER P30,TRL (MY27),Combustão,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:857,GWM,POER P30,PRO (MY27),Combustão,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:858,GWM,POER P30,PRO,Combustão,2.75,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:859,JAC,IEV330P,IEV330,Elétrico,0.75,0.20833333333333331,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:860,JAC,HUNTER,HUNTER AT,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:861,JAC,HUNTER,HUNTER 4WORK,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:862,JAC,HUNTER,HUNTER HD 4X4 AT C,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:863,JAC,HUNTER,HUNTER HD 4X4 AT,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:864,JAC,HUNTER,HUNTER HDX 4X4 AT,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:865,JAC,HUNTER,HUNTER HD AT,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:866,JAC,HUNTER,HUNTER HW AT,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:867,JAC,HUNTER,HUNTER HW 4X4 AT,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:868,JEEP,GLADIATOR,RUBICON,Combustão,3.38,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:869,KIA,TASMAN,BASIC,Combustão,2.67,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:870,KIA,TASMAN,X-LINE,Combustão,2.67,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:871,MITSUBISHI,Triton,GL AT2,Combustão,2.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:872,MITSUBISHI,Triton,GLS AT2,Combustão,2.43,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:873,MITSUBISHI,Triton,GL MT4,Combustão,2.34,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:874,MITSUBISHI,Triton,GL AT4,Combustão,2.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:875,MITSUBISHI,Triton,GLS AT4,Combustão,2.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:876,MITSUBISHI,Triton,HPE AT4,Combustão,2.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:877,MITSUBISHI,Triton,HPE-S AT4,Combustão,2.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:878,MITSUBISHI,Triton,KATANA AT4,Combustão,2.6,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:879,RAM,1500,BIG HORN (CY26),Combustão,3.45,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:880,RAM,1500,LARAMIE,Combustão,3.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:881,RAM,1500,LARAMIE (CY26),Combustão,3.45,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:882,RAM,1500,REBEL,Combustão,3.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:883,RAM,1500,LARAMIE NE,Combustão,3.5,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:884,RAM,1500,LARAMIE NE (CY26),Combustão,3.45,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:885,RAM,RAMPAGE,LARAMIE DS,Combustão,2.3,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:886,RAM,RAMPAGE,BIGHORN DS,Combustão,2.3,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:887,RAM,RAMPAGE,LARAMIE FLEX,Combustão,2.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:888,RAM,RAMPAGE,LARAMIE GAS,Combustão,2.51,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:889,RAM,RAMPAGE,REBEL AT GAS,Combustão,2.51,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:890,RAM,RAMPAGE,REBEL DS,Combustão,2.3,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:891,RAM,RAMPAGE,REBEL FLEX,Combustão,2.48,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:892,RAM,RAMPAGE,RT FLEX,Combustão,2.62,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:893,RAM,RAMPAGE,RT GAS,Combustão,2.61,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:894,RAM,DAKOTA,BIGHORN,Combustão,2.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:895,RAM,DAKOTA,LARAMIE,Combustão,2.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:896,RAM,DAKOTA,WARLOCK,Combustão,2.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:897,RAM,DAKOTA,LARAMIE NE,Combustão,2.66,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:898,TOYOTA,HILUX DIESEL 4X4 MT,CHASSI MT,Combustão,2.74,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:899,TOYOTA,HILUX DIESEL 4X4 MT,CABINE SIMPLES MT,Combustão,2.74,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:900,TOYOTA,HILUX DIESEL 4X4 MT,POWER PACK MT,Combustão,2.62,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:901,TOYOTA,HILUX DIESEL 4X4 AT,CHASSI AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:902,TOYOTA,HILUX DIESEL 4X4 AT,CABINE SIMPLES AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:903,TOYOTA,HILUX DIESEL 4X4 AT,POWER PACK AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:904,TOYOTA,HILUX DIESEL 4X4 AT,SR AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:905,TOYOTA,HILUX DIESEL 4X4 AT,SRV AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:906,TOYOTA,HILUX DIESEL 4X4 AT,SRX AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:907,TOYOTA,HILUX DIESEL 4X4 AT,SRX PLUS AT,Combustão,2.82,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:908,VW,AMAROK,V6 COMFORT (MY26),Combustão,3.14,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:909,VW,AMAROK,V6 HIGH (MY26),Combustão,3.14,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:910,VW,AMAROK,V6 EXTREME (MY26),Combustão,3.14,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:911,BMW,M3,Competition,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:912,BMW,M3,COMP TRACK,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:913,BMW,M2,Coupe,Combustão,2.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:914,BMW,M2,Coupe Track,Combustão,2.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:915,BMW,M4,Competition,Combustão,2.67,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:916,BMW,M4,COMP TRACK,Combustão,2.67,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:917,BMW,M2,CUP,Combustão,2.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:918,BMW,M2,CUP,Combustão,2.79,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:919,FERRARI,296,GTB,Plug-in,2.02,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:920,FERRARI,PUROSANGUE,--,Combustão,4.88,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:921,FERRARI,12CILINDRI,--,Combustão,4.14,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:922,FERRARI,12CILINDRI,SPI,Combustão,4.28,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:923,FERRARI,296,GTS,Plug-in,1.97,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:924,FERRARI,ROMA,SPIDER,Combustão,3.01,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:925,FORD,Mustang Dark Horse,Dark Horse,Combustão,3.11,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:926,FORD,Mustang,GT AT,Combustão,3.02,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:927,MCLAREN,ARTURA,,Plug-in,1.45,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:928,MCLAREN,ARTURA,SPIDER,Plug-in,1.45,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:929,MCLAREN,750S,COUPE,Combustão,3.46,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:930,MCLAREN,750S,SPIDER,Combustão,3.46,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:931,MERCEDES-BENZ,AMG SL63S EP,,Plug-in,2.27,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:932,MERCEDES-BENZ,AMG GT63S EP,2P,Plug-in,1.77,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:933,MERCEDES-BENZ,AMG GT63S EP,,Plug-in,1.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:934,MG,CYBERSTER,77 KWH AWD,Elétrico,0.56,0.15555555555555556,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:935,PORSCHE,911,CARRERA,Combustão,2.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:936,PORSCHE,911,CARRERA C,Combustão,2.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:937,PORSCHE,911,CARRERA S,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:938,PORSCHE,911,CARRERA SC,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:939,PORSCHE,911,GT3 MANUAL,Combustão,3.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:940,PORSCHE,911,GT3 TOURMT,Combustão,3.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:941,PORSCHE,911,GT3,Combustão,3.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:942,PORSCHE,911,GT3TOURING,Combustão,3.69,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:943,PORSCHE,911,CAR T MT,Combustão,2.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:944,PORSCHE,911,CAR T MT 2,Combustão,2.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:945,PORSCHE,911,CAR T MTCA,Combustão,2.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:946,PORSCHE,911,TURBO S / TURBO S CA,Híbrido,3.17,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:947,PORSCHE,911,CARRERAGTS,Híbrido,2.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:948,PORSCHE,911,CAR GTS CA,Híbrido,2.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:949,PORSCHE,911,SPIRIT 70,Híbrido,2.8,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:950,PORSCHE,911,GT3 FA 90Y,Combustão,3.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:951,PORSCHE,911,TARGA 4GTS,Híbrido,2.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:952,PORSCHE,911,GT3 FA 90Y,Combustão,3.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:953,PORSCHE,911,TARGA 4GTS,Híbrido,2.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:954,PORSCHE,911,GT3 SC,Combustão,3.86,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:955,PORSCHE,BOXSTER,GTS4.0,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:956,PORSCHE,BOXSTER,25 ANOS,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:957,PORSCHE,CAYMAN,GTS 4.0,Combustão,2.84,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:958,PORSCHE,PANAMERA,TPHEV,Plug-in,0.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:959,PORSCHE,PANAMERA,TSEHY,Plug-in,0.96,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:960,PORSCHE,PANAMERA,4EHYB,Plug-in,0.9,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:961,PORSCHE,PANAMERA,4SEHY,Plug-in,0.93,,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:962,PORSCHE,TAYCAN,TURBO S,Elétrico,0.67,0.18611111111111112,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:963,PORSCHE,TAYCAN,4S,Elétrico,0.69,0.19166666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:964,PORSCHE,TAYCAN,4S BE,Elétrico,0.69,0.19166666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:965,PORSCHE,TAYCAN,TURBOCT,Elétrico,0.69,0.19166666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:966,PORSCHE,TAYCAN,4S CT,Elétrico,0.69,0.19166666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:967,PORSCHE,TAYCAN,4CT,Elétrico,0.69,0.19166666666666665,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas
+INMETRO:968,PORSCHE,TAYCAN,TURBOGT,Elétrico,0.64,0.17777777777777778,MJ/km convertido em kWh/km somente para eletrico; confirmar contexto de ensaio e perdas

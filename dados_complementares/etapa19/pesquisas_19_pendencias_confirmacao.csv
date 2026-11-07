@@ -1,0 +1,12 @@
+﻿campo,metodo_obtencao,status
+seguro_brl_ano,cotação para motorista de app e perfil de risco; preço não pode ser universal,pendente_cotacao_individual
+manutencao_brl_km,"cotar revisões completas + reparos e desgaste, por versão",referencia_parcial_BYD
+durabilidade_pneus_km,"hipótese documentada por modelo, uso e rodagem",pendente_hipotese
+preco_energia_brl_kwh,TE+TUSD obtidos; faltam tributos/bandeira e distribuição válida,referencia_parcial
+preco_combustivel_brl_l,"selecionar linha/agregado ANP do mesmo município, produto e data",disponivel_noutra_base
+ipva_brl_ano_confirmado,"vincular código IPVA, modelo e ano; não aplicar isenção automática",ponte_a_validar
+depreciacao_brl_mes,requer preços históricos da MESMA versão,pendente_series
+receita_brl_por_hora_online,coleta observada ou hipótese explícita de cenário,pendente_metodologia
+km_mes,hipótese operacional para turno e região do usuário,pendente_hipotese
+horas_online_mes,hipótese operacional (online inclui espera),pendente_hipotese
+outros_custos_brl_mes,"definir escopo de estacionamento, limpeza, tributos e plataformas",pendente_escopo

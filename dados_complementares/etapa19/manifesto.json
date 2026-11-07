@@ -1,0 +1,20 @@
+{
+  "gerado_em_utc": "2026-11-07T16:19:13.176166+00:00",
+  "versao_mestre_utilizada": "20261107T150640Z_fd637316",
+  "tabelas_mestres_localizadas": true,
+  "qtd_veiculos_referencia": 968,
+  "qtd_ofertas": 56,
+  "qtd_cenarios": 3,
+  "qtd_cenarios_completos": 0,
+  "entradas": {
+    "parametros_cenarios.csv": "74f2c058061be0edf6fc8a8604e6eba7de9cbe489f24c85640c3bb02af595f23",
+    "cotacoes.csv": "8283c9458a8156ae6a5592bfe6df1210baced0d8bcc9bc0ee101bfcae433ea13"
+  },
+  "licenciamento_anual_oficial_brl": 174.08,
+  "alertas": [
+    "Não substituir dados ausentes por zero.",
+    "Valores pesquisa Cebrap são benchmark, não receita líquida do cenário.",
+    "Não inserir isenção IPVA sem comprovante.",
+    "Não somar seguro/manutenção/IPVA incluídos em locação."
+  ]
+}

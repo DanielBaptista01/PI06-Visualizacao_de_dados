@@ -1,0 +1,33 @@
+﻿cenario_id,campo_ou_condicao,status,acao
+proprio_combustao,km_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,horas_online_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,receita_brl_por_hora_online,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,ipva_brl_ano_confirmado,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,seguro_brl_ano,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,depreciacao_brl_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,manutencao_brl_km,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,durabilidade_pneus_km,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,preco_combustivel_brl_l,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,eficiencia_combustivel_km_l,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,fonte_parametros,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_combustao,outros_custos_brl_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,km_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,horas_online_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,receita_brl_por_hora_online,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,ipva_brl_ano_confirmado,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,seguro_brl_ano,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,depreciacao_brl_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,manutencao_brl_km,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,durabilidade_pneus_km,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,preco_energia_brl_kwh,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,perda_recarga_pct (usar 0 somente se justificadamente desprezada),pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,fonte_parametros,pendente,obter evidência e preencher parametros_cenarios.csv
+proprio_eletrico,outros_custos_brl_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,km_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,horas_online_mes,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,receita_brl_por_hora_online,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,oferta_uber_id,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,licenciamento_incluido_contrato,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,"energia_alugado: preencher par combustivel ou par eletrico, nao ambos",pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,fonte_parametros,pendente,obter evidência e preencher parametros_cenarios.csv
+alugado,outros_custos_brl_mes,pendente,obter evidência e preencher parametros_cenarios.csv

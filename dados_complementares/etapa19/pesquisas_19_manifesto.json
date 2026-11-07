@@ -1,0 +1,19 @@
+{
+  "gerado_utc": "2026-11-07T16:18:51.499742+00:00",
+  "fontes_pesquisadas": 6,
+  "cotacoes_acrescentadas": 6,
+  "cenarios_verificados": [
+    {
+      "cenario_id": "proprio_combustao",
+      "status": "preenchimento_parcial_seguro",
+      "id": "INMETRO:6"
+    },
+    {
+      "cenario_id": "proprio_eletrico",
+      "status": "preenchimento_parcial_seguro",
+      "id": "INMETRO:1"
+    }
+  ],
+  "anp_status": "ANP observações de postos em São Paulo (gasolina/etanol): 2652; NÃO é média e pode haver várias semanas",
+  "politica": "Não preencher receita, seguro, manutenção total, desgaste de pneus e tarifa final sem evidência; não substituir dados já preenchidos."
+}
