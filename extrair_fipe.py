@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import time
@@ -9,12 +10,13 @@ from datetime import date
 import pandas as pd
 import requests
 
-from pipeline_utils import CACHE_DIR, OUTPUT_DIR, localizar_coluna, normalizar_texto, registrar_coleta
+from pipeline_utils import CACHE_DIR, OUTPUT_DIR, normalizar_texto, registrar_coleta
 
 API_BASE = os.getenv("FIPE_API_BASE", "https://fipe.parallelum.com.br/api/v2/cars")
 MAPEAMENTO = CACHE_DIR / "fipe_mapeamento.csv"
 CATALOGO = CACHE_DIR / "fipe_catalogo.json"
 CHECKPOINT = CACHE_DIR / "fipe_checkpoint.csv"
+ASSINATURA = CACHE_DIR / "fipe_mapeamento_origem.sha256"
 SAIDA = OUTPUT_DIR / "08_FIPE_VEICULOS.csv"
 
 
@@ -61,30 +63,6 @@ def _uber() -> pd.DataFrame:
     return df.loc[df["ano_min_consulta"].notna()].copy()
 
 
-def _filtrar_inmetro(uber: pd.DataFrame) -> pd.DataFrame:
-    caminho = OUTPUT_DIR / "05_INMETRO_ORGANIZADO.csv"
-    if not caminho.exists():
-        return uber
-    try:
-        inmetro = pd.read_csv(caminho)
-    except Exception:
-        return uber
-    cm = localizar_coluna(inmetro, ["MARCA", "FABRICANTE"], contem=True)
-    cmo = localizar_coluna(inmetro, ["MODELO", "VERSAO", "VERSÃO"], contem=True)
-    if not cm or not cmo:
-        return uber
-
-    chaves = [(normalizar_texto(m), normalizar_texto(x)) for m, x in zip(inmetro[cm], inmetro[cmo])]
-    def relevante(row: pd.Series) -> bool:
-        marca, modelo = normalizar_texto(row["marca"]), normalizar_texto(row["modelo"])
-        return any(
-            (marca == mi or marca in mi or mi in marca) and
-            (modelo in moi or moi in modelo or any(p in moi.split() for p in modelo.split()))
-            for mi, moi in chaves if mi and moi
-        )
-    filtrado = uber.loc[uber.apply(relevante, axis=1)].copy()
-    return filtrado if len(filtrado) >= max(10, int(len(uber) * 0.15)) else uber
-
 
 def _carregar_catalogo() -> dict:
     if CATALOGO.exists():
@@ -99,88 +77,165 @@ def _salvar_catalogo(catalogo: dict) -> None:
     CATALOGO.write_text(json.dumps(catalogo, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _pontuar(uber: str, fipe: str) -> float:
-    u, f = normalizar_texto(uber), normalizar_texto(fipe)
-    if not u or not f:
-        return 0.0
-    if u == f:
-        return 100.0
-    if u in f:
-        return 85.0
-    if f in u:
-        return 75.0
-    inter = set(u.split()) & set(f.split())
-    return 60.0 * len(inter) / max(len(set(u.split())), 1) if inter else 0.0
+def _assinatura_uber(uber: pd.DataFrame) -> str:
+    """Detecta mudanças na fonte que invalidam o mapeamento FIPE em cache."""
+    colunas = ["marca", "modelo", "ano_min_consulta"]
+    serializado = (
+        uber[colunas].fillna("").astype(str).sort_values(colunas)
+        .to_csv(index=False).encode("utf-8")
+    )
+    return hashlib.sha256(serializado).hexdigest()
+
+
+def _selecionar_modelo(modelo_uber: str, modelos_fipe: list[dict]) -> dict:
+    """Exige correspondência exata ou prefixo por palavra, sem escolher versão ambígua.
+
+    Uma correspondência de prefixo não autoriza preço automaticamente, porque
+    FIPE lista versões/motorizações distintas sob o mesmo modelo comercial.
+    """
+    nome = normalizar_texto(modelo_uber)
+    if not nome:
+        return {"status": "modelo_nao_encontrado", "candidatos": []}
+
+    registros = [
+        {"code": str(item["code"]), "name": str(item["name"])}
+        for item in modelos_fipe
+        if item.get("code") is not None and item.get("name")
+    ]
+    exatos = [r for r in registros if normalizar_texto(r["name"]) == nome]
+    if len(exatos) == 1:
+        return {"status": "modelo_exato", "candidatos": exatos}
+    if len(exatos) > 1:
+        return {"status": "revisao_modelo_ambiguo", "candidatos": exatos}
+
+    # Ex.: "ARGO" pode encontrar "ARGO 1.0...", mas não "ARGOZ".
+    prefixos = [r for r in registros if normalizar_texto(r["name"]).startswith(nome + " ")]
+    if prefixos:
+        return {"status": "revisao_modelo_ambiguo", "candidatos": prefixos}
+    return {"status": "modelo_nao_encontrado", "candidatos": []}
+
+
+def _selecionar_ano(ano_min: int, anos_fipe: list[dict]) -> dict:
+    """Seleciona um ano de referência somente quando seu código é inequívoco.
+
+    O menor ano elegível é uma referência ilustrativa, NÃO o ano de um carro
+    real da Uber; múltiplos combustíveis/códigos no mesmo ano exigem revisão.
+    """
+    elegiveis = []
+    for item in anos_fipe:
+        codigo = str(item.get("code", ""))
+        try:
+            ano = int(codigo.split("-")[0])
+        except ValueError:
+            continue
+        if 1900 <= ano <= date.today().year + 2 and ano >= ano_min:
+            elegiveis.append({"ano": ano, "code": codigo, "name": str(item.get("name", ""))})
+    if not elegiveis:
+        return {"status": "ano_nao_encontrado", "candidatos": []}
+    menor_ano = min(x["ano"] for x in elegiveis)
+    candidatos = [x for x in elegiveis if x["ano"] == menor_ano]
+    if len({x["code"] for x in candidatos}) != 1:
+        return {"status": "revisao_ano_combustivel", "candidatos": candidatos}
+    return {"status": "ano_unico", "candidatos": candidatos}
+
+EQUIVALENCIAS_MARCAS = {
+    "CHEVROLET": "GM CHEVROLET",
+    "GM": "GM CHEVROLET",
+    "VOLKSWAGEN": "VW VOLKSWAGEN",
+    "VW": "VW VOLKSWAGEN",
+    "KIA": "KIA MOTORS",
+    "JAC MOTORS": "JAC",
+    "HYUNDAI MOTORS": "HYUNDAI",
+    "LANDROVER": "LAND ROVER",
+}
+
+
+def resolver_marca_fipe(marca_uber: str, marcas: dict):
+    """Resolve somente equivalências verificadas no catálogo FIPE."""
+    nome = normalizar_texto(marca_uber)
+    nome = EQUIVALENCIAS_MARCAS.get(nome, nome)
+
+    codigo = marcas.get(nome)
+
+    if codigo is not None:
+        return codigo, "marca_encontrada"
+
+    return None, "marca_nao_encontrada"
 
 
 def construir_mapeamento(forcar: bool = False) -> pd.DataFrame:
-    if MAPEAMENTO.exists() and not forcar:
-        return pd.read_csv(MAPEAMENTO)
+    """Constrói mapa auditável; nunca escolhe automaticamente versões ambíguas."""
+    uber = _uber()[["marca", "modelo", "ano_min_consulta"]].copy()
+    uber = uber.drop_duplicates(["marca", "modelo"]).reset_index(drop=True)
+    assinatura = _assinatura_uber(uber)
+    if MAPEAMENTO.exists() and not forcar and ASSINATURA.exists():
+        if ASSINATURA.read_text(encoding="utf-8").strip() == assinatura:
+            mapa_cache = pd.read_csv(MAPEAMENTO)
+            if {"status", "marca_uber", "modelo_uber"}.issubset(mapa_cache.columns):
+                return mapa_cache
 
-    uber = _filtrar_inmetro(_uber())[["marca", "modelo", "ano_min_consulta"]].drop_duplicates(["marca", "modelo"])
     cliente, catalogo = ClienteFipe(), _carregar_catalogo()
     if not catalogo.get("brands"):
         catalogo["brands"] = cliente.get_json(f"{API_BASE}/brands")
         _salvar_catalogo(catalogo)
 
-    marcas = {normalizar_texto(x.get("name")): str(x.get("code")) for x in catalogo["brands"] if x.get("name") and x.get("code") is not None}
+    marcas = {
+        normalizar_texto(x["name"]): str(x["code"])
+        for x in catalogo["brands"] if x.get("name") and x.get("code") is not None
+    }
     equivalencias = {"VW": "VOLKSWAGEN", "GM": "CHEVROLET", "LANDROVER": "LAND ROVER"}
     linhas = []
-
     for _, row in uber.iterrows():
-        marca_uber, modelo_uber = str(row["marca"]).strip(), str(row["modelo"]).strip()
+        marca = str(row["marca"]).strip()
+        modelo = str(row["modelo"]).strip()
         ano_min = int(row["ano_min_consulta"])
-        marca_norm = equivalencias.get(normalizar_texto(marca_uber), normalizar_texto(marca_uber))
-        brand_id = marcas.get(marca_norm)
-        if not brand_id:
-            candidatos = [(n, c) for n, c in marcas.items() if marca_norm in n or n in marca_norm]
-            brand_id = candidatos[0][1] if candidatos else None
-        if not brand_id:
-            linhas.append({"marca_uber": marca_uber, "modelo_uber": modelo_uber, "status": "marca_nao_encontrada"})
+        registro = {"marca_uber": marca, "modelo_uber": modelo, "ano_min_uber": ano_min,
+                    "status": "pendente", "revisar_match": True}
+        marca_normalizada = normalizar_texto(marca)
+        brand_id = marcas.get(equivalencias.get(marca_normalizada, marca_normalizada))
+        if brand_id is None:
+            registro["status"] = "marca_nao_encontrada"
+            linhas.append(registro)
             continue
-
+        registro["brand_id"] = brand_id
         if brand_id not in catalogo["models"]:
             catalogo["models"][brand_id] = cliente.get_json(f"{API_BASE}/brands/{brand_id}/models")
             _salvar_catalogo(catalogo)
-        pontuados = sorted(
-            [(_pontuar(modelo_uber, m.get("name", "")), m) for m in catalogo["models"][brand_id]],
-            key=lambda x: x[0], reverse=True,
-        )
-        score, melhor = pontuados[0] if pontuados else (0.0, None)
-        if not melhor or score < 30:
-            linhas.append({"marca_uber": marca_uber, "modelo_uber": modelo_uber, "brand_id": brand_id, "status": "modelo_nao_encontrado"})
-            continue
 
-        model_id = str(melhor.get("code"))
+        selecao = _selecionar_modelo(modelo, catalogo["models"][brand_id])
+        registro["status"] = selecao["status"]
+        registro["candidatos_modelos"] = json.dumps(selecao["candidatos"], ensure_ascii=False)
+        if selecao["status"] != "modelo_exato":
+            linhas.append(registro)
+            continue
+        melhor = selecao["candidatos"][0]
+        model_id = melhor["code"]
+        registro.update({"model_id": model_id, "modelo_fipe_match": melhor["name"]})
         chave = f"{brand_id}:{model_id}"
         if chave not in catalogo["years"]:
-            catalogo["years"][chave] = cliente.get_json(f"{API_BASE}/brands/{brand_id}/models/{model_id}/years")
+            catalogo["years"][chave] = cliente.get_json(
+                f"{API_BASE}/brands/{brand_id}/models/{model_id}/years"
+            )
             _salvar_catalogo(catalogo)
-
-        elegiveis = []
-        for item in catalogo["years"][chave]:
-            codigo = str(item.get("code", ""))
-            try:
-                ano = int(codigo.split("-")[0])
-            except ValueError:
-                continue
-            if 1900 <= ano <= 3000 and ano >= ano_min:
-                elegiveis.append((ano, codigo, item.get("name")))
-        elegiveis.sort(key=lambda x: x[0])
-        if not elegiveis:
-            linhas.append({"marca_uber": marca_uber, "modelo_uber": modelo_uber, "brand_id": brand_id, "model_id": model_id, "status": "ano_nao_encontrado"})
-            continue
-
-        ano, year_code, year_name = elegiveis[0]
-        linhas.append({
-            "marca_uber": marca_uber, "modelo_uber": modelo_uber, "ano_min_uber": ano_min,
-            "brand_id": brand_id, "model_id": model_id, "year_code": year_code,
-            "ano_escolhido": ano, "year_name": year_name, "modelo_fipe_match": melhor.get("name"),
-            "pontuacao_match": score, "revisar_match": score < 70, "status": "mapeado",
-        })
+        ano = _selecionar_ano(ano_min, catalogo["years"][chave])
+        registro["status"] = ano["status"]
+        registro["candidatos_anos"] = json.dumps(ano["candidatos"], ensure_ascii=False)
+        if ano["status"] == "ano_unico":
+            escolhido = ano["candidatos"][0]
+            registro.update({
+                "ano_escolhido": escolhido["ano"], "year_code": escolhido["code"],
+                "year_name": escolhido["name"], "status": "mapeado",
+                "revisar_match": False,
+                "criterio_ano": "primeiro_ano_fipe_a_partir_min_uber_nao_ano_real",
+                "pontuacao_match": 100.0,
+            })
+        linhas.append(registro)
 
     mapa = pd.DataFrame(linhas)
+    # Grava artefatos derivados; não apaga RAW nem checkpoint histórico.
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     mapa.to_csv(MAPEAMENTO, index=False, encoding="utf-8-sig")
+    ASSINATURA.write_text(assinatura, encoding="utf-8")
     return mapa
 
 
@@ -192,7 +247,12 @@ def atualizar_precos(forcar_mapeamento: bool = False) -> pd.DataFrame:
 
     checkpoint = pd.read_csv(CHECKPOINT) if CHECKPOINT.exists() else pd.DataFrame()
     hoje = date.today().isoformat()
-    feitos = set(checkpoint.loc[checkpoint.get("data_coleta", pd.Series(dtype=str)) == hoje, "chave"].astype(str)) if not checkpoint.empty else set()
+    assinatura_atual = ASSINATURA.read_text(encoding="utf-8").strip()
+    if {"data_coleta", "chave", "assinatura_origem"}.issubset(checkpoint.columns):
+        mascara = (checkpoint["data_coleta"].astype(str) == hoje) & (checkpoint["assinatura_origem"].astype(str) == assinatura_atual)
+        feitos = set(checkpoint.loc[mascara, "chave"].astype(str))
+    else:
+        feitos = set()
     cliente = ClienteFipe()
 
     for i, (_, row) in enumerate(validos.iterrows(), start=1):
@@ -206,8 +266,15 @@ def atualizar_precos(forcar_mapeamento: bool = False) -> pd.DataFrame:
             print(f"FIPE [{i}/{len(validos)}] falhou: {exc}")
             continue
 
+        if (str(info.get("modelYear", "")) != str(int(row["ano_escolhido"]))
+                or not info.get("codeFipe") or not info.get("price")):
+            print(f"FIPE [{i}/{len(validos)}] resposta inconsistente: {chave}")
+            continue
+
         novo = pd.DataFrame([{
-            "chave": chave, "marca_uber": row["marca_uber"], "modelo_uber": row["modelo_uber"],
+            "chave": chave, "brand_id": row["brand_id"], "model_id": row["model_id"],
+            "year_code": row["year_code"], "criterio_ano": row["criterio_ano"],
+            "assinatura_origem": assinatura_atual, "marca_uber": row["marca_uber"], "modelo_uber": row["modelo_uber"],
             "marca_fipe": info.get("brand"), "modelo_fipe": info.get("model"),
             "ano_modelo": info.get("modelYear"), "combustivel": info.get("fuel"),
             "preco_fipe": info.get("price"), "codigo_fipe": info.get("codeFipe"),
@@ -219,9 +286,12 @@ def atualizar_precos(forcar_mapeamento: bool = False) -> pd.DataFrame:
         feitos.add(chave)
         print(f"FIPE [{i}/{len(validos)}] OK: {row['marca_uber']} {row['modelo_uber']}")
 
-    atual = checkpoint.loc[checkpoint["data_coleta"] == hoje].copy() if not checkpoint.empty else checkpoint
-    if atual.empty and not checkpoint.empty:
-        atual = checkpoint.sort_values("data_coleta").drop_duplicates("chave", keep="last")
+    atual = checkpoint.loc[
+        (checkpoint["data_coleta"].astype(str) == hoje)
+        & (checkpoint["assinatura_origem"].astype(str) == assinatura_atual)
+    ].drop_duplicates("chave", keep="last").copy() if not checkpoint.empty else checkpoint
+    if atual.empty:
+        raise RuntimeError("Nenhum preço FIPE obtido hoje; histórico mantido no checkpoint, sem substituir saída por valores antigos.")
     atual.to_csv(SAIDA, index=False, encoding="utf-8-sig")
     registrar_coleta(
         "FIPE_API", API_BASE, SAIDA, len(atual),
