@@ -1,0 +1,11 @@
+{
+  "gerado_em_utc": "2026-11-07T15:38:15.010970+00:00",
+  "fonte": "dados_padronizados\\18_IPVA_SP_VALORES_VENAIS_2026.csv",
+  "sha256_fonte": "7b409c507f98505c769575a5ac8cda949b42e48d6884487696a6031fbdeab5d1",
+  "total_valores_venais": 41330,
+  "total_automoveis_com_cenario_base": 11847,
+  "total_candidatos_inmetro_com_correspondencia_textual": 402,
+  "tabela_mestre_inmetro": "dados_mestres\\execucoes\\20261107T150640Z_fd637316\\veiculos\\dim_modelos_versoes_inmetro.csv",
+  "isencoes_automaticamente_confirmadas": 0,
+  "nota": "Apenas cenários tributários e vínculos candidatos; não representa cobrança individual."
+}

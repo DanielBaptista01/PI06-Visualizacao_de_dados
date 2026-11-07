@@ -1,0 +1,8 @@
+﻿assunto,condicao,situacao,fonte
+IPVA geral automóvel,"Categoria A, sem benefício",calculado_cenario_base,https://legislacao.fazenda.sp.gov.br/Paginas/lei13296.aspx
+Híbrido com etanol/flex,"Valor limite atualizado e requisitos técnicos de 40 kW / 150 V, e cadastro",pendente_validacao_por_versao,https://legislacao.fazenda.sp.gov.br/Paginas/Portaria-SRE-94-de-2024.aspx
+Veículo elétrico,Sem isenção estadual universal por ser elétrico,nao_presumir_isencao,https://legislacao.fazenda.sp.gov.br/Paginas/lei13296.aspx
+Locadora,Benefício de 1% depende de locadora habilitada e veículo elegível,hipotese_nao_confirmada,https://portal.fazenda.sp.gov.br/servicos/ipva/Paginas/Pedido-de-cadastramento-.aspx
+Veículo novo 0 km,Base de cálculo difere da tabela de usados,fora_do_escopo_desta_base,https://legislacao.fazenda.sp.gov.br/Paginas/lei13296.aspx
+Outras categorias B-F,Regras específicas por tipo e combustível,nao_calculado,https://legislacao.fazenda.sp.gov.br/Paginas/lei13296.aspx
+Relacionamento INMETRO,"Descrições podem ser abreviadas, com versões distintas",apenas_candidatos,dados_mestres/atual.json
