@@ -21,6 +21,7 @@ ORIGEM_E_DESTINO*/
 SENATRAN/
 UBER/
 UBER_MATCH/
+ipva-26/
 
 # Cache local do pipeline (reconstruível)
 dados_cache/
