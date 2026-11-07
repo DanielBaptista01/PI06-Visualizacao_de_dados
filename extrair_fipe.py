@@ -59,7 +59,19 @@ def _uber() -> pd.DataFrame:
         raise ValueError("Arquivo da Uber sem ano mínimo por categoria")
     for coluna in anos:
         df[coluna] = pd.to_numeric(df[coluna], errors="coerce")
-    df["ano_min_consulta"] = df[anos].min(axis=1, skipna=True)
+    from datetime import date
+
+    ano_atual = date.today().year
+    ano_min_fabricacao_sp = ano_atual - 10
+
+    df["ano_min_fonte"] = df[anos].min(
+        axis=1,
+        skipna=True
+    )
+
+    df["ano_min_consulta"] = df["ano_min_fonte"].clip(
+        lower=ano_min_fabricacao_sp
+    )
     return df.loc[df["ano_min_consulta"].notna()].copy()
 
 
@@ -108,11 +120,28 @@ def _selecionar_modelo(modelo_uber: str, modelos_fipe: list[dict]) -> dict:
     if len(exatos) > 1:
         return {"status": "revisao_modelo_ambiguo", "candidatos": exatos}
 
-    # Ex.: "ARGO" pode encontrar "ARGO 1.0...", mas não "ARGOZ".
-    prefixos = [r for r in registros if normalizar_texto(r["name"]).startswith(nome + " ")]
-    if prefixos:
-        return {"status": "revisao_modelo_ambiguo", "candidatos": prefixos}
-    return {"status": "modelo_nao_encontrado", "candidatos": []}
+    prefixos = [
+        r
+        for r in registros
+        if normalizar_texto(r["name"]).startswith(nome + " ")
+    ]
+
+    if len(prefixos) == 1:
+        return {
+            "status": "revisao_prefixo_unico",
+            "candidatos": prefixos,
+        }
+
+    if len(prefixos) > 1:
+        return {
+            "status": "revisao_modelo_ambiguo",
+            "candidatos": prefixos,
+        }
+
+    return {
+        "status": "modelo_nao_encontrado",
+        "candidatos": [],
+    }
 
 
 def _selecionar_ano(ano_min: int, anos_fipe: list[dict]) -> dict:
@@ -183,7 +212,7 @@ def construir_mapeamento(forcar: bool = False) -> pd.DataFrame:
         normalizar_texto(x["name"]): str(x["code"])
         for x in catalogo["brands"] if x.get("name") and x.get("code") is not None
     }
-    equivalencias = {"VW": "VOLKSWAGEN", "GM": "CHEVROLET", "LANDROVER": "LAND ROVER"}
+
     linhas = []
     for _, row in uber.iterrows():
         marca = str(row["marca"]).strip()
@@ -191,8 +220,11 @@ def construir_mapeamento(forcar: bool = False) -> pd.DataFrame:
         ano_min = int(row["ano_min_consulta"])
         registro = {"marca_uber": marca, "modelo_uber": modelo, "ano_min_uber": ano_min,
                     "status": "pendente", "revisar_match": True}
-        marca_normalizada = normalizar_texto(marca)
-        brand_id = marcas.get(equivalencias.get(marca_normalizada, marca_normalizada))
+        brand_id, status_marca = resolver_marca_fipe(
+        marca,
+        marcas
+        )
+
         if brand_id is None:
             registro["status"] = "marca_nao_encontrada"
             linhas.append(registro)
