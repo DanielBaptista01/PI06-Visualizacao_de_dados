@@ -1,0 +1,646 @@
+﻿CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_UF,NM_UF,SIGLA_UF,CD_REGIAO,NM_REGIAO,SIGLA_RG,CD_CONCURB,NM_CONCURB,AREA_KM2,municipio_chave,codigo_ibge_municipio
+3543402,Ribeirão Preto,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,650.916,RIBEIRAO PRETO,3543402
+3518859,Guatapará,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,413.653,GUATAPARA,3518859
+3518206,Guararapes,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,955.637,GUARARAPES,3518206
+3510005,Cândido Mota,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,595.811,CANDIDO MOTA,3510005
+3502606,Aparecida d'Oeste,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,179.004,APARECIDA D OESTE,3502606
+3534609,Osvaldo Cruz,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,248.038,OSVALDO CRUZ,3534609
+3502408,Anhumas,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,320.84,ANHUMAS,3502408
+3526407,Laranjal Paulista,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,384.274,LARANJAL PAULISTA,3526407
+3502507,Aparecida,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3518404,Guaratinguetá/SP,120.89,APARECIDA,3502507
+3551009,São Vicente,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,147.774,SAO VICENTE,3551009
+3534500,Oscar Bressane,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,222.13,OSCAR BRESSANE,3534500
+3501806,Américo de Campos,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,252.876,AMERICO DE CAMPOS,3501806
+3542800,Ribeira,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,335.759,RIBEIRA,3542800
+3526308,Lagoinha,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,254.454,LAGOINHA,3526308
+3509957,Canas,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,53.261,CANAS,3509957
+3518107,Guarantã,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,461.746,GUARANTA,3518107
+3550803,São Sebastião da Grama,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,252.41,SAO SEBASTIAO DA GRAMA,3550803
+3509908,Cananéia,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1237.354,CANANEIA,3509908
+3534807,Ouro Verde,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,266.778,OURO VERDE,3534807
+3542602,Registro,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,722.201,REGISTRO,3542602
+3550902,São Simão,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,617.252,SAO SIMAO,3550902
+3526605,Lavrinhas,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,166.948,LAVRINHAS,3526605
+3534906,Pacaembu,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,339.375,PACAEMBU,3534906
+3542701,Restinga,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3516200,Franca/SP,245.746,RESTINGA,3542701
+3526704,Leme,350045,Araras,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,402.871,LEME,3526704
+3518503,Guareí,350006,Itapetininga,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,567.719,GUAREI,3518503
+3551207,Sarutaiá,350017,Piraju,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,141.608,SARUTAIA,3551207
+3534708,Ourinhos,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,3534708,Ourinhos/SP,295.818,OURINHOS,3534708
+3510302,Capela do Alto,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,169.89,CAPELA DO ALTO,3510302
+3543006,Ribeirão Branco,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,697.5,RIBEIRAO BRANCO,3543006
+3526506,Lavínia,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,537.675,LAVINIA,3526506
+3543105,Ribeirão Corrente,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3516200,Franca/SP,148.332,RIBEIRAO CORRENTE,3543105
+3501707,Américo Brasiliense,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3503208,Araraquara/SP,122.958,AMERICO BRASILIENSE,3501707
+3518305,Guararema,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,,,270.816,GUARAREMA,3518305
+3510104,Cândido Rodrigues,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,70.892,CANDIDO RODRIGUES,3510104
+3534757,Ouroeste,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,288.648,OUROESTE,3534757
+3518404,Guaratinguetá,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3518404,Guaratinguetá/SP,752.636,GUARATINGUETA,3518404
+3551108,Sarapuí,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,352.592,SARAPUI,3551108
+3510203,Capão Bonito,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1640.229,CAPAO BONITO,3510203
+3542909,Ribeirão Bonito,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,471.553,RIBEIRAO BONITO,3542909
+3510153,Canitar,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,3534708,Ourinhos/SP,57.459,CANITAR,3510153
+3525854,Jumirim,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,56.685,JUMIRIM,3525854
+3502101,Andradina,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,964.226,ANDRADINA,3502101
+3509502,Campinas,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,794.57,CAMPINAS,3509502
+3509452,Campina do Monte Alegre,350006,Itapetininga,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,184.479,CAMPINA DO MONTE ALEGRE,3509452
+3534104,Oriente,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,3529005,Marília/SP,218.668,ORIENTE,3534104
+3501905,Amparo,350048,Amparo,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,445.323,AMPARO,3501905
+3525904,Jundiaí,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,431.162,JUNDIAI,3525904
+3517703,Guará,350035,Ituverava,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,362.183,GUARA,3517703
+3550407,São Pedro,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,611.51,SAO PEDRO,3550407
+3502002,Analândia,350046,Rio Claro,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,325.953,ANALANDIA,3502002
+3533908,Olímpia,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,802.393,OLIMPIA,3533908
+3550506,São Pedro do Turvo,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,731.221,SAO PEDRO DO TURVO,3550506
+3525706,José Bonifácio,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,860.2,JOSE BONIFACIO,3525706
+3534005,Onda Verde,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,242.946,ONDA VERDE,3534005
+3542305,Redenção da Serra,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,309.322,REDENCAO DA SERRA,3542305
+3501301,Álvares Machado,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,347.647,ALVARES MACHADO,3501301
+3525805,Júlio Mesquita,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,128.183,JULIO MESQUITA,3525805
+3517604,Guapiara,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,408.292,GUAPIARA,3517604
+3550308,São Paulo,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,1522.683,SAO PAULO,3550308
+3509403,Cajuru,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,660.088,CAJURU,3509403
+3542107,Rafard,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,121.645,RAFARD,3542107
+3534302,Orlândia,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,291.765,ORLANDIA,3534302
+3542206,Rancharia,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,1591.148,RANCHARIA,3542206
+3526100,Juquiá,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,812.799,JUQUIA,3526100
+3534401,Osasco,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,64.999,OSASCO,3534401
+3526209,Juquitiba,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,,,523.074,JUQUITIBA,3526209
+3517901,Guaraci,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,641.501,GUARACI,3517901
+3518008,Guarani d'Oeste,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,85.7,GUARANI D OESTE,3518008
+3501152,Alumínio,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3552205,Sorocaba/SP,83.619,ALUMINIO,3501152
+3550704,São Sebastião,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,402.395,SAO SEBASTIAO,3550704
+3534203,Orindiúva,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,247.378,ORINDIUVA,3534203
+3509809,Campos Novos Paulista,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,484.199,CAMPOS NOVOS PAULISTA,3509809
+3542503,Reginópolis,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,410.406,REGINOPOLIS,3542503
+3526001,Junqueirópolis,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,583.273,JUNQUEIROPOLIS,3526001
+3517802,Guaraçaí,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,569.222,GUARACAI,3517802
+3501202,Álvares Florence,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,362.411,ALVARES FLORENCE,3501202
+3509601,Campo Limpo Paulista,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,79.504,CAMPO LIMPO PAULISTA,3509601
+3509700,Campos do Jordão,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,289.981,CAMPOS DO JORDAO,3509700
+3542404,Regente Feijó,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,263.426,REGENTE FEIJO,3542404
+3501608,Americana,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3501608,Americana - Santa Bárbara d´Oeste/SP,133.912,AMERICANA,3501608
+3550605,São Roque,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3550605,São Roque - Mairinque/SP,306.899,SAO ROQUE,3550605
+3533601,Nuporanga,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,348.265,NUPORANGA,3533601
+3549953,São Lourenço da Serra,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,186.353,SAO LOURENCO DA SERRA,3549953
+3525409,Jeriquara,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,141.971,JERIQUARA,3525409
+3501400,Álvaro de Carvalho,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,153.662,ALVARO DE CARVALHO,3501400
+3501509,Alvinlândia,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,84.879,ALVINLANDIA,3501509
+3517208,Guaiçara,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,277.154,GUAICARA,3517208
+3549904,São José dos Campos,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,1099.494,SAO JOSE DOS CAMPOS,3549904
+3509007,Caieiras,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,97.745,CAIEIRAS,3509007
+3533403,Nova Odessa,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3501608,Americana - Santa Bárbara d´Oeste/SP,73.788,NOVA ODESSA,3533403
+3541703,Quatá,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,651.341,QUATA,3541703
+3550001,São Luiz do Paraitinga,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,618.126,SAO LUIZ DO PARAITINGA,3550001
+3525201,Jarinu,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,207.549,JARINU,3525201
+3533502,Novo Horizonte,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,931.743,NOVO HORIZONTE,3533502
+3541802,Queiroz,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,234.914,QUEIROZ,3541802
+3517000,Getulina,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,676.755,GETULINA,3517000
+3525300,Jaú,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,3525300,Jaú,687.103,JAU,3525300
+3517109,Glicério,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,272.8,GLICERIO,3517109
+3500758,Alambari,350006,Itapetininga,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3522307,Itapetininga/SP,159.6,ALAMBARI,3500758
+3549805,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,431.944,SAO JOSE DO RIO PRETO,3549805
+3508900,Caiabu,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,252.704,CAIABU,3508900
+3533809,Óleo,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,198.938,OLEO,3533809
+3541604,Promissão,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,779.2,PROMISSAO,3541604
+3525607,João Ramalho,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,415.452,JOAO RAMALHO,3525607
+3509254,Cajati,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,454.489,CAJATI,3509254
+3500808,Alfredo Marcondes,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,118.915,ALFREDO MARCONDES,3500808
+3517406,Guaíra,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,1258.465,GUAIRA,3517406
+3509205,Cajamar,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,131.521,CAJAMAR,3509205
+3517505,Guapiaçu,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,324.752,GUAPIACU,3517505
+3541653,Quadra,350008,Tatuí,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,205.672,QUADRA,3541653
+3550209,São Miguel Arcanjo,350006,Itapetininga,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,930.339,SAO MIGUEL ARCANJO,3550209
+3509304,Cajobi,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,176.929,CAJOBI,3509304
+3533700,Ocauçu,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,301.036,OCAUCU,3533700
+3542008,Quintana,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,318.937,QUINTANA,3542008
+3525508,Joanópolis,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,374.346,JOANOPOLIS,3525508
+3517307,Guaimbê,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,217.811,GUAIMBE,3517307
+3500709,Agudos,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,966.708,AGUDOS,3500709
+3509106,Caiuá,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,551.159,CAIUA,3509106
+3501004,Altinópolis,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,928.956,ALTINOPOLIS,3501004
+3501103,Alto Alegre,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,318.574,ALTO ALEGRE,3501103
+3533007,Nova Granada,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,531.796,NOVA GRANADA,3533007
+3524808,Jales,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,368.574,JALES,3524808
+3550100,São Manuel,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,650.734,SAO MANUEL,3550100
+3533106,Nova Guataporanga,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,34.675,NOVA GUATAPORANGA,3533106
+3500907,Altair,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,313.007,ALTAIR,3500907
+3524907,Jambeiro,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,184.413,JAMBEIRO,3524907
+3541901,Queluz,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,249.356,QUELUZ,3541901
+3516705,Garça,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,555.807,GARCA,3516705
+3549409,São Joaquim da Barra,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,410.863,SAO JOAQUIM DA BARRA,3549409
+3508504,Caçapava,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,369.558,CACAPAVA,3508504
+3532900,Nova Europa,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,160.25,NOVA EUROPA,3532900
+3541208,Presidente Bernardes,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,749.234,PRESIDENTE BERNARDES,3541208
+3549508,São José da Bela Vista,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,276.952,SAO JOSE DA BELA VISTA,3549508
+3524709,Jaguariúna,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,141.391,JAGUARIUNA,3524709
+3541307,Presidente Epitácio,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,1260.281,PRESIDENTE EPITACIO,3541307
+3516507,Gabriel Monteiro,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,138.681,GABRIEL MONTEIRO,3516507
+3508306,Cabrália Paulista,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,239.974,CABRALIA PAULISTA,3508306
+3516606,Gália,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,355.914,GALIA,3516606
+3549300,São João do Pau d'Alho,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,117.514,SAO JOAO DO PAU D ALHO,3549300
+3508405,Cabreúva,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,260.234,CABREUVA,3508405
+3541109,Presidente Alves,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,286.642,PRESIDENTE ALVES,3541109
+3533304,Nova Luzitânia,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,73.69,NOVA LUZITANIA,3533304
+3525102,Jardinópolis,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,501.87,JARDINOPOLIS,3525102
+3516903,General Salgado,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,493.88,GENERAL SALGADO,3516903
+3500303,Aguaí,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,474.554,AGUAI,3500303
+3508702,Caconde,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,468.998,CACONDE,3508702
+3508801,Cafelândia,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,920.28,CAFELANDIA,3508801
+3541505,Presidente Venceslau,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,755.203,PRESIDENTE VENCESLAU,3541505
+3500105,Adamantina,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,411.987,ADAMANTINA,3500105
+3516804,Gastão Vidigal,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,180.569,GASTAO VIDIGAL,3516804
+3500204,Adolfo,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,211.055,ADOLFO,3500204
+3508603,Cachoeira Paulista,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,288.747,CACHOEIRA PAULISTA,3508603
+3533254,Novais,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,117.772,NOVAIS,3533254
+3500550,Águas de Santa Bárbara,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,404.463,AGUAS DE SANTA BARBARA,3500550
+3549706,São José do Rio Pardo,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,419.729,SAO JOSE DO RIO PARDO,3549706
+3533205,Nova Independência,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,265.028,NOVA INDEPENDENCIA,3533205
+3516853,Gavião Peixoto,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3503208,Araraquara/SP,243.766,GAVIAO PEIXOTO,3516853
+3500501,Águas de Lindóia,350048,Amparo,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,59.872,AGUAS DE LINDOIA,3500501
+3525003,Jandira,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,17.122,JANDIRA,3525003
+3500600,Águas de São Pedro,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,3.38,AGUAS DE SAO PEDRO,3500600
+3532504,Neves Paulista,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,219.05,NEVES PAULISTA,3532504
+3549607,São José do Barreiro,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,570.604,SAO JOSE DO BARREIRO,3549607
+3524303,Jaboticabal,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,706.722,JABOTICABAL,3524303
+3532603,Nhandeara,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,436.159,NHANDEARA,3532603
+3541406,Presidente Prudente,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,560.637,PRESIDENTE PRUDENTE,3541406
+3500402,Águas da Prata,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,142.673,AGUAS DA PRATA,3500402
+3524402,Jacareí,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,464.252,JACAREI,3524402
+3557105,Votuporanga,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,420.703,VOTUPORANGA,3557105
+3516200,Franca,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3516200,Franca/SP,605.679,FRANCA,3516200
+3548906,São Carlos,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3548906,São Carlos/SP,1136.907,SAO CARLOS,3548906
+3508009,Buri,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1196.463,BURI,3508009
+3532405,Nazaré Paulista,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,326.392,NAZARE PAULISTA,3532405
+3540705,Porto Ferreira,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,245.327,PORTO FERREIRA,3540705
+3524204,Jaborandi,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,273.438,JABORANDI,3524204
+3540804,Potirendaba,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,342.492,POTIRENDABA,3540804
+3557154,Zacarias,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,319.056,ZACARIAS,3557154
+3516002,Flórida Paulista,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,524.138,FLORIDA PAULISTA,3516002
+3507803,Brodowski,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,278.458,BRODOWSKI,3507803
+3516101,Florínea,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,225.886,FLORINEA,3516101
+3540754,Potim,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3518404,Guaratinguetá/SP,44.644,POTIM,3540754
+3507902,Brotas,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,1101.373,BROTAS,3507902
+3556958,Vitória Brasil,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,49.832,VITORIA BRASIL,3556958
+3540606,Porto Feliz,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,556.706,PORTO FELIZ,3540606
+3532801,Nova Aliança,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,217.515,NOVA ALIANCA,3532801
+3524600,Jacupiranga,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,704.136,JACUPIRANGA,3524600
+3516408,Franco da Rocha,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,132.775,FRANCO DA ROCHA,3516408
+3532868,Nova Castilho,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,183.396,NOVA CASTILHO,3532868
+3508207,Buritizal,350035,Ituverava,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,266.42,BURITIZAL,3508207
+3557006,Votorantim,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3552205,Sorocaba/SP,184.186,VOTORANTIM,3557006
+3532843,Nova Canaã Paulista,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,124.473,NOVA CANAA PAULISTA,3532843
+3548807,São Caetano do Sul,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,15.421,SAO CAETANO DO SUL,3548807
+3532827,Nova Campina,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,385.375,NOVA CAMPINA,3532827
+3549250,São João de Iracema,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,178.396,SAO JOAO DE IRACEMA,3549250
+3541059,Pratânia,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,175.1,PRATANIA,3541059
+3549201,São João das Duas Pontes,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,129.462,SAO JOAO DAS DUAS PONTES,3549201
+3532702,Nipoã,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,137.609,NIPOA,3532702
+3541000,Praia Grande,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,149.652,PRAIA GRANDE,3541000
+3524501,Jaci,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,145.133,JACI,3524501
+3557204,Chavantes,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,188.727,CHAVANTES,3557204
+3540853,Pracinha,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,63.141,PRACINHA,3540853
+3516309,Francisco Morato,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,49.001,FRANCISCO MORATO,3516309
+3549003,São Francisco,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,75.579,SAO FRANCISCO,3549003
+3557303,Estiva Gerbi,350043,Mogi Guaçu,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3530706,Mogi Guaçu - Mogi Mirim/SP,74.144,ESTIVA GERBI,3557303
+3508108,Buritama,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,327.344,BURITAMA,3508108
+3540200,Pontal,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,356.371,PONTAL,3540200
+3532009,Morungaba,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,146.752,MORUNGABA,3532009
+3549102,São João da Boa Vista,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,516.399,SAO JOAO DA BOA VISTA,3549102
+3540903,Pradópolis,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,164.386,PRADOPOLIS,3540903
+3523800,Itobi,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,138.986,ITOBI,3523800
+3515608,Fernando Prestes,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,169.99,FERNANDO PRESTES,3515608
+3540259,Pontalinda,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,209.504,PONTALINDA,3540259
+3523909,Itu,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3523909,Itu - Salto/SP,640.719,ITU,3523909
+3556602,Vera Cruz,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,3529005,Marília/SP,247.716,VERA CRUZ,3556602
+3515707,Ferraz de Vasconcelos,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,29.58,FERRAZ DE VASCONCELOS,3515707
+3532058,Motuca,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,228.651,MOTUCA,3532058
+3540101,Pongaí,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,183.399,PONGAI,3540101
+3548401,Santópolis do Aguapeí,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,128.026,SANTOPOLIS DO AGUAPEI,3548401
+3531902,Morro Agudo,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,1388.127,MORRO AGUDO,3531902
+3515657,Fernão,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,100.504,FERNAO,3515657
+3523701,Itirapuã,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3516200,Franca/SP,161.118,ITIRAPUA,3523701
+3515509,Fernandópolis,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,549.797,FERNANDOPOLIS,3515509
+3507456,Borebi,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,347.989,BOREBI,3507456
+3507407,Borborema,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,552.256,BORBOREMA,3507407
+3556453,Vargem Grande Paulista,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,42.489,VARGEM GRANDE PAULISTA,3556453
+3507506,Botucatu,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,3507506,Botucatu,1481.772,BOTUCATU,3507506
+3515905,Floreal,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,204.236,FLOREAL,3515905
+3556503,Várzea Paulista,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,35.048,VARZEA PAULISTA,3556503
+3507308,Boracéia,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,122.11,BORACEIA,3507308
+3540507,Porangaba,350008,Tatuí,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,265.968,PORANGABA,3540507
+3548302,Santo Expedito,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,94.465,SANTO EXPEDITO,3548302
+3532306,Natividade da Serra,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,834.281,NATIVIDADE DA SERRA,3532306
+3532157,Nantes,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,286.444,NANTES,3532157
+3524105,Ituverava,350035,Ituverava,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,704.659,ITUVERAVA,3524105
+3540309,Pontes Gestal,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,217.505,PONTES GESTAL,3540309
+3556909,Vista Alegre do Alto,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,95.429,VISTA ALEGRE DO ALTO,3556909
+3532108,Murutinga do Sul,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,250.873,MURUTINGA DO SUL,3532108
+3540408,Populina,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,315.938,POPULINA,3540408
+3548708,São Bernardo do Campo,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,408.234,SAO BERNARDO DO CAMPO,3548708
+3507704,Braúna,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,3506508,Birigui/SP,195.176,BRAUNA,3507704
+3532207,Narandiba,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,357.325,NARANDIBA,3532207
+3524006,Itupeva,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,201.214,ITUPEVA,3524006
+3539707,Platina,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,327.48,PLATINA,3539707
+3556701,Vinhedo,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,80.208,VINHEDO,3556701
+3515806,Flora Rica,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,224.619,FLORA RICA,3515806
+3548500,Santos,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,281.033,SANTOS,3548500
+3531506,Monte Azul Paulista,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,263.463,MONTE AZUL PAULISTA,3531506
+3507753,Brejo Alegre,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,3506508,Birigui/SP,105.689,BREJO ALEGRE,3507753
+3556800,Viradouro,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,217.726,VIRADOURO,3556800
+3548609,São Bento do Sapucaí,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,252.579,SAO BENTO DO SAPUCAI,3548609
+3523305,Itariri,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,,,273.956,ITARIRI,3523305
+3515129,Emilianópolis,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,225.177,EMILIANOPOLIS,3515129
+3515103,Embu-Guaçu,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,155.285,EMBU GUACU,3515103
+3547908,Santo Antônio da Alegria,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,310.311,SANTO ANTONIO DA ALEGRIA,3547908
+3515202,Estrela d'Oeste,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,296.281,ESTRELA D OESTE,3515202
+3515194,Espírito Santo do Turvo,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,193.666,ESPIRITO SANTO DO TURVO,3515194
+3515186,Espírito Santo do Pinhal,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,389.235,ESPIRITO SANTO DO PINHAL,3515186
+3523206,Itararé,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1003.86,ITARARE,3523206
+3515152,Engenheiro Coelho,350042,Limeira,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,109.574,ENGENHEIRO COELHO,3515152
+3515004,Embu das Artes,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,70.264,EMBU DAS ARTES,3515004
+3507605,Bragança Paulista,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3507605,Bragança Paulista,512.584,BRAGANCA PAULISTA,3507605
+3556107,Valentim Gentil,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,149.741,VALENTIM GENTIL,3556107
+3514957,Embaúba,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,83.129,EMBAUBA,3514957
+3539608,Planalto,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,289.825,PLANALTO,3539608
+3506904,Bofete,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,654.546,BOFETE,3506904
+3531407,Monte Aprazível,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,495.559,MONTE APRAZIVEL,3531407
+3507001,Boituva,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,248.954,BOITUVA,3507001
+3556008,Urupês,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,323.916,URUPES,3556008
+3547809,Santo André,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,175.801,SANTO ANDRE,3547809
+3506805,Bocaina,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,363.926,BOCAINA,3506805
+3515350,Euclides da Cunha Paulista,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,571.169,EUCLIDES DA CUNHA PAULISTA,3515350
+3540002,Pompéia,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,784.674,POMPEIA,3540002
+3556354,Vargem,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,142.595,VARGEM,3556354
+3531803,Monte Mor,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,240.566,MONTE MOR,3531803
+3523602,Itirapina,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,564.603,ITIRAPINA,3523602
+3556305,Valparaíso,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,857.661,VALPARAISO,3556305
+3539806,Poá,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,17.264,POA,3539806
+3515400,Fartura,350017,Piraju,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,429.171,FARTURA,3515400
+3548104,Santo Antônio do Jardim,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,109.956,SANTO ANTONIO DO JARDIM,3548104
+3556404,Vargem Grande do Sul,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,267.178,VARGEM GRANDE DO SUL,3556404
+3531605,Monte Castelo,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,233.289,MONTE CASTELO,3531605
+3539905,Poloni,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,135.119,POLONI,3539905
+3548203,Santo Antônio do Pinhal,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,132.966,SANTO ANTONIO DO PINHAL,3548203
+3523404,Itatiba,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3523404,Itatiba,322.253,ITATIBA,3523404
+3531704,Monteiro Lobato,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,332.408,MONTEIRO LOBATO,3531704
+3523503,Itatinga,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,979.526,ITATINGA,3523503
+3507159,Bom Sucesso de Itararé,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,133.578,BOM SUCESSO DE ITARARE,3507159
+3556206,Valinhos,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,148.72,VALINHOS,3556206
+3539202,Pirapozinho,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,477.673,PIRAPOZINHO,3539202
+3515301,Estrela do Norte,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,264.987,ESTRELA DO NORTE,3515301
+3548005,Santo Antônio de Posse,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,154.133,SANTO ANTONIO DE POSSE,3548005
+3531001,Monções,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,104.352,MONCOES,3531001
+3522802,Itaporanga,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,507.997,ITAPORANGA,3522802
+3507209,Borá,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,118.951,BORA,3507209
+3514601,Dumont,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,111.361,DUMONT,3514601
+3548054,Santo Antônio do Aracanguá,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,1308.889,SANTO ANTONIO DO ARACANGUA,3548054
+3507100,Bom Jesus dos Perdões,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3504107,Atibaia/SP,108.366,BOM JESUS DOS PERDOES,3507100
+3514502,Duartina,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,264.557,DUARTINA,3514502
+3522653,Itapirapuã Paulista,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,406.478,ITAPIRAPUA PAULISTA,3522653
+3555604,Uchoa,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,256.982,UCHOA,3555604
+3539103,Pirapora do Bom Jesus,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,108.304,PIRAPORA DO BOM JESUS,3539103
+3506409,Bilac,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,158.025,BILAC,3506409
+3547403,Santa Rita d'Oeste,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,209.8,SANTA RITA D OESTE,3547403
+3530904,Mombuca,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,133.698,MOMBUCA,3530904
+3522703,Itápolis,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,996.747,ITAPOLIS,3522703
+3555406,Ubatuba,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,708.246,UBATUBA,3555406
+3555505,Ubirajara,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,282.179,UBIRAJARA,3555505
+3539400,Piratininga,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,3506003,Bauru/SP,402.409,PIRATININGA,3539400
+3531209,Monte Alegre do Sul,350048,Amparo,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,110.308,MONTE ALEGRE DO SUL,3531209
+3539509,Pitangueiras,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,430.638,PITANGUEIRAS,3539509
+3547304,Santana de Parnaíba,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,179.89,SANTANA DE PARNAIBA,3547304
+3506300,Bernardino de Campos,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,244.158,BERNARDINO DE CAMPOS,3506300
+3531308,Monte Alto,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,346.95,MONTE ALTO,3531308
+3547650,Santa Salete,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,79.192,SANTA SALETE,3547650
+3523107,Itaquaquecetuba,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,82.575,ITAQUAQUECETUBA,3523107
+3514924,Elisiário,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,93.314,ELISIARIO,3514924
+3555802,Urânia,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,209.262,URANIA,3555802
+3506359,Bertioga,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,,,491.546,BERTIOGA,3506359
+3514908,Elias Fausto,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,202.36,ELIAS FAUSTO,3514908
+3539301,Pirassununga,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,727.714,PIRASSUNUNGA,3539301
+3547601,Santa Rosa de Viterbo,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,288.576,SANTA ROSA DE VITERBO,3547601
+3555901,Uru,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,146.901,URU,3555901
+3531100,Mongaguá,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,142.521,MONGAGUA,3531100
+3547700,Santo Anastácio,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,552.876,SANTO ANASTACIO,3547700
+3522901,Itapuí,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,140.023,ITAPUI,3522901
+3523008,Itapura,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,301.653,ITAPURA,3523008
+3514700,Echaporã,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,515.258,ECHAPORA,3514700
+3555703,União Paulista,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,79.056,UNIAO PAULISTA,3555703
+3514809,Eldorado,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1654.256,ELDORADO,3514809
+3547502,Santa Rita do Passa Quatro,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,752.911,SANTA RITA DO PASSA QUATRO,3547502
+3522307,Itapetininga,350006,Itapetininga,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3522307,Itapetininga/SP,1789.35,ITAPETININGA,3522307
+3514106,Dois Córregos,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,632.972,DOIS CORREGOS,3514106
+3506706,Boa Esperança do Sul,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,690.748,BOA ESPERANCA DO SUL,3506706
+3538709,Piracicaba,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3538709,Piracicaba/SP,1377.173,PIRACICABA,3538709
+3506508,Birigui,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,3506508,Birigui/SP,530.031,BIRIGUI,3506508
+3530508,Mococa,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,855.701,MOCOCA,3530508
+3506607,Biritiba Mirim,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,317.406,BIRITIBA MIRIM,3506607
+3522158,Itaoca,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,183.015,ITAOCA,3522158
+3555109,Tupi Paulista,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,244.663,TUPI PAULISTA,3555109
+3538600,Piracaia,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,385.64,PIRACAIA,3538600
+3505906,Batatais,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,849.526,BATATAIS,3505906
+3546900,Santa Lúcia,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3503208,Araraquara/SP,153.86,SANTA LUCIA,3546900
+3530409,Mirassolândia,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,166.125,MIRASSOLANDIA,3530409
+3522208,Itapecerica da Serra,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,151.012,ITAPECERICA DA SERRA,3522208
+3554904,Três Fronteiras,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,151.594,TRES FRONTEIRAS,3554904
+3514007,Dobrada,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,149.729,DOBRADA,3514007
+3538907,Pirajuí,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,823.758,PIRAJUI,3538907
+3546702,Santa Gertrudes,350046,Rio Claro,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3543907,Rio Claro/SP,98.045,SANTA GERTRUDES,3546702
+3555000,Tupã,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,627.986,TUPA,3555000
+3530706,Mogi Guaçu,350043,Mogi Guaçu,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3530706,Mogi Guaçu - Mogi Mirim/SP,812.753,MOGI GUACU,3530706
+3539004,Pirangi,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,215.809,PIRANGI,3539004
+3546801,Santa Isabel,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,362.875,SANTA ISABEL,3546801
+3522505,Itapevi,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,82.583,ITAPEVI,3522505
+3530805,Mogi Mirim,350043,Mogi Guaçu,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3530706,Mogi Guaçu - Mogi Mirim/SP,497.709,MOGI MIRIM,3530805
+3554953,Tuiuti,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,126.731,TUIUTI,3554953
+3522604,Itapira,350043,Mogi Guaçu,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,518.431,ITAPIRA,3522604
+3555307,Turmalina,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,147.797,TURMALINA,3555307
+3538808,Piraju,350017,Piraju,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,504.591,PIRAJU,3538808
+3514403,Dracena,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,487.271,DRACENA,3514403
+3547106,Santa Mercedes,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,166.884,SANTA MERCEDES,3547106
+3530607,Mogi das Cruzes,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,712.532,MOGI DAS CRUZES,3530607
+3547205,Santana da Ponte Pensa,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,129.888,SANTANA DA PONTE PENSA,3547205
+3505807,Bastos,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,170.912,BASTOS,3505807
+3522406,Itapeva,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1826.258,ITAPEVA,3522406
+3555356,Ubarana,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,209.861,UBARANA,3555356
+3514205,Dolcinópolis,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,77.939,DOLCINOPOLIS,3514205
+3514304,Dourado,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,205.874,DOURADO,3514304
+3547007,Santa Maria da Serra,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,252.621,SANTA MARIA DA SERRA,3547007
+3513603,Cunha,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,1407.098,CUNHA,3513603
+3506201,Bento de Abreu,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,301.687,BENTO DE ABREU,3506201
+3555208,Turiúba,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,153.492,TURIUBA,3555208
+3538204,Pinhalzinho,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,154.529,PINHALZINHO,3538204
+3506003,Bauru,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,3506003,Bauru/SP,667.684,BAURU,3506003
+3530003,Mira Estrela,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,216.825,MIRA ESTRELA,3530003
+3521804,Itaí,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1092.884,ITAI,3521804
+3506102,Bebedouro,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,683.192,BEBEDOURO,3506102
+3554508,Tietê,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,405.034,TIETE,3554508
+3538006,Pindamonhangaba,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,731.356,PINDAMONHANGABA,3538006
+3554607,Timburi,350017,Piraju,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,196.79,TIMBURI,3554607
+3529807,Mineiros do Tietê,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,213.242,MINEIROS DO TIETE,3529807
+3538105,Pindorama,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,184.825,PINDORAMA,3538105
+3546405,Santa Cruz do Rio Pardo,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,1114.747,SANTA CRUZ DO RIO PARDO,3546405
+3505401,Barra do Turvo,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1007.684,BARRA DO TURVO,3505401
+3529906,Miracatu,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1002.2,MIRACATU,3529906
+3521705,Itaberá,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1100.247,ITABERA,3521705
+3554409,Terra Roxa,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,221.54,TERRA ROXA,3554409
+3505351,Barra do Chapéu,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,405.681,BARRA DO CHAPEU,3505351
+3513504,Cubatão,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,143.649,CUBATAO,3513504
+3546207,Santa Cruz da Conceição,350045,Araras,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,150.13,SANTA CRUZ DA CONCEICAO,3546207
+3546306,Santa Cruz das Palmeiras,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,295.33,SANTA CRUZ DAS PALMEIRAS,3546306
+3530201,Mirante do Paranapanema,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,1238.931,MIRANTE DO PARANAPANEMA,3530201
+3538501,Piquete,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,175.996,PIQUETE,3538501
+3513850,Dirce Reis,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,88.152,DIRCE REIS,3513850
+3522000,Itaju,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,230.355,ITAJU,3522000
+3530300,Mirassol,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,243.228,MIRASSOL,3530300
+3546256,Santa Cruz da Esperança,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,148.062,SANTA CRUZ DA ESPERANCA,3546256
+3522109,Itanhaém,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,601.018,ITANHAEM,3522109
+3513801,Diadema,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,30.806,DIADEMA,3513801
+3554805,Tremembé,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,190.93,TREMEMBE,3554805
+3538303,Piquerobi,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,482.769,PIQUEROBI,3538303
+3513900,Divinolândia,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,223.749,DIVINOLANDIA,3513900
+3546603,Santa Fé do Sul,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,206.537,SANTA FE DO SUL,3546603
+3530102,Mirandópolis,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,917.692,MIRANDOPOLIS,3530102
+3521903,Itajobi,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,502.066,ITAJOBI,3521903
+3505302,Barra Bonita,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,150.121,BARRA BONITA,3505302
+3513702,Descalvado,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,753.926,DESCALVADO,3513702
+3505609,Barrinha,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,148.756,BARRINHA,3505609
+3554656,Torre de Pedra,350008,Tatuí,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,71.506,TORRE DE PEDRA,3554656
+3505708,Barueri,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,66.364,BARUERI,3505708
+3554755,Trabiju,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,63.421,TRABIJU,3554755
+3554706,Torrinha,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,315.267,TORRINHA,3554706
+3537701,Piacatu,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,232.488,PIACATU,3537701
+3546504,Santa Ernestina,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,134.421,SANTA ERNESTINA,3546504
+3505500,Barretos,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3505500,Barretos,1566.161,BARRETOS,3505500
+3529500,Mendonça,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,195.151,MENDONCA,3529500
+3521309,Ipuã,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,466.461,IPUA,3521309
+3554003,Tatuí,350008,Tatuí,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3554003,Tatuí,523.749,TATUI,3554003
+3513108,Cravinhos,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,311.423,CRAVINHOS,3513108
+3537503,Pereiras,350008,Tatuí,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,223.136,PEREIRAS,3537503
+3521150,Ipiguá,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,136.028,IPIGUA,3521150
+3545803,Santa Bárbara d'Oeste,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3501608,Americana - Santa Bárbara d´Oeste/SP,271.03,SANTA BARBARA D OESTE,3545803
+3554102,Taubaté,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,624.924,TAUBATE,3554102
+3529302,Matão,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,524.899,MATAO,3529302
+3537602,Peruíbe,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,,,323.331,PERUIBE,3537602
+3521101,Ipeúna,350046,Rio Claro,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3543907,Rio Claro/SP,190.01,IPEUNA,3521101
+3529401,Mauá,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,62.034,MAUA,3529401
+3521200,Iporanga,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1152.059,IPORANGA,3521200
+3553906,Tarabai,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,201.385,TARABAI,3553906
+3513009,Cotia,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,324.0,COTIA,3513009
+3537909,Pilar do Sul,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,681.248,PILAR DO SUL,3537909
+3545704,Santa Albertina,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,272.692,SANTA ALBERTINA,3545704
+3529708,Miguelópolis,350035,Ituverava,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,820.849,MIGUELOPOLIS,3529708
+3521507,Irapuã,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,257.611,IRAPUA,3521507
+3504909,Bananal,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,616.934,BANANAL,3504909
+3553955,Tarumã,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,302.913,TARUMA,3553955
+3513306,Cruzália,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,149.33,CRUZALIA,3513306
+3521606,Irapuru,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,214.078,IRAPURU,3521606
+3554300,Teodoro Sampaio,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,1559.776,TEODORO SAMPAIO,3554300
+3513405,Cruzeiro,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,305.669,CRUZEIRO,3513405
+3546108,Santa Clara d'Oeste,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,183.458,SANTA CLARA D OESTE,3546108
+3521408,Iracemápolis,350042,Limeira,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3526902,Limeira/SP,115.31,IRACEMAPOLIS,3521408
+3504800,Bálsamo,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,149.881,BALSAMO,3504800
+3513207,Cristais Paulista,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3516200,Franca/SP,385.23,CRISTAIS PAULISTA,3513207
+3529658,Mesópolis,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,148.636,MESOPOLIS,3529658
+3537800,Piedade,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,746.903,PIEDADE,3537800
+3505104,Barbosa,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,205.212,BARBOSA,3505104
+3537156,Pedrinhas Paulista,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,152.309,PEDRINHAS PAULISTA,3537156
+3529609,Meridiano,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,228.199,MERIDIANO,3529609
+3505203,Bariri,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,444.405,BARIRI,3505203
+3537107,Pedreira,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,108.817,PEDREIRA,3537107
+3528908,Mariápolis,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,186.432,MARIAPOLIS,3528908
+3537206,Pedro de Toledo,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,,,672.83,PEDRO DE TOLEDO,3537206
+3554201,Tejupá,350017,Piraju,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,296.189,TEJUPA,3554201
+3546009,Santa Branca,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3549904,São José dos Campos/SP,272.238,SANTA BRANCA,3546009
+3505005,Barão de Antonina,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,153.142,BARAO DE ANTONINA,3505005
+3529005,Marília,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,3529005,Marília/SP,1170.515,MARILIA,3529005
+3520806,Inúbia Paulista,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,87.119,INUBIA PAULISTA,3520806
+3553500,Tapiraí,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,754.421,TAPIRAI,3553500
+3537008,Pedregulho,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,712.604,PEDREGULHO,3537008
+3512605,Coronel Macedo,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,303.83,CORONEL MACEDO,3512605
+3545308,Salto de Pirapora,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3552205,Sorocaba/SP,280.412,SALTO DE PIRAPORA,3545308
+3528809,Maracaí,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,533.498,MARACAI,3528809
+3545407,Salto Grande,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,188.441,SALTO GRANDE,3545407
+3520608,Indiana,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,129.019,INDIANA,3520608
+3512407,Cordeirópolis,350042,Limeira,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,137.678,CORDEIROPOLIS,3512407
+3520707,Indiaporã,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,279.606,INDIAPORA,3520707
+3553401,Tanabi,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,747.218,TANABI,3553401
+3528858,Marapoama,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,111.267,MARAPOAMA,3528858
+3512506,Coroados,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,3506508,Birigui/SP,246.826,COROADOS,3512506
+3545209,Salto,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3523909,Itu - Salto/SP,133.057,SALTO,3545209
+3537404,Pereira Barreto,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,974.248,PEREIRA BARRETO,3537404
+3529203,Martinópolis,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,1251.492,MARTINOPOLIS,3529203
+3545159,Saltinho,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3538709,Piracicaba/SP,99.924,SALTINHO,3545159
+3504404,Avanhandava,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,338.37,AVANHANDAVA,3504404
+3521002,Iperó,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,170.289,IPERO,3521002
+3512803,Cosmópolis,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,151.645,COSMOPOLIS,3512803
+3512902,Cosmorama,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,441.68,COSMORAMA,3512902
+3545605,Santa Adélia,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,330.269,SANTA ADELIA,3545605
+3504206,Auriflama,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,434.117,AURIFLAMA,3504206
+3504305,Avaí,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,540.689,AVAI,3504305
+3553856,Taquarivaí,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,231.792,TAQUARIVAI,3553856
+3512704,Corumbataí,350046,Rio Claro,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,278.622,CORUMBATAI,3512704
+3553807,Taquarituba,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,448.515,TAQUARITUBA,3553807
+3537305,Penápolis,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,711.315,PENAPOLIS,3537305
+3553658,Taquaral,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,53.892,TAQUARAL,3553658
+3504602,Bady Bassitt,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,110.372,BADY BASSITT,3504602
+3529104,Marinópolis,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,77.827,MARINOPOLIS,3529104
+3504701,Balbinos,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,91.635,BALBINOS,3504701
+3520905,Ipaussu,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,209.554,IPAUSSU,3520905
+3553609,Tapiratiba,350047,São José do Rio Pardo - Mococa,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,220.518,TAPIRATIBA,3553609
+3536604,Paulo de Faria,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,737.986,PAULO DE FARIA,3536604
+3553708,Taquaritinga,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,594.335,TAQUARITINGA,3553708
+3528403,Mairinque,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3550605,São Roque - Mairinque/SP,210.149,MAIRINQUE,3528403
+3536703,Pederneiras,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,727.482,PEDERNEIRAS,3536703
+3504503,Avaré,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1213.055,AVARE,3504503
+3545506,Sandovalina,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,455.856,SANDOVALINA,3545506
+3520202,Igaratá,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,293.002,IGARATA,3520202
+3528502,Mairiporã,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,320.492,MAIRIPORA,3528502
+3520301,Iguape,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1978.329,IGUAPE,3520301
+3553005,Taguaí,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,145.332,TAGUAI,3553005
+3536505,Paulínia,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,138.777,PAULINIA,3536505
+3512100,Colômbia,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,728.648,COLOMBIA,3512100
+3544806,Sales,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,308.555,SALES,3544806
+3528304,Magda,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,312.282,MAGDA,3528304
+3520103,Igarapava,350035,Ituverava,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,468.355,IGARAPAVA,3520103
+3536570,Paulistânia,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,256.178,PAULISTANIA,3536570
+3511904,Clementina,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,168.59,CLEMENTINA,3511904
+3544707,Sagres,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,147.923,SAGRES,3544707
+3512001,Colina,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,422.303,COLINA,3512001
+3536901,Pedranópolis,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,260.101,PEDRANOPOLIS,3536901
+3528700,Marabá Paulista,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,919.519,MARABA PAULISTA,3528700
+3520509,Indaiatuba,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3520509,Indaiatuba,311.545,INDAIATUBA,3520509
+3503901,Arujá,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,96.369,ARUJA,3503901
+3512308,Conchas,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,467.327,CONCHAS,3512308
+3552908,Taciba,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,3541406,Presidente Prudente/SP,606.755,TACIBA,3552908
+3503703,Ariranha,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,132.624,ARIRANHA,3503703
+3503802,Artur Nogueira,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,181.786,ARTUR NOGUEIRA,3503802
+3553302,Tambaú,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,561.788,TAMBAU,3553302
+3504107,Atibaia,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3504107,Atibaia/SP,478.52,ATIBAIA,3504107
+3536802,Pedra Bela,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,158.588,PEDRA BELA,3536802
+3545100,Salmourão,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,172.934,SALMOURAO,3545100
+3520442,Ilha Solteira,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,652.641,ILHA SOLTEIRA,3520442
+3528601,Manduri,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,229.046,MANDURI,3528601
+3520426,Ilha Comprida,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,196.567,ILHA COMPRIDA,3520426
+3520400,Ilhabela,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,346.389,ILHABELA,3520400
+3536109,Pardinho,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,208.223,PARDINHO,3536109
+3553104,Taiaçu,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,107.059,TAIACU,3553104
+3512209,Conchal,350045,Araras,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,182.793,CONCHAL,3512209
+3544905,Sales Oliveira,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,305.776,SALES OLIVEIRA,3544905
+3553203,Taiúva,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,132.459,TAIUVA,3553203
+3527900,Lutécia,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,475.226,LUTECIA,3527900
+3519709,Ibiúna,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1058.01,IBIUNA,3519709
+3545001,Salesópolis,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,424.997,SALESOPOLIS,3545001
+3511508,Cerquilho,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,127.803,CERQUILHO,3511508
+3519808,Icém,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,362.355,ICEM,3519808
+3552502,Suzano,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,206.236,SUZANO,3552502
+3511607,Cesário Lange,350008,Tatuí,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,190.392,CESARIO LANGE,3511607
+3536000,Parapuã,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,366.676,PARAPUA,3536000
+3503950,Aspásia,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,69.373,ASPASIA,3503950
+3544301,Roseira,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3518404,Guaratinguetá/SP,129.847,ROSEIRA,3544301
+3527801,Lupércio,350013,Marília,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,155.171,LUPERCIO,3527801
+3519600,Ibitinga,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,689.391,IBITINGA,3519600
+3552551,Suzanápolis,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,330.587,SUZANAPOLIS,3552551
+3504008,Assis,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,460.609,ASSIS,3504008
+3511409,Cerqueira César,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,511.621,CERQUEIRA CESAR,3511409
+3503356,Arco-Íris,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,264.904,ARCO IRIS,3503356
+3503307,Araras,350045,Araras,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3503307,Araras,644.805,ARARAS,3503307
+3520004,Igaraçu do Tietê,350010,Jaú,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,97.747,IGARACU DO TIETE,3520004
+3503406,Arealva,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,506.226,AREALVA,3503406
+3544251,Rosana,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,742.762,ROSANA,3544251
+3552403,Sumaré,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,153.465,SUMARE,3552403
+3503208,Araraquara,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3503208,Araraquara/SP,1003.626,ARARAQUARA,3503208
+3536406,Paulicéia,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,374.091,PAULICEIA,3536406
+3544202,Riolândia,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,631.897,RIOLANDIA,3544202
+3536257,Parisi,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,84.737,PARISI,3536257
+3528205,Macedônia,350029,Fernandópolis,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,327.567,MACEDONIA,3528205
+3536208,Pariquera-Açu,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,359.414,PARIQUERA ACU,3536208
+3552809,Taboão da Serra,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,20.371,TABOAO DA SERRA,3552809
+3528007,Macatuba,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,224.514,MACATUBA,3528007
+3536307,Patrocínio Paulista,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3516200,Franca/SP,602.848,PATROCINIO PAULISTA,3536307
+3544608,Sabino,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,305.285,SABINO,3544608
+3503604,Areiópolis,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,85.907,AREIOPOLIS,3503604
+3528106,Macaubal,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,248.087,MACAUBAL,3528106
+3519907,Iepê,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,594.985,IEPE,3519907
+3535606,Paraibuna,350049,São José dos Campos,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,809.576,PARAIBUNA,3535606
+3552601,Tabapuã,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,346.692,TABAPUA,3552601
+3511706,Charqueada,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3538709,Piracicaba/SP,175.846,CHARQUEADA,3511706
+3527405,Lucélia,350019,Adamantina - Lucélia,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,314.81,LUCELIA,3527405
+3544400,Rubiácea,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,236.484,RUBIACEA,3544400
+3552700,Tabatinga,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,,,368.604,TABATINGA,3552700
+3544509,Rubinéia,350030,Santa Fé do Sul,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,242.877,RUBINEIA,3544509
+3519204,Iacri,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,321.948,IACRI,3519204
+3511003,Castilho,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,1065.318,CASTILHO,3511003
+3543808,Rinópolis,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,358.481,RINOPOLIS,3543808
+3511102,Catanduva,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,291.926,CATANDUVA,3511102
+3519253,Iaras,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,401.381,IARAS,3519253
+3519105,Iacanga,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,547.393,IACANGA,3519105
+3527256,Lourdes,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,113.808,LOURDES,3527256
+3503505,Areias,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,303.98,AREIAS,3503505
+3510906,Cássia dos Coqueiros,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,191.683,CASSIA DOS COQUEIROS,3510906
+3519071,Hortolândia,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3509502,Campinas/SP,62.416,HORTOLANDIA,3519071
+3519055,Holambra,350038,Campinas,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,65.337,HOLAMBRA,3519055
+3552007,Silveiras,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,415.038,SILVEIRAS,3552007
+3535507,Paraguaçu Paulista,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,1001.492,PARAGUACU PAULISTA,3535507
+3502804,Araçatuba,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,3502804,Araçatuba,1167.126,ARACATUBA,3502804
+3527306,Louveira,350039,Jundiaí,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3525904,Jundiaí/SP,55.989,LOUVEIRA,3527306
+3502903,Araçoiaba da Serra,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3552205,Sorocaba/SP,255.305,ARACOIABA DA SERRA,3502903
+3511300,Cedral,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3549805,São José do Rio Preto/SP,197.099,CEDRAL,3511300
+3551900,Severínia,350032,Barretos,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,140.46,SEVERINIA,3551900
+3543709,Rincão,350036,Araraquara,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3503208,Araraquara/SP,316.639,RINCAO,3543709
+3502705,Apiaí,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,974.322,APIAI,3502705
+3535903,Paranapuã,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,140.354,PARANAPUA,3535903
+3527702,Luiziânia,350023,Birigui - Penápolis,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,166.576,LUIZIANIA,3527702
+3519501,Ibirarema,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,228.23,IBIRAREMA,3519501
+3552205,Sorocaba,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,3552205,Sorocaba/SP,449.872,SOROCABA,3552205
+3535705,Paraíso,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,155.186,PARAISO,3535705
+3502754,Araçariguama,350003,Sorocaba,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,145.247,ARACARIGUAMA,3502754
+3552304,Sud Mennucci,350024,Andradina,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,594.543,SUD MENNUCCI,3552304
+3527504,Lucianópolis,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,189.536,LUCIANOPOLIS,3527504
+3535804,Paranapanema,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1018.724,PARANAPANEMA,3535804
+3503109,Arandu,350007,Avaré,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,285.908,ARANDU,3503109
+3544103,Rio Grande da Serra,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,36.341,RIO GRANDE DA SERRA,3544103
+3519303,Ibaté,350037,São Carlos,3509,Araraquara,35,São Paulo,SP,3,Sudeste,SE,3548906,São Carlos/SP,290.977,IBATE,3519303
+3527603,Luís Antônio,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,598.257,LUIS ANTONIO,3527603
+3519402,Ibirá,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,268.9,IBIRA,3519402
+3552106,Socorro,350041,Bragança Paulista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,448.894,SOCORRO,3552106
+3535101,Palmares Paulista,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,82.125,PALMARES PAULISTA,3535101
+3543907,Rio Claro,350046,Rio Claro,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3543907,Rio Claro/SP,498.403,RIO CLARO,3543907
+3511201,Catiguá,350026,Catanduva,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,3511102,Catanduva/SP,146.568,CATIGUA,3511201
+3503158,Arapeí,350053,Cruzeiro,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,156.479,ARAPEI,3503158
+3526902,Limeira,350042,Limeira,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3526902,Limeira/SP,580.577,LIMEIRA,3526902
+3544004,Rio das Pedras,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,3538709,Piracicaba/SP,226.729,RIO DAS PEDRAS,3544004
+3518701,Guarujá,350002,Santos,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3548500,Baixada Santista/SP,144.794,GUARUJA,3518701
+3510500,Caraguatatuba,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,484.947,CARAGUATATUBA,3510500
+3543253,Ribeirão Grande,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,333.363,RIBEIRAO GRANDE,3543253
+3503000,Aramina,350035,Ituverava,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,202.829,ARAMINA,3503000
+3510401,Capivari,350040,Piracicaba,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,322.878,CAPIVARI,3510401
+3551504,Serrana,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,126.046,SERRANA,3551504
+3502309,Anhembi,350011,Botucatu,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,736.09,ANHEMBI,3502309
+3535002,Palestina,350025,São José do Rio Preto,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,697.701,PALESTINA,3535002
+3543303,Ribeirão Pires,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,98.972,RIBEIRAO PIRES,3543303
+3526803,Lençóis Paulista,350009,Bauru,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,809.541,LENCOIS PAULISTA,3526803
+3518602,Guariba,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,270.408,GUARIBA,3518602
+3551306,Sebastianópolis do Sul,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,167.848,SEBASTIANOPOLIS DO SUL,3551306
+3535309,Palmital,350014,Assis,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,548.407,PALMITAL,3535309
+3543238,Ribeirão dos Índios,350018,Presidente Prudente,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,196.467,RIBEIRAO DOS INDIOS,3543238
+3551405,Serra Azul,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3543402,Ribeirão Preto/SP,283.144,SERRA AZUL,3551405
+3535408,Panorama,350020,Dracena,3505,Presidente Prudente,35,São Paulo,SP,3,Sudeste,SE,,,356.05,PANORAMA,3535408
+3543204,Ribeirão do Sul,350015,Ourinhos,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,203.208,RIBEIRAO DO SUL,3543204
+3502200,Angatuba,350006,Itapetininga,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1028.104,ANGATUBA,3502200
+3527207,Lorena,350052,Guaratinguetá,3511,São José dos Campos,35,São Paulo,SP,3,Sudeste,SE,,,414.16,LORENA,3527207
+3519006,Herculândia,350016,Tupã,3504,Marília,35,São Paulo,SP,3,Sudeste,SE,,,364.252,HERCULANDIA,3519006
+3551702,Sertãozinho,350031,Ribeirão Preto,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,3551702,Sertãozinho,403.089,SERTAOZINHO,3551702
+3510807,Casa Branca,350044,São João da Boa Vista,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,864.225,CASA BRANCA,3510807
+3535200,Palmeira d'Oeste,350028,Jales,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,318.696,PALMEIRA D OESTE,3535200
+3543501,Riversul,350004,Itapeva,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,385.878,RIVERSUL,3543501
+3551801,Sete Barras,350005,Registro,3502,Sorocaba,35,São Paulo,SP,3,Sudeste,SE,,,1062.699,SETE BARRAS,3551801
+3527009,Lindóia,350048,Amparo,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,48.321,LINDOIA,3527009
+3543600,Rifaina,350033,Franca,3508,Ribeirão Preto,35,São Paulo,SP,3,Sudeste,SE,,,162.508,RIFAINA,3543600
+3527108,Lins,350012,Lins,3503,Bauru,35,São Paulo,SP,3,Sudeste,SE,,,570.058,LINS,3527108
+3518800,Guarulhos,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,318.838,GUARULHOS,3518800
+3510609,Carapicuíba,350001,São Paulo,3501,São Paulo,35,São Paulo,SP,3,Sudeste,SE,3550308,São Paulo/SP,34.234,CARAPICUIBA,3510609
+3518909,Guzolândia,350022,Araçatuba,3506,Araçatuba,35,São Paulo,SP,3,Sudeste,SE,,,252.722,GUZOLANDIA,3518909
+3551603,Serra Negra,350048,Amparo,3510,Campinas,35,São Paulo,SP,3,Sudeste,SE,,,204.542,SERRA NEGRA,3551603
+3510708,Cardoso,350027,Votuporanga,3507,São José do Rio Preto,35,São Paulo,SP,3,Sudeste,SE,,,639.248,CARDOSO,3510708
