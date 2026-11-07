@@ -31,6 +31,7 @@ FONTES_BASES = (
     FonteStorage("anp", "raw/anp", "ANP"),
     FonteStorage("ibge", "raw/ibge", "IBGE_STORAGE", 1),
     FonteStorage("inmetro", "raw/inmetro", "INMETRO"),
+    FonteStorage("inmetro_organizado", "curated/inmetro","INMETRO", 1,),
     FonteStorage("od2023", "raw/od2023", "ORIGEM_E_DESTINO_2023", 1),
     FonteStorage("senatran", "raw/senatran", "SENATRAN"),
     FonteStorage("abve", "raw/abve/manual", "ABVE"),
@@ -157,11 +158,11 @@ def planejar_fonte(fonte: FonteStorage) -> tuple[list[tuple[str, str]], str | No
             # Mantém apenas HTMLs do Uber Match.
             if not relativo.lower().endswith(".html"):
                 continue
-            _destino_seguro(Path(tempfile.gettempdir()), fonte, relativo)
-            if chave in chaves_vistas:
-                raise ValueError(f"Chave duplicada na listagem: {chave}")
-            chaves_vistas.add(chave)
-            plano.append((chave, relativo))
+        _destino_seguro(Path(tempfile.gettempdir()), fonte, relativo)
+        if chave in chaves_vistas:
+            raise ValueError(f"Chave duplicada na listagem: {chave}")
+        chaves_vistas.add(chave)
+        plano.append((chave, relativo))
     if not plano:
         raise RuntimeError(f"Nenhum arquivo valido para {fonte.codigo}")
     return plano, ref

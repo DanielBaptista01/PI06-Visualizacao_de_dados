@@ -121,8 +121,7 @@ def processar_aneel() -> None:
     ])
 
     if not origem:
-        print("ANEEL: arquivo não encontrado.")
-        return
+        raise FileNotFoundError("ANEEL: arquivo não encontrado no workspace")
 
     df_original = _ler_aneel(origem)
 
@@ -153,6 +152,7 @@ def processar_aneel() -> None:
         len(df),
         observacao=observacao,
     )
+    print(f"[OK] ANEEL | registros={len(df)} | saida={destino} | {observacao}")
 
 
 def processar_anp() -> None:
@@ -178,7 +178,7 @@ def processar_anp() -> None:
             print(f"ANP: erro em {origem.name}: {exc}")
             
     if not dfs:
-        return
+        raise RuntimeError("ANP: nenhum arquivo processado com sucesso")
         
     df = pd.concat(dfs, ignore_index=True, sort=False)
     
@@ -220,116 +220,73 @@ def processar_ibge() -> None:
     print(f"IBGE: {len(df)} registros -> {destino}")
 
 def processar_inmetro() -> None:
-
-    escolhido = localizar_primeiro([
-        "INMETRO/**/dados-inmetro-organizado.xlsx",
-        "INMETRO/**/dados-inmetro.xlsx",
-    ])
-
-    if escolhido is None:
+    """Lê a planilha organizada do INMETRO, preservando nulos e fonte RAW."""
+    candidatos = localizar_todos(["INMETRO/**/*.xlsx"])
+    organizados = [
+        p for p in candidatos
+        if normalizar_texto(p.stem) == "DADOS INMETRO ORGANIZADO"
+    ]
+    if len(organizados) != 1:
         raise FileNotFoundError(
-            "INMETRO: planilha não encontrada na origem selecionada."
+            "INMETRO: esperado exatamente um arquivo de dados organizados "
+            "na referência selecionada. Encontrados: "
+            f"{[str(p) for p in organizados]}. "
+            f"Todos os XLSX: {[p.name for p in candidatos]}"
         )
 
-    print(f"INMETRO: fonte selecionada: {escolhido}")
-
-
-    if not escolhido.exists():
-        print(f"INMETRO: arquivo não encontrado: {escolhido}")
-        return
-
-    print(f"INMETRO: arquivo encontrado: {escolhido}")
-
-    df = pd.read_excel(
-        escolhido,
-        sheet_name="Dados-inmetro-organizado",
-        dtype=object,
-    )
-
-    # Continue aqui com o restante do processamento.
-
-    print(f"INMETRO: fonte selecionada: {escolhido}")
-
-    # Lê a tabela já organizada.
-    df = pd.read_excel(
-        escolhido,
-        sheet_name="Dados-inmetro-organizado",
-        dtype=object,
-    )
-
-    # Padroniza espaços nos nomes das colunas.
-    df.columns = [str(col).strip() for col in df.columns]
-
-    # Verifica se as principais colunas existem.
+    origem = organizados[0]
     colunas_esperadas = [
-        "categoria",
-        "marca",
-        "modelo",
-        "versao",
-        "motor",
-        "tipo_propulsao",
-        "consumo_energetico_mj_km",
-        "autonomia_eletrica_km",
-        "linha_origem_excel",
+        "categoria", "marca", "modelo", "versao", "motor",
+        "tipo_propulsao", "consumo_energetico_mj_km",
+        "autonomia_eletrica_km", "linha_origem_excel",
     ]
+    # Aceita variantes de nome de aba, mas nunca assume a primeira aba.
+    with pd.ExcelFile(origem) as excel:
+        preferidas = [
+            nome for nome in excel.sheet_names
+            if normalizar_texto(nome) in {
+                "DADOS ORGANIZADOS", "DADOS INMETRO ORGANIZADO"
+            }
+        ]
+        if not preferidas:
+            raise ValueError(
+                f"INMETRO: aba organizada não encontrada em {origem.name}. "
+                f"Abas disponíveis: {excel.sheet_names}"
+            )
+        if len(preferidas) != 1:
+            raise ValueError(
+                f"INMETRO: abas organizadas ambíguas: {preferidas}"
+            )
+        aba = preferidas[0]
+        df = pd.read_excel(excel, sheet_name=aba, dtype=object)
 
-    faltantes = [
-        coluna
-        for coluna in colunas_esperadas
-        if coluna not in df.columns
-    ]
-
+    df.columns = [str(col).strip() for col in df.columns]
+    faltantes = sorted(set(colunas_esperadas) - set(df.columns))
     if faltantes:
-        print("INMETRO: faltam colunas esperadas:", faltantes)
-        return
+        raise ValueError(
+            f"INMETRO: aba {aba!r} sem as colunas {faltantes}"
+        )
+    if df.empty:
+        raise ValueError("INMETRO: aba organizada sem registros")
 
-    # Exibe os nomes das colunas para conferência.
-    print("\nINMETRO: colunas encontradas:")
-    for coluna in df.columns:
-        print(f" - {coluna}")
-
-    # Conta registros que pertencem a grupos com chave repetida.
-    duplicadas = df.duplicated(
-        subset=[
-            "marca",
-            "modelo",
-            "versao",
-            "motor",
-            "tipo_propulsao",
-        ],
-        keep=False,
-    ).sum()
-
-    # Conta valores vazios, sem substituí-los.
+    chave = ["marca", "modelo", "versao", "motor", "tipo_propulsao"]
+    grupos_repetidos = int(df.duplicated(subset=chave, keep=False).sum())
     vazios = df.isna().sum()
-
-    print("\nINMETRO: valores vazios por coluna:")
-    print(vazios[vazios > 0])
-
-    # Salva a tabela tratada.
     destino = salvar_csv(df, "05_INMETRO_ORGANIZADO.csv")
-
     registrar_coleta(
-        "INMETRO_PBEV",
-        escolhido,
-        destino,
-        len(df),
+        "INMETRO_PBEV", origem, destino, len(df),
         observacao=(
-            "Leitura da aba Dados_organizados; "
-            "nomes de colunas padronizados; "
-            "valores vazios e marcadores originais preservados; "
-            f"{duplicadas} linhas pertencem a grupos com chave repetida."
+            f"Planilha organizada, aba={aba}; "
+            "nulos e marcadores originais preservados; "
+            f"{grupos_repetidos} linhas em grupos de chave repetida."
         ),
     )
+    print(
+        f"[OK] INMETRO | arquivo={origem.name} | aba={aba} | "
+        f"registros={len(df)} | duplicidade_de_chave={grupos_repetidos} | "
+        f"colunas_com_nulos={int((vazios > 0).sum())} | saida={destino}"
+    )
 
-    print(
-        f"\nINMETRO: {len(df):,} registros processados "
-        f"-> {destino}"
-    )
-    print(
-        f"INMETRO: {duplicadas:,} linhas em grupos "
-        "com chave repetida."
-    )
 
 def _grupo_senatran(nome: str) -> str:
     n = normalizar_texto(nome)
