@@ -18,15 +18,13 @@ from pipeline_utils import (
 
 def _filtrar_uf_sp(df: pd.DataFrame) -> pd.DataFrame:
     coluna = localizar_coluna(df, ["UF", "SG_UF", "SIGLA_UF", "ESTADO"], contem=True)
-    if not coluna:
-        return df
-    valores = df[coluna].astype(str).map(normalizar_texto)
+    if coluna is None:
+        raise ValueError("UF não identificada; recorte SP não comprovado")
+    valores = df[coluna].astype("string").map(normalizar_texto)
     mascara = valores.isin({"SP", "SAO PAULO"})
     if not mascara.any():
-      raise ValueError("Nenhum registro de SP encontrado.")
-
+        raise ValueError("Nenhum registro de SP encontrado; arquivo não processado")
     return df.loc[mascara].copy()
-
 
 def _shape_zonas() -> Path | None:
     return localizar_primeiro(["ORIGEM_E_DESTINO*/**/Zonas_2023.shp", "**/Zonas_2023.shp"])
@@ -913,7 +911,8 @@ def processar_uber() -> None:
         summary = bloco.find("summary")
         if not summary:
             continue
-        marca = summary.get_text(strip=True)
+        marca_extraida = summary.get_text(" ", strip=True)
+        marca_normalizada = re.sub(r"\s*Down\s*$", "", marca_extraida, flags=re.I).strip()
         for li in bloco.find_all("li"):
             tag_b = li.find("b")
             if not tag_b:
@@ -935,7 +934,7 @@ def processar_uber() -> None:
                 black = max(black, limite)
             if any(v is not None for v in [x, comfort, black, electric]):
                 dados.append({
-                    "marca": marca, "modelo": modelo, "uberx_ano_min": x,
+                    "marca": marca_normalizada, "modelo": modelo, "uberx_ano_min": x,
                     "comfort_ano_min": comfort, "black_ano_min": black, "electric_ano_min": electric,
                 })
 

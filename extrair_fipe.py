@@ -62,7 +62,7 @@ def _uber() -> pd.DataFrame:
 
 
 def _filtrar_inmetro(uber: pd.DataFrame) -> pd.DataFrame:
-    caminho = OUTPUT_DIR / "05_INMETRO.csv"
+    caminho = OUTPUT_DIR / "05_INMETRO_ORGANIZADO.csv"
     if not caminho.exists():
         return uber
     try:

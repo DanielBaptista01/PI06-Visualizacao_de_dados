@@ -73,17 +73,13 @@ def sha256_arquivo(caminho: Path) -> str:
     return h.hexdigest()
 
 
-def salvar_csv(df, nome_arquivo):
+def salvar_csv(df: pd.DataFrame, nome_arquivo: str) -> Path:
+    """Grava CSV tratado no diretório configurado sem alterar arquivos RAW."""
+    if not nome_arquivo or Path(nome_arquivo).name != nome_arquivo:
+        raise ValueError("O nome de saída deve ser um nome de arquivo, sem diretórios")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
     caminho = OUTPUT_DIR / nome_arquivo
-
-    df.to_csv(
-        caminho,
-        index=False,
-        encoding="utf-8-sig",
-    )
-
+    df.to_csv(caminho, index=False, encoding="utf-8-sig")
     return caminho
 
 def _origem_storage(origem_path: Path) -> str | None:
