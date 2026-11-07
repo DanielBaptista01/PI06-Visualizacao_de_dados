@@ -334,11 +334,239 @@ def atualizar_precos(forcar_mapeamento: bool = False) -> pd.DataFrame:
     return atual
 
 
+def coletar_precos_catalogados(
+    limite_requisicoes: int = 50,
+) -> pd.DataFrame:
+    """Coleta preços por versão/ano FIPE sem presumir elegibilidade Uber."""
+
+    from pathlib import Path
+
+    if limite_requisicoes < 0:
+        raise ValueError("Limite de requisições deve ser >= 0.")
+
+    origem = Path(
+        "dados_relatorios/fipe_anos_catalogados_2026.csv"
+    )
+    checkpoint_path = CACHE_DIR / "fipe_precos_catalogados_checkpoint.csv"
+    saida = Path(
+        "dados_relatorios/fipe_precos_catalogados_parcial_2026.csv"
+    )
+
+    if not origem.exists():
+        raise FileNotFoundError(f"Catálogo não encontrado: {origem}")
+
+    colunas_chave = ["brand_id", "model_id", "year_code"]
+    colunas_obrigatorias = set(colunas_chave) | {
+        "status_ano_catalogo"
+    }
+
+    anos = pd.read_csv(origem, dtype=str)
+    faltantes = colunas_obrigatorias - set(anos.columns)
+
+    if faltantes:
+        raise ValueError(f"Colunas ausentes: {sorted(faltantes)}")
+
+    anos = anos[
+        anos["status_ano_catalogo"].isin([
+            "dentro_da_janela_de_estudo",
+            "zero_km",
+        ])
+    ].copy()
+
+    for coluna in colunas_chave:
+        anos[coluna] = anos[coluna].astype("string").str.strip()
+
+    if anos[colunas_chave].isna().any().any():
+        raise ValueError("Existem identificadores FIPE ausentes.")
+
+    anos = anos.drop_duplicates(colunas_chave).reset_index(drop=True)
+
+    colunas_saida = [
+        "brand_id", "model_id", "year_code",
+        "codigo_fipe", "marca_fipe", "modelo_fipe",
+        "ano_modelo", "combustivel_fipe",
+        "preco_fipe", "mes_referencia",
+        "status_ano_catalogo", "data_coleta",
+        "url_fonte", "elegibilidade_uber_confirmada",
+    ]
+
+    if checkpoint_path.exists():
+        historico = pd.read_csv(checkpoint_path, dtype=str)
+        faltantes_historico = set(colunas_saida) - set(historico.columns)
+
+        if faltantes_historico:
+            raise ValueError(
+                "Checkpoint com estrutura inesperada: "
+                f"{sorted(faltantes_historico)}"
+            )
+
+        historico = historico[colunas_saida].copy()
+    else:
+        historico = pd.DataFrame(columns=colunas_saida)
+
+    hoje = date.today().isoformat()
+
+    ja_coletados_hoje = set(
+        map(
+            tuple,
+            historico.loc[
+                historico["data_coleta"] == hoje,
+                colunas_chave,
+            ].to_numpy(),
+        )
+    )
+
+    cliente = ClienteFipe()
+    novas_linhas = []
+    requisicoes = 0
+    falhas = 0
+
+    for _, registro in anos.iterrows():
+        chave = tuple(str(registro[c]) for c in colunas_chave)
+
+        if chave in ja_coletados_hoje:
+            continue
+
+        if requisicoes >= limite_requisicoes:
+            break
+
+        brand_id, model_id, year_code = chave
+
+        url = (
+            f"{API_BASE}/brands/{brand_id}"
+            f"/models/{model_id}/years/{year_code}"
+        )
+
+        requisicoes += 1
+
+        try:
+            info = cliente.get_json(url)
+
+            if not isinstance(info, dict):
+                raise ValueError("Resposta não é um objeto.")
+
+            if not all(
+                info.get(campo)
+                for campo in ("codeFipe", "price", "referenceMonth")
+            ):
+                raise ValueError("Resposta sem preço ou identificação.")
+
+            ano_resposta = info.get("modelYear")
+
+            if year_code.startswith("32000-"):
+                # Zero km é um código especial, não um ano-modelo.
+                ano_modelo = None
+            else:
+                ano_esperado = int(year_code.split("-")[0])
+                if str(ano_resposta) != str(ano_esperado):
+                    raise ValueError(
+                        f"Ano divergente: {ano_resposta} != {ano_esperado}"
+                    )
+                ano_modelo = ano_resposta
+
+            novo = {
+                "brand_id": brand_id,
+                "model_id": model_id,
+                "year_code": year_code,
+                "codigo_fipe": info["codeFipe"],
+                "marca_fipe": info.get("brand"),
+                "modelo_fipe": info.get("model"),
+                "ano_modelo": ano_modelo,
+                "combustivel_fipe": info.get("fuel"),
+                "preco_fipe": info["price"],
+                "mes_referencia": info["referenceMonth"],
+                "status_ano_catalogo": registro["status_ano_catalogo"],
+                "data_coleta": hoje,
+                "url_fonte": url,
+                "elegibilidade_uber_confirmada": False,
+            }
+
+            novas_linhas.append(novo)
+            ja_coletados_hoje.add(chave)
+
+            # Salva cada resultado, permitindo retomada segura.
+            historico = pd.concat(
+                [historico, pd.DataFrame([novo])],
+                ignore_index=True,
+            )
+            checkpoint_path.parent.mkdir(
+                parents=True, exist_ok=True
+            )
+            historico.to_csv(
+                checkpoint_path,
+                index=False,
+                encoding="utf-8-sig",
+            )
+
+        except (requests.RequestException, ValueError) as exc:
+            falhas += 1
+            print(f"Falha FIPE {chave}: {exc}")
+
+            if isinstance(exc, requests.HTTPError):
+                resposta = exc.response
+                if resposta is not None and resposta.status_code == 429:
+                    print("Cota da API atingida. Interrompendo coleta.")
+                    break
+
+    # Exporta apenas uma cotação por chave no dia de referência.
+    atual = historico.loc[
+        historico["data_coleta"] == hoje
+    ].drop_duplicates(colunas_chave, keep="last").copy()
+
+    saida.parent.mkdir(parents=True, exist_ok=True)
+    atual.to_csv(saida, index=False, encoding="utf-8-sig")
+
+    chaves_atual = set(
+        map(tuple, atual[colunas_chave].to_numpy())
+    )
+
+    chaves_esperadas = set(
+        map(tuple, anos[colunas_chave].to_numpy())
+    )
+
+    print(f"Combinações no catálogo: {len(anos)}")
+    print(f"Novas requisições: {requisicoes}")
+    print(f"Falhas: {falhas}")
+    print(f"Preços válidos de hoje: {len(chaves_atual)}")
+    print(
+        "Combinações pendentes:",
+        len(chaves_esperadas - chaves_atual),
+    )
+    print(f"CSV parcial: {saida}")
+
+    if chaves_esperadas == chaves_atual:
+        print("Cobertura integral do catálogo de entrada atual.")
+    else:
+        print("Coleta parcial; CSV principal preservado.")
+
+    return atual
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Pipeline FIPE incremental")
     parser.add_argument("--remapear", action="store_true")
     parser.add_argument("--somente-mapear", action="store_true")
+
+    parser.add_argument(
+        "--precos-catalogados",
+        action="store_true",
+        help="Coletar preços das versões/anos catalogados."
+    )
+
+    parser.add_argument(
+        "--limite-precos",
+        type=int,
+        default=50,
+        help="Máximo de requisições de preço nesta execução."
+    )
+
     args = parser.parse_args()
+
+    args = parser.parse_args()
+    if args.precos_catalogados:
+        coletar_precos_catalogados(args.limite_precos)
+        return
+
     mapa = construir_mapeamento(forcar=args.remapear)
     print(f"Mapeamento FIPE: {len(mapa):,} modelos")
     if not args.somente_mapear:
