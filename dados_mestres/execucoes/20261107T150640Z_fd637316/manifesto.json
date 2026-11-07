@@ -1,0 +1,241 @@
+{
+  "gerado_em_utc": "2026-11-07T15:07:23.143833+00:00",
+  "versao": "20261107T150640Z_fd637316",
+  "validacao_apenas": false,
+  "fontes_esperadas": 25,
+  "tabelas_geradas": 27,
+  "fontes": [
+    {
+      "dominio": "territorios",
+      "tabela": "territorios/dim_municipios_sp.csv",
+      "arquivo_origem": "04_IBGE_SP.csv + 04_IBGE_RMSP.csv",
+      "linhas": 645,
+      "hash_origem": "ce194c5f737e57d6132296c551e47c88cb151c72c178497ed87a682f626ec10c;4692e2820e95b2c5af026af770fdc5f08e9fda9cae2dee41daa1d9b12d433982",
+      "granularidade": "um município IBGE SP"
+    },
+    {
+      "dominio": "veiculos",
+      "tabela": "veiculos/dim_modelos_versoes_inmetro.csv",
+      "arquivo_origem": "05_INMETRO_ORGANIZADO.csv",
+      "linhas": 968,
+      "hash_origem": "b9b0733577d81b556bca621808d4676a9e2ce25291738c46e461068b36ab746c",
+      "granularidade": "linha da planilha organizada INMETRO"
+    },
+    {
+      "dominio": "veiculos",
+      "tabela": "veiculos/fato_cotacoes_fipe_parcial.csv",
+      "arquivo_origem": "08_FIPE_VEICULOS_PARCIAL.csv",
+      "linhas": 489,
+      "hash_origem": "a7d8326c53d294313e2f117411390d15d011ccbeab96e50fc98b6e572cc44535",
+      "granularidade": "versão FIPE × ano-modelo × mês de referência"
+    },
+    {
+      "dominio": "uber",
+      "tabela": "uber/regra_modelos_uber.csv",
+      "arquivo_origem": "09_UBER_MODELOS_SP.csv",
+      "linhas": 1219,
+      "hash_origem": "24ce76f15b8804908f79913ee8801617ff8e6f10d032f2f8ee12f013eca672e3",
+      "granularidade": "marca × modelo e critérios de ano mínimo por categoria"
+    },
+    {
+      "dominio": "uber",
+      "tabela": "uber/fato_ofertas_locacao_uber.csv",
+      "arquivo_origem": "17_UBER_MATCH_OFERTAS_SP.csv",
+      "linhas": 56,
+      "hash_origem": "b445221375a61faf87b8fb46d8f2d293fbd6a509a4e59eb546b8fc50d78ee9f4",
+      "granularidade": "oferta comercial individual"
+    },
+    {
+      "dominio": "recarga",
+      "tabela": "recarga/dim_pontos_recarga_ocm.csv",
+      "arquivo_origem": "10_OPEN_CHARGE_MAP_SP.csv",
+      "linhas": 143,
+      "hash_origem": "df1424ee1a1ee1359412f9449d1568768ecdfdf8c83056bb136ae0b89c448b69",
+      "granularidade": "ponto cadastrado com localização"
+    },
+    {
+      "dominio": "recarga",
+      "tabela": "recarga/fato_totais_recarga_abve_municipios.csv",
+      "arquivo_origem": "15_ABVE_ELETROPOSTOS_RMSP.csv",
+      "linhas": 32,
+      "hash_origem": "8a46333549707e1fc29055fd72daf2c0ecb0221a55c0f9919b79827369685439",
+      "granularidade": "agregado por município ABVE (não pontos OCM)"
+    },
+    {
+      "dominio": "recarga",
+      "tabela": "recarga/fato_serie_recarga_abve.csv",
+      "arquivo_origem": "17_ABVE_EVOLUCAO_ELETROPOSTOS_SP.csv",
+      "linhas": 17,
+      "hash_origem": "f9d3cf9b04c9ac19a6b78caa5cbb71dd4e308e23aeee0fc4bbb51901a7ef18f8",
+      "granularidade": "ano × mês da evolução declarada"
+    },
+    {
+      "dominio": "mobilidade",
+      "tabela": "mobilidade/fato_viagens_aplicativo_od2023.csv",
+      "arquivo_origem": "07_ORIGEM_DESTINO.csv",
+      "linhas": 4229,
+      "hash_origem": "7ca32b83ffbbda02199ed3ea5df29e79fadc8a25fdbe12733f9cb511e81653d8",
+      "granularidade": "registro amostral de viagem; peso FE_VIA"
+    },
+    {
+      "dominio": "energia",
+      "tabela": "energia/fato_pesquisas_precos_anp_sp.csv",
+      "arquivo_origem": "03_ANP_SP.csv",
+      "linhas": 14920,
+      "hash_origem": "ee85de7639ee626ff3030b5e81b226edfd8e365d4f0402e08511826e2e947fe8",
+      "granularidade": "observação de preço de revenda/produto/data"
+    },
+    {
+      "dominio": "energia",
+      "tabela": "energia/fato_tarifas_aneel_nacional.csv",
+      "arquivo_origem": "02_ANEEL_NACIONAL.csv",
+      "linhas": 332165,
+      "hash_origem": "a543f0b744ed446971a70a040377730dcb0fbfac40d9be1fb42e928bb90938f1",
+      "granularidade": "distribuidora × vigência × modalidade × posto × unidade"
+    },
+    {
+      "dominio": "frota",
+      "tabela": "frota/fato_frota_senatran_ano.csv",
+      "arquivo_origem": "06_SENATRAN_ANO_SP.csv",
+      "linhas": 91563,
+      "hash_origem": "d8cddef187b30c358e73004c8b4a4f797eb1d897595be4ec35939cc79bf782b1",
+      "granularidade": "frota por município/ano e demais dimensões"
+    },
+    {
+      "dominio": "frota",
+      "tabela": "frota/fato_frota_senatran_cep.csv",
+      "arquivo_origem": "06_SENATRAN_CEP_SP.csv",
+      "linhas": 9164,
+      "hash_origem": "69316307ccf37e7ca4058e551685ba2ba34c5d10db8188daa09534efe197aa59",
+      "granularidade": "frota por município/CEP e demais dimensões"
+    },
+    {
+      "dominio": "frota",
+      "tabela": "frota/fato_frota_senatran_combustivel.csv",
+      "arquivo_origem": "06_SENATRAN_COMBUSTIVEL_SP.csv",
+      "linhas": 2540,
+      "hash_origem": "1fa36e6af920b508b8da1ee2b4691e5580360d17a092af25abf5b82ba98183bf",
+      "granularidade": "frota por município/combustível"
+    },
+    {
+      "dominio": "frota",
+      "tabela": "frota/fato_frota_senatran_marca_modelo.csv",
+      "arquivo_origem": "06_SENATRAN_MARCA_MODELO_SP.csv",
+      "linhas": 81652,
+      "hash_origem": "5c01a95308c9ecf7d72bc8667cf332acaffe0a2e27e9b1c631189091199c5f94",
+      "granularidade": "frota por município/marca-modelo"
+    },
+    {
+      "dominio": "frota",
+      "tabela": "frota/fato_frota_senatran_potencia.csv",
+      "arquivo_origem": "06_SENATRAN_POTENCIA_SP.csv",
+      "linhas": 77770,
+      "hash_origem": "4771d39434ed44450d7c5cf8e5aaadf8b622fc41032c2fc5429215956918ed84",
+      "granularidade": "frota por município/potência"
+    },
+    {
+      "dominio": "frota",
+      "tabela": "frota/fato_frota_senatran_tipo.csv",
+      "arquivo_origem": "06_SENATRAN_TIPO_VEICULO_SP.csv",
+      "linhas": 646,
+      "hash_origem": "45c620b30ccd188b8754c098a01b49044b3ce6d426cb41803bf408a22ed10e4f",
+      "granularidade": "frota municipal por tipos em colunas"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_vendas_abve_rmsp.csv",
+      "arquivo_origem": "11_ABVE_VENDAS_RMSP.csv",
+      "linhas": 33,
+      "hash_origem": "a84a105952c3e811c6d34bb9f97d493aa4b2b388aba5042fe82745c02adefd67",
+      "granularidade": "agregado de vendas por município RMSP"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_vendas_abve_capital.csv",
+      "arquivo_origem": "11_ABVE_VENDAS_SAO_PAULO.csv",
+      "linhas": 1,
+      "hash_origem": "cafafcf45b15127c2ea3973002f11b0b3e098720120e20342614547af27582eb",
+      "granularidade": "agregado de vendas municipal da capital; visão sobreposta à RMSP"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_vendas_abve_modelos.csv",
+      "arquivo_origem": "14_ABVE_VENDAS_POR_MODELO.csv",
+      "linhas": 1912,
+      "hash_origem": "df68219a932bf4b2c970adeadb53155487a3c8c16fa723470a851b8a02608fc8",
+      "granularidade": "ano × mês × fabricante × modelo"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_vendas_mhev_brasil.csv",
+      "arquivo_origem": "16_ABVE_VENDAS_MHEV_BRASIL.csv",
+      "linhas": 499,
+      "hash_origem": "cca450292b8dd53317c76dfc4184eb791c26f41a0dd6e5c39cb87a6066c2c47f",
+      "granularidade": "vendas MHEV por município no recorte Brasil"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_vendas_mhev_rmsp.csv",
+      "arquivo_origem": "16_ABVE_VENDAS_MHEV_RMSP.csv",
+      "linhas": 31,
+      "hash_origem": "bca4b84a17c1b0d78fbec7bac419afc6673efa0f43598446269cea42ebe638db",
+      "granularidade": "vendas MHEV por município RMSP"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_vendas_mhev_capital.csv",
+      "arquivo_origem": "16_ABVE_VENDAS_MHEV_SAO_PAULO.csv",
+      "linhas": 1,
+      "hash_origem": "35f94cb2cf6e7105fdf16dd3792e9fa50af413813a01aed1e43fd8431637f41b",
+      "granularidade": "vendas MHEV municipal da capital; visão sobreposta"
+    },
+    {
+      "dominio": "mercado",
+      "tabela": "mercado/fato_serie_abve_tecnologia.csv",
+      "arquivo_origem": "abve_resumo_tecnologia.csv",
+      "linhas": 197,
+      "hash_origem": "1015c83052aff058704011b1ef1f91fcddbb8f9a43f37c0c9722596aa35d8e48",
+      "granularidade": "ano × mês × tecnologia (quantidade/share de significado misto)"
+    },
+    {
+      "dominio": "relacionamentos",
+      "tabela": "relacionamentos/ponte_candidatos_uber_inmetro.csv",
+      "arquivo_origem": "candidatos Uber + INMETRO/FIPE (não confirmado)",
+      "linhas": 485,
+      "hash_origem": "derivado",
+      "granularidade": "candidatos ou cobertura por linha de modelo Uber"
+    },
+    {
+      "dominio": "relacionamentos",
+      "tabela": "relacionamentos/ponte_candidatos_uber_fipe.csv",
+      "arquivo_origem": "candidatos Uber + INMETRO/FIPE (não confirmado)",
+      "linhas": 2,
+      "hash_origem": "derivado",
+      "granularidade": "candidatos ou cobertura por linha de modelo Uber"
+    },
+    {
+      "dominio": "relacionamentos",
+      "tabela": "relacionamentos/cobertura_modelos_uber.csv",
+      "arquivo_origem": "candidatos Uber + INMETRO/FIPE (não confirmado)",
+      "linhas": 1219,
+      "hash_origem": "derivado",
+      "granularidade": "candidatos ou cobertura por linha de modelo Uber"
+    }
+  ],
+  "limites": [
+    "Uber: sufixo HTML \"Down\" removido APENAS em marca_comparacao; marca original mantida.",
+    "ANEEL: preservada sem interpretação semântica completa. Dimensões não identificadas automaticamente: ['unidade']. Colunas disponíveis: ['DatGeracaoConjuntoDados', 'DscREH', 'SigAgente', 'NumCNPJDistribuidora', 'DatInicioVigencia', 'DatFimVigencia', 'DscBaseTarifaria', 'DscSubGrupo', 'DscModalidadeTarifaria', 'DscClasse', 'DscSubClasse', 'DscDetalhe', 'NomPostoTarifario', 'DscUnidadeTerciaria', 'SigAgenteAcessante', 'VlrTUSD', 'VlrTE', 'te_num', 'tusd_num']. Não usar em cálculo econômico até conferir o esquema oficial.",
+    "Vínculos municipais com status nao_encontrado_no_ibge_sp: 1 linhas (não ligados automaticamente).",
+    "Vínculos municipais com status fora_do_escopo_sp_ou_uf_incerta: 359 linhas (não ligados automaticamente).",
+    "A origem IBGE RMSP marca pertença ao conjunto de 39 municípios, não gera zonas OD.",
+    "As pontes Uber-INMETRO e Uber-FIPE são candidatas somente por marca/modelo EXATO normalizado; NÃO comprovam versão, ano ou categoria elegível.",
+    "A FIPE é parcial; ausência de candidato NÃO significa ausência de preço na tabela FIPE completa.",
+    "Os dados SENATRAN são fatos distintos por dimensão, não somar suas tabelas entre si.",
+    "ABVE capital está contida em recortes mais amplos; não somar vistas capital + RMSP + Brasil.",
+    "ANEEL nacional tem vigências/unidades distintas (R$/kW e R$/kWh); não calcular custo por kWh ainda.",
+    "OD registra amostras expandidas por FE_VIA; distância pode ser em linha reta e não percurso real.",
+    "Recarga OCM (pontos) não equivale à quantidade agregada de carregadores da ABVE.",
+    "Sem tabelas de fotos/imagens de eletropostos: nenhuma fonte de fotos validada foi fornecida.",
+    "Para georreferenciar Zonas OD é preciso cruzamento espacial com a geometria oficial de zonas OD; não imputar zonas por nome de município."
+  ]
+}

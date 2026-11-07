@@ -1,0 +1,33 @@
+﻿Municipio,Estado,Carregadores_AC,Carregadores_DC,Total_Eletropostos,Participacao_Estadual_Pct,municipio_chave,total_eletropostos_num,carregadores_ac_num,carregadores_dc_num,participacao_estadual_pct_num,id_registro_mestre,linha_csv_origem,codigo_ibge_municipio,status_vinculo_ibge
+São Paulo,SP,2270,511,2781,10.9363,SAO PAULO,2781.0,2270.0,511.0,10.9363,fato_totais_recarga_abve_municipios:1,2,3550308,exato_nome_e_uf_sp
+Barueri,SP,143,38,181,0.7118,BARUERI,181.0,143.0,38.0,0.7118,fato_totais_recarga_abve_municipios:2,3,3505708,exato_nome_e_uf_sp
+São Bernardo Do Campo,SP,108,35,143,0.5624,SAO BERNARDO DO CAMPO,143.0,108.0,35.0,0.5624,fato_totais_recarga_abve_municipios:3,4,3548708,exato_nome_e_uf_sp
+Guarulhos,SP,68,22,90,0.3539,GUARULHOS,90.0,68.0,22.0,0.3539,fato_totais_recarga_abve_municipios:4,5,3518800,exato_nome_e_uf_sp
+Santo André,SP,64,24,88,0.3461,SANTO ANDRE,88.0,64.0,24.0,0.3461,fato_totais_recarga_abve_municipios:5,6,3547809,exato_nome_e_uf_sp
+Mogi Das Cruzes,SP,44,18,62,0.2438,MOGI DAS CRUZES,62.0,44.0,18.0,0.2438,fato_totais_recarga_abve_municipios:6,7,3530607,exato_nome_e_uf_sp
+Santana De Parnaíba,SP,42,6,48,0.1888,SANTANA DE PARNAIBA,48.0,42.0,6.0,0.1888,fato_totais_recarga_abve_municipios:7,8,3547304,exato_nome_e_uf_sp
+Cotia,SP,38,7,45,0.177,COTIA,45.0,38.0,7.0,0.177,fato_totais_recarga_abve_municipios:8,9,3513009,exato_nome_e_uf_sp
+São Caetano Do Sul,SP,31,8,39,0.1534,SAO CAETANO DO SUL,39.0,31.0,8.0,0.1534,fato_totais_recarga_abve_municipios:9,10,3548807,exato_nome_e_uf_sp
+Osasco,SP,24,7,31,0.1219,OSASCO,31.0,24.0,7.0,0.1219,fato_totais_recarga_abve_municipios:10,11,3534401,exato_nome_e_uf_sp
+Guararema,SP,11,11,22,0.0865,GUARAREMA,22.0,11.0,11.0,0.0865,fato_totais_recarga_abve_municipios:11,12,3518305,exato_nome_e_uf_sp
+Carapicuíba,SP,18,0,18,0.0708,CARAPICUIBA,18.0,18.0,0.0,0.0708,fato_totais_recarga_abve_municipios:12,13,3510609,exato_nome_e_uf_sp
+Diadema,SP,7,4,11,0.0433,DIADEMA,11.0,7.0,4.0,0.0433,fato_totais_recarga_abve_municipios:13,14,3513801,exato_nome_e_uf_sp
+Cajamar,SP,3,7,10,0.0393,CAJAMAR,10.0,3.0,7.0,0.0393,fato_totais_recarga_abve_municipios:14,15,3509205,exato_nome_e_uf_sp
+Ribeirão Pires,SP,9,1,10,0.0393,RIBEIRAO PIRES,10.0,9.0,1.0,0.0393,fato_totais_recarga_abve_municipios:15,16,3543303,exato_nome_e_uf_sp
+Arujá,SP,10,0,10,0.0393,ARUJA,10.0,10.0,0.0,0.0393,fato_totais_recarga_abve_municipios:16,17,3503901,exato_nome_e_uf_sp
+Franco Da Rocha,SP,7,2,9,0.0354,FRANCO DA ROCHA,9.0,7.0,2.0,0.0354,fato_totais_recarga_abve_municipios:17,18,3516408,exato_nome_e_uf_sp
+Caieiras,SP,5,3,8,0.0315,CAIEIRAS,8.0,5.0,3.0,0.0315,fato_totais_recarga_abve_municipios:18,19,3509007,exato_nome_e_uf_sp
+Itaquaquecetuba,SP,4,3,7,0.0275,ITAQUAQUECETUBA,7.0,4.0,3.0,0.0275,fato_totais_recarga_abve_municipios:19,20,3523107,exato_nome_e_uf_sp
+Suzano,SP,3,4,7,0.0275,SUZANO,7.0,3.0,4.0,0.0275,fato_totais_recarga_abve_municipios:20,21,3552502,exato_nome_e_uf_sp
+Mairiporã,SP,4,2,6,0.0236,MAIRIPORA,6.0,4.0,2.0,0.0236,fato_totais_recarga_abve_municipios:21,22,3528502,exato_nome_e_uf_sp
+Francisco Morato,SP,4,1,5,0.0197,FRANCISCO MORATO,5.0,4.0,1.0,0.0197,fato_totais_recarga_abve_municipios:22,23,3516309,exato_nome_e_uf_sp
+Itapecerica Da Serra,SP,5,0,5,0.0197,ITAPECERICA DA SERRA,5.0,5.0,0.0,0.0197,fato_totais_recarga_abve_municipios:23,24,3522208,exato_nome_e_uf_sp
+Vargem Grande Paulista,SP,4,1,5,0.0197,VARGEM GRANDE PAULISTA,5.0,4.0,1.0,0.0197,fato_totais_recarga_abve_municipios:24,25,3556453,exato_nome_e_uf_sp
+Taboão Da Serra,SP,0,4,4,0.0157,TABOAO DA SERRA,4.0,0.0,4.0,0.0157,fato_totais_recarga_abve_municipios:25,26,3552809,exato_nome_e_uf_sp
+Embu Das Artes,SP,4,0,4,0.0157,EMBU DAS ARTES,4.0,4.0,0.0,0.0157,fato_totais_recarga_abve_municipios:26,27,3515004,exato_nome_e_uf_sp
+Mauá,SP,3,0,3,0.0118,MAUA,3.0,3.0,0.0,0.0118,fato_totais_recarga_abve_municipios:27,28,3529401,exato_nome_e_uf_sp
+Pirapora Do Bom Jesus,SP,2,0,2,0.0079,PIRAPORA DO BOM JESUS,2.0,2.0,0.0,0.0079,fato_totais_recarga_abve_municipios:28,29,3539103,exato_nome_e_uf_sp
+Juquitiba,SP,0,2,2,0.0079,JUQUITIBA,2.0,0.0,2.0,0.0079,fato_totais_recarga_abve_municipios:29,30,3526209,exato_nome_e_uf_sp
+Santa Isabel,SP,1,0,1,0.0039,SANTA ISABEL,1.0,1.0,0.0,0.0039,fato_totais_recarga_abve_municipios:30,31,3546801,exato_nome_e_uf_sp
+Itapevi,SP,1,0,1,0.0039,ITAPEVI,1.0,1.0,0.0,0.0039,fato_totais_recarga_abve_municipios:31,32,3522505,exato_nome_e_uf_sp
+Poá,SP,0,1,1,0.0039,POA,1.0,0.0,1.0,0.0039,fato_totais_recarga_abve_municipios:32,33,3539806,exato_nome_e_uf_sp

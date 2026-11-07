@@ -1,0 +1,2 @@
+﻿Municipio,Estado,Quantidade,MarketShare_Pct,municipio_chave,quantidade_num,market_share_pct_num,id_registro_mestre,linha_csv_origem,codigo_ibge_municipio,status_vinculo_ibge
+São Paulo,SP,108786,12.4625,SAO PAULO,108786.0,12.4625,fato_vendas_abve_capital:1,2,3550308,exato_nome_e_uf_sp

@@ -1,0 +1,104 @@
+﻿arquivo_tabela,coluna,tipo_exportado,ausentes_e_marcadores,granularidade,fonte_original,variavel_derivada,linhas_tabela,percentual_ausente
+energia/fato_pesquisas_precos_anp_sp.csv,Valor de Compra,string,14920,observação de preço de revenda/produto/data,03_ANP_SP.csv,False,14920,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,MUNI_T1,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,MUNI_T2,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,MUNI_T3,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,MODO2,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,MODO3,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,MODO4,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,TP_ESAUTO,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,VL_EST,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,PE_BICI,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,TP_ESTBICI,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,PROP_BICI,string,4229,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,100.0
+uber/fato_ofertas_locacao_uber.csv,km_inclusos,string,56,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,100.0
+mobilidade/fato_viagens_aplicativo_od2023.csv,CD_TIPO_HIBRIDO_T2,string,4225,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.91
+mobilidade/fato_viagens_aplicativo_od2023.csv,QT_HIBRIDO_T2,string,4225,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.91
+veiculos/dim_modelos_versoes_inmetro.csv,eficiencia_modo_eletrico_vehp_flex_etanol_estrada_km_le,string,964,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,99.59
+mobilidade/fato_viagens_aplicativo_od2023.csv,MUNITRA2,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,TRAB2_RE,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,TRABEXT2,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,DS_OCUP_TRAB2,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,SETOR2,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,VINC2,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,CD_PRES_HIB_T2,string,4191,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,99.1
+mobilidade/fato_viagens_aplicativo_od2023.csv,ANO_AUTO3,string,4173,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,98.68
+mobilidade/fato_viagens_aplicativo_od2023.csv,CD_TIPO_HIBRIDO_T1,string,3849,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,91.01
+mobilidade/fato_viagens_aplicativo_od2023.csv,QT_HIBRIDO_T1,string,3849,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,91.01
+energia/fato_pesquisas_precos_anp_sp.csv,Complemento,string,13532,observação de preço de revenda/produto/data,03_ANP_SP.csv,False,14920,90.7
+mobilidade/fato_viagens_aplicativo_od2023.csv,ANO_AUTO2,string,3826,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,90.47
+veiculos/dim_modelos_versoes_inmetro.csv,eficiencia_modo_eletrico_vehp_flex_etanol_cidade_km_le,string,859,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,88.74
+uber/fato_ofertas_locacao_uber.csv,valor_km_excedente_reais,string,49,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,87.5
+uber/fato_ofertas_locacao_uber.csv,sem_limite_quilometragem,string,49,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,87.5
+mobilidade/fato_viagens_aplicativo_od2023.csv,MUNIESC,string,3693,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,87.33
+mobilidade/fato_viagens_aplicativo_od2023.csv,TIPO_ESC,string,3680,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,87.02
+recarga/dim_pontos_recarga_ocm.csv,custo_uso,string,122,ponto cadastrado com localização,10_OPEN_CHARGE_MAP_SP.csv,False,143,85.31
+uber/regra_modelos_uber.csv,electric_ano_min,string,1028,marca × modelo e critérios de ano mínimo por categoria,09_UBER_MODELOS_SP.csv,False,1219,84.33
+recarga/dim_pontos_recarga_ocm.csv,estado_provincia,string,116,ponto cadastrado com localização,10_OPEN_CHARGE_MAP_SP.csv,False,143,81.12
+uber/fato_ofertas_locacao_uber.csv,motivos_revisao,string,45,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,80.36
+veiculos/dim_modelos_versoes_inmetro.csv,co2e_fossil_vehp_g_km,string,770,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,79.55
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_etanol_cidade_km_l,string,769,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,79.44
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_etanol_combinado_km_l,string,759,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,78.41
+uber/regra_modelos_uber.csv,black_ano_min,string,893,marca × modelo e critérios de ano mínimo por categoria,09_UBER_MODELOS_SP.csv,False,1219,73.26
+territorios/dim_municipios_sp.csv,CD_CONCURB,string,465,"tabela derivada de múltiplas fontes, conforme documentação",derivada (ver relatório),False,645,72.09
+territorios/dim_municipios_sp.csv,NM_CONCURB,string,465,"tabela derivada de múltiplas fontes, conforme documentação",derivada (ver relatório),False,645,72.09
+mercado/fato_vendas_mhev_brasil.csv,codigo_ibge_municipio,string,359,vendas MHEV por município no recorte Brasil,16_ABVE_VENDAS_MHEV_BRASIL.csv,True,499,71.94
+veiculos/dim_modelos_versoes_inmetro.csv,autonomia_eletrica_km,string,691,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,71.38
+veiculos/dim_modelos_versoes_inmetro.csv,selo_conpet_eficiencia_energetica,string,657,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,67.87
+uber/regra_modelos_uber.csv,comfort_ano_min,string,817,marca × modelo e critérios de ano mínimo por categoria,09_UBER_MODELOS_SP.csv,False,1219,67.02
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_etanol_estrada_km_l,string,610,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,63.02
+recarga/dim_pontos_recarga_ocm.csv,cep,string,90,ponto cadastrado com localização,10_OPEN_CHARGE_MAP_SP.csv,False,143,62.94
+veiculos/dim_modelos_versoes_inmetro.csv,co2_fossil_etanol_g_km,string,567,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,58.57
+veiculos/dim_modelos_versoes_inmetro.csv,eficiencia_modo_eletrico_ve_vehp_gasolina_estrada_km_le,string,531,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,54.86
+uber/fato_ofertas_locacao_uber.csv,caucao_reais,string,30,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,53.57
+veiculos/dim_modelos_versoes_inmetro.csv,eficiencia_modo_eletrico_ve_vehp_gasolina_cidade_km_le,string,491,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,50.72
+mobilidade/fato_viagens_aplicativo_od2023.csv,ANO_AUTO1,string,2025,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,47.88
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_energetico_mj_km,string,434,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,44.83
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_energetico_mj_km_num,string,434,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,44.83
+recarga/dim_pontos_recarga_ocm.csv,operadora,string,63,ponto cadastrado com localização,10_OPEN_CHARGE_MAP_SP.csv,False,143,44.06
+mobilidade/fato_viagens_aplicativo_od2023.csv,MUNITRA1,string,1847,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.67
+mobilidade/fato_viagens_aplicativo_od2023.csv,TRAB1_RE,string,1833,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.34
+mobilidade/fato_viagens_aplicativo_od2023.csv,TRABEXT1,string,1833,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.34
+mobilidade/fato_viagens_aplicativo_od2023.csv,DS_OCUP_TRAB1,string,1833,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.34
+mobilidade/fato_viagens_aplicativo_od2023.csv,SETOR1,string,1833,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.34
+mobilidade/fato_viagens_aplicativo_od2023.csv,VINC1,string,1833,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.34
+mobilidade/fato_viagens_aplicativo_od2023.csv,CD_PRES_HIB_T1,string,1833,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,43.34
+veiculos/dim_modelos_versoes_inmetro.csv,co2_fossil_gasolina_diesel_g_km,string,410,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,42.36
+mobilidade/fato_viagens_aplicativo_od2023.csv,VL_REN_I,string,1750,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,41.38
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_gasolina_diesel_cidade_km_l,string,329,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,33.99
+veiculos/dim_modelos_versoes_inmetro.csv,classificacao_pbe_absoluta_geral,string,299,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,30.89
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_gasolina_diesel_estrada_km_l,string,286,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,29.55
+veiculos/dim_modelos_versoes_inmetro.csv,consumo_gasolina_diesel_combinado_km_l,string,286,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,29.55
+uber/fato_ofertas_locacao_uber.csv,descricao,string,15,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,26.79
+veiculos/dim_modelos_versoes_inmetro.csv,nox_g_km,string,215,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,22.21
+uber/fato_ofertas_locacao_uber.csv,requisitos,string,11,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,19.64
+veiculos/dim_modelos_versoes_inmetro.csv,co2_total_etanol_g_km,string,189,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,19.52
+veiculos/fato_cotacoes_fipe_parcial.csv,ano_modelo,string,85,versão FIPE × ano-modelo × mês de referência,08_FIPE_VEICULOS_PARCIAL.csv,False,489,17.38
+veiculos/dim_modelos_versoes_inmetro.csv,classificacao_pbe_relativa_categoria,string,164,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,16.94
+veiculos/dim_modelos_versoes_inmetro.csv,co_mg_km,string,117,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,12.09
+veiculos/dim_modelos_versoes_inmetro.csv,ar_condicionado,string,111,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,11.47
+veiculos/dim_modelos_versoes_inmetro.csv,nmog_nox_mg_km,string,111,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,11.47
+uber/fato_ofertas_locacao_uber.csv,itens_inclusos,string,5,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,8.93
+uber/fato_ofertas_locacao_uber.csv,categorias_uber,string,3,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,5.36
+uber/fato_ofertas_locacao_uber.csv,valor_semanal_equivalente,string,3,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,5.36
+uber/fato_ofertas_locacao_uber.csv,valor_mensal_equivalente,string,3,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,5.36
+recarga/dim_pontos_recarga_ocm.csv,cidade,string,6,ponto cadastrado com localização,10_OPEN_CHARGE_MAP_SP.csv,False,143,4.2
+frota/fato_frota_senatran_marca_modelo.csv,Ano Fabricação Veículo CRV,string,3350,frota por município/marca-modelo,06_SENATRAN_MARCA_MODELO_SP.csv,False,81652,4.1
+veiculos/dim_modelos_versoes_inmetro.csv,transmissao,string,36,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,3.72
+uber/fato_ofertas_locacao_uber.csv,valor_card_reais,string,2,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,3.57
+uber/fato_ofertas_locacao_uber.csv,divergencia_valor_card_detalhe_pct,string,2,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,3.57
+veiculos/dim_modelos_versoes_inmetro.csv,versao,string,31,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,3.2
+veiculos/dim_modelos_versoes_inmetro.csv,versao_chave,string,31,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,3.2
+veiculos/dim_modelos_versoes_inmetro.csv,reducao_relativa_limite_poluentes,string,18,linha da planilha organizada INMETRO,05_INMETRO_ORGANIZADO.csv,False,968,1.86
+uber/fato_ofertas_locacao_uber.csv,valor_display,string,1,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,1.79
+uber/fato_ofertas_locacao_uber.csv,valor_reais,string,1,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,1.79
+uber/fato_ofertas_locacao_uber.csv,valor_reais_num,string,1,oferta comercial individual,17_UBER_MATCH_OFERTAS_SP.csv,False,56,1.79
+recarga/dim_pontos_recarga_ocm.csv,potencia_max_kw,string,1,ponto cadastrado com localização,10_OPEN_CHARGE_MAP_SP.csv,False,143,0.7
+energia/fato_tarifas_aneel_nacional.csv,SigAgente,string,2007,distribuidora × vigência × modalidade × posto × unidade,02_ANEEL_NACIONAL.csv,False,332165,0.6
+relacionamentos/ponte_candidatos_uber_inmetro.csv,versao,string,2,"tabela derivada de múltiplas fontes, conforme documentação",derivada (ver relatório),False,485,0.41
+frota/fato_frota_senatran_tipo.csv,codigo_ibge_municipio,string,1,frota municipal por tipos em colunas,06_SENATRAN_TIPO_VEICULO_SP.csv,True,646,0.15
+energia/fato_pesquisas_precos_anp_sp.csv,Bairro,string,21,observação de preço de revenda/produto/data,03_ANP_SP.csv,False,14920,0.14
+mobilidade/fato_viagens_aplicativo_od2023.csv,QT_DVD,string,4,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,0.09
+energia/fato_tarifas_aneel_nacional.csv,DscREH,string,274,distribuidora × vigência × modalidade × posto × unidade,02_ANEEL_NACIONAL.csv,False,332165,0.08
+mobilidade/fato_viagens_aplicativo_od2023.csv,QT_BICICLE,string,2,registro amostral de viagem; peso FE_VIA,07_ORIGEM_DESTINO.csv,False,4229,0.05
+energia/fato_tarifas_aneel_nacional.csv,SigAgenteAcessante,string,22,distribuidora × vigência × modalidade × posto × unidade,02_ANEEL_NACIONAL.csv,False,332165,0.01

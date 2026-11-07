@@ -1,0 +1,1220 @@
+﻿id_modelo_uber,marca,modelo,candidatos_inmetro,candidatos_fipe,status_inmetro,status_fipe
+regra_modelos_uber:1,Acura,CL,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:2,Acura,Integra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:3,Acura,MDX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:4,Acura,NSX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:5,Acura,TL,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:6,Acura,ZDX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:7,Aion,ES,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:8,Aion,V,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:9,Aion,Y,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:10,Aiways,U5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:11,Alfa Romeo,147,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:12,Alfa Romeo,156,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:13,Alfa Romeo,159,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:14,Alfa Romeo,166,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:15,Alfa Romeo,939,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:16,Alfa Romeo,Giulietta,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:17,Alfa Romeo,GTV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:18,Alfa Romeo,4C,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:19,Alfa Romeo,4C Spider,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:20,Alfa Romeo,GT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:21,Alfa Romeo,Mito,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:22,Aston Martin,DBS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:23,Aston Martin,One-77,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:24,Audi,80,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:25,Audi,100,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:26,Audi,A1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:27,Audi,A3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:28,Audi,A3 Limousine,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:29,Audi,A3 Sportback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:30,Audi,A4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:31,Audi,A4 Avant,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:32,Audi,A5,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:33,Audi,A5 Avant,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:34,Audi,A6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:35,Audi,A6 Avant,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:36,Audi,A7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:37,Audi,A8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:38,Audi,e-tron,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:39,Audi,Audi e-tron Sportback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:40,Audi,Q3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:41,Audi,Q5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:42,Audi,Q6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:43,Audi,Q7,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:44,Audi,Q8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:45,Audi,RS 3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:46,Audi,RS 4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:47,Audi,RS 6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:48,Audi,S3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:49,Audi,S4 Avant,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:50,Audi,S5 Sportback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:51,Audi,S6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:52,Audi,S7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:53,Audi,SQ5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:54,Audi,TTS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:55,Audi,E-Tron GT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:56,Audi,Q4 e-tron,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:57,Audi,Q4 Sportback e-tron,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:58,Audi,A2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:59,Audi,A3 Cabriolet,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:60,Audi,A4 Cabriolet,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:61,Audi,A5 Cabriolet,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:62,Audi,S5 Cabriolet,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:63,Audi,S8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:64,BAIC,E150,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:65,BAIC,EU260,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:66,BAIC,EX360,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:67,BMW,1-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:68,BMW,2-Series 225xe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:69,BMW,Série 2 Active Tourer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:70,BMW,2-series Gran Tourer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:71,BMW,3-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:72,BMW,3-Series 330e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:73,BMW,Série 3 Gran Turismo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:74,BMW,316i,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:75,BMW,320i,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:76,BMW,4-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:77,BMW,4-series Gran Coupe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:78,BMW,5-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:79,BMW,5-Series 530e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:80,BMW,Série 5 Gran Turismo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:81,BMW,6-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:82,BMW,6-series Gran Coupe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:83,BMW,7-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:84,BMW,7-Series 745e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:85,BMW,ActiveHybrid 5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:86,BMW,M3,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:87,BMW,M5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:88,BMW,X1,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:89,BMW,X2,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:90,BMW,X3,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:91,BMW,X4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:92,BMW,X5,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:93,BMW,X6,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:94,BMW,X7,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:95,BMW,i3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:96,BMW,i4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:97,BMW,i7,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:98,BMW,iX,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:99,BMW,iX1,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:100,BMW,iX3,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:101,BMW,2-series,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:102,BMW,i8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:103,BMW,M6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:104,BMW,M6 Gran Coupe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:105,BYD,Atto 2,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:106,BYD,D1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:107,BYD,Dolphin,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:108,BYD,E5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:109,BYD,e6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:110,BYD,Han EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:111,BYD,KING DM-i,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:112,BYD,Seal,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:113,BYD,Song Plus,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:114,BYD,Song Plus Champion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:115,BYD,Song Pro,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:116,BYD,TAN,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:117,BYD,Tang,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:118,BYD,Yuan Plus,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:119,BYD,Yuan Pro,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:120,BYD,Dolphin Mini,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:121,BYD,E2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:122,BYD,E3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:123,BYD,Qin,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:124,BYD,BYD S1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:125,BYD,Song,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:126,BYD,Shark,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:127,Bestune,NAT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:128,Buick,Century,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:129,Buick,Enclave,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:130,Buick,GL8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:131,Buick,LaCrosse,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:132,Buick,LeSabre,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:133,Buick,Lucerne,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:134,Buick,Park Avenue,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:135,Buick,Rainier,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:136,Buick,Regal,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:137,Buick,Rendezvous,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:138,Buick,Royaum,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:139,Buick,Terraza,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:140,Cadillac,DeVille,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:141,Cadillac,Eldorado,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:142,Cadillac,Escalade,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:143,Cadillac,Sevilha,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:144,Cadillac,LYRIQ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:145,Chang'an,CS35,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:146,Chang'an Suzuki,S-Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:147,Changhe,Coolcar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:148,Changhe,M100 CH7101,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:149,Chery,A5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:150,Chery,A6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:151,Chery,Arrizo 3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:152,Chery,Arrizo 5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:153,Chery,Arrizo 5e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:154,Chery,Arrizo 6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:155,Chery,Arrizo 7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:156,Chery,Arrizo M7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:157,Chery,Grand Tiggo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:158,Chery,Tiggo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:159,Chery,Tiggo 2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:160,Chery,Tiggo 3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:161,Chery,Tiggo 3X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:162,Chery,Tiggo 4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:163,Chery,Tiggo 5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:164,Chery,Tiggo 5X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:165,Chery,Tiggo 5X Pro Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:166,Chery,Tiggo 7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:167,Chery,Tiggo 7 Pro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:168,Chery,Tiggo 8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:169,Chery,Tiggo 8 Pro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:170,Chery,eQ5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:171,Chery,A1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:172,Chery,A13,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:173,Chery,A3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:174,Chery,Beat,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:175,Chery,Celer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:176,Chery,Cielo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:177,Chery,Cowin,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:178,Chery,Face,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:179,Chery,J11,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:180,Chery,J3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:181,Chery,New QQ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:182,Chery,QQ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:183,Chery,QQ3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:184,Chery,QQ6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:185,Chery,S18,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:186,Chevrolet,Cobalt,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:187,Chevrolet,Prisma,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:188,Chevrolet,Bolt,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:189,Chevrolet,Bolt EUV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:190,Chevrolet,Bolt EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:191,Chevrolet,Captiva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:192,Chevrolet,Cruze,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:193,Chevrolet,Equinox,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:194,Chevrolet,Grand Vitara,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:195,Chevrolet,Joy Plus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:196,Chevrolet,Malibu,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:197,Chevrolet,Onix Plus,10,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:198,Chevrolet,Sonic,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:199,Chevrolet,SPARK EUV,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:200,Chevrolet,Spin,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:201,Chevrolet,Tracker,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:202,Chevrolet,Trailblazer,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:203,Chevrolet,Menlo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:204,Chevrolet,Volt,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:205,Chevrolet,Agile,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:206,Chevrolet,Astra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:207,Chevrolet,Astro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:208,Chevrolet,Avalanche,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:209,Chevrolet,Aveo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:210,Chevrolet,Aveo5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:211,Chevrolet,Beat,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:212,Chevrolet,Blazer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:213,Chevrolet,Camaro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:214,Chevrolet,Caprice,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:215,Chevrolet,Cavalier,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:216,Chevrolet,Celta,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:217,Chevrolet,Chevy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:218,Chevrolet,Classic,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:219,Chevrolet,Colorado,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:220,Chevrolet,Corsa,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:221,Chevrolet,Corsa Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:222,Chevrolet,Corsa Wagon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:223,Chevrolet,Cruze Sport6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:224,Chevrolet,Dmax,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:225,Chevrolet,Enjoy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:226,Chevrolet,Epica,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:227,Chevrolet,Esteem,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:228,Chevrolet,HHR,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:229,Chevrolet,Impala,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:230,Chevrolet,Joy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:231,Chevrolet,Lacetti,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:232,Chevrolet,Lanos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:233,Chevrolet,Lova,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:234,Chevrolet,LTZ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:235,Chevrolet,Lumina,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:236,Chevrolet,Matiz,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:237,Chevrolet,Meriva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:238,Chevrolet,Metro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:239,Chevrolet,Montana,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:240,Chevrolet,Monte Carlo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:241,Chevrolet,Monza,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:242,Chevrolet,MW,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:243,Chevrolet,Niva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:244,Chevrolet,Nubira,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:245,Chevrolet,Omega,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:246,Chevrolet,Onix,13,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:247,Chevrolet,Optra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:248,Chevrolet,Orlando,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:249,Chevrolet,Prizm,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:250,Chevrolet,Rezzo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:251,Chevrolet,S-10,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:252,Chevrolet,Silverado,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:253,Chevrolet,Sonic Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:254,Chevrolet,Spark,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:255,Chevrolet,Sprint,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:256,Chevrolet,ss,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:257,Chevrolet,Suburban,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:258,Chevrolet,Trans Sport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:259,Chevrolet,Traverse,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:260,Chevrolet,Trax,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:261,Chevrolet,Uplander,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:262,Chevrolet,Vectra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:263,Chevrolet,Venture,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:264,Chevrolet,Viva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:265,Chevrolet,Zafira,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:266,Chirey,Tiggo 8 Pro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:267,Chrysler,200,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:268,Chrysler,300,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:269,Chrysler,Pacifica,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:270,Chrysler,Town and Country,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:271,Chrysler,Cirrus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:272,Chrysler,Neon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:273,Chrysler,PT Cruiser,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:274,Chrysler,Sebring,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:275,Citroen,Jumpy,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:276,Citroen,Aircross,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:277,Citroen,Basalt,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:278,Citroen,C3 Aircross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:279,Citroen,C4 Aircross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:280,Citroen,C4 Cactus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:281,Citroen,C4 Lounge,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:282,Citroen,C4 Picasso,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:283,Citroen,C4L,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:284,Citroen,DS4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:285,Citroen,DS5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:286,Citroen,Grand Picasso,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:287,Citroen,C-Zero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:288,Citroen,e-Berlingo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:289,Citroen,E-C4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:290,Citroen,E-Mehari,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:291,Citroen,Ë-SpaceTourer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:292,Citroen,Berlingo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:293,Citroen,BX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:294,Citroen,C-Crosser,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:295,Citroen,C-Elysee,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:296,Citroen,C-Quatre,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:297,Citroen,C1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:298,Citroen,C2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:299,Citroen,C3,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:300,Citroen,C3 Feel,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:301,Citroen,C3 Picasso,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:302,Citroen,C3-XR,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:303,Citroen,C4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:304,Citroen,C4 Grand Picasso,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:305,Citroen,C4 Pallas,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:306,Citroen,C5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:307,Citroen,C6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:308,Citroen,C8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:309,Citroen,DS3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:310,Citroen,Elysee,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:311,Citroen,Evasion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:312,Citroen,Saxo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:313,Citroen,Xantia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:314,Citroen,Xsara,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:315,Citroen,Xsara Picasso,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:316,Cupra,Born,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:317,Dacia,Spring,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:318,Dacia,Logan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:319,Dacia,Sandero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:320,Daewoo,Chairman,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:321,Daewoo,Espero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:322,Daewoo,Gentra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:323,Daewoo,Kalos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:324,Daewoo,Lacetti,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:325,Daewoo,Lanos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:326,Daewoo,Leganza,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:327,Daewoo,Matiz,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:328,Daewoo,Nexia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:329,Daewoo,Nubira,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:330,Daewoo,Racer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:331,Daewoo,Rezzo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:332,Daewoo,Tosca,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:333,Daewoo,Winstorm,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:334,Daihatsu,Applause,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:335,Daihatsu,Charade,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:336,Daihatsu,Cuore,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:337,Daihatsu,Terios,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:338,Dodge,Caravan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:339,Dodge,Grand Caravan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:340,Dodge,Journey,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:341,Dodge,Attitude,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:342,Dodge,Avenger,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:343,Dodge,Caliber,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:344,Dodge,Challenger,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:345,Dodge,Charger,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:346,Dodge,Dart,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:347,Dodge,Durango,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:348,Dodge,Magnum,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:349,Dodge,Nitro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:350,Dodge,Stratus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:351,Dongfeng,Seres 3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:352,Dongfeng,E30,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:353,Dongfeng,EX1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:354,Dongfeng,Nano Box,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:355,E-Motors,EMOVA Easy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:356,E-Motors,EMOVA Urban,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:357,Effa,M100,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:358,FAW,Cale,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:359,FAW,Senya M80,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:360,Ferrari,California,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:361,Ferrari,FF,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:362,Fiat,500,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:363,Fiat,Doblo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:364,Fiat,Ducato,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:365,Fiat,Argo,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:366,Fiat,Cronos,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:367,Fiat,Fastback,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:368,Fiat,Freemont,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:369,Fiat,Idea Adventure,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:370,Fiat,Idea Attractive,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:371,Fiat,Pulse,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:372,Fiat,500E,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:373,Fiat,E-Ulysse,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:374,Fiat,500C,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:375,Fiat,500L,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:376,Fiat,500X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:377,Fiat,Albea,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:378,Fiat,Avventura,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:379,Fiat,Bravo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:380,Fiat,Croma,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:381,Fiat,Egea,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:382,Fiat,Grand Siena,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:383,Fiat,Grande Punto,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:384,Fiat,Idea,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:385,Fiat,Linea,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:386,Fiat,Marea,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:387,Fiat,Mobi,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:388,Fiat,Multipla,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:389,Fiat,Novo Uno,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:390,Fiat,Ottimo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:391,Fiat,Palio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:392,Fiat,Palio (326) Attractive,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:393,Fiat,Palio Weekend,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:394,Fiat,Panda,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:395,Fiat,Panorama,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:396,Fiat,Perla,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:397,Fiat,Punto,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:398,Fiat,Qubo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:399,Fiat,Ritmo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:400,Fiat,Sedici,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:401,Fiat,Siena,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:402,Fiat,Siena Attractive,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:403,Fiat,Stilo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:404,Fiat,Strada Cabine Dupla,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:405,Fiat,Tempra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:406,Fiat,Tipo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:407,Fiat,Titano,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:408,Fiat,Fiat Toro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:409,Fiat,Ulysse,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:410,Fiat,Uno,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:411,Fiat,Viaggio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:412,Ford,Bronco,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:413,Ford,EcoSport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:414,Ford,Fusion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:415,Ford,Territory,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:416,Ford,F-150 Lightning,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:417,Ford,Focus Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:418,Ford,Mustang Mach-E,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:419,Ford,Activa,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:420,Ford,Aspire,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:421,Ford,B-Max,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:422,Ford,Bronco Sport,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:423,Ford,C-Max,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:424,Ford,Capri,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:425,Ford,Classic,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:426,Ford,Contour,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:427,Ford,Crown Victoria,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:428,Ford,Edge,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:429,Ford,Escape,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:430,Ford,Escort,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:431,Ford,Everest,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:432,Ford,Excursion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:433,Ford,Expedition,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:434,Ford,Explorer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:435,Ford,Explorer Sport Trac,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:436,Ford,F-150,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:437,Ford,Fairlane,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:438,Ford,Fairmont,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:439,Ford,Falcon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:440,Ford,Festiva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:441,Ford,Fiesta,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:442,Ford,Fiesta se,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:443,Ford,Fiesta Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:444,Ford,Figo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:445,Ford,Flex,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:446,Ford,Focus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:447,Ford,Focus Hatchback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:448,Ford,Focus Titanium,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:449,Ford,Freestar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:450,Ford,Freestyle,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:451,Ford,Galaxy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:452,Ford,Ikon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:453,Ford,Ka,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:454,Ford,Ka Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:455,Ford,Ka Sedan 1.0 Hatch,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:456,Ford,Ka+,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:457,Ford,Kuga,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:458,Ford,Laser,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:459,Ford,LTD,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:460,Ford,Maverick,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:461,Ford,Mondeo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:462,Ford,Mustang,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:463,Ford,Ranger,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:464,Ford,S-Max,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:465,Ford,Sierra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:466,Ford,Stretch Limo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:467,Ford,Taurus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:468,Ford,Tourneo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:469,Ford,Windstar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:470,Foton,Tunland,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:471,GAC,Aion ES,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:472,GAC,Aion UT,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:473,GAC,AION V,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:474,GAC,Aion Y,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:475,GAC,GS4,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:476,GAC,Hyptec HT,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:477,GAC,Aion S,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:478,GM,Alpheon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:479,GWM,Haval H6,11,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:480,GWM,Ora 03,4,2,multiplas_versoes_ou_registros,multiplas_cotacoes_ano_versao
+regra_modelos_uber:481,GWM,Ora 5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:482,GWM,Poer P30,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:483,GWM,Tank 300,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:484,Geely,Emgrand EC7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:485,Geely,EX2,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:486,Geely,EX5,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:487,Geely,Geely EX5 Max,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:488,Geely,Geometry C,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:489,Geely,EC7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:490,Geely,EC8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:491,Geely,Emgrand 7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:492,Geely,Emgrand EC718,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:493,Geely,GC2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:494,Geely,SC7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:495,Genesis,GV60,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:496,Grande Muralha,Haval H6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:497,Grande Muralha,Hover,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:498,Haima,3 Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:499,Haval,H6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:500,Haval,Novo Haval H6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:501,Holden,Cruze,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:502,Honda,Accord,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:503,Honda,Accord Hybrid,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:504,Honda,City,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:505,Honda,City Hatchback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:506,Honda,Civic,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:507,Honda,Civic e:HEV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:508,Honda,CR-V,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:509,Honda,HR-V,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:510,Honda,WR-V,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:511,Honda,ZR-V,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:512,Honda,Clarity Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:513,Honda,E,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:514,Honda,EV Plus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:515,Honda,FCX Clarity,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:516,Honda,Accord Crosstour,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:517,Honda,Airwave,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:518,Honda,Avancier,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:519,Honda,Ballade,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:520,Honda,BR-V,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:521,Honda,Brio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:522,Honda,Ciimo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:523,Honda,Civic Type R,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:524,Honda,Clarity,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:525,Honda,CR-Z,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:526,Honda,Crossroad,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:527,Honda,Domani,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:528,Honda,Edix,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:529,Honda,Element,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:530,Honda,Fit,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:531,Honda,Fit Shuttle,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:532,Honda,FR-V,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:533,Honda,Idea,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:534,Honda,Insight,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:535,Honda,Jade,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:536,Honda,Logo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:537,Honda,MDX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:538,Honda,Mobilio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:539,Honda,Odyssey,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:540,Honda,Orthia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:541,Honda,Partner,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:542,Honda,Passport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:543,Honda,Pilot,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:544,Honda,Prelude,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:545,Honda,Ridgeline,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:546,Honda,Saber,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:547,Honda,Stepwgn,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:548,Honda,Stream,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:549,Honda,That's,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:550,Honda,Torneo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:551,Honda,Vamos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:552,Honda,XR-V,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:553,Honda,Zest,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:554,Hongqi,E-HS9,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:555,Hozon,Nezha,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:556,Hummer,H3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:557,Hyundai,H-1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:558,Hyundai,Azera,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:559,Hyundai,Creta,7,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:560,Hyundai,Elantra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:561,Hyundai,Equus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:562,Hyundai,Genesis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:563,Hyundai,HB20S,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:564,Hyundai,HB20x,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:565,Hyundai,i30,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:566,Hyundai,Ioniq,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:567,Hyundai,IONIQ 5,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:568,Hyundai,IONIQ 6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:569,Hyundai,IONIQ Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:570,Hyundai,Ioniq Plug-in Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:571,Hyundai,ix35,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:572,Hyundai,Kona,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:573,Hyundai,Kona Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:574,Hyundai,Kona Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:575,Hyundai,Santa Fe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:576,Hyundai,Santa Fe Sport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:577,Hyundai,Sonata,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:578,Hyundai,Tucson,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:579,Hyundai,Veracruz,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:580,Hyundai,Kauai Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:581,Hyundai,Lafesta EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:582,Hyundai,Accent,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:583,Hyundai,Atos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:584,Hyundai,Coupe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:585,Hyundai,Elantra GT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:586,Hyundai,Entourage,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:587,Hyundai,Excel,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:588,Hyundai,Grand Santa Fe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:589,Hyundai,Grand Starex,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:590,Hyundai,HB20,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:591,Hyundai,i10,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:592,Hyundai,i20,14,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:593,Hyundai,i30 Fastback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:594,Hyundai,i30 Wagon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:595,Hyundai,i35,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:596,Hyundai,ix20,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:597,Hyundai,ix25,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:598,Hyundai,ix55,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:599,Hyundai,Lantra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:600,Hyundai,Matrix,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:601,Hyundai,Maxcruz,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:602,Hyundai,Terracan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:603,Hyundai,Tiburon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:604,Hyundai,Trajet,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:605,Hyundai,Veloster,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:606,Hyundai Motors,Prime SD,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:607,Infiniti,EX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:608,Infiniti,G Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:609,JAC,T60,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:610,JAC,E10X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:611,JAC Motors,A-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:612,JAC Motors,E-JS4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:613,JAC Motors,EJ7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:614,JAC Motors,iEV 40,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:615,JAC Motors,iEV6S,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:616,JAC Motors,J3 Turin,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:617,JAC Motors,J4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:618,JAC Motors,S3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:619,JAC Motors,T40,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:620,JAC Motors,T5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:621,JAC Motors,T50,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:622,JAC Motors,T6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:623,JAC Motors,T60 Plus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:624,JAC Motors,T8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:625,JAC Motors,T80,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:626,JAC Motors,E 10X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:627,JAC Motors,E SEI 2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:628,JAC Motors,E SEI 4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:629,JAC Motors,E SEI1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:630,JAC Motors,E-JS1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:631,JAC Motors,ES4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:632,JAC Motors,iEV20,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:633,JAC Motors,iEV4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:634,JAC Motors,IEV7S,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:635,JAC Motors,Hunter,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:636,JAC Motors,J2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:637,JAC Motors,J3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:638,JAC Motors,J5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:639,JAC Motors,J6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:640,JAECOO,J7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:641,JMEV,EV3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:642,Jaguar,E-PACE,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:643,Jaguar,F-PACE,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:644,Jaguar,XE,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:645,Jaguar,XF,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:646,Jaguar,XF Sportbrake,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:647,Jaguar,I-PACE,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:648,Jaguar,S-Type,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:649,Jaguar,X-Type,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:650,Jeep,2500,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:651,Jeep,Cherokee,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:652,Jeep,Commander,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:653,Jeep,Compass,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:654,Jeep,Grand Cherokee,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:655,Jeep,Renegade,13,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:656,Jeep,Wrangler,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:657,Jetour,S06,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:658,Jetour,T1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:659,Jetour,T2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:660,Jonway,A380,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:661,Kaiyi,KYX7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:662,Kaiyi,X3 Pro EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:663,Kia,Cadenza,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:664,Kia,Carens,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:665,Kia,Carnival,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:666,Kia,Cerato,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:667,Kia,E-Niro,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:668,Kia,Mohave,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:669,Kia,Optima,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:670,Kia,Rio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:671,Kia,Sorento,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:672,Kia,Soul,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:673,Kia,Sportage,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:674,Kia,Stonic,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:675,Kia,EV6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:676,Kia,Niro EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:677,Kia,Soul EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:678,Kia,Cee'd,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:679,Kia,Clarus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:680,Kia,Forte,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:681,Kia,K5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:682,Kia,KX3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:683,Kia,Magentis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:684,Kia,Opirus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:685,Kia,Pegas,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:686,Kia,Picanto,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:687,Kia,Quoris,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:688,Kia,Sephia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:689,Kia,Shuma,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:690,Kia,Soluto,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:691,Kia,Sportage R,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:692,Kia,Stinger,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:693,Lada,Niva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:694,Lada,Samara,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:695,Land Rover,Defender,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:696,Land Rover,Discovery,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:697,Land Rover,Discovery Sport,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:698,Land Rover,LR2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:699,Land Rover,LR3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:700,Land Rover,LR4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:701,Land Rover,Range Rover,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:702,Land Rover,Range Rover Evoque,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:703,Land Rover,Range Rover Sport,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:704,Land Rover,Range Rover Velar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:705,Land Rover,Range Rover Vogue,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:706,Land Rover,Freelander,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:707,Land Rover,Freelander 2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:708,Landwind,Fashion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:709,Landwind,X8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:710,Leapmotor,B10,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:711,Leapmotor,c10,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:712,Leapmotor,T03,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:713,Lexus,CT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:714,Lexus,CT200h,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:715,Lexus,ES,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:716,Lexus,NX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:717,Lexus,NX 300h,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:718,Lexus,RX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:719,Lexus,UX Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:720,Lexus,RZ 450e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:721,Lexus,UX 300e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:722,Lexus,GS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:723,Lexus,LS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:724,Lexus,LX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:725,Lexus,SC,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:726,Lifan,320,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:727,Lifan,520,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:728,Lifan,530,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:729,Lifan,620,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:730,Lifan,X60,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:731,Lifan,X7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:732,Lifan,X50,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:733,Lifan,X80,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:734,Lincoln,Aviator,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:735,Lincoln,Blackwood,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:736,Lincoln,Continental,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:737,Lincoln,LS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:738,Lincoln,Mark,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:739,Lincoln,Mark LT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:740,Lincoln,MKC,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:741,Lincoln,MKS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:742,Lincoln,MKX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:743,Lincoln,MKZ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:744,Lincoln,Navegador,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:745,Lincoln,Town Car,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:746,Lincoln,Zephyr,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:747,Lucid,Air,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:748,MG,550,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:749,MG,MG4,7,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:750,MG,MGS5 EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:751,MG,5 EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:752,MG,Marvel R,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:753,MG,ZS EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:754,MG,MG 6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:755,Mahindra,e2o,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:756,Mahindra,Bolero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:757,Mahindra,Scorpio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:758,Mahindra,Thar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:759,Mahindra,Xylo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:760,Maple,30X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:761,Maruti Suzuki,S-Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:762,Maserati,Coupe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:763,Maserati,Ghibli,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:764,Maserati,GranCabrio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:765,Maserati,GranSport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:766,Maserati,Quattroporte,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:767,Maxus,EUNIQ5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:768,Mazda,323,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:769,Mazda,626,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:770,Mazda,929,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:771,Mazda,CX-7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:772,Mazda,MAZDA2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:773,Mazda,Millenia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:774,Mazda,MPV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:775,Mazda,Protege,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:776,Mercedes Benz,A200,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:777,Mercedes-Benz,190,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:778,Mercedes-Benz,220,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:779,Mercedes-Benz,Citan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:780,Mercedes-Benz,EQV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:781,Mercedes-Benz,Sprinter,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:782,Mercedes-Benz,Vito,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:783,Mercedes-Benz,eVito Tourer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:784,Mercedes-Benz,A-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:785,Mercedes-Benz,B-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:786,Mercedes-Benz,B200,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:787,Mercedes-Benz,C 180,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:788,Mercedes-Benz,C 200,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:789,Mercedes-Benz,C 250,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:790,Mercedes-Benz,C-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:791,Mercedes-Benz,CLA-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:792,Mercedes-Benz,E-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:793,Mercedes-Benz,E250,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:794,Mercedes-Benz,GLA-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:795,Mercedes-Benz,GLE-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:796,Mercedes-Benz,M-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:797,Mercedes-Benz,ML Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:798,Mercedes-Benz,S-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:799,Mercedes-Benz,B250e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:800,Mercedes-Benz,EQA,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:801,Mercedes-Benz,EQB,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:802,Mercedes-Benz,EQC,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:803,Mercedes-Benz,EQE,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:804,Mercedes-Benz,EQS,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:805,Mercedes-Benz,B180,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:806,Mercedes-Benz,C 300,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:807,Mercedes-Benz,C350e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:808,Mercedes-Benz,CL-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:809,Mercedes-Benz,CLS-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:810,Mercedes-Benz,E350e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:811,Mercedes-Benz,G-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:812,Mercedes-Benz,GLC-Class,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:813,Mercedes-Benz,Mercedes-Benz GLE Coupe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:814,Mercedes-Benz,Vaneo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:815,Mercury,Monterey,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:816,Mercury,Mystique,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:817,Mercury,Sable,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:818,Mini,5 portas,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:819,Mini,Cabrio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:820,Mini,Cooper,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:821,Mini,Countryman,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:822,Mini,Paceman,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:823,Mitsubishi,380,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:824,Mitsubishi,Airtrek,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:825,Mitsubishi,ASX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:826,Mitsubishi,Mitsubishi Eclipse Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:827,Mitsubishi,Lancer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:828,Mitsubishi,Outlander,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:829,Mitsubishi,Outlander Sport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:830,Mitsubishi,Pajero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:831,Mitsubishi,Pajero Full,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:832,Mitsubishi,Pajero Sport,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:833,Mitsubishi,Pajero TR4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:834,Mitsubishi,i-Miev,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:835,Mitsubishi,Colt,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:836,Mitsubishi,Eclipse,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:837,Mitsubishi,Galant,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:838,Mitsubishi,Grandis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:839,Mitsubishi,L200,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:840,Mitsubishi,Mirage,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:841,Mitsubishi,Montero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:842,Mitsubishi,Space Wagon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:843,Mitsubishi,Triton,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:844,NETA,X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:845,NETA,Aya,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:846,NETA,U,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:847,NETA,V,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:848,Nio,ES6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:849,Nio,ES8,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:850,Nio,ET7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:851,Nissan,Vanette,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:852,Nissan,Altima,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:853,Nissan,Kait,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:854,Nissan,Kicks,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:855,Nissan,LEAF,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:856,Nissan,LEAF EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:857,Nissan,Pathfinder,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:858,Nissan,Sentra,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:859,Nissan,V-Drive,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:860,Nissan,Versa,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:861,Nissan,Versa V-Drive,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:862,Nissan,Ariya,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:863,Nissan,e-NV200,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:864,Nissan,Caravan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:865,Nissan,Cedric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:866,Nissan,DAYZ ROOX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:867,Nissan,Elgrand,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:868,Nissan,Evalia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:869,Nissan,Frontier,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:870,Nissan,Grand Livina,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:871,Nissan,Juke,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:872,Nissan,kicks e power,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:873,Nissan,KIX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:874,Nissan,Liberty,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:875,Nissan,Livina,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:876,Nissan,Livina Geniss,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:877,Nissan,March,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:878,Nissan,Maxima,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:879,Nissan,Micra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:880,Nissan,Murano,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:881,Nissan,Navara,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:882,Nissan,Note,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:883,Nissan,NV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:884,Nissan,NV100,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:885,Nissan,Presage,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:886,Nissan,Primera,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:887,Nissan,Pulsar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:888,Nissan,Qashqai,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:889,Nissan,Missão,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:890,Nissan,Rogue,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:891,Nissan,Sentra B17,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:892,Nissan,Serena,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:893,Nissan,Teana,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:894,Nissan,Terrano,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:895,Nissan,Tida,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:896,Nissan,Tiida,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:897,Nissan,Tiida Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:898,Nissan,Tino,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:899,Nissan,V16,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:900,Nissan,Versa Note,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:901,Nissan,Wingroad,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:902,Nissan,X-Trail,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:903,Nissan,Xterra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:904,Oldsmobile,19,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:905,Oldsmobile,Alero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:906,Oldsmobile,Aurora,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:907,Oldsmobile,Bravada,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:908,Oldsmobile,Cutlass Supreme,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:909,Oldsmobile,Intrigue,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:910,Oldsmobile,Silhouette,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:911,Omoda,5,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:912,Omoda,E5,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:913,Opel,Corsa-E,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:914,Opel,Mokka-e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:915,Opel,Corsa,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:916,Opel,Vectra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:917,Ora,IQ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:918,Peugeot,107,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:919,Peugeot,108,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:920,Peugeot,206,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:921,Peugeot,207,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:922,Peugeot,208,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:923,Peugeot,300,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:924,Peugeot,306,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:925,Peugeot,307,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:926,Peugeot,308,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:927,Peugeot,405,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:928,Peugeot,406,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:929,Peugeot,407,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:930,Peugeot,408,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:931,Peugeot,508,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:932,Peugeot,607,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:933,Peugeot,807,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:934,Peugeot,1007,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:935,Peugeot,2008,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:936,Peugeot,3008,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:937,Peugeot,4008,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:938,Peugeot,5008,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:939,Peugeot,Partner,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:940,Peugeot,E-2008,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:941,Peugeot,E-208,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:942,Peugeot,e-Rifter,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:943,Peugeot,e-Traveller,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:944,Peugeot,iOn,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:945,Peugeot,206 SW,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:946,Peugeot,207 Passion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:947,Peugeot,207 SW,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:948,Peugeot,308 SW,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:949,Peugeot,E-208 GT,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:950,Peugeot,Pars,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:951,Peugeot,RCZ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:952,Plymouth,Neon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:953,Plymouth,Voyager,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:954,Polestar,2,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:955,Porsche,Caiena,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:956,Porsche,Macan,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:957,Porsche,Macan Turbo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:958,Porsche,Taycan,7,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:959,Porsche,Panamera,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:960,RAM,1500,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:961,RAM,2500,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:962,RAM,3500,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:963,RAM,Rampage,9,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:964,Renault,25,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:965,Renault,Dokker,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:966,Renault,Boreal,3,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:967,Renault,Captur,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:968,Renault,Duster,12,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:969,Renault,Fluence,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:970,Renault,Kardian,5,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:971,Renault,Megane E-Tech,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:972,Renault,Zoe,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:973,Renault,City K-ZE,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:974,Renault,Fluence Z.E.,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:975,Renault,Kangoo Z.E.,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:976,Renault,Renault Kwid E-Tech,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:977,Renault,Clio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:978,Renault,Clio Break,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:979,Renault,Clio Grandtour,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:980,Renault,Clio Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:981,Renault,Duster Oroch,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:982,Renault,Espace,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:983,Renault,Grand Scenic,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:984,Renault,Kadjar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:985,Renault,Kangoo,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:986,Renault,Kaptur,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:987,Renault,Koleos,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:988,Renault,Kwid,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:989,Renault,Laguna,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:990,Renault,Latitude,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:991,Renault,Lodgy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:992,Renault,Logan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:993,Renault,Megane,1,0,um_candidato_sem_confirmacao,sem_candidato_exato
+regra_modelos_uber:994,Renault,Mégane Estate,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:995,Renault,Megane Grandtour,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:996,Renault,New Logan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:997,Renault,Pulse,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:998,Renault,Safrane,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:999,Renault,Sandero,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1000,Renault,Scala,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1001,Renault,Scenic,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1002,Renault,Stepway,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1003,Renault,Symbol,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1004,Renault,Thalia,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1005,Renault,Tondar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1006,Renault,Twingo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1007,Renault,Vel Satis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1008,Rivian,R1S,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1009,Rivian,R1T,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1010,Roewe,E50,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1011,Seat,Cordoba,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1012,Seat,Ibiza,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1013,Skoda,Skoda Enyaq,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1014,Skoda,Enyaq iV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1015,Smart,#1,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1016,Ssangyong,Korando,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1017,Ssangyong,Kyron,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1018,Ssangyong,XLV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1019,Ssangyong,Actyon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1020,Ssangyong,Actyon Sports,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1021,Ssangyong,Chairman,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1022,Ssangyong,Istana,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1023,Ssangyong,Musso,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1024,Ssangyong,Rexton,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1025,Subaru,Forester,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1026,Subaru,Impreza,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1027,Subaru,WRX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1028,Subaru,XV Crosstrek,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1029,Subaru,Solterra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1030,Subaru,Legacy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1031,Subaru,Outback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1032,Subaru,Tribeca,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1033,Suzuki,Grand Vitara,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1034,Suzuki,S-Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1035,Suzuki,Vitara,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1036,Suzuki,Aerio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1037,Suzuki,Alto,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1038,Suzuki,APV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1039,Suzuki,Baleno,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1040,Suzuki,Ignis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1041,Suzuki,Jimny,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1042,Suzuki,Kei,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1043,Suzuki,Lapin,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1044,Suzuki,MR Wagon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1045,Suzuki,Swift,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1046,Suzuki,SX4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1047,Suzuki,Verona,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1048,Suzuki,Wagon R,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1049,Suzuki,XL7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1050,Tata,Nexon EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1051,Tesla,Model 3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1052,Tesla,Model S,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1053,Tesla,Model X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1054,Tesla,Model Y,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1055,Toyota,Etios Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1056,Toyota,Camry,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1057,Toyota,Camry Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1058,Toyota,Corolla,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1059,Toyota,Corolla Altis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1060,Toyota,Toyota Corolla Altis Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1061,Toyota,Corolla Ceres,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1062,Toyota,Corolla Cross,6,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1063,Toyota,Corolla Cross Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1064,Toyota,Corolla EX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1065,Toyota,Corolla Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1066,Toyota,Hilux SW4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1067,Toyota,Prius,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1068,Toyota,Prius+,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1069,Toyota,RAV4,4,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1070,Toyota,Sienna,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1071,Toyota,SW4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1072,Toyota,Yaris,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1073,Toyota,Yaris Ativ,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1074,Toyota,Yaris Cross,2,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1075,Toyota,Yaris Cross Hybrid,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1076,Toyota,Yaris iA,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1077,Toyota,Yaris Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1078,Toyota,BZ3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1079,Toyota,bZ4X,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1080,Toyota,C-HR EV,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1081,Toyota,Mirai,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1082,Toyota,Proace Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1083,Toyota,4Runner,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1084,Toyota,Agya,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1085,Toyota,Altis,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1086,Toyota,Avalon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1087,Toyota,Celica,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1088,Toyota,Comfort,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1089,Toyota,Condor,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1090,Toyota,Corolla Axio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1091,Toyota,Corolla Fielder,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1092,Toyota,Corolla Hatchback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1093,Toyota,Corolla iM,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1094,Toyota,Corolla Levin,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1095,Toyota,Corolla Rumion,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1096,Toyota,Corolla RunX,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1097,Toyota,Corolla Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1098,Toyota,Corolla Spacio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1099,Toyota,Corolla Wagon,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1100,Toyota,Corona,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1101,Toyota,Crown Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1102,Toyota,E'Z,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1103,Toyota,Echo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1104,Toyota,Etios,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1105,Toyota,Etios Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1106,Toyota,Etios Liva,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1107,Toyota,FJ Cruiser,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1108,Toyota,Highlander,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1109,Toyota,Hilux,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1110,Toyota,Land Cruiser,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1111,Toyota,Paseo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1112,Toyota,Previa,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1113,Toyota,Prius Alpha,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1114,Toyota,Prius Prime,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1115,Toyota,Proace,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1116,Toyota,RAV4 Prime,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1117,Toyota,Supra,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1118,Toyota,Tarago,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1119,Toyota,Terios,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1120,Toyota,TownAce,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1121,Toyota,Vitz,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1122,Toyota,Yaris R,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1123,Uber,Outros,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1124,Vauxhall,Mokka-e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1125,Vauxhall,Vivaro-e,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1126,Venucia,E30,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1127,Volkswagen,Voyage,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1128,Volkswagen,Polo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1129,Volkswagen,CC,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1130,Volkswagen,Golf,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1131,Volkswagen,Jetta,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1132,Volkswagen,Jetta Clasico,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1133,Volkswagen,Jetta GLI,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1134,Volkswagen,Jetta SportWagen,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1135,Volkswagen,Nivus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1136,Volkswagen,Passat,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1137,Volkswagen,Polo Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1138,Volkswagen,Polo Track,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1139,Volkswagen,Space Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1140,Volkswagen,T-Cross,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1141,Volkswagen,Taos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1142,Volkswagen,Tera,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1143,Volkswagen,Tiguan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1144,Volkswagen,Touareg,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1145,Volkswagen,Virtus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1146,Volkswagen,e-Bora,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1147,Volkswagen,e-Golf,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1148,Volkswagen,e-Tharu,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1149,Volkswagen,e-up!,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1150,Volkswagen,ID.3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1151,Volkswagen,Volkswagen ID.4,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1152,Volkswagen,ID.5,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1153,Volkswagen,ID.6,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1154,Volkswagen,Amarok,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1155,Volkswagen,Beetle,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1156,Volkswagen,Bora,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1157,Volkswagen,Cabrio,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1158,Volkswagen,Caddy,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1159,Volkswagen,Caravelle,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1160,Volkswagen,Cross Lavida,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1161,Volkswagen,CrossFox,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1162,Volkswagen,Derby,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1163,Volkswagen,Eos,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1164,Volkswagen,EuroVan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1165,Volkswagen,Fox,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1166,Volkswagen,GLI,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1167,Volkswagen,Gol,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1168,Volkswagen,Gol Trend,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1169,Volkswagen,Golf Alltrack,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1170,Volkswagen,Golf Estate,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1171,Volkswagen,Golf GTI,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1172,Volkswagen,Golf Hatchback,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1173,Volkswagen,Golf Plus,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1174,Volkswagen,Golf SportWagen,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1175,Volkswagen,Golf Variant,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1176,Volkswagen,GTI,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1177,Volkswagen,Lamando,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1178,Volkswagen,Lupo,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1179,Volkswagen,Magotan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1180,Volkswagen,Parati,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1181,Volkswagen,Phaeton,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1182,Volkswagen,Pointer,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1183,Volkswagen,Polo MCA,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1184,Volkswagen,Rabbit,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1185,Volkswagen,Sagitar,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1186,Volkswagen,Santana,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1187,Volkswagen,Sedan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1188,Volkswagen,Sharan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1189,Volkswagen,Spacefox,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1190,Volkswagen,Sportsvan,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1191,Volkswagen,T-Roc,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1192,Volkswagen,Tiguan Allspace,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1193,Volkswagen,Touran,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1194,Volkswagen,TSi,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1195,Volkswagen,Up,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1196,Volkswagen,Vento,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1197,Volvo,850,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1198,Volvo,EX30,8,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1199,Volvo,S40,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1200,Volvo,S60,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1201,Volvo,S70,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1202,Volvo,S80,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1203,Volvo,S90,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1204,Volvo,V40,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1205,Volvo,V50,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1206,Volvo,V60,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1207,Volvo,V70,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1208,Volvo,XC40,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1209,Volvo,XC40 Electric,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1210,Volvo,XC60,10,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1211,Volvo,XC70,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1212,Volvo,XC90,15,0,multiplas_versoes_ou_registros,sem_candidato_exato
+regra_modelos_uber:1213,Volvo,C40 Recharge,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1214,Volvo,C30,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1215,Volvo,C70,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1216,XPENG,G3,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1217,XPENG,G9,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1218,XPENG,P7,0,0,sem_candidato_exato,sem_candidato_exato
+regra_modelos_uber:1219,Zeepo,I-Zeepo,0,0,sem_candidato_exato,sem_candidato_exato

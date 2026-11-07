@@ -1,0 +1,3 @@
+﻿id_modelo_uber,marca,modelo,marca_comparacao,modelo_comparacao,id_cotacao_fipe,marca_fipe,modelo_fipe,mes_referencia,tipo_correspondencia
+regra_modelos_uber:480,GWM,Ora 03,GWM,ORA 03,fato_cotacoes_fipe_parcial:73,GWM,Ora 03 ,novembro de 2026,candidato_exato_marca_modelo_sem_confirmacao_de_versao_ano
+regra_modelos_uber:480,GWM,Ora 03,GWM,ORA 03,fato_cotacoes_fipe_parcial:74,GWM,Ora 03 ,novembro de 2026,candidato_exato_marca_modelo_sem_confirmacao_de_versao_ano

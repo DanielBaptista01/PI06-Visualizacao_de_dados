@@ -1,0 +1,9 @@
+﻿dominio,variavel,linhas_afetadas,tipo,acao
+energia,"identificação de tarifas, vigência e unidade ANEEL",332165,esquema não confirmado,"conferir colunas da versão atual, unidade e vigência; não inferir TE/TUSD"
+veiculos,correspondência Uber ↔ INMETRO por versão,1096,cobertura de matching exato por modelo,"revisão por versão, motorização e ano; não assumir elegibilidade"
+veiculos,correspondência Uber ↔ FIPE por versão/ano,1218,cobertura de matching exato por modelo,"coleta FIPE parcial; validar versão, combustível, ano e mês"
+territorios,código Zona OD de cada ponto de recarga,a avaliar,requer dado espacial,usar polígono oficial das zonas OD 2023 com join espacial e CRS explícito
+energia,tarifa residencial SP vigente R$/kWh,a avaliar,filtro e validade temporal,"confirmar distribuidora, unidade, modalidade, subgrupo, tributos e vigência na ANEEL"
+energia,preço público de recarga por kWh,a avaliar,variável não observada para todos os pontos,"pesquisar fonte comercial verificável, data e unidade"
+modelo_economico,"receita do motorista, manutenção, seguro, IPVA, depreciação",a avaliar,parâmetros externos,pesquisar na etapa 1.9; não atribuir valor 0
+mercado,período e abrangência de certas séries ABVE,a avaliar,metadados insuficientes,confirmar documento original e denominadores de market share

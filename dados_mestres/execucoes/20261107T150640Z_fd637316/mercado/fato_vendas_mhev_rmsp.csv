@@ -1,0 +1,32 @@
+﻿Municipio,Estado,Quantidade_MHEV,MarketShare_MHEV_Pct,municipio_chave,quantidade_mhev_num,market_share_mhev_pct_num,id_registro_mestre,linha_csv_origem,codigo_ibge_municipio,status_vinculo_ibge
+São Paulo,SP,5815,9.3354,SAO PAULO,5815.0,9.3354,fato_vendas_mhev_rmsp:1,2,3550308,exato_nome_e_uf_sp
+São Bernardo do Campo,SP,325,0.5218,SAO BERNARDO DO CAMPO,325.0,0.5218,fato_vendas_mhev_rmsp:2,3,3548708,exato_nome_e_uf_sp
+Santo André,SP,301,0.4832,SANTO ANDRE,301.0,0.4832,fato_vendas_mhev_rmsp:3,4,3547809,exato_nome_e_uf_sp
+Guarulhos,SP,287,0.4607,GUARULHOS,287.0,0.4607,fato_vendas_mhev_rmsp:4,5,3518800,exato_nome_e_uf_sp
+Barueri,SP,244,0.3917,BARUERI,244.0,0.3917,fato_vendas_mhev_rmsp:5,6,3505708,exato_nome_e_uf_sp
+São Caetano do Sul,SP,195,0.3131,SAO CAETANO DO SUL,195.0,0.3131,fato_vendas_mhev_rmsp:6,7,3548807,exato_nome_e_uf_sp
+Mogi das Cruzes,SP,193,0.3098,MOGI DAS CRUZES,193.0,0.3098,fato_vendas_mhev_rmsp:7,8,3530607,exato_nome_e_uf_sp
+Osasco,SP,177,0.2842,OSASCO,177.0,0.2842,fato_vendas_mhev_rmsp:8,9,3534401,exato_nome_e_uf_sp
+Santana de Parnaíba,SP,173,0.2777,SANTANA DE PARNAIBA,173.0,0.2777,fato_vendas_mhev_rmsp:9,10,3547304,exato_nome_e_uf_sp
+Cotia,SP,121,0.1943,COTIA,121.0,0.1943,fato_vendas_mhev_rmsp:10,11,3513009,exato_nome_e_uf_sp
+Diadema,SP,66,0.106,DIADEMA,66.0,0.106,fato_vendas_mhev_rmsp:11,12,3513801,exato_nome_e_uf_sp
+Carapicuíba,SP,59,0.0947,CARAPICUIBA,59.0,0.0947,fato_vendas_mhev_rmsp:12,13,3510609,exato_nome_e_uf_sp
+Mauá,SP,56,0.0899,MAUA,56.0,0.0899,fato_vendas_mhev_rmsp:13,14,3529401,exato_nome_e_uf_sp
+Arujá,SP,54,0.0867,ARUJA,54.0,0.0867,fato_vendas_mhev_rmsp:14,15,3503901,exato_nome_e_uf_sp
+Suzano,SP,47,0.0755,SUZANO,47.0,0.0755,fato_vendas_mhev_rmsp:15,16,3552502,exato_nome_e_uf_sp
+Taboão da Serra,SP,42,0.0674,TABOAO DA SERRA,42.0,0.0674,fato_vendas_mhev_rmsp:16,17,3552809,exato_nome_e_uf_sp
+Cajamar,SP,32,0.0514,CAJAMAR,32.0,0.0514,fato_vendas_mhev_rmsp:17,18,3509205,exato_nome_e_uf_sp
+Ribeirão Pires,SP,30,0.0482,RIBEIRAO PIRES,30.0,0.0482,fato_vendas_mhev_rmsp:18,19,3543303,exato_nome_e_uf_sp
+Embu das Artes,SP,28,0.045,EMBU DAS ARTES,28.0,0.045,fato_vendas_mhev_rmsp:19,20,3515004,exato_nome_e_uf_sp
+Itapecerica da Serra,SP,28,0.045,ITAPECERICA DA SERRA,28.0,0.045,fato_vendas_mhev_rmsp:20,21,3522208,exato_nome_e_uf_sp
+Mairiporã,SP,27,0.0433,MAIRIPORA,27.0,0.0433,fato_vendas_mhev_rmsp:21,22,3528502,exato_nome_e_uf_sp
+Itaquaquecetuba,SP,26,0.0417,ITAQUAQUECETUBA,26.0,0.0417,fato_vendas_mhev_rmsp:22,23,3523107,exato_nome_e_uf_sp
+Itapevi,SP,25,0.0401,ITAPEVI,25.0,0.0401,fato_vendas_mhev_rmsp:23,24,3522505,exato_nome_e_uf_sp
+Jandira,SP,24,0.0385,JANDIRA,24.0,0.0385,fato_vendas_mhev_rmsp:24,25,3525003,exato_nome_e_uf_sp
+Caieiras,SP,23,0.0369,CAIEIRAS,23.0,0.0369,fato_vendas_mhev_rmsp:25,26,3509007,exato_nome_e_uf_sp
+Vargem Grande Paulista,SP,23,0.0369,VARGEM GRANDE PAULISTA,23.0,0.0369,fato_vendas_mhev_rmsp:26,27,3556453,exato_nome_e_uf_sp
+Poá,SP,21,0.0337,POA,21.0,0.0337,fato_vendas_mhev_rmsp:27,28,3539806,exato_nome_e_uf_sp
+Franco da Rocha,SP,15,0.0241,FRANCO DA ROCHA,15.0,0.0241,fato_vendas_mhev_rmsp:28,29,3516408,exato_nome_e_uf_sp
+Guararema,SP,13,0.0209,GUARAREMA,13.0,0.0209,fato_vendas_mhev_rmsp:29,30,3518305,exato_nome_e_uf_sp
+Embu-Guaçu,SP,12,0.0193,EMBU GUACU,12.0,0.0193,fato_vendas_mhev_rmsp:30,31,3515103,exato_nome_e_uf_sp
+Santa Isabel,SP,10,0.0161,SANTA ISABEL,10.0,0.0161,fato_vendas_mhev_rmsp:31,32,3546801,exato_nome_e_uf_sp

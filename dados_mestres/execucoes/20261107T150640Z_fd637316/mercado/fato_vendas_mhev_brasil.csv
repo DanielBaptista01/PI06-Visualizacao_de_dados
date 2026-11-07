@@ -1,0 +1,500 @@
+﻿Municipio,Estado,Quantidade_MHEV,MarketShare_MHEV_Pct,municipio_chave,quantidade_mhev_num,market_share_mhev_pct_num,id_registro_mestre,linha_csv_origem,codigo_ibge_municipio,status_vinculo_ibge
+São Paulo,SP,5815,9.3354,SAO PAULO,5815.0,9.3354,fato_vendas_mhev_brasil:1,2,3550308,exato_nome_e_uf_sp
+Brasília,DF,4424,7.1023,BRASILIA,4424.0,7.1023,fato_vendas_mhev_brasil:2,3,,fora_do_escopo_sp_ou_uf_incerta
+Belo Horizonte,MG,3601,5.781,BELO HORIZONTE,3601.0,5.781,fato_vendas_mhev_brasil:3,4,,fora_do_escopo_sp_ou_uf_incerta
+Rio de Janeiro,RJ,1889,3.0326,RIO DE JANEIRO,1889.0,3.0326,fato_vendas_mhev_brasil:4,5,,fora_do_escopo_sp_ou_uf_incerta
+Curitiba,PR,1633,2.6216,CURITIBA,1633.0,2.6216,fato_vendas_mhev_brasil:5,6,,fora_do_escopo_sp_ou_uf_incerta
+Fortaleza,CE,1266,2.0324,FORTALEZA,1266.0,2.0324,fato_vendas_mhev_brasil:6,7,,fora_do_escopo_sp_ou_uf_incerta
+Recife,PE,1262,2.026,RECIFE,1262.0,2.026,fato_vendas_mhev_brasil:7,8,,fora_do_escopo_sp_ou_uf_incerta
+Salvador,BA,1257,2.018,SALVADOR,1257.0,2.018,fato_vendas_mhev_brasil:8,9,,fora_do_escopo_sp_ou_uf_incerta
+Goiânia,GO,1101,1.7675,GOIANIA,1101.0,1.7675,fato_vendas_mhev_brasil:9,10,,fora_do_escopo_sp_ou_uf_incerta
+Porto Alegre,RS,1059,1.7001,PORTO ALEGRE,1059.0,1.7001,fato_vendas_mhev_brasil:10,11,,fora_do_escopo_sp_ou_uf_incerta
+Manaus,AM,920,1.477,MANAUS,920.0,1.477,fato_vendas_mhev_brasil:11,12,,fora_do_escopo_sp_ou_uf_incerta
+Maceió,AL,803,1.2891,MACEIO,803.0,1.2891,fato_vendas_mhev_brasil:12,13,,fora_do_escopo_sp_ou_uf_incerta
+Campinas,SP,732,1.1751,CAMPINAS,732.0,1.1751,fato_vendas_mhev_brasil:13,14,3509502,exato_nome_e_uf_sp
+João Pessoa,PB,721,1.1575,JOAO PESSOA,721.0,1.1575,fato_vendas_mhev_brasil:14,15,,fora_do_escopo_sp_ou_uf_incerta
+Florianópolis,SC,614,0.9857,FLORIANOPOLIS,614.0,0.9857,fato_vendas_mhev_brasil:15,16,,fora_do_escopo_sp_ou_uf_incerta
+Cuiabá,MT,586,0.9408,CUIABA,586.0,0.9408,fato_vendas_mhev_brasil:16,17,,fora_do_escopo_sp_ou_uf_incerta
+Natal,RN,580,0.9311,NATAL,580.0,0.9311,fato_vendas_mhev_brasil:17,18,,fora_do_escopo_sp_ou_uf_incerta
+Ribeirão Preto,SP,559,0.8974,RIBEIRAO PRETO,559.0,0.8974,fato_vendas_mhev_brasil:18,19,3543402,exato_nome_e_uf_sp
+Teresina,PI,516,0.8284,TERESINA,516.0,0.8284,fato_vendas_mhev_brasil:19,20,,fora_do_escopo_sp_ou_uf_incerta
+Aracaju,SE,485,0.7786,ARACAJU,485.0,0.7786,fato_vendas_mhev_brasil:20,21,,fora_do_escopo_sp_ou_uf_incerta
+Campo Grande,MS,456,0.7321,CAMPO GRANDE,456.0,0.7321,fato_vendas_mhev_brasil:21,22,,fora_do_escopo_sp_ou_uf_incerta
+Sorocaba,SP,448,0.7192,SOROCABA,448.0,0.7192,fato_vendas_mhev_brasil:22,23,3552205,exato_nome_e_uf_sp
+Uberlândia,MG,412,0.6614,UBERLANDIA,412.0,0.6614,fato_vendas_mhev_brasil:23,24,,fora_do_escopo_sp_ou_uf_incerta
+Belém,PA,368,0.5908,BELEM,368.0,0.5908,fato_vendas_mhev_brasil:24,25,,fora_do_escopo_sp_ou_uf_incerta
+Vitória,ES,360,0.5779,VITORIA,360.0,0.5779,fato_vendas_mhev_brasil:25,26,,fora_do_escopo_sp_ou_uf_incerta
+São Luís,MA,356,0.5715,SAO LUIS,356.0,0.5715,fato_vendas_mhev_brasil:26,27,,fora_do_escopo_sp_ou_uf_incerta
+Porto Velho,RO,340,0.5458,PORTO VELHO,340.0,0.5458,fato_vendas_mhev_brasil:27,28,,fora_do_escopo_sp_ou_uf_incerta
+Niterói,RJ,325,0.5218,NITEROI,325.0,0.5218,fato_vendas_mhev_brasil:28,29,,fora_do_escopo_sp_ou_uf_incerta
+São Bernardo do Campo,SP,325,0.5218,SAO BERNARDO DO CAMPO,325.0,0.5218,fato_vendas_mhev_brasil:29,30,3548708,exato_nome_e_uf_sp
+Caxias do Sul,RS,322,0.5169,CAXIAS DO SUL,322.0,0.5169,fato_vendas_mhev_brasil:30,31,,fora_do_escopo_sp_ou_uf_incerta
+São José do Rio Preto,SP,319,0.5121,SAO JOSE DO RIO PRETO,319.0,0.5121,fato_vendas_mhev_brasil:31,32,3549805,exato_nome_e_uf_sp
+Indaiatuba,SP,311,0.4993,INDAIATUBA,311.0,0.4993,fato_vendas_mhev_brasil:32,33,3520509,exato_nome_e_uf_sp
+Santo André,SP,301,0.4832,SANTO ANDRE,301.0,0.4832,fato_vendas_mhev_brasil:33,34,3547809,exato_nome_e_uf_sp
+Vila Velha,ES,301,0.4832,VILA VELHA,301.0,0.4832,fato_vendas_mhev_brasil:34,35,,fora_do_escopo_sp_ou_uf_incerta
+Feira de Santana,BA,297,0.4768,FEIRA DE SANTANA,297.0,0.4768,fato_vendas_mhev_brasil:35,36,,fora_do_escopo_sp_ou_uf_incerta
+Jundiaí,SP,297,0.4768,JUNDIAI,297.0,0.4768,fato_vendas_mhev_brasil:36,37,3525904,exato_nome_e_uf_sp
+Maringá,PR,296,0.4752,MARINGA,296.0,0.4752,fato_vendas_mhev_brasil:37,38,,fora_do_escopo_sp_ou_uf_incerta
+Londrina,PR,288,0.4624,LONDRINA,288.0,0.4624,fato_vendas_mhev_brasil:38,39,,fora_do_escopo_sp_ou_uf_incerta
+Guarulhos,SP,287,0.4607,GUARULHOS,287.0,0.4607,fato_vendas_mhev_brasil:39,40,3518800,exato_nome_e_uf_sp
+São José dos Pinhais,PR,276,0.4431,SAO JOSE DOS PINHAIS,276.0,0.4431,fato_vendas_mhev_brasil:40,41,,fora_do_escopo_sp_ou_uf_incerta
+Piracicaba,SP,266,0.427,PIRACICABA,266.0,0.427,fato_vendas_mhev_brasil:41,42,3538709,exato_nome_e_uf_sp
+Joinville,SC,264,0.4238,JOINVILLE,264.0,0.4238,fato_vendas_mhev_brasil:42,43,,fora_do_escopo_sp_ou_uf_incerta
+Lauro de Freitas,BA,247,0.3965,LAURO DE FREITAS,247.0,0.3965,fato_vendas_mhev_brasil:43,44,,fora_do_escopo_sp_ou_uf_incerta
+Barueri,SP,244,0.3917,BARUERI,244.0,0.3917,fato_vendas_mhev_brasil:44,45,3505708,exato_nome_e_uf_sp
+São José dos Campos,SP,243,0.3901,SAO JOSE DOS CAMPOS,243.0,0.3901,fato_vendas_mhev_brasil:45,46,3549904,exato_nome_e_uf_sp
+Parnamirim,RN,237,0.3805,PARNAMIRIM,237.0,0.3805,fato_vendas_mhev_brasil:46,47,,fora_do_escopo_sp_ou_uf_incerta
+Santos,SP,231,0.3708,SANTOS,231.0,0.3708,fato_vendas_mhev_brasil:47,48,3548500,exato_nome_e_uf_sp
+Vitória da Conquista,BA,228,0.366,VITORIA DA CONQUISTA,228.0,0.366,fato_vendas_mhev_brasil:48,49,,fora_do_escopo_sp_ou_uf_incerta
+Anápolis,GO,224,0.3596,ANAPOLIS,224.0,0.3596,fato_vendas_mhev_brasil:49,50,,fora_do_escopo_sp_ou_uf_incerta
+Petrolina,PE,223,0.358,PETROLINA,223.0,0.358,fato_vendas_mhev_brasil:50,51,,fora_do_escopo_sp_ou_uf_incerta
+São José,SC,215,0.3452,SAO JOSE,215.0,0.3452,fato_vendas_mhev_brasil:51,52,,fora_do_escopo_sp_ou_uf_incerta
+Jaboatão dos Guararapes,PE,210,0.3371,JABOATAO DOS GUARARAPES,210.0,0.3371,fato_vendas_mhev_brasil:52,53,,fora_do_escopo_sp_ou_uf_incerta
+Bauru,SP,204,0.3275,BAURU,204.0,0.3275,fato_vendas_mhev_brasil:53,54,3506003,exato_nome_e_uf_sp
+Blumenau,SC,198,0.3179,BLUMENAU,198.0,0.3179,fato_vendas_mhev_brasil:54,55,,fora_do_escopo_sp_ou_uf_incerta
+Juiz de Fora,MG,198,0.3179,JUIZ DE FORA,198.0,0.3179,fato_vendas_mhev_brasil:55,56,,fora_do_escopo_sp_ou_uf_incerta
+Serra,ES,198,0.3179,SERRA,198.0,0.3179,fato_vendas_mhev_brasil:56,57,,fora_do_escopo_sp_ou_uf_incerta
+Mossoró,RN,196,0.3147,MOSSORO,196.0,0.3147,fato_vendas_mhev_brasil:57,58,,fora_do_escopo_sp_ou_uf_incerta
+São Caetano do Sul,SP,195,0.3131,SAO CAETANO DO SUL,195.0,0.3131,fato_vendas_mhev_brasil:58,59,3548807,exato_nome_e_uf_sp
+Campina Grande,PB,194,0.3114,CAMPINA GRANDE,194.0,0.3114,fato_vendas_mhev_brasil:59,60,,fora_do_escopo_sp_ou_uf_incerta
+Mogi das Cruzes,SP,193,0.3098,MOGI DAS CRUZES,193.0,0.3098,fato_vendas_mhev_brasil:60,61,3530607,exato_nome_e_uf_sp
+Osasco,SP,177,0.2842,OSASCO,177.0,0.2842,fato_vendas_mhev_brasil:61,62,3534401,exato_nome_e_uf_sp
+Palmas,TO,176,0.2825,PALMAS,176.0,0.2825,fato_vendas_mhev_brasil:62,63,,fora_do_escopo_sp_ou_uf_incerta
+Balneário Camboriú,SC,173,0.2777,BALNEARIO CAMBORIU,173.0,0.2777,fato_vendas_mhev_brasil:63,64,,fora_do_escopo_sp_ou_uf_incerta
+Santana de Parnaíba,SP,173,0.2777,SANTANA DE PARNAIBA,173.0,0.2777,fato_vendas_mhev_brasil:64,65,3547304,exato_nome_e_uf_sp
+Itajaí,SC,170,0.2729,ITAJAI,170.0,0.2729,fato_vendas_mhev_brasil:65,66,,fora_do_escopo_sp_ou_uf_incerta
+Novo Hamburgo,RS,156,0.2504,NOVO HAMBURGO,156.0,0.2504,fato_vendas_mhev_brasil:66,67,,fora_do_escopo_sp_ou_uf_incerta
+Limeira,SP,154,0.2472,LIMEIRA,154.0,0.2472,fato_vendas_mhev_brasil:67,68,3526902,exato_nome_e_uf_sp
+Cascavel,PR,152,0.244,CASCAVEL,152.0,0.244,fato_vendas_mhev_brasil:68,69,,fora_do_escopo_sp_ou_uf_incerta
+Canoas,RS,149,0.2392,CANOAS,149.0,0.2392,fato_vendas_mhev_brasil:69,70,,fora_do_escopo_sp_ou_uf_incerta
+Boa Vista,RR,146,0.2344,BOA VISTA,146.0,0.2344,fato_vendas_mhev_brasil:70,71,,fora_do_escopo_sp_ou_uf_incerta
+Americana,SP,144,0.2312,AMERICANA,144.0,0.2312,fato_vendas_mhev_brasil:71,72,3501608,exato_nome_e_uf_sp
+Cariacica,ES,144,0.2312,CARIACICA,144.0,0.2312,fato_vendas_mhev_brasil:72,73,,fora_do_escopo_sp_ou_uf_incerta
+Arapiraca,AL,143,0.2296,ARAPIRACA,143.0,0.2296,fato_vendas_mhev_brasil:73,74,,fora_do_escopo_sp_ou_uf_incerta
+Valinhos,SP,142,0.228,VALINHOS,142.0,0.228,fato_vendas_mhev_brasil:74,75,3556206,exato_nome_e_uf_sp
+Caruaru,PE,137,0.2199,CARUARU,137.0,0.2199,fato_vendas_mhev_brasil:75,76,,fora_do_escopo_sp_ou_uf_incerta
+Foz do Iguaçu,PR,137,0.2199,FOZ DO IGUACU,137.0,0.2199,fato_vendas_mhev_brasil:76,77,,fora_do_escopo_sp_ou_uf_incerta
+Macapá,AP,135,0.2167,MACAPA,135.0,0.2167,fato_vendas_mhev_brasil:77,78,,fora_do_escopo_sp_ou_uf_incerta
+Eusébio,CE,131,0.2103,EUSEBIO,131.0,0.2103,fato_vendas_mhev_brasil:78,79,,fora_do_escopo_sp_ou_uf_incerta
+Chapecó,SC,130,0.2087,CHAPECO,130.0,0.2087,fato_vendas_mhev_brasil:79,80,,fora_do_escopo_sp_ou_uf_incerta
+Jaraguá do Sul,SC,124,0.1991,JARAGUA DO SUL,124.0,0.1991,fato_vendas_mhev_brasil:80,81,,fora_do_escopo_sp_ou_uf_incerta
+Volta Redonda,RJ,124,0.1991,VOLTA REDONDA,124.0,0.1991,fato_vendas_mhev_brasil:81,82,,fora_do_escopo_sp_ou_uf_incerta
+Passo Fundo,RS,123,0.1975,PASSO FUNDO,123.0,0.1975,fato_vendas_mhev_brasil:82,83,,fora_do_escopo_sp_ou_uf_incerta
+Aparecida de Goiânia,GO,122,0.1959,APARECIDA DE GOIANIA,122.0,0.1959,fato_vendas_mhev_brasil:83,84,,fora_do_escopo_sp_ou_uf_incerta
+Cotia,SP,121,0.1943,COTIA,121.0,0.1943,fato_vendas_mhev_brasil:84,85,3513009,exato_nome_e_uf_sp
+Olinda,PE,121,0.1943,OLINDA,121.0,0.1943,fato_vendas_mhev_brasil:85,86,,fora_do_escopo_sp_ou_uf_incerta
+Ponta Grossa,PR,121,0.1943,PONTA GROSSA,121.0,0.1943,fato_vendas_mhev_brasil:86,87,,fora_do_escopo_sp_ou_uf_incerta
+Rio Verde,GO,119,0.191,RIO VERDE,119.0,0.191,fato_vendas_mhev_brasil:87,88,,fora_do_escopo_sp_ou_uf_incerta
+Araraquara,SP,113,0.1814,ARARAQUARA,113.0,0.1814,fato_vendas_mhev_brasil:88,89,3503208,exato_nome_e_uf_sp
+Contagem,MG,113,0.1814,CONTAGEM,113.0,0.1814,fato_vendas_mhev_brasil:89,90,,fora_do_escopo_sp_ou_uf_incerta
+Camaçari,BA,112,0.1798,CAMACARI,112.0,0.1798,fato_vendas_mhev_brasil:90,91,,fora_do_escopo_sp_ou_uf_incerta
+Pelotas,RS,109,0.175,PELOTAS,109.0,0.175,fato_vendas_mhev_brasil:91,92,,fora_do_escopo_sp_ou_uf_incerta
+Várzea Grande,MT,109,0.175,VARZEA GRANDE,109.0,0.175,fato_vendas_mhev_brasil:92,93,,fora_do_escopo_sp_ou_uf_incerta
+Santa Maria,RS,107,0.1718,SANTA MARIA,107.0,0.1718,fato_vendas_mhev_brasil:93,94,,fora_do_escopo_sp_ou_uf_incerta
+Franca,SP,105,0.1686,FRANCA,105.0,0.1686,fato_vendas_mhev_brasil:94,95,3516200,exato_nome_e_uf_sp
+Dourados,MS,104,0.167,DOURADOS,104.0,0.167,fato_vendas_mhev_brasil:95,96,,fora_do_escopo_sp_ou_uf_incerta
+Criciúma,SC,103,0.1654,CRICIUMA,103.0,0.1654,fato_vendas_mhev_brasil:96,97,,fora_do_escopo_sp_ou_uf_incerta
+Marília,SP,102,0.1638,MARILIA,102.0,0.1638,fato_vendas_mhev_brasil:97,98,3529005,exato_nome_e_uf_sp
+Maricá,RJ,101,0.1621,MARICA,101.0,0.1621,fato_vendas_mhev_brasil:98,99,,fora_do_escopo_sp_ou_uf_incerta
+Gravataí,RS,98,0.1573,GRAVATAI,98.0,0.1573,fato_vendas_mhev_brasil:99,100,,fora_do_escopo_sp_ou_uf_incerta
+Paulista,PE,98,0.1573,PAULISTA,98.0,0.1573,fato_vendas_mhev_brasil:100,101,,fora_do_escopo_sp_ou_uf_incerta
+Rio Branco,AC,98,0.1573,RIO BRANCO,98.0,0.1573,fato_vendas_mhev_brasil:101,102,,fora_do_escopo_sp_ou_uf_incerta
+Atibaia,SP,97,0.1557,ATIBAIA,97.0,0.1557,fato_vendas_mhev_brasil:102,103,3504107,exato_nome_e_uf_sp
+Ipatinga,MG,96,0.1541,IPATINGA,96.0,0.1541,fato_vendas_mhev_brasil:103,104,,fora_do_escopo_sp_ou_uf_incerta
+Macaé,RJ,96,0.1541,MACAE,96.0,0.1541,fato_vendas_mhev_brasil:104,105,,fora_do_escopo_sp_ou_uf_incerta
+Presidente Prudente,SP,93,0.1493,PRESIDENTE PRUDENTE,93.0,0.1493,fato_vendas_mhev_brasil:105,106,3541406,exato_nome_e_uf_sp
+São Carlos,SP,93,0.1493,SAO CARLOS,93.0,0.1493,fato_vendas_mhev_brasil:106,107,3548906,exato_nome_e_uf_sp
+Araçatuba,SP,89,0.1429,ARACATUBA,89.0,0.1429,fato_vendas_mhev_brasil:107,108,3502804,exato_nome_e_uf_sp
+Duque de Caxias,RJ,89,0.1429,DUQUE DE CAXIAS,89.0,0.1429,fato_vendas_mhev_brasil:108,109,,fora_do_escopo_sp_ou_uf_incerta
+Governador Valadares,MG,89,0.1429,GOVERNADOR VALADARES,89.0,0.1429,fato_vendas_mhev_brasil:109,110,,fora_do_escopo_sp_ou_uf_incerta
+Palhoça,SC,89,0.1429,PALHOCA,89.0,0.1429,fato_vendas_mhev_brasil:110,111,,fora_do_escopo_sp_ou_uf_incerta
+Ananindeua,PA,88,0.1413,ANANINDEUA,88.0,0.1413,fato_vendas_mhev_brasil:111,112,,fora_do_escopo_sp_ou_uf_incerta
+Linhares,ES,88,0.1413,LINHARES,88.0,0.1413,fato_vendas_mhev_brasil:112,113,,fora_do_escopo_sp_ou_uf_incerta
+Bragança Paulista,SP,86,0.1381,BRAGANCA PAULISTA,86.0,0.1381,fato_vendas_mhev_brasil:113,114,3507605,exato_nome_e_uf_sp
+Praia Grande,SP,86,0.1381,PRAIA GRANDE,86.0,0.1381,fato_vendas_mhev_brasil:114,115,3541000,exato_nome_e_uf_sp
+Brusque,SC,85,0.1365,BRUSQUE,85.0,0.1365,fato_vendas_mhev_brasil:115,116,,fora_do_escopo_sp_ou_uf_incerta
+Cabedelo,PB,85,0.1365,CABEDELO,85.0,0.1365,fato_vendas_mhev_brasil:116,117,,fora_do_escopo_sp_ou_uf_incerta
+Cachoeiro de Itapemirim,ES,84,0.1349,CACHOEIRO DE ITAPEMIRIM,84.0,0.1349,fato_vendas_mhev_brasil:117,118,,fora_do_escopo_sp_ou_uf_incerta
+Nova Iguaçu,RJ,83,0.1332,NOVA IGUACU,83.0,0.1332,fato_vendas_mhev_brasil:118,119,,fora_do_escopo_sp_ou_uf_incerta
+Petrópolis,RJ,83,0.1332,PETROPOLIS,83.0,0.1332,fato_vendas_mhev_brasil:119,120,,fora_do_escopo_sp_ou_uf_incerta
+São Gonçalo,RJ,80,0.1284,SAO GONCALO,80.0,0.1284,fato_vendas_mhev_brasil:120,121,,fora_do_escopo_sp_ou_uf_incerta
+Itu,SP,78,0.1252,ITU,78.0,0.1252,fato_vendas_mhev_brasil:121,122,3523909,exato_nome_e_uf_sp
+Rondonópolis,MT,77,0.1236,RONDONOPOLIS,77.0,0.1236,fato_vendas_mhev_brasil:122,123,,fora_do_escopo_sp_ou_uf_incerta
+Vinhedo,SP,77,0.1236,VINHEDO,77.0,0.1236,fato_vendas_mhev_brasil:123,124,3556701,exato_nome_e_uf_sp
+Garanhuns,PE,75,0.1204,GARANHUNS,75.0,0.1204,fato_vendas_mhev_brasil:124,125,,fora_do_escopo_sp_ou_uf_incerta
+Guarapari,ES,75,0.1204,GUARAPARI,75.0,0.1204,fato_vendas_mhev_brasil:125,126,,fora_do_escopo_sp_ou_uf_incerta
+Itabuna,BA,72,0.1156,ITABUNA,72.0,0.1156,fato_vendas_mhev_brasil:126,127,,fora_do_escopo_sp_ou_uf_incerta
+Juazeiro do Norte,CE,72,0.1156,JUAZEIRO DO NORTE,72.0,0.1156,fato_vendas_mhev_brasil:127,128,,fora_do_escopo_sp_ou_uf_incerta
+Campos dos Goytacazes,RJ,70,0.1124,CAMPOS DOS GOYTACAZES,70.0,0.1124,fato_vendas_mhev_brasil:128,129,,fora_do_escopo_sp_ou_uf_incerta
+Taubaté,SP,70,0.1124,TAUBATE,70.0,0.1124,fato_vendas_mhev_brasil:129,130,3554102,exato_nome_e_uf_sp
+Araguaína,TO,69,0.1108,ARAGUAINA,69.0,0.1108,fato_vendas_mhev_brasil:130,131,,fora_do_escopo_sp_ou_uf_incerta
+Imperatriz,MA,69,0.1108,IMPERATRIZ,69.0,0.1108,fato_vendas_mhev_brasil:131,132,,fora_do_escopo_sp_ou_uf_incerta
+Montes Claros,MG,69,0.1108,MONTES CLAROS,69.0,0.1108,fato_vendas_mhev_brasil:132,133,,fora_do_escopo_sp_ou_uf_incerta
+Pinhais,PR,69,0.1108,PINHAIS,69.0,0.1108,fato_vendas_mhev_brasil:133,134,,fora_do_escopo_sp_ou_uf_incerta
+Paulínia,SP,67,0.1076,PAULINIA,67.0,0.1076,fato_vendas_mhev_brasil:134,135,3536505,exato_nome_e_uf_sp
+Salto,SP,67,0.1076,SALTO,67.0,0.1076,fato_vendas_mhev_brasil:135,136,3545209,exato_nome_e_uf_sp
+Votorantim,SP,67,0.1076,VOTORANTIM,67.0,0.1076,fato_vendas_mhev_brasil:136,137,3557006,exato_nome_e_uf_sp
+Botucatu,SP,66,0.106,BOTUCATU,66.0,0.106,fato_vendas_mhev_brasil:137,138,3507506,exato_nome_e_uf_sp
+Colombo,PR,66,0.106,COLOMBO,66.0,0.106,fato_vendas_mhev_brasil:138,139,,fora_do_escopo_sp_ou_uf_incerta
+Diadema,SP,66,0.106,DIADEMA,66.0,0.106,fato_vendas_mhev_brasil:139,140,3513801,exato_nome_e_uf_sp
+Itapema,SC,66,0.106,ITAPEMA,66.0,0.106,fato_vendas_mhev_brasil:140,141,,fora_do_escopo_sp_ou_uf_incerta
+São Leopoldo,RS,66,0.106,SAO LEOPOLDO,66.0,0.106,fato_vendas_mhev_brasil:141,142,,fora_do_escopo_sp_ou_uf_incerta
+Sinop,MT,65,0.1044,SINOP,65.0,0.1044,fato_vendas_mhev_brasil:142,143,,fora_do_escopo_sp_ou_uf_incerta
+Uberaba,MG,65,0.1044,UBERABA,65.0,0.1044,fato_vendas_mhev_brasil:143,144,,fora_do_escopo_sp_ou_uf_incerta
+Betim,MG,63,0.1011,BETIM,63.0,0.1011,fato_vendas_mhev_brasil:144,145,,fora_do_escopo_sp_ou_uf_incerta
+Lajeado,RS,63,0.1011,LAJEADO,63.0,0.1011,fato_vendas_mhev_brasil:145,146,,fora_do_escopo_sp_ou_uf_incerta
+Nova Lima,MG,60,0.0963,NOVA LIMA,60.0,0.0963,fato_vendas_mhev_brasil:146,147,,fora_do_escopo_sp_ou_uf_incerta
+Carapicuíba,SP,59,0.0947,CARAPICUIBA,59.0,0.0947,fato_vendas_mhev_brasil:147,148,3510609,exato_nome_e_uf_sp
+Varginha,MG,59,0.0947,VARGINHA,59.0,0.0947,fato_vendas_mhev_brasil:148,149,,fora_do_escopo_sp_ou_uf_incerta
+Rio das Ostras,RJ,58,0.0931,RIO DAS OSTRAS,58.0,0.0931,fato_vendas_mhev_brasil:149,150,,fora_do_escopo_sp_ou_uf_incerta
+Santa Bárbara d'Oeste,SP,57,0.0915,SANTA BARBARA D OESTE,57.0,0.0915,fato_vendas_mhev_brasil:150,151,3545803,exato_nome_e_uf_sp
+Mauá,SP,56,0.0899,MAUA,56.0,0.0899,fato_vendas_mhev_brasil:151,152,3529401,exato_nome_e_uf_sp
+Parauapebas,PA,56,0.0899,PARAUAPEBAS,56.0,0.0899,fato_vendas_mhev_brasil:152,153,,fora_do_escopo_sp_ou_uf_incerta
+Caucaia,CE,55,0.0883,CAUCAIA,55.0,0.0883,fato_vendas_mhev_brasil:153,154,,fora_do_escopo_sp_ou_uf_incerta
+Arujá,SP,54,0.0867,ARUJA,54.0,0.0867,fato_vendas_mhev_brasil:154,155,3503901,exato_nome_e_uf_sp
+Cabo Frio,RJ,54,0.0867,CABO FRIO,54.0,0.0867,fato_vendas_mhev_brasil:155,156,,fora_do_escopo_sp_ou_uf_incerta
+Rio Claro,SP,54,0.0867,RIO CLARO,54.0,0.0867,fato_vendas_mhev_brasil:156,157,3543907,exato_nome_e_uf_sp
+Senador Canedo,GO,54,0.0867,SENADOR CANEDO,54.0,0.0867,fato_vendas_mhev_brasil:157,158,,fora_do_escopo_sp_ou_uf_incerta
+Parnaíba,PI,53,0.0851,PARNAIBA,53.0,0.0851,fato_vendas_mhev_brasil:158,159,,fora_do_escopo_sp_ou_uf_incerta
+Poços de Caldas,MG,53,0.0851,POCOS DE CALDAS,53.0,0.0851,fato_vendas_mhev_brasil:159,160,,fora_do_escopo_sp_ou_uf_incerta
+Teresópolis,RJ,53,0.0851,TERESOPOLIS,53.0,0.0851,fato_vendas_mhev_brasil:160,161,,fora_do_escopo_sp_ou_uf_incerta
+Viamão,RS,53,0.0851,VIAMAO,53.0,0.0851,fato_vendas_mhev_brasil:161,162,,fora_do_escopo_sp_ou_uf_incerta
+Pouso Alegre,MG,52,0.0835,POUSO ALEGRE,52.0,0.0835,fato_vendas_mhev_brasil:162,163,,fora_do_escopo_sp_ou_uf_incerta
+Barra dos Coqueiros,SE,50,0.0803,BARRA DOS COQUEIROS,50.0,0.0803,fato_vendas_mhev_brasil:163,164,,fora_do_escopo_sp_ou_uf_incerta
+Cabo de Santo Agostinho,PE,50,0.0803,CABO DE SANTO AGOSTINHO,50.0,0.0803,fato_vendas_mhev_brasil:164,165,,fora_do_escopo_sp_ou_uf_incerta
+Itumbiara,GO,50,0.0803,ITUMBIARA,50.0,0.0803,fato_vendas_mhev_brasil:165,166,,fora_do_escopo_sp_ou_uf_incerta
+Nova Friburgo,RJ,50,0.0803,NOVA FRIBURGO,50.0,0.0803,fato_vendas_mhev_brasil:166,167,,fora_do_escopo_sp_ou_uf_incerta
+Itatiba,SP,49,0.0787,ITATIBA,49.0,0.0787,fato_vendas_mhev_brasil:167,168,3523404,exato_nome_e_uf_sp
+Catu,BA,48,0.0771,CATU,48.0,0.0771,fato_vendas_mhev_brasil:168,169,,fora_do_escopo_sp_ou_uf_incerta
+Guarapuava,PR,48,0.0771,GUARAPUAVA,48.0,0.0771,fato_vendas_mhev_brasil:169,170,,fora_do_escopo_sp_ou_uf_incerta
+Caraguatatuba,SP,47,0.0755,CARAGUATATUBA,47.0,0.0755,fato_vendas_mhev_brasil:170,171,3510500,exato_nome_e_uf_sp
+Jacareí,SP,47,0.0755,JACAREI,47.0,0.0755,fato_vendas_mhev_brasil:171,172,3524402,exato_nome_e_uf_sp
+Marechal Deodoro,AL,47,0.0755,MARECHAL DEODORO,47.0,0.0755,fato_vendas_mhev_brasil:172,173,,fora_do_escopo_sp_ou_uf_incerta
+Suzano,SP,47,0.0755,SUZANO,47.0,0.0755,fato_vendas_mhev_brasil:173,174,3552502,exato_nome_e_uf_sp
+Barretos,SP,46,0.0738,BARRETOS,46.0,0.0738,fato_vendas_mhev_brasil:174,175,3505500,exato_nome_e_uf_sp
+Camaragibe,PE,46,0.0738,CAMARAGIBE,46.0,0.0738,fato_vendas_mhev_brasil:175,176,,fora_do_escopo_sp_ou_uf_incerta
+Maracanaú,CE,46,0.0738,MARACANAU,46.0,0.0738,fato_vendas_mhev_brasil:176,177,,fora_do_escopo_sp_ou_uf_incerta
+Toledo,PR,46,0.0738,TOLEDO,46.0,0.0738,fato_vendas_mhev_brasil:177,178,,fora_do_escopo_sp_ou_uf_incerta
+Divinópolis,MG,44,0.0706,DIVINOPOLIS,44.0,0.0706,fato_vendas_mhev_brasil:178,179,,fora_do_escopo_sp_ou_uf_incerta
+Mirassol,SP,44,0.0706,MIRASSOL,44.0,0.0706,fato_vendas_mhev_brasil:179,180,3530300,exato_nome_e_uf_sp
+São José de Ribamar,MA,43,0.069,SAO JOSE DE RIBAMAR,43.0,0.069,fato_vendas_mhev_brasil:180,181,,fora_do_escopo_sp_ou_uf_incerta
+Angra dos Reis,RJ,42,0.0674,ANGRA DOS REIS,42.0,0.0674,fato_vendas_mhev_brasil:181,182,,fora_do_escopo_sp_ou_uf_incerta
+Barra Mansa,RJ,42,0.0674,BARRA MANSA,42.0,0.0674,fato_vendas_mhev_brasil:182,183,,fora_do_escopo_sp_ou_uf_incerta
+Catanduva,SP,42,0.0674,CATANDUVA,42.0,0.0674,fato_vendas_mhev_brasil:183,184,3511102,exato_nome_e_uf_sp
+Rio do Sul,SC,42,0.0674,RIO DO SUL,42.0,0.0674,fato_vendas_mhev_brasil:184,185,,fora_do_escopo_sp_ou_uf_incerta
+Santarém,PA,42,0.0674,SANTAREM,42.0,0.0674,fato_vendas_mhev_brasil:185,186,,fora_do_escopo_sp_ou_uf_incerta
+Sorriso,MT,42,0.0674,SORRISO,42.0,0.0674,fato_vendas_mhev_brasil:186,187,,fora_do_escopo_sp_ou_uf_incerta
+Sumaré,SP,42,0.0674,SUMARE,42.0,0.0674,fato_vendas_mhev_brasil:187,188,3552403,exato_nome_e_uf_sp
+Taboão da Serra,SP,42,0.0674,TABOAO DA SERRA,42.0,0.0674,fato_vendas_mhev_brasil:188,189,3552809,exato_nome_e_uf_sp
+Alvorada,RS,41,0.0658,ALVORADA,41.0,0.0658,fato_vendas_mhev_brasil:189,190,,fora_do_escopo_sp_ou_uf_incerta
+Cambé,PR,41,0.0658,CAMBE,41.0,0.0658,fato_vendas_mhev_brasil:190,191,,fora_do_escopo_sp_ou_uf_incerta
+Campo Largo,PR,41,0.0658,CAMPO LARGO,41.0,0.0658,fato_vendas_mhev_brasil:191,192,,fora_do_escopo_sp_ou_uf_incerta
+Lages,SC,41,0.0658,LAGES,41.0,0.0658,fato_vendas_mhev_brasil:192,193,,fora_do_escopo_sp_ou_uf_incerta
+Sete Lagoas,MG,41,0.0658,SETE LAGOAS,41.0,0.0658,fato_vendas_mhev_brasil:193,194,,fora_do_escopo_sp_ou_uf_incerta
+Marabá,PA,40,0.0642,MARABA,40.0,0.0642,fato_vendas_mhev_brasil:194,195,,fora_do_escopo_sp_ou_uf_incerta
+Tubarão,SC,40,0.0642,TUBARAO,40.0,0.0642,fato_vendas_mhev_brasil:195,196,,fora_do_escopo_sp_ou_uf_incerta
+Assis,SP,39,0.0626,ASSIS,39.0,0.0626,fato_vendas_mhev_brasil:196,197,3504008,exato_nome_e_uf_sp
+Apucarana,PR,38,0.061,APUCARANA,38.0,0.061,fato_vendas_mhev_brasil:197,198,,fora_do_escopo_sp_ou_uf_incerta
+Araucária,PR,38,0.061,ARAUCARIA,38.0,0.061,fato_vendas_mhev_brasil:198,199,,fora_do_escopo_sp_ou_uf_incerta
+Cachoeirinha,RS,38,0.061,CACHOEIRINHA,38.0,0.061,fato_vendas_mhev_brasil:199,200,,fora_do_escopo_sp_ou_uf_incerta
+São Jorge do Patrocínio,PR,38,0.061,SAO JORGE DO PATROCINIO,38.0,0.061,fato_vendas_mhev_brasil:200,201,,fora_do_escopo_sp_ou_uf_incerta
+Camboriú,SC,37,0.0594,CAMBORIU,37.0,0.0594,fato_vendas_mhev_brasil:201,202,,fora_do_escopo_sp_ou_uf_incerta
+Castanhal,PA,37,0.0594,CASTANHAL,37.0,0.0594,fato_vendas_mhev_brasil:202,203,,fora_do_escopo_sp_ou_uf_incerta
+Colatina,ES,37,0.0594,COLATINA,37.0,0.0594,fato_vendas_mhev_brasil:203,204,,fora_do_escopo_sp_ou_uf_incerta
+Mogi Mirim,SP,37,0.0594,MOGI MIRIM,37.0,0.0594,fato_vendas_mhev_brasil:204,205,3530805,exato_nome_e_uf_sp
+Rio Grande,RS,37,0.0594,RIO GRANDE,37.0,0.0594,fato_vendas_mhev_brasil:205,206,,fora_do_escopo_sp_ou_uf_incerta
+Caçador,SC,36,0.0578,CACADOR,36.0,0.0578,fato_vendas_mhev_brasil:206,207,,fora_do_escopo_sp_ou_uf_incerta
+Biguaçu,SC,35,0.0562,BIGUACU,35.0,0.0562,fato_vendas_mhev_brasil:207,208,,fora_do_escopo_sp_ou_uf_incerta
+Erechim,RS,35,0.0562,ERECHIM,35.0,0.0562,fato_vendas_mhev_brasil:208,209,,fora_do_escopo_sp_ou_uf_incerta
+Guarujá,SP,35,0.0562,GUARUJA,35.0,0.0562,fato_vendas_mhev_brasil:209,210,3518701,exato_nome_e_uf_sp
+São Vicente,SP,35,0.0562,SAO VICENTE,35.0,0.0562,fato_vendas_mhev_brasil:210,211,3551009,exato_nome_e_uf_sp
+Birigui,SP,33,0.053,BIRIGUI,33.0,0.053,fato_vendas_mhev_brasil:211,212,3506508,exato_nome_e_uf_sp
+Jaú,SP,33,0.053,JAU,33.0,0.053,fato_vendas_mhev_brasil:212,213,3525300,exato_nome_e_uf_sp
+Navegantes,SC,33,0.053,NAVEGANTES,33.0,0.053,fato_vendas_mhev_brasil:213,214,,fora_do_escopo_sp_ou_uf_incerta
+Araras,SP,32,0.0514,ARARAS,32.0,0.0514,fato_vendas_mhev_brasil:214,215,3503307,exato_nome_e_uf_sp
+Ariquemes,RO,32,0.0514,ARIQUEMES,32.0,0.0514,fato_vendas_mhev_brasil:215,216,,fora_do_escopo_sp_ou_uf_incerta
+Boituva,SP,32,0.0514,BOITUVA,32.0,0.0514,fato_vendas_mhev_brasil:216,217,3507001,exato_nome_e_uf_sp
+Cajamar,SP,32,0.0514,CAJAMAR,32.0,0.0514,fato_vendas_mhev_brasil:217,218,3509205,exato_nome_e_uf_sp
+Espírito Santo do Pinhal,SP,32,0.0514,ESPIRITO SANTO DO PINHAL,32.0,0.0514,fato_vendas_mhev_brasil:218,219,3515186,exato_nome_e_uf_sp
+Hortolândia,SP,32,0.0514,HORTOLANDIA,32.0,0.0514,fato_vendas_mhev_brasil:219,220,3519071,exato_nome_e_uf_sp
+Luís Eduardo Magalhães,BA,32,0.0514,LUIS EDUARDO MAGALHAES,32.0,0.0514,fato_vendas_mhev_brasil:220,221,,fora_do_escopo_sp_ou_uf_incerta
+Nova Odessa,SP,32,0.0514,NOVA ODESSA,32.0,0.0514,fato_vendas_mhev_brasil:221,222,3533403,exato_nome_e_uf_sp
+Pato Branco,PR,32,0.0514,PATO BRANCO,32.0,0.0514,fato_vendas_mhev_brasil:222,223,,fora_do_escopo_sp_ou_uf_incerta
+Umuarama,PR,32,0.0514,UMUARAMA,32.0,0.0514,fato_vendas_mhev_brasil:223,224,,fora_do_escopo_sp_ou_uf_incerta
+Araquari,SC,31,0.0498,ARAQUARI,31.0,0.0498,fato_vendas_mhev_brasil:224,225,,fora_do_escopo_sp_ou_uf_incerta
+Araruama,RJ,31,0.0498,ARARUAMA,31.0,0.0498,fato_vendas_mhev_brasil:225,226,,fora_do_escopo_sp_ou_uf_incerta
+Paço do Lumiar,MA,31,0.0498,PACO DO LUMIAR,31.0,0.0498,fato_vendas_mhev_brasil:226,227,,fora_do_escopo_sp_ou_uf_incerta
+Tatuí,SP,31,0.0498,TATUI,31.0,0.0498,fato_vendas_mhev_brasil:227,228,3554003,exato_nome_e_uf_sp
+Aracruz,ES,30,0.0482,ARACRUZ,30.0,0.0482,fato_vendas_mhev_brasil:228,229,,fora_do_escopo_sp_ou_uf_incerta
+Bento Gonçalves,RS,30,0.0482,BENTO GONCALVES,30.0,0.0482,fato_vendas_mhev_brasil:229,230,,fora_do_escopo_sp_ou_uf_incerta
+Cacoal,RO,30,0.0482,CACOAL,30.0,0.0482,fato_vendas_mhev_brasil:230,231,,fora_do_escopo_sp_ou_uf_incerta
+Fazenda Rio Grande,PR,30,0.0482,FAZENDA RIO GRANDE,30.0,0.0482,fato_vendas_mhev_brasil:231,232,,fora_do_escopo_sp_ou_uf_incerta
+Itupeva,SP,30,0.0482,ITUPEVA,30.0,0.0482,fato_vendas_mhev_brasil:232,233,3524006,exato_nome_e_uf_sp
+Leme,SP,30,0.0482,LEME,30.0,0.0482,fato_vendas_mhev_brasil:233,234,3526704,exato_nome_e_uf_sp
+Ribeirão Pires,SP,30,0.0482,RIBEIRAO PIRES,30.0,0.0482,fato_vendas_mhev_brasil:234,235,3543303,exato_nome_e_uf_sp
+Estância Velha,RS,29,0.0466,ESTANCIA VELHA,29.0,0.0466,fato_vendas_mhev_brasil:235,236,,fora_do_escopo_sp_ou_uf_incerta
+Guaíba,RS,29,0.0466,GUAIBA,29.0,0.0466,fato_vendas_mhev_brasil:236,237,,fora_do_escopo_sp_ou_uf_incerta
+Ilhéus,BA,29,0.0466,ILHEUS,29.0,0.0466,fato_vendas_mhev_brasil:237,238,,fora_do_escopo_sp_ou_uf_incerta
+Itapetininga,SP,29,0.0466,ITAPETININGA,29.0,0.0466,fato_vendas_mhev_brasil:238,239,3522307,exato_nome_e_uf_sp
+Jaboticabal,SP,29,0.0466,JABOTICABAL,29.0,0.0466,fato_vendas_mhev_brasil:239,240,3524303,exato_nome_e_uf_sp
+Jataí,GO,29,0.0466,JATAI,29.0,0.0466,fato_vendas_mhev_brasil:240,241,,fora_do_escopo_sp_ou_uf_incerta
+São Mateus,ES,29,0.0466,SAO MATEUS,29.0,0.0466,fato_vendas_mhev_brasil:241,242,,fora_do_escopo_sp_ou_uf_incerta
+Sapucaia do Sul,RS,29,0.0466,SAPUCAIA DO SUL,29.0,0.0466,fato_vendas_mhev_brasil:242,243,,fora_do_escopo_sp_ou_uf_incerta
+Simões Filho,BA,29,0.0466,SIMOES FILHO,29.0,0.0466,fato_vendas_mhev_brasil:243,244,,fora_do_escopo_sp_ou_uf_incerta
+Sobral,CE,29,0.0466,SOBRAL,29.0,0.0466,fato_vendas_mhev_brasil:244,245,,fora_do_escopo_sp_ou_uf_incerta
+Votuporanga,SP,29,0.0466,VOTUPORANGA,29.0,0.0466,fato_vendas_mhev_brasil:245,246,3557105,exato_nome_e_uf_sp
+Campo Bom,RS,28,0.045,CAMPO BOM,28.0,0.045,fato_vendas_mhev_brasil:246,247,,fora_do_escopo_sp_ou_uf_incerta
+Catalão,GO,28,0.045,CATALAO,28.0,0.045,fato_vendas_mhev_brasil:247,248,,fora_do_escopo_sp_ou_uf_incerta
+Embu das Artes,SP,28,0.045,EMBU DAS ARTES,28.0,0.045,fato_vendas_mhev_brasil:248,249,3515004,exato_nome_e_uf_sp
+Gramado,RS,28,0.045,GRAMADO,28.0,0.045,fato_vendas_mhev_brasil:249,250,,fora_do_escopo_sp_ou_uf_incerta
+Itabira,MG,28,0.045,ITABIRA,28.0,0.045,fato_vendas_mhev_brasil:250,251,,fora_do_escopo_sp_ou_uf_incerta
+Itapecerica da Serra,SP,28,0.045,ITAPECERICA DA SERRA,28.0,0.045,fato_vendas_mhev_brasil:251,252,3522208,exato_nome_e_uf_sp
+João Monlevade,MG,28,0.045,JOAO MONLEVADE,28.0,0.045,fato_vendas_mhev_brasil:252,253,,fora_do_escopo_sp_ou_uf_incerta
+Patos,PB,28,0.045,PATOS,28.0,0.045,fato_vendas_mhev_brasil:253,254,,fora_do_escopo_sp_ou_uf_incerta
+São Pedro da Aldeia,RJ,28,0.045,SAO PEDRO DA ALDEIA,28.0,0.045,fato_vendas_mhev_brasil:254,255,,fora_do_escopo_sp_ou_uf_incerta
+São Roque,SP,28,0.045,SAO ROQUE,28.0,0.045,fato_vendas_mhev_brasil:255,256,3550605,exato_nome_e_uf_sp
+Arapongas,PR,27,0.0433,ARAPONGAS,27.0,0.0433,fato_vendas_mhev_brasil:256,257,,fora_do_escopo_sp_ou_uf_incerta
+Ji-Paraná,RO,27,0.0433,JI PARANA,27.0,0.0433,fato_vendas_mhev_brasil:257,258,,fora_do_escopo_sp_ou_uf_incerta
+Mafra,SC,27,0.0433,MAFRA,27.0,0.0433,fato_vendas_mhev_brasil:258,259,,fora_do_escopo_sp_ou_uf_incerta
+Mairiporã,SP,27,0.0433,MAIRIPORA,27.0,0.0433,fato_vendas_mhev_brasil:259,260,3528502,exato_nome_e_uf_sp
+Resende,RJ,27,0.0433,RESENDE,27.0,0.0433,fato_vendas_mhev_brasil:260,261,,fora_do_escopo_sp_ou_uf_incerta
+São João de Meriti,RJ,27,0.0433,SAO JOAO DE MERITI,27.0,0.0433,fato_vendas_mhev_brasil:261,262,,fora_do_escopo_sp_ou_uf_incerta
+Barreiras,BA,26,0.0417,BARREIRAS,26.0,0.0417,fato_vendas_mhev_brasil:262,263,,fora_do_escopo_sp_ou_uf_incerta
+Coronel Fabriciano,MG,26,0.0417,CORONEL FABRICIANO,26.0,0.0417,fato_vendas_mhev_brasil:263,264,,fora_do_escopo_sp_ou_uf_incerta
+Itaquaquecetuba,SP,26,0.0417,ITAQUAQUECETUBA,26.0,0.0417,fato_vendas_mhev_brasil:264,265,3523107,exato_nome_e_uf_sp
+Lagoa Santa,MG,26,0.0417,LAGOA SANTA,26.0,0.0417,fato_vendas_mhev_brasil:265,266,,fora_do_escopo_sp_ou_uf_incerta
+Porto Belo,SC,26,0.0417,PORTO BELO,26.0,0.0417,fato_vendas_mhev_brasil:266,267,,fora_do_escopo_sp_ou_uf_incerta
+Santana,AP,26,0.0417,SANTANA,26.0,0.0417,fato_vendas_mhev_brasil:267,268,,fora_do_escopo_sp_ou_uf_incerta
+São João da Boa Vista,SP,26,0.0417,SAO JOAO DA BOA VISTA,26.0,0.0417,fato_vendas_mhev_brasil:268,269,3549102,exato_nome_e_uf_sp
+Sertãozinho,SP,26,0.0417,SERTAOZINHO,26.0,0.0417,fato_vendas_mhev_brasil:269,270,3551702,exato_nome_e_uf_sp
+Trindade,GO,26,0.0417,TRINDADE,26.0,0.0417,fato_vendas_mhev_brasil:270,271,,fora_do_escopo_sp_ou_uf_incerta
+Vitória de Santo Antão,PE,26,0.0417,VITORIA DE SANTO ANTAO,26.0,0.0417,fato_vendas_mhev_brasil:271,272,,fora_do_escopo_sp_ou_uf_incerta
+Itapevi,SP,25,0.0401,ITAPEVI,25.0,0.0401,fato_vendas_mhev_brasil:272,273,3522505,exato_nome_e_uf_sp
+Osório,RS,25,0.0401,OSORIO,25.0,0.0401,fato_vendas_mhev_brasil:273,274,,fora_do_escopo_sp_ou_uf_incerta
+Paranaguá,PR,25,0.0401,PARANAGUA,25.0,0.0401,fato_vendas_mhev_brasil:274,275,,fora_do_escopo_sp_ou_uf_incerta
+Pirassununga,SP,25,0.0401,PIRASSUNUNGA,25.0,0.0401,fato_vendas_mhev_brasil:275,276,3539301,exato_nome_e_uf_sp
+Ponte Nova,MG,25,0.0401,PONTE NOVA,25.0,0.0401,fato_vendas_mhev_brasil:276,277,,fora_do_escopo_sp_ou_uf_incerta
+Santa Cruz do Sul,RS,25,0.0401,SANTA CRUZ DO SUL,25.0,0.0401,fato_vendas_mhev_brasil:277,278,,fora_do_escopo_sp_ou_uf_incerta
+Farroupilha,RS,24,0.0385,FARROUPILHA,24.0,0.0385,fato_vendas_mhev_brasil:278,279,,fora_do_escopo_sp_ou_uf_incerta
+Imbituba,SC,24,0.0385,IMBITUBA,24.0,0.0385,fato_vendas_mhev_brasil:279,280,,fora_do_escopo_sp_ou_uf_incerta
+Indaial,SC,24,0.0385,INDAIAL,24.0,0.0385,fato_vendas_mhev_brasil:280,281,,fora_do_escopo_sp_ou_uf_incerta
+Jandira,SP,24,0.0385,JANDIRA,24.0,0.0385,fato_vendas_mhev_brasil:281,282,3525003,exato_nome_e_uf_sp
+Mogi Guaçu,SP,24,0.0385,MOGI GUACU,24.0,0.0385,fato_vendas_mhev_brasil:282,283,3530706,exato_nome_e_uf_sp
+Santa Cruz do Capibaribe,PE,24,0.0385,SANTA CRUZ DO CAPIBARIBE,24.0,0.0385,fato_vendas_mhev_brasil:283,284,,fora_do_escopo_sp_ou_uf_incerta
+Saquarema,RJ,24,0.0385,SAQUAREMA,24.0,0.0385,fato_vendas_mhev_brasil:284,285,,fora_do_escopo_sp_ou_uf_incerta
+Almirante Tamandaré,PR,23,0.0369,ALMIRANTE TAMANDARE,23.0,0.0369,fato_vendas_mhev_brasil:285,286,,fora_do_escopo_sp_ou_uf_incerta
+Altamira,PA,23,0.0369,ALTAMIRA,23.0,0.0369,fato_vendas_mhev_brasil:286,287,,fora_do_escopo_sp_ou_uf_incerta
+Aquiraz,CE,23,0.0369,AQUIRAZ,23.0,0.0369,fato_vendas_mhev_brasil:287,288,,fora_do_escopo_sp_ou_uf_incerta
+Balneário Piçarras,SC,23,0.0369,BALNEARIO PICARRAS,23.0,0.0369,fato_vendas_mhev_brasil:288,289,,fora_do_escopo_sp_ou_uf_incerta
+Caçapava,SP,23,0.0369,CACAPAVA,23.0,0.0369,fato_vendas_mhev_brasil:289,290,3508504,exato_nome_e_uf_sp
+Caieiras,SP,23,0.0369,CAIEIRAS,23.0,0.0369,fato_vendas_mhev_brasil:290,291,3509007,exato_nome_e_uf_sp
+Campo Mourão,PR,23,0.0369,CAMPO MOURAO,23.0,0.0369,fato_vendas_mhev_brasil:291,292,,fora_do_escopo_sp_ou_uf_incerta
+Itaperuna,RJ,23,0.0369,ITAPERUNA,23.0,0.0369,fato_vendas_mhev_brasil:292,293,,fora_do_escopo_sp_ou_uf_incerta
+Magé,RJ,23,0.0369,MAGE,23.0,0.0369,fato_vendas_mhev_brasil:293,294,,fora_do_escopo_sp_ou_uf_incerta
+Picos,PI,23,0.0369,PICOS,23.0,0.0369,fato_vendas_mhev_brasil:294,295,,fora_do_escopo_sp_ou_uf_incerta
+Tramandaí,RS,23,0.0369,TRAMANDAI,23.0,0.0369,fato_vendas_mhev_brasil:295,296,,fora_do_escopo_sp_ou_uf_incerta
+Vargem Grande Paulista,SP,23,0.0369,VARGEM GRANDE PAULISTA,23.0,0.0369,fato_vendas_mhev_brasil:296,297,3556453,exato_nome_e_uf_sp
+Alagoinhas,BA,22,0.0353,ALAGOINHAS,22.0,0.0353,fato_vendas_mhev_brasil:297,298,,fora_do_escopo_sp_ou_uf_incerta
+Concórdia,SC,22,0.0353,CONCORDIA,22.0,0.0353,fato_vendas_mhev_brasil:298,299,,fora_do_escopo_sp_ou_uf_incerta
+Dois Irmãos,RS,22,0.0353,DOIS IRMAOS,22.0,0.0353,fato_vendas_mhev_brasil:299,300,,fora_do_escopo_sp_ou_uf_incerta
+Gaspar,SC,22,0.0353,GASPAR,22.0,0.0353,fato_vendas_mhev_brasil:300,301,,fora_do_escopo_sp_ou_uf_incerta
+Itabaiana,SE,22,0.0353,ITABAIANA,22.0,0.0353,fato_vendas_mhev_brasil:301,302,,fora_do_escopo_sp_ou_uf_incerta
+Juazeiro,BA,22,0.0353,JUAZEIRO,22.0,0.0353,fato_vendas_mhev_brasil:302,303,,fora_do_escopo_sp_ou_uf_incerta
+Mesquita,RJ,22,0.0353,MESQUITA,22.0,0.0353,fato_vendas_mhev_brasil:303,304,,fora_do_escopo_sp_ou_uf_incerta
+Patos de Minas,MG,22,0.0353,PATOS DE MINAS,22.0,0.0353,fato_vendas_mhev_brasil:304,305,,fora_do_escopo_sp_ou_uf_incerta
+Santo Antônio de Jesus,BA,22,0.0353,SANTO ANTONIO DE JESUS,22.0,0.0353,fato_vendas_mhev_brasil:305,306,,fora_do_escopo_sp_ou_uf_incerta
+São Lourenço da Mata,PE,22,0.0353,SAO LOURENCO DA MATA,22.0,0.0353,fato_vendas_mhev_brasil:306,307,,fora_do_escopo_sp_ou_uf_incerta
+Araranguá,SC,21,0.0337,ARARANGUA,21.0,0.0337,fato_vendas_mhev_brasil:307,308,,fora_do_escopo_sp_ou_uf_incerta
+Avaré,SP,21,0.0337,AVARE,21.0,0.0337,fato_vendas_mhev_brasil:308,309,3504503,exato_nome_e_uf_sp
+Caicó,RN,21,0.0337,CAICO,21.0,0.0337,fato_vendas_mhev_brasil:309,310,,fora_do_escopo_sp_ou_uf_incerta
+Carazinho,RS,21,0.0337,CARAZINHO,21.0,0.0337,fato_vendas_mhev_brasil:310,311,,fora_do_escopo_sp_ou_uf_incerta
+Carpina,PE,21,0.0337,CARPINA,21.0,0.0337,fato_vendas_mhev_brasil:311,312,,fora_do_escopo_sp_ou_uf_incerta
+Crato,CE,21,0.0337,CRATO,21.0,0.0337,fato_vendas_mhev_brasil:312,313,,fora_do_escopo_sp_ou_uf_incerta
+Ijuí,RS,21,0.0337,IJUI,21.0,0.0337,fato_vendas_mhev_brasil:313,314,,fora_do_escopo_sp_ou_uf_incerta
+Jequié,BA,21,0.0337,JEQUIE,21.0,0.0337,fato_vendas_mhev_brasil:314,315,,fora_do_escopo_sp_ou_uf_incerta
+Muriaé,MG,21,0.0337,MURIAE,21.0,0.0337,fato_vendas_mhev_brasil:315,316,,fora_do_escopo_sp_ou_uf_incerta
+Poá,SP,21,0.0337,POA,21.0,0.0337,fato_vendas_mhev_brasil:316,317,3539806,exato_nome_e_uf_sp
+Primavera do Leste,MT,21,0.0337,PRIMAVERA DO LESTE,21.0,0.0337,fato_vendas_mhev_brasil:317,318,,fora_do_escopo_sp_ou_uf_incerta
+Tangará da Serra,MT,21,0.0337,TANGARA DA SERRA,21.0,0.0337,fato_vendas_mhev_brasil:318,319,,fora_do_escopo_sp_ou_uf_incerta
+Três Lagoas,MS,21,0.0337,TRES LAGOAS,21.0,0.0337,fato_vendas_mhev_brasil:319,320,,fora_do_escopo_sp_ou_uf_incerta
+Belford Roxo,RJ,20,0.0321,BELFORD ROXO,20.0,0.0321,fato_vendas_mhev_brasil:320,321,,fora_do_escopo_sp_ou_uf_incerta
+Cáceres,MT,20,0.0321,CACERES,20.0,0.0321,fato_vendas_mhev_brasil:321,322,,fora_do_escopo_sp_ou_uf_incerta
+Penha,SC,20,0.0321,PENHA,20.0,0.0321,fato_vendas_mhev_brasil:322,323,,fora_do_escopo_sp_ou_uf_incerta
+Tijucas,SC,20,0.0321,TIJUCAS,20.0,0.0321,fato_vendas_mhev_brasil:323,324,,fora_do_escopo_sp_ou_uf_incerta
+Videira,SC,20,0.0321,VIDEIRA,20.0,0.0321,fato_vendas_mhev_brasil:324,325,,fora_do_escopo_sp_ou_uf_incerta
+Cianorte,PR,19,0.0305,CIANORTE,19.0,0.0305,fato_vendas_mhev_brasil:325,326,,fora_do_escopo_sp_ou_uf_incerta
+Jaguariúna,SP,19,0.0305,JAGUARIUNA,19.0,0.0305,fato_vendas_mhev_brasil:326,327,3524709,exato_nome_e_uf_sp
+Lucas do Rio Verde,MT,19,0.0305,LUCAS DO RIO VERDE,19.0,0.0305,fato_vendas_mhev_brasil:327,328,,fora_do_escopo_sp_ou_uf_incerta
+Matão,SP,19,0.0305,MATAO,19.0,0.0305,fato_vendas_mhev_brasil:328,329,3529302,exato_nome_e_uf_sp
+Paranavaí,PR,19,0.0305,PARANAVAI,19.0,0.0305,fato_vendas_mhev_brasil:329,330,,fora_do_escopo_sp_ou_uf_incerta
+Santa Rosa,RS,19,0.0305,SANTA ROSA,19.0,0.0305,fato_vendas_mhev_brasil:330,331,,fora_do_escopo_sp_ou_uf_incerta
+Santiago,RS,19,0.0305,SANTIAGO,19.0,0.0305,fato_vendas_mhev_brasil:331,332,,fora_do_escopo_sp_ou_uf_incerta
+Torres,RS,19,0.0305,TORRES,19.0,0.0305,fato_vendas_mhev_brasil:332,333,,fora_do_escopo_sp_ou_uf_incerta
+Ubatuba,SP,19,0.0305,UBATUBA,19.0,0.0305,fato_vendas_mhev_brasil:333,334,3555406,exato_nome_e_uf_sp
+Bertioga,SP,18,0.0289,BERTIOGA,18.0,0.0289,fato_vendas_mhev_brasil:334,335,3506359,exato_nome_e_uf_sp
+Caldas Novas,GO,18,0.0289,CALDAS NOVAS,18.0,0.0289,fato_vendas_mhev_brasil:335,336,,fora_do_escopo_sp_ou_uf_incerta
+Capão da Canoa,RS,18,0.0289,CAPAO DA CANOA,18.0,0.0289,fato_vendas_mhev_brasil:336,337,,fora_do_escopo_sp_ou_uf_incerta
+Cosmópolis,SP,18,0.0289,COSMOPOLIS,18.0,0.0289,fato_vendas_mhev_brasil:337,338,3512803,exato_nome_e_uf_sp
+Flores da Cunha,RS,18,0.0289,FLORES DA CUNHA,18.0,0.0289,fato_vendas_mhev_brasil:338,339,,fora_do_escopo_sp_ou_uf_incerta
+Mangaratiba,RJ,18,0.0289,MANGARATIBA,18.0,0.0289,fato_vendas_mhev_brasil:339,340,,fora_do_escopo_sp_ou_uf_incerta
+Matinhos,PR,18,0.0289,MATINHOS,18.0,0.0289,fato_vendas_mhev_brasil:340,341,,fora_do_escopo_sp_ou_uf_incerta
+Porto Feliz,SP,18,0.0289,PORTO FELIZ,18.0,0.0289,fato_vendas_mhev_brasil:341,342,3540606,exato_nome_e_uf_sp
+Abreu e Lima,PE,17,0.0273,ABREU E LIMA,17.0,0.0273,fato_vendas_mhev_brasil:342,343,,fora_do_escopo_sp_ou_uf_incerta
+Araxá,MG,17,0.0273,ARAXA,17.0,0.0273,fato_vendas_mhev_brasil:343,344,,fora_do_escopo_sp_ou_uf_incerta
+Bady Bassitt,SP,17,0.0273,BADY BASSITT,17.0,0.0273,fato_vendas_mhev_brasil:344,345,3504602,exato_nome_e_uf_sp
+Ibitinga,SP,17,0.0273,IBITINGA,17.0,0.0273,fato_vendas_mhev_brasil:345,346,3519600,exato_nome_e_uf_sp
+Palmeira dos Índios,AL,17,0.0273,PALMEIRA DOS INDIOS,17.0,0.0273,fato_vendas_mhev_brasil:346,347,,fora_do_escopo_sp_ou_uf_incerta
+Pindamonhangaba,SP,17,0.0273,PINDAMONHANGABA,17.0,0.0273,fato_vendas_mhev_brasil:347,348,3538006,exato_nome_e_uf_sp
+Sapiranga,RS,17,0.0273,SAPIRANGA,17.0,0.0273,fato_vendas_mhev_brasil:348,349,,fora_do_escopo_sp_ou_uf_incerta
+Bagé,RS,16,0.0257,BAGE,16.0,0.0257,fato_vendas_mhev_brasil:349,350,,fora_do_escopo_sp_ou_uf_incerta
+Bombinhas,SC,16,0.0257,BOMBINHAS,16.0,0.0257,fato_vendas_mhev_brasil:350,351,,fora_do_escopo_sp_ou_uf_incerta
+Esteio,RS,16,0.0257,ESTEIO,16.0,0.0257,fato_vendas_mhev_brasil:351,352,,fora_do_escopo_sp_ou_uf_incerta
+Içara,SC,16,0.0257,ICARA,16.0,0.0257,fato_vendas_mhev_brasil:352,353,,fora_do_escopo_sp_ou_uf_incerta
+Itaboraí,RJ,16,0.0257,ITABORAI,16.0,0.0257,fato_vendas_mhev_brasil:353,354,,fora_do_escopo_sp_ou_uf_incerta
+Itaguaí,RJ,16,0.0257,ITAGUAI,16.0,0.0257,fato_vendas_mhev_brasil:354,355,,fora_do_escopo_sp_ou_uf_incerta
+Lagarto,SE,16,0.0257,LAGARTO,16.0,0.0257,fato_vendas_mhev_brasil:355,356,,fora_do_escopo_sp_ou_uf_incerta
+Mococa,SP,16,0.0257,MOCOCA,16.0,0.0257,fato_vendas_mhev_brasil:356,357,3530508,exato_nome_e_uf_sp
+Santa Rita,PB,16,0.0257,SANTA RITA,16.0,0.0257,fato_vendas_mhev_brasil:357,358,,fora_do_escopo_sp_ou_uf_incerta
+São Pedro,SP,16,0.0257,SAO PEDRO,16.0,0.0257,fato_vendas_mhev_brasil:358,359,3550407,exato_nome_e_uf_sp
+Sarandi,PR,16,0.0257,SARANDI,16.0,0.0257,fato_vendas_mhev_brasil:359,360,,fora_do_escopo_sp_ou_uf_incerta
+Vicência,PE,16,0.0257,VICENCIA,16.0,0.0257,fato_vendas_mhev_brasil:360,361,,fora_do_escopo_sp_ou_uf_incerta
+Barra de São Francisco,ES,15,0.0241,BARRA DE SAO FRANCISCO,15.0,0.0241,fato_vendas_mhev_brasil:361,362,,fora_do_escopo_sp_ou_uf_incerta
+Bayeux,PB,15,0.0241,BAYEUX,15.0,0.0241,fato_vendas_mhev_brasil:362,363,,fora_do_escopo_sp_ou_uf_incerta
+Cravinhos,SP,15,0.0241,CRAVINHOS,15.0,0.0241,fato_vendas_mhev_brasil:363,364,3513108,exato_nome_e_uf_sp
+Franco da Rocha,SP,15,0.0241,FRANCO DA ROCHA,15.0,0.0241,fato_vendas_mhev_brasil:364,365,3516408,exato_nome_e_uf_sp
+Garopaba,SC,15,0.0241,GAROPABA,15.0,0.0241,fato_vendas_mhev_brasil:365,366,,fora_do_escopo_sp_ou_uf_incerta
+Guanambi,BA,15,0.0241,GUANAMBI,15.0,0.0241,fato_vendas_mhev_brasil:366,367,,fora_do_escopo_sp_ou_uf_incerta
+Ipojuca,PE,15,0.0241,IPOJUCA,15.0,0.0241,fato_vendas_mhev_brasil:367,368,,fora_do_escopo_sp_ou_uf_incerta
+Lençóis Paulista,SP,15,0.0241,LENCOIS PAULISTA,15.0,0.0241,fato_vendas_mhev_brasil:368,369,3526803,exato_nome_e_uf_sp
+Marechal Cândido Rondon,PR,15,0.0241,MARECHAL CANDIDO RONDON,15.0,0.0241,fato_vendas_mhev_brasil:369,370,,fora_do_escopo_sp_ou_uf_incerta
+Piraquara,PR,15,0.0241,PIRAQUARA,15.0,0.0241,fato_vendas_mhev_brasil:370,371,,fora_do_escopo_sp_ou_uf_incerta
+Rio das Pedras,SP,15,0.0241,RIO DAS PEDRAS,15.0,0.0241,fato_vendas_mhev_brasil:371,372,3544004,exato_nome_e_uf_sp
+São Gonçalo do Amarante,RN,15,0.0241,SAO GONCALO DO AMARANTE,15.0,0.0241,fato_vendas_mhev_brasil:372,373,,fora_do_escopo_sp_ou_uf_incerta
+São Sebastião,SP,15,0.0241,SAO SEBASTIAO,15.0,0.0241,fato_vendas_mhev_brasil:373,374,3550704,exato_nome_e_uf_sp
+Timbó,SC,15,0.0241,TIMBO,15.0,0.0241,fato_vendas_mhev_brasil:374,375,,fora_do_escopo_sp_ou_uf_incerta
+Armação dos Búzios,RJ,14,0.0225,ARMACAO DOS BUZIOS,14.0,0.0225,fato_vendas_mhev_brasil:375,376,,fora_do_escopo_sp_ou_uf_incerta
+Barra do Garças,MT,14,0.0225,BARRA DO GARCAS,14.0,0.0225,fato_vendas_mhev_brasil:376,377,,fora_do_escopo_sp_ou_uf_incerta
+Cajazeiras,PB,14,0.0225,CAJAZEIRAS,14.0,0.0225,fato_vendas_mhev_brasil:377,378,,fora_do_escopo_sp_ou_uf_incerta
+Canela,RS,14,0.0225,CANELA,14.0,0.0225,fato_vendas_mhev_brasil:378,379,,fora_do_escopo_sp_ou_uf_incerta
+Caratinga,MG,14,0.0225,CARATINGA,14.0,0.0225,fato_vendas_mhev_brasil:379,380,,fora_do_escopo_sp_ou_uf_incerta
+Fernandópolis,SP,14,0.0225,FERNANDOPOLIS,14.0,0.0225,fato_vendas_mhev_brasil:380,381,3515509,exato_nome_e_uf_sp
+Itatiaia,RJ,14,0.0225,ITATIAIA,14.0,0.0225,fato_vendas_mhev_brasil:381,382,,fora_do_escopo_sp_ou_uf_incerta
+Ivoti,RS,14,0.0225,IVOTI,14.0,0.0225,fato_vendas_mhev_brasil:382,383,,fora_do_escopo_sp_ou_uf_incerta
+Lins,SP,14,0.0225,LINS,14.0,0.0225,fato_vendas_mhev_brasil:383,384,3527108,exato_nome_e_uf_sp
+Louveira,SP,14,0.0225,LOUVEIRA,14.0,0.0225,fato_vendas_mhev_brasil:384,385,3527306,exato_nome_e_uf_sp
+Montenegro,RS,14,0.0225,MONTENEGRO,14.0,0.0225,fato_vendas_mhev_brasil:385,386,,fora_do_escopo_sp_ou_uf_incerta
+Penedo,AL,14,0.0225,PENEDO,14.0,0.0225,fato_vendas_mhev_brasil:386,387,,fora_do_escopo_sp_ou_uf_incerta
+Piratininga,SP,14,0.0225,PIRATININGA,14.0,0.0225,fato_vendas_mhev_brasil:387,388,3539400,exato_nome_e_uf_sp
+Santo Antônio da Patrulha,RS,14,0.0225,SANTO ANTONIO DA PATRULHA,14.0,0.0225,fato_vendas_mhev_brasil:388,389,,fora_do_escopo_sp_ou_uf_incerta
+São João Batista,SC,14,0.0225,SAO JOAO BATISTA,14.0,0.0225,fato_vendas_mhev_brasil:389,390,,fora_do_escopo_sp_ou_uf_incerta
+Venâncio Aires,RS,14,0.0225,VENANCIO AIRES,14.0,0.0225,fato_vendas_mhev_brasil:390,391,,fora_do_escopo_sp_ou_uf_incerta
+Anchieta,ES,13,0.0209,ANCHIETA,13.0,0.0209,fato_vendas_mhev_brasil:391,392,,fora_do_escopo_sp_ou_uf_incerta
+Araçoiaba da Serra,SP,13,0.0209,ARACOIABA DA SERRA,13.0,0.0209,fato_vendas_mhev_brasil:392,393,3502903,exato_nome_e_uf_sp
+Bebedouro,SP,13,0.0209,BEBEDOURO,13.0,0.0209,fato_vendas_mhev_brasil:393,394,3506102,exato_nome_e_uf_sp
+Capivari,SP,13,0.0209,CAPIVARI,13.0,0.0209,fato_vendas_mhev_brasil:394,395,3510401,exato_nome_e_uf_sp
+Ceres,GO,13,0.0209,CERES,13.0,0.0209,fato_vendas_mhev_brasil:395,396,,fora_do_escopo_sp_ou_uf_incerta
+Encantado,RS,13,0.0209,ENCANTADO,13.0,0.0209,fato_vendas_mhev_brasil:396,397,,fora_do_escopo_sp_ou_uf_incerta
+Guararema,SP,13,0.0209,GUARAREMA,13.0,0.0209,fato_vendas_mhev_brasil:397,398,3518305,exato_nome_e_uf_sp
+Guaratinguetá,SP,13,0.0209,GUARATINGUETA,13.0,0.0209,fato_vendas_mhev_brasil:398,399,3518404,exato_nome_e_uf_sp
+Ibiporã,PR,13,0.0209,IBIPORA,13.0,0.0209,fato_vendas_mhev_brasil:399,400,,fora_do_escopo_sp_ou_uf_incerta
+Igarassu,PE,13,0.0209,IGARASSU,13.0,0.0209,fato_vendas_mhev_brasil:400,401,,fora_do_escopo_sp_ou_uf_incerta
+Iguatu,CE,13,0.0209,IGUATU,13.0,0.0209,fato_vendas_mhev_brasil:401,402,,fora_do_escopo_sp_ou_uf_incerta
+Imbé,RS,13,0.0209,IMBE,13.0,0.0209,fato_vendas_mhev_brasil:402,403,,fora_do_escopo_sp_ou_uf_incerta
+Limoeiro,PE,13,0.0209,LIMOEIRO,13.0,0.0209,fato_vendas_mhev_brasil:403,404,,fora_do_escopo_sp_ou_uf_incerta
+Nova Esperança,PR,13,0.0209,NOVA ESPERANCA,13.0,0.0209,fato_vendas_mhev_brasil:404,405,,fora_do_escopo_sp_ou_uf_incerta
+Nova Venécia,ES,13,0.0209,NOVA VENECIA,13.0,0.0209,fato_vendas_mhev_brasil:405,406,,fora_do_escopo_sp_ou_uf_incerta
+Olímpia,SP,13,0.0209,OLIMPIA,13.0,0.0209,fato_vendas_mhev_brasil:406,407,3533908,exato_nome_e_uf_sp
+Ourinhos,SP,13,0.0209,OURINHOS,13.0,0.0209,fato_vendas_mhev_brasil:407,408,3534708,exato_nome_e_uf_sp
+Pará de Minas,MG,13,0.0209,PARA DE MINAS,13.0,0.0209,fato_vendas_mhev_brasil:408,409,,fora_do_escopo_sp_ou_uf_incerta
+Paudalho,PE,13,0.0209,PAUDALHO,13.0,0.0209,fato_vendas_mhev_brasil:409,410,,fora_do_escopo_sp_ou_uf_incerta
+Quatro Barras,PR,13,0.0209,QUATRO BARRAS,13.0,0.0209,fato_vendas_mhev_brasil:410,411,,fora_do_escopo_sp_ou_uf_incerta
+Quixadá,CE,13,0.0209,QUIXADA,13.0,0.0209,fato_vendas_mhev_brasil:411,412,,fora_do_escopo_sp_ou_uf_incerta
+Tietê,SP,13,0.0209,TIETE,13.0,0.0209,fato_vendas_mhev_brasil:412,413,3554508,exato_nome_e_uf_sp
+Ubá,MG,13,0.0209,UBA,13.0,0.0209,fato_vendas_mhev_brasil:413,414,,fora_do_escopo_sp_ou_uf_incerta
+Uruguaiana,RS,13,0.0209,URUGUAIANA,13.0,0.0209,fato_vendas_mhev_brasil:414,415,,fora_do_escopo_sp_ou_uf_incerta
+Valença,RJ,13,0.0209,VALENCA,13.0,0.0209,fato_vendas_mhev_brasil:415,416,,fora_do_escopo_sp_ou_uf_incerta
+Amparo,SP,12,0.0193,AMPARO,12.0,0.0193,fato_vendas_mhev_brasil:416,417,3501905,exato_nome_e_uf_sp
+Arcoverde,PE,12,0.0193,ARCOVERDE,12.0,0.0193,fato_vendas_mhev_brasil:417,418,,fora_do_escopo_sp_ou_uf_incerta
+Batatais,SP,12,0.0193,BATATAIS,12.0,0.0193,fato_vendas_mhev_brasil:418,419,3505906,exato_nome_e_uf_sp
+Cabreúva,SP,12,0.0193,CABREUVA,12.0,0.0193,fato_vendas_mhev_brasil:419,420,3508405,exato_nome_e_uf_sp
+Campina Grande do Sul,PR,12,0.0193,CAMPINA GRANDE DO SUL,12.0,0.0193,fato_vendas_mhev_brasil:420,421,,fora_do_escopo_sp_ou_uf_incerta
+Campos do Jordão,SP,12,0.0193,CAMPOS DO JORDAO,12.0,0.0193,fato_vendas_mhev_brasil:421,422,3509700,exato_nome_e_uf_sp
+Canoinhas,SC,12,0.0193,CANOINHAS,12.0,0.0193,fato_vendas_mhev_brasil:422,423,,fora_do_escopo_sp_ou_uf_incerta
+Cornélio Procópio,PR,12,0.0193,CORNELIO PROCOPIO,12.0,0.0193,fato_vendas_mhev_brasil:423,424,,fora_do_escopo_sp_ou_uf_incerta
+Embu-Guaçu,SP,12,0.0193,EMBU GUACU,12.0,0.0193,fato_vendas_mhev_brasil:424,425,3515103,exato_nome_e_uf_sp
+Francisco Beltrão,PR,12,0.0193,FRANCISCO BELTRAO,12.0,0.0193,fato_vendas_mhev_brasil:425,426,,fora_do_escopo_sp_ou_uf_incerta
+Guarabira,PB,12,0.0193,GUARABIRA,12.0,0.0193,fato_vendas_mhev_brasil:426,427,,fora_do_escopo_sp_ou_uf_incerta
+Guaramirim,SC,12,0.0193,GUARAMIRIM,12.0,0.0193,fato_vendas_mhev_brasil:427,428,,fora_do_escopo_sp_ou_uf_incerta
+Ilhabela,SP,12,0.0193,ILHABELA,12.0,0.0193,fato_vendas_mhev_brasil:428,429,3520400,exato_nome_e_uf_sp
+Inhumas,GO,12,0.0193,INHUMAS,12.0,0.0193,fato_vendas_mhev_brasil:429,430,,fora_do_escopo_sp_ou_uf_incerta
+Itanhaém,SP,12,0.0193,ITANHAEM,12.0,0.0193,fato_vendas_mhev_brasil:430,431,3522109,exato_nome_e_uf_sp
+Itapira,SP,12,0.0193,ITAPIRA,12.0,0.0193,fato_vendas_mhev_brasil:431,432,3522604,exato_nome_e_uf_sp
+Itaúna,MG,12,0.0193,ITAUNA,12.0,0.0193,fato_vendas_mhev_brasil:432,433,,fora_do_escopo_sp_ou_uf_incerta
+Jales,SP,12,0.0193,JALES,12.0,0.0193,fato_vendas_mhev_brasil:433,434,3524808,exato_nome_e_uf_sp
+Lagoa Seca,PB,12,0.0193,LAGOA SECA,12.0,0.0193,fato_vendas_mhev_brasil:434,435,,fora_do_escopo_sp_ou_uf_incerta
+Laguna,SC,12,0.0193,LAGUNA,12.0,0.0193,fato_vendas_mhev_brasil:435,436,,fora_do_escopo_sp_ou_uf_incerta
+Nilópolis,RJ,12,0.0193,NILOPOLIS,12.0,0.0193,fato_vendas_mhev_brasil:436,437,,fora_do_escopo_sp_ou_uf_incerta
+Pomerode,SC,12,0.0193,POMERODE,12.0,0.0193,fato_vendas_mhev_brasil:437,438,,fora_do_escopo_sp_ou_uf_incerta
+Queimados,RJ,12,0.0193,QUEIMADOS,12.0,0.0193,fato_vendas_mhev_brasil:438,439,,fora_do_escopo_sp_ou_uf_incerta
+Rio Bonito,RJ,12,0.0193,RIO BONITO,12.0,0.0193,fato_vendas_mhev_brasil:439,440,,fora_do_escopo_sp_ou_uf_incerta
+Santa Helena de Goiás,GO,12,0.0193,SANTA HELENA DE GOIAS,12.0,0.0193,fato_vendas_mhev_brasil:440,441,,fora_do_escopo_sp_ou_uf_incerta
+São Bento do Sul,SC,12,0.0193,SAO BENTO DO SUL,12.0,0.0193,fato_vendas_mhev_brasil:441,442,,fora_do_escopo_sp_ou_uf_incerta
+São Francisco do Sul,SC,12,0.0193,SAO FRANCISCO DO SUL,12.0,0.0193,fato_vendas_mhev_brasil:442,443,,fora_do_escopo_sp_ou_uf_incerta
+Taquaritinga,SP,12,0.0193,TAQUARITINGA,12.0,0.0193,fato_vendas_mhev_brasil:443,444,3553708,exato_nome_e_uf_sp
+Vilhena,RO,12,0.0193,VILHENA,12.0,0.0193,fato_vendas_mhev_brasil:444,445,,fora_do_escopo_sp_ou_uf_incerta
+Xangri-lá,RS,12,0.0193,XANGRI LA,12.0,0.0193,fato_vendas_mhev_brasil:445,446,,fora_do_escopo_sp_ou_uf_incerta
+Barbalha,CE,11,0.0177,BARBALHA,11.0,0.0177,fato_vendas_mhev_brasil:446,447,,fora_do_escopo_sp_ou_uf_incerta
+Barcarena,PA,11,0.0177,BARCARENA,11.0,0.0177,fato_vendas_mhev_brasil:447,448,,fora_do_escopo_sp_ou_uf_incerta
+Barra do Piraí,RJ,11,0.0177,BARRA DO PIRAI,11.0,0.0177,fato_vendas_mhev_brasil:448,449,,fora_do_escopo_sp_ou_uf_incerta
+Castelo,ES,11,0.0177,CASTELO,11.0,0.0177,fato_vendas_mhev_brasil:449,450,,fora_do_escopo_sp_ou_uf_incerta
+Cerquilho,SP,11,0.0177,CERQUILHO,11.0,0.0177,fato_vendas_mhev_brasil:450,451,3511508,exato_nome_e_uf_sp
+Dracena,SP,11,0.0177,DRACENA,11.0,0.0177,fato_vendas_mhev_brasil:451,452,3514403,exato_nome_e_uf_sp
+Eunápolis,BA,11,0.0177,EUNAPOLIS,11.0,0.0177,fato_vendas_mhev_brasil:452,453,,fora_do_escopo_sp_ou_uf_incerta
+Guaíra,SP,11,0.0177,GUAIRA,11.0,0.0177,fato_vendas_mhev_brasil:453,454,3517406,exato_nome_e_uf_sp
+Irati,PR,11,0.0177,IRATI,11.0,0.0177,fato_vendas_mhev_brasil:454,455,,fora_do_escopo_sp_ou_uf_incerta
+Itapemirim,ES,11,0.0177,ITAPEMIRIM,11.0,0.0177,fato_vendas_mhev_brasil:455,456,,fora_do_escopo_sp_ou_uf_incerta
+Jaraguá,GO,11,0.0177,JARAGUA,11.0,0.0177,fato_vendas_mhev_brasil:456,457,,fora_do_escopo_sp_ou_uf_incerta
+Joaçaba,SC,11,0.0177,JOACABA,11.0,0.0177,fato_vendas_mhev_brasil:457,458,,fora_do_escopo_sp_ou_uf_incerta
+Monte Alto,SP,11,0.0177,MONTE ALTO,11.0,0.0177,fato_vendas_mhev_brasil:458,459,3531308,exato_nome_e_uf_sp
+Nossa Senhora do Socorro,SE,11,0.0177,NOSSA SENHORA DO SOCORRO,11.0,0.0177,fato_vendas_mhev_brasil:459,460,,fora_do_escopo_sp_ou_uf_incerta
+Orlândia,SP,11,0.0177,ORLANDIA,11.0,0.0177,fato_vendas_mhev_brasil:460,461,3534302,exato_nome_e_uf_sp
+Pacatuba,CE,11,0.0177,PACATUBA,11.0,0.0177,fato_vendas_mhev_brasil:461,462,,fora_do_escopo_sp_ou_uf_incerta
+Paulo Afonso,BA,11,0.0177,PAULO AFONSO,11.0,0.0177,fato_vendas_mhev_brasil:462,463,,fora_do_escopo_sp_ou_uf_incerta
+Porto Seguro,BA,11,0.0177,PORTO SEGURO,11.0,0.0177,fato_vendas_mhev_brasil:463,464,,fora_do_escopo_sp_ou_uf_incerta
+Rolândia,PR,11,0.0177,ROLANDIA,11.0,0.0177,fato_vendas_mhev_brasil:464,465,,fora_do_escopo_sp_ou_uf_incerta
+Santana do Ipanema,AL,11,0.0177,SANTANA DO IPANEMA,11.0,0.0177,fato_vendas_mhev_brasil:465,466,,fora_do_escopo_sp_ou_uf_incerta
+Sant'Ana do Livramento,RS,11,0.0177,SANT ANA DO LIVRAMENTO,11.0,0.0177,fato_vendas_mhev_brasil:466,467,,fora_do_escopo_sp_ou_uf_incerta
+Santo Ângelo,RS,11,0.0177,SANTO ANGELO,11.0,0.0177,fato_vendas_mhev_brasil:467,468,,fora_do_escopo_sp_ou_uf_incerta
+São João da Barra,RJ,11,0.0177,SAO JOAO DA BARRA,11.0,0.0177,fato_vendas_mhev_brasil:468,469,,fora_do_escopo_sp_ou_uf_incerta
+Taquara,RS,11,0.0177,TAQUARA,11.0,0.0177,fato_vendas_mhev_brasil:469,470,,fora_do_escopo_sp_ou_uf_incerta
+Teixeira de Freitas,BA,11,0.0177,TEIXEIRA DE FREITAS,11.0,0.0177,fato_vendas_mhev_brasil:470,471,,fora_do_escopo_sp_ou_uf_incerta
+Tupã,SP,11,0.0177,TUPA,11.0,0.0177,fato_vendas_mhev_brasil:471,472,3555000,exato_nome_e_uf_sp
+Várzea Paulista,SP,11,0.0177,VARZEA PAULISTA,11.0,0.0177,fato_vendas_mhev_brasil:472,473,3556503,exato_nome_e_uf_sp
+Alegrete,RS,10,0.0161,ALEGRETE,10.0,0.0161,fato_vendas_mhev_brasil:473,474,,fora_do_escopo_sp_ou_uf_incerta
+Alta Floresta,MT,10,0.0161,ALTA FLORESTA,10.0,0.0161,fato_vendas_mhev_brasil:474,475,,fora_do_escopo_sp_ou_uf_incerta
+Campos Novos,SC,10,0.0161,CAMPOS NOVOS,10.0,0.0161,fato_vendas_mhev_brasil:475,476,,fora_do_escopo_sp_ou_uf_incerta
+Canaã dos Carajás,PA,10,0.0161,CANAA DOS CARAJAS,10.0,0.0161,fato_vendas_mhev_brasil:476,477,,fora_do_escopo_sp_ou_uf_incerta
+Cruz Alta,RS,10,0.0161,CRUZ ALTA,10.0,0.0161,fato_vendas_mhev_brasil:477,478,,fora_do_escopo_sp_ou_uf_incerta
+Cubatão,SP,10,0.0161,CUBATAO,10.0,0.0161,fato_vendas_mhev_brasil:478,479,3513504,exato_nome_e_uf_sp
+Currais Novos,RN,10,0.0161,CURRAIS NOVOS,10.0,0.0161,fato_vendas_mhev_brasil:479,480,,fora_do_escopo_sp_ou_uf_incerta
+Eldorado do Sul,RS,10,0.0161,ELDORADO DO SUL,10.0,0.0161,fato_vendas_mhev_brasil:480,481,,fora_do_escopo_sp_ou_uf_incerta
+Escada,PE,10,0.0161,ESCADA,10.0,0.0161,fato_vendas_mhev_brasil:481,482,,fora_do_escopo_sp_ou_uf_incerta
+Goianésia,GO,10,0.0161,GOIANESIA,10.0,0.0161,fato_vendas_mhev_brasil:482,483,,fora_do_escopo_sp_ou_uf_incerta
+Goianira,GO,10,0.0161,GOIANIRA,10.0,0.0161,fato_vendas_mhev_brasil:483,484,,fora_do_escopo_sp_ou_uf_incerta
+Guabiruba,SC,10,0.0161,GUABIRUBA,10.0,0.0161,fato_vendas_mhev_brasil:484,485,,fora_do_escopo_sp_ou_uf_incerta
+Ibicuí,BA,10,0.0161,IBICUI,10.0,0.0161,fato_vendas_mhev_brasil:485,486,,fora_do_escopo_sp_ou_uf_incerta
+Ibirité,MG,10,0.0161,IBIRITE,10.0,0.0161,fato_vendas_mhev_brasil:486,487,,fora_do_escopo_sp_ou_uf_incerta
+Itapeva,SP,10,0.0161,ITAPEVA,10.0,0.0161,fato_vendas_mhev_brasil:487,488,3522406,exato_nome_e_uf_sp
+Jacobina,BA,10,0.0161,JACOBINA,10.0,0.0161,fato_vendas_mhev_brasil:488,489,,fora_do_escopo_sp_ou_uf_incerta
+Lavras,MG,10,0.0161,LAVRAS,10.0,0.0161,fato_vendas_mhev_brasil:489,490,,fora_do_escopo_sp_ou_uf_incerta
+Marataízes,ES,10,0.0161,MARATAIZES,10.0,0.0161,fato_vendas_mhev_brasil:490,491,,fora_do_escopo_sp_ou_uf_incerta
+Mineiros,GO,10,0.0161,MINEIROS,10.0,0.0161,fato_vendas_mhev_brasil:491,492,,fora_do_escopo_sp_ou_uf_incerta
+Monte Mor,SP,10,0.0161,MONTE MOR,10.0,0.0161,fato_vendas_mhev_brasil:492,493,3531803,exato_nome_e_uf_sp
+Nísia Floresta,RN,10,0.0161,NISIA FLORESTA,10.0,0.0161,fato_vendas_mhev_brasil:493,494,,fora_do_escopo_sp_ou_uf_incerta
+Piedade,SP,10,0.0161,PIEDADE,10.0,0.0161,fato_vendas_mhev_brasil:494,495,3537800,exato_nome_e_uf_sp
+Redenção,PA,10,0.0161,REDENCAO,10.0,0.0161,fato_vendas_mhev_brasil:495,496,,fora_do_escopo_sp_ou_uf_incerta
+Riacho de Santana,RN,10,0.0161,RIACHO DE SANTANA,10.0,0.0161,fato_vendas_mhev_brasil:496,497,,fora_do_escopo_sp_ou_uf_incerta
+Rio Largo,AL,10,0.0161,RIO LARGO,10.0,0.0161,fato_vendas_mhev_brasil:497,498,,fora_do_escopo_sp_ou_uf_incerta
+Santa Fé do Sul,SP,10,0.0161,SANTA FE DO SUL,10.0,0.0161,fato_vendas_mhev_brasil:498,499,3546603,exato_nome_e_uf_sp
+Santa Isabel,SP,10,0.0161,SANTA ISABEL,10.0,0.0161,fato_vendas_mhev_brasil:499,500,3546801,exato_nome_e_uf_sp

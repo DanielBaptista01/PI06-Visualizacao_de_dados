@@ -1,0 +1,2 @@
+﻿Municipio,Estado,Quantidade_MHEV,MarketShare_MHEV_Pct,municipio_chave,quantidade_mhev_num,market_share_mhev_pct_num,id_registro_mestre,linha_csv_origem,codigo_ibge_municipio,status_vinculo_ibge
+São Paulo,SP,5815,9.3354,SAO PAULO,5815.0,9.3354,fato_vendas_mhev_capital:1,2,3550308,exato_nome_e_uf_sp
