@@ -1,0 +1,344 @@
+﻿zona_od,NomeZona,NumeroMuni,NomeMunici,NumDistrit,NomeDistri,Area_ha_2,municipio_nome,origem_geometria
+1,Sé,36,São Paulo,80,Sé,57.1,São Paulo,Pesquisa OD 2023
+2,Parque Dom Pedro,36,São Paulo,80,Sé,113.64,São Paulo,Pesquisa OD 2023
+3,Praça João Mendes,36,São Paulo,80,Sé,47.75,São Paulo,Pesquisa OD 2023
+4,Ladeira da Memória,36,São Paulo,67,República,75.11,São Paulo,Pesquisa OD 2023
+5,República,36,São Paulo,67,República,74.95,São Paulo,Pesquisa OD 2023
+6,Santa Ifigênia,36,São Paulo,67,República,82.93,São Paulo,Pesquisa OD 2023
+7,Luz,36,São Paulo,9,Bom Retiro,154.6,São Paulo,Pesquisa OD 2023
+8,Bom Retiro,36,São Paulo,9,Bom Retiro,143.01,São Paulo,Pesquisa OD 2023
+9,Ponte Pequena,36,São Paulo,9,Bom Retiro,129.78,São Paulo,Pesquisa OD 2023
+10,Canindé,36,São Paulo,57,Pari,82.61,São Paulo,Pesquisa OD 2023
+11,Bom Jardim,36,São Paulo,57,Pari,49.85,São Paulo,Pesquisa OD 2023
+12,Pari,36,São Paulo,57,Pari,140.16,São Paulo,Pesquisa OD 2023
+13,João Teodoro,36,São Paulo,10,Brás,39.32,São Paulo,Pesquisa OD 2023
+14,Oriente,36,São Paulo,10,Brás,69.88,São Paulo,Pesquisa OD 2023
+15,Bresser,36,São Paulo,10,Brás,76.98,São Paulo,Pesquisa OD 2023
+16,Brás,36,São Paulo,10,Brás,109.08,São Paulo,Pesquisa OD 2023
+17,Gasômetro,36,São Paulo,10,Brás,69.35,São Paulo,Pesquisa OD 2023
+18,Independência,36,São Paulo,14,Cambuci,253.75,São Paulo,Pesquisa OD 2023
+19,Cambuci,36,São Paulo,14,Cambuci,140.43,São Paulo,Pesquisa OD 2023
+20,Glicério,36,São Paulo,49,Liberdade,108.02,São Paulo,Pesquisa OD 2023
+21,Aclimação,36,São Paulo,49,Liberdade,113.62,São Paulo,Pesquisa OD 2023
+22,Pires da Mota,36,São Paulo,49,Liberdade,50.03,São Paulo,Pesquisa OD 2023
+23,Centro Cultural,36,São Paulo,49,Liberdade,33.24,São Paulo,Pesquisa OD 2023
+24,Liberdade,36,São Paulo,49,Liberdade,59.49,São Paulo,Pesquisa OD 2023
+25,Treze de Maio,36,São Paulo,7,Bela Vista,42.85,São Paulo,Pesquisa OD 2023
+26,Bexiga,36,São Paulo,7,Bela Vista,51.76,São Paulo,Pesquisa OD 2023
+27,Bela Vista,36,São Paulo,7,Bela Vista,93.8,São Paulo,Pesquisa OD 2023
+28,São Carlos do Pinhal,36,São Paulo,7,Bela Vista,31.03,São Paulo,Pesquisa OD 2023
+29,Masp,36,São Paulo,7,Bela Vista,57.27,São Paulo,Pesquisa OD 2023
+30,Higienópolis,36,São Paulo,26,Consolação,67.81,São Paulo,Pesquisa OD 2023
+31,Vila Buarque,36,São Paulo,26,Consolação,89.58,São Paulo,Pesquisa OD 2023
+32,Consolação,36,São Paulo,26,Consolação,57.23,São Paulo,Pesquisa OD 2023
+33,Pacaembu,36,São Paulo,26,Consolação,90.45,São Paulo,Pesquisa OD 2023
+34,FAAP,36,São Paulo,26,Consolação,74.45,São Paulo,Pesquisa OD 2023
+35,Santa Cecília,36,São Paulo,70,Santa Cecília,144.09,São Paulo,Pesquisa OD 2023
+36,Marechal Deodoro,36,São Paulo,70,Santa Cecília,142.2,São Paulo,Pesquisa OD 2023
+37,Rudge,36,São Paulo,70,Santa Cecília,84.73,São Paulo,Pesquisa OD 2023
+38,Catumbi,36,São Paulo,8,Belém,81.44,São Paulo,Pesquisa OD 2023
+39,Belém,36,São Paulo,8,Belém,160.71,São Paulo,Pesquisa OD 2023
+40,Quarta Parada,36,São Paulo,8,Belém,127.4,São Paulo,Pesquisa OD 2023
+41,Belenzinho,36,São Paulo,8,Belém,180.11,São Paulo,Pesquisa OD 2023
+42,Celso Garcia,36,São Paulo,8,Belém,63.89,São Paulo,Pesquisa OD 2023
+43,Mooca,36,São Paulo,54,Mooca,271.79,São Paulo,Pesquisa OD 2023
+44,Alto da Mooca,36,São Paulo,54,Mooca,141.65,São Paulo,Pesquisa OD 2023
+45,Parque da Mooca,36,São Paulo,54,Mooca,381.42,São Paulo,Pesquisa OD 2023
+46,Água Rasa,36,São Paulo,1,Água Rasa,315.81,São Paulo,Pesquisa OD 2023
+47,Vila Bertioga,36,São Paulo,1,Água Rasa,195.28,São Paulo,Pesquisa OD 2023
+48,Regente Feijó,36,São Paulo,1,Água Rasa,203.96,São Paulo,Pesquisa OD 2023
+49,Ana Rosa,36,São Paulo,92,Vila Mariana,94.46,São Paulo,Pesquisa OD 2023
+50,Jardim da Glória,36,São Paulo,92,Vila Mariana,88.43,São Paulo,Pesquisa OD 2023
+51,Chácara Klabin,36,São Paulo,92,Vila Mariana,97.57,São Paulo,Pesquisa OD 2023
+52,Vila Mariana,36,São Paulo,92,Vila Mariana,59.61,São Paulo,Pesquisa OD 2023
+53,Santa Cruz,36,São Paulo,92,Vila Mariana,108.52,São Paulo,Pesquisa OD 2023
+54,Vila Clementino,36,São Paulo,92,Vila Mariana,93.7,São Paulo,Pesquisa OD 2023
+55,França Pinto,36,São Paulo,92,Vila Mariana,112.14,São Paulo,Pesquisa OD 2023
+56,Rodrigues Alves,36,São Paulo,92,Vila Mariana,103.55,São Paulo,Pesquisa OD 2023
+57,Paraíso,36,São Paulo,92,Vila Mariana,96.28,São Paulo,Pesquisa OD 2023
+58,Bosque da Saúde,36,São Paulo,79,Saúde,169.91,São Paulo,Pesquisa OD 2023
+59,Saúde,36,São Paulo,79,Saúde,260.81,São Paulo,Pesquisa OD 2023
+60,Planalto Paulista,36,São Paulo,79,Saúde,321.66,São Paulo,Pesquisa OD 2023
+61,Mirandópolis,36,São Paulo,79,Saúde,173.45,São Paulo,Pesquisa OD 2023
+62,Parque Ibirapuera,36,São Paulo,53,Moema,283.7,São Paulo,Pesquisa OD 2023
+63,Jardim Luzitânia,36,São Paulo,53,Moema,103.07,São Paulo,Pesquisa OD 2023
+64,Moema,36,São Paulo,53,Moema,175.13,São Paulo,Pesquisa OD 2023
+65,Vila Helena,36,São Paulo,53,Moema,104.82,São Paulo,Pesquisa OD 2023
+66,Bandeirantes,36,São Paulo,53,Moema,133.42,São Paulo,Pesquisa OD 2023
+67,Vila Nova Conceição,36,São Paulo,53,Moema,112.48,São Paulo,Pesquisa OD 2023
+68,Chácara Itaim,36,São Paulo,34,Itaim Bibi,204.01,São Paulo,Pesquisa OD 2023
+69,Vila Olímpia,36,São Paulo,34,Itaim Bibi,89.63,São Paulo,Pesquisa OD 2023
+70,Hélio Pelegrino,36,São Paulo,34,Itaim Bibi,103.38,São Paulo,Pesquisa OD 2023
+71,Brooklin,36,São Paulo,34,Itaim Bibi,234.25,São Paulo,Pesquisa OD 2023
+72,Vila Cordeiro,36,São Paulo,34,Itaim Bibi,176.69,São Paulo,Pesquisa OD 2023
+73,Berrini,36,São Paulo,34,Itaim Bibi,197.39,São Paulo,Pesquisa OD 2023
+74,Campinas,36,São Paulo,44,Jardim Paulista,49.08,São Paulo,Pesquisa OD 2023
+75,Pamplona,36,São Paulo,44,Jardim Paulista,51.34,São Paulo,Pesquisa OD 2023
+76,Jardins,36,São Paulo,44,Jardim Paulista,237.7,São Paulo,Pesquisa OD 2023
+77,Clínicas,36,São Paulo,44,Jardim Paulista,128.72,São Paulo,Pesquisa OD 2023
+78,Oscar Freire,36,São Paulo,44,Jardim Paulista,100.01,São Paulo,Pesquisa OD 2023
+79,Trianon,36,São Paulo,44,Jardim Paulista,59.81,São Paulo,Pesquisa OD 2023
+80,Jardim Paulistano,36,São Paulo,63,Pinheiros,98.98,São Paulo,Pesquisa OD 2023
+81,Jardim Europa,36,São Paulo,63,Pinheiros,308.02,São Paulo,Pesquisa OD 2023
+82,Pinheiros,36,São Paulo,63,Pinheiros,202.58,São Paulo,Pesquisa OD 2023
+83,Vila Madalena,36,São Paulo,63,Pinheiros,219.31,São Paulo,Pesquisa OD 2023
+84,PUC,36,São Paulo,61,Perdizes,73.32,São Paulo,Pesquisa OD 2023
+85,Cardoso de Almeida,36,São Paulo,61,Perdizes,63.39,São Paulo,Pesquisa OD 2023
+86,Zequinha de Abreu,36,São Paulo,61,Perdizes,49.61,São Paulo,Pesquisa OD 2023
+87,Sumaré,36,São Paulo,61,Perdizes,139.16,São Paulo,Pesquisa OD 2023
+88,Perdizes,36,São Paulo,61,Perdizes,168.45,São Paulo,Pesquisa OD 2023
+89,Vila Anglo Brasileira,36,São Paulo,61,Perdizes,79.12,São Paulo,Pesquisa OD 2023
+90,Pompéia,36,São Paulo,61,Perdizes,60.0,São Paulo,Pesquisa OD 2023
+91,Santa Marina,36,São Paulo,6,Barra Funda,295.36,São Paulo,Pesquisa OD 2023
+92,Barra Funda,36,São Paulo,6,Barra Funda,118.21,São Paulo,Pesquisa OD 2023
+93,Francisco Matarazzo,36,São Paulo,6,Barra Funda,105.13,São Paulo,Pesquisa OD 2023
+94,Água Branca,36,São Paulo,6,Barra Funda,71.11,São Paulo,Pesquisa OD 2023
+95,Vila Beatriz,36,São Paulo,2,Alto de Pinheiros,183.66,São Paulo,Pesquisa OD 2023
+96,Alto de Pinheiros,36,São Paulo,2,Alto de Pinheiros,253.17,São Paulo,Pesquisa OD 2023
+97,Boaçava,36,São Paulo,2,Alto de Pinheiros,314.44,São Paulo,Pesquisa OD 2023
+98,Vila Anastácio,36,São Paulo,48,Lapa,164.66,São Paulo,Pesquisa OD 2023
+99,Lapa de Baixo,36,São Paulo,48,Lapa,242.69,São Paulo,Pesquisa OD 2023
+100,Lapa,36,São Paulo,48,Lapa,225.22,São Paulo,Pesquisa OD 2023
+101,Vila Ipojuca,36,São Paulo,48,Lapa,168.47,São Paulo,Pesquisa OD 2023
+102,Alto da Lapa,36,São Paulo,48,Lapa,159.95,São Paulo,Pesquisa OD 2023
+103,Gavião Peixoto,36,São Paulo,48,Lapa,68.96,São Paulo,Pesquisa OD 2023
+104,Bela Aliança,36,São Paulo,90,Vila Leopoldina,71.35,São Paulo,Pesquisa OD 2023
+105,Vila Hamburguesa,36,São Paulo,90,Vila Leopoldina,149.18,São Paulo,Pesquisa OD 2023
+106,CEASA,36,São Paulo,90,Vila Leopoldina,197.78,São Paulo,Pesquisa OD 2023
+107,Vila Leopoldina,36,São Paulo,90,Vila Leopoldina,91.65,São Paulo,Pesquisa OD 2023
+108,Emissário,36,São Paulo,90,Vila Leopoldina,190.52,São Paulo,Pesquisa OD 2023
+109,Vila Zatt,36,São Paulo,64,Pirituba,1220.22,São Paulo,Pesquisa OD 2023
+110,Pirituba,36,São Paulo,64,Pirituba,488.92,São Paulo,Pesquisa OD 2023
+111,São Domingos,36,São Paulo,73,São Domingos,581.76,São Paulo,Pesquisa OD 2023
+112,Jardim Mutinga,36,São Paulo,73,São Domingos,411.97,São Paulo,Pesquisa OD 2023
+113,Vila Jaguara,36,São Paulo,39,Jaguara,454.34,São Paulo,Pesquisa OD 2023
+114,Parque do Jaraguá,36,São Paulo,41,Jaraguá,489.12,São Paulo,Pesquisa OD 2023
+115,Nova Jaraguá,36,São Paulo,41,Jaraguá,777.78,São Paulo,Pesquisa OD 2023
+116,Parada de Taipas,36,São Paulo,41,Jaraguá,1553.24,São Paulo,Pesquisa OD 2023
+117,Parque Morro Doce,36,São Paulo,3,Anhanguera,1527.16,São Paulo,Pesquisa OD 2023
+118,Anhanguera,36,São Paulo,3,Anhanguera,1812.79,São Paulo,Pesquisa OD 2023
+119,Perus,36,São Paulo,62,Perus,2369.13,São Paulo,Pesquisa OD 2023
+120,Vista Alegre,36,São Paulo,11,Brasilândia,742.47,São Paulo,Pesquisa OD 2023
+121,Jardim Damasceno,36,São Paulo,11,Brasilândia,573.73,São Paulo,Pesquisa OD 2023
+122,Vila Souza,36,São Paulo,11,Brasilândia,220.86,São Paulo,Pesquisa OD 2023
+123,Vila Terezinha,36,São Paulo,11,Brasilândia,250.78,São Paulo,Pesquisa OD 2023
+124,Brasilândia,36,São Paulo,11,Brasilândia,318.28,São Paulo,Pesquisa OD 2023
+125,Vila Morro Grande,36,São Paulo,29,Freguesia do Ó,413.07,São Paulo,Pesquisa OD 2023
+126,Itaberaba,36,São Paulo,29,Freguesia do Ó,207.42,São Paulo,Pesquisa OD 2023
+127,Freguesia do Ó,36,São Paulo,29,Freguesia do Ó,485.85,São Paulo,Pesquisa OD 2023
+128,Carandiru,36,São Paulo,71,Santana,38.03,São Paulo,Pesquisa OD 2023
+129,Santana,36,São Paulo,71,Santana,54.36,São Paulo,Pesquisa OD 2023
+130,Zaki Narchi,36,São Paulo,71,Santana,71.32,São Paulo,Pesquisa OD 2023
+131,Tietê,36,São Paulo,71,Santana,78.6,São Paulo,Pesquisa OD 2023
+132,Parque Anhembi,36,São Paulo,71,Santana,313.52,São Paulo,Pesquisa OD 2023
+133,Alfredo Pujol,36,São Paulo,71,Santana,215.07,São Paulo,Pesquisa OD 2023
+134,Santa Terezinha,36,São Paulo,71,Santana,251.08,São Paulo,Pesquisa OD 2023
+135,Jardim São Paulo,36,São Paulo,71,Santana,291.23,São Paulo,Pesquisa OD 2023
+136,Casa Verde,36,São Paulo,21,Casa Verde,325.35,São Paulo,Pesquisa OD 2023
+137,Parque Peruche,36,São Paulo,21,Casa Verde,391.87,São Paulo,Pesquisa OD 2023
+138,Limão,36,São Paulo,50,Limão,171.8,São Paulo,Pesquisa OD 2023
+139,Jardim Primavera,36,São Paulo,50,Limão,192.75,São Paulo,Pesquisa OD 2023
+140,Vila Santa Maria,36,São Paulo,50,Limão,277.94,São Paulo,Pesquisa OD 2023
+141,Cachoeirinha,36,São Paulo,13,Cachoeirinha,478.58,São Paulo,Pesquisa OD 2023
+142,Jardim Peri,36,São Paulo,13,Cachoeirinha,443.68,São Paulo,Pesquisa OD 2023
+143,Reserva da Cantareira,36,São Paulo,13,Cachoeirinha,436.61,São Paulo,Pesquisa OD 2023
+144,Mandaqui,36,São Paulo,51,Mandaqui,552.45,São Paulo,Pesquisa OD 2023
+145,Horto Florestal,36,São Paulo,51,Mandaqui,342.18,São Paulo,Pesquisa OD 2023
+146,ETA Guaraú,36,São Paulo,51,Mandaqui,428.67,São Paulo,Pesquisa OD 2023
+147,Parque Palmas do Tremembé,36,São Paulo,83,Tremembé,407.03,São Paulo,Pesquisa OD 2023
+148,Tremembé,36,São Paulo,83,Tremembé,331.62,São Paulo,Pesquisa OD 2023
+149,Cantareira,36,São Paulo,83,Tremembé,2886.45,São Paulo,Pesquisa OD 2023
+150,Jardim das Pedras,36,São Paulo,83,Tremembé,1609.01,São Paulo,Pesquisa OD 2023
+151,Jardim Guapira,36,São Paulo,83,Tremembé,548.53,São Paulo,Pesquisa OD 2023
+152,Parada Inglesa,36,São Paulo,84,Tucuruvi,242.67,São Paulo,Pesquisa OD 2023
+153,Tucuruvi,36,São Paulo,84,Tucuruvi,358.5,São Paulo,Pesquisa OD 2023
+154,Vila Gustavo,36,São Paulo,84,Tucuruvi,345.8,São Paulo,Pesquisa OD 2023
+155,Cohab Jova Rural,36,São Paulo,38,Jaçanã,254.58,São Paulo,Pesquisa OD 2023
+156,Jaçanã,36,São Paulo,38,Jaçanã,386.23,São Paulo,Pesquisa OD 2023
+157,Parque Edu Chaves,36,São Paulo,38,Jaçanã,109.91,São Paulo,Pesquisa OD 2023
+158,Vila Medeiros,36,São Paulo,94,Vila Medeiros,335.02,São Paulo,Pesquisa OD 2023
+159,Jardim Brasil,36,São Paulo,94,Vila Medeiros,454.37,São Paulo,Pesquisa OD 2023
+160,Jardim Japão,36,São Paulo,91,Vila Maria,396.23,São Paulo,Pesquisa OD 2023
+161,Parque Novo Mundo,36,São Paulo,91,Vila Maria,551.36,São Paulo,Pesquisa OD 2023
+162,Vila Maria,36,São Paulo,91,Vila Maria,234.12,São Paulo,Pesquisa OD 2023
+163,Vila Isolina Mazzei,36,São Paulo,88,Vila Guilherme,379.5,São Paulo,Pesquisa OD 2023
+164,Vila Guilherme,36,São Paulo,88,Vila Guilherme,170.9,São Paulo,Pesquisa OD 2023
+165,Coroa,36,São Paulo,88,Vila Guilherme,174.39,São Paulo,Pesquisa OD 2023
+166,Gomes Cardim,36,São Paulo,82,Tatuapé,243.24,São Paulo,Pesquisa OD 2023
+167,Tatuapé,36,São Paulo,82,Tatuapé,156.88,São Paulo,Pesquisa OD 2023
+168,Chácara do Piqueri,36,São Paulo,82,Tatuapé,198.59,São Paulo,Pesquisa OD 2023
+169,Parque São Jorge,36,São Paulo,82,Tatuapé,252.07,São Paulo,Pesquisa OD 2023
+170,Penha,36,São Paulo,60,Penha,384.16,São Paulo,Pesquisa OD 2023
+171,Tiquatira,36,São Paulo,60,Penha,324.46,São Paulo,Pesquisa OD 2023
+172,Vila Esperança,36,São Paulo,60,Penha,228.82,São Paulo,Pesquisa OD 2023
+173,Vila Ré,36,São Paulo,60,Penha,208.23,São Paulo,Pesquisa OD 2023
+174,Rui Barbosa,36,São Paulo,18,Cangaíba,271.23,São Paulo,Pesquisa OD 2023
+175,Estação Eng. Goulart,36,São Paulo,18,Cangaíba,193.33,São Paulo,Pesquisa OD 2023
+176,Cangaíba,36,São Paulo,18,Cangaíba,333.53,São Paulo,Pesquisa OD 2023
+177,Parque Ecológico do Tietê,36,São Paulo,18,Cangaíba,530.85,São Paulo,Pesquisa OD 2023
+178,USP Leste I,36,São Paulo,18,Cangaíba,50.18,São Paulo,Pesquisa OD 2023
+179,USP Leste II,36,São Paulo,28,Ermelino Matarazzo,122.83,São Paulo,Pesquisa OD 2023
+180,Ermelino Matarazzo,36,São Paulo,28,Ermelino Matarazzo,448.82,São Paulo,Pesquisa OD 2023
+181,Parque Buturussu,36,São Paulo,28,Ermelino Matarazzo,371.83,São Paulo,Pesquisa OD 2023
+182,Ponte Rasa,36,São Paulo,65,Ponte Rasa,365.36,São Paulo,Pesquisa OD 2023
+183,Burgo Paulista,36,São Paulo,65,Ponte Rasa,291.63,São Paulo,Pesquisa OD 2023
+184,Limoeiro,36,São Paulo,89,Vila Jacuí,143.33,São Paulo,Pesquisa OD 2023
+185,Laranja da China,36,São Paulo,89,Vila Jacuí,131.72,São Paulo,Pesquisa OD 2023
+186,Pedro José Nunes,36,São Paulo,89,Vila Jacuí,86.18,São Paulo,Pesquisa OD 2023
+187,Parque Cruzeiro do Sul,36,São Paulo,89,Vila Jacuí,249.91,São Paulo,Pesquisa OD 2023
+188,Vila Jacuí,36,São Paulo,89,Vila Jacuí,211.87,São Paulo,Pesquisa OD 2023
+189,Parada XV,36,São Paulo,36,Itaquera,324.46,São Paulo,Pesquisa OD 2023
+190,Itaquera,36,São Paulo,36,Itaquera,283.17,São Paulo,Pesquisa OD 2023
+191,Arena Corinthians,36,São Paulo,36,Itaquera,140.29,São Paulo,Pesquisa OD 2023
+192,Vila Campanela,36,São Paulo,36,Itaquera,230.53,São Paulo,Pesquisa OD 2023
+193,Araucárias,36,São Paulo,36,Itaquera,129.58,São Paulo,Pesquisa OD 2023
+194,Parque Guarani,36,São Paulo,36,Itaquera,126.45,São Paulo,Pesquisa OD 2023
+195,Rio Verde,36,São Paulo,36,Itaquera,238.76,São Paulo,Pesquisa OD 2023
+196,Saudade,36,São Paulo,76,São Miguel,207.28,São Paulo,Pesquisa OD 2023
+197,São Miguel Paulista,36,São Paulo,76,São Miguel,302.65,São Paulo,Pesquisa OD 2023
+198,Cidade Nitro-Operária,36,São Paulo,76,São Miguel,357.92,São Paulo,Pesquisa OD 2023
+199,Jardim Helena,36,São Paulo,43,Jardim Helena,684.67,São Paulo,Pesquisa OD 2023
+200,Jardim Romano,36,São Paulo,43,Jardim Helena,230.77,São Paulo,Pesquisa OD 2023
+201,Vila Curuçá,36,São Paulo,86,Vila Curuçá,503.17,São Paulo,Pesquisa OD 2023
+202,Jardim Robru,36,São Paulo,86,Vila Curuçá,449.19,São Paulo,Pesquisa OD 2023
+203,Lajeado,36,São Paulo,47,Lajeado,276.95,São Paulo,Pesquisa OD 2023
+204,Fábrica Bandeirantes,36,São Paulo,47,Lajeado,615.33,São Paulo,Pesquisa OD 2023
+205,Fazenda Itaim,36,São Paulo,35,Itaim Paulista,462.24,São Paulo,Pesquisa OD 2023
+206,Itaim Paulista,36,São Paulo,35,Itaim Paulista,302.19,São Paulo,Pesquisa OD 2023
+207,Jardim das Oliveiras,36,São Paulo,35,Itaim Paulista,460.11,São Paulo,Pesquisa OD 2023
+208,Vila Califórnia,36,São Paulo,20,Carrão,340.04,São Paulo,Pesquisa OD 2023
+209,Vila Carrão,36,São Paulo,20,Carrão,440.28,São Paulo,Pesquisa OD 2023
+210,Jardim Anália Franco,36,São Paulo,87,Vila Formosa,334.04,São Paulo,Pesquisa OD 2023
+211,Vila Formosa,36,São Paulo,87,Vila Formosa,417.48,São Paulo,Pesquisa OD 2023
+212,Barreira Grande,36,São Paulo,4,Aricanduva,280.1,São Paulo,Pesquisa OD 2023
+213,Aricanduva,36,São Paulo,4,Aricanduva,406.17,São Paulo,Pesquisa OD 2023
+214,Frei Mont'Alverne,36,São Paulo,93,Vila Matilde,225.2,São Paulo,Pesquisa OD 2023
+215,Vila Matilde,36,São Paulo,93,Vila Matilde,330.17,São Paulo,Pesquisa OD 2023
+216,Cidade Patriarca,36,São Paulo,93,Vila Matilde,336.5,São Paulo,Pesquisa OD 2023
+217,Cidade A.E.Carvalho,36,São Paulo,5,Artur Alvim,265.77,São Paulo,Pesquisa OD 2023
+218,Artur Alvim,36,São Paulo,5,Artur Alvim,387.27,São Paulo,Pesquisa OD 2023
+219,Cidade Líder,36,São Paulo,24,Cidade Líder,347.51,São Paulo,Pesquisa OD 2023
+220,Santa Marcelina,36,São Paulo,24,Cidade Líder,265.94,São Paulo,Pesquisa OD 2023
+221,Parque Savoy,36,São Paulo,24,Cidade Líder,444.75,São Paulo,Pesquisa OD 2023
+222,Vila Carmosina,36,São Paulo,58,Parque do Carmo,343.76,São Paulo,Pesquisa OD 2023
+223,Fazenda Caguaçu,36,São Paulo,58,Parque do Carmo,439.53,São Paulo,Pesquisa OD 2023
+224,Parque do Carmo,36,São Paulo,58,Parque do Carmo,777.43,São Paulo,Pesquisa OD 2023
+225,Gleba do Pêssego,36,São Paulo,46,José Bonifácio,1028.47,São Paulo,Pesquisa OD 2023
+226,José Bonifácio,36,São Paulo,46,José Bonifácio,416.53,São Paulo,Pesquisa OD 2023
+227,Guaianases,36,São Paulo,31,Guaianases,472.34,São Paulo,Pesquisa OD 2023
+228,Juscelino Kubitschek,36,São Paulo,31,Guaianases,418.82,São Paulo,Pesquisa OD 2023
+229,Cidade Tiradentes,36,São Paulo,25,Cidade Tiradentes,953.59,São Paulo,Pesquisa OD 2023
+230,Santa Etelvina,36,São Paulo,25,Cidade Tiradentes,541.3,São Paulo,Pesquisa OD 2023
+231,Terceira Divisão,36,São Paulo,32,Iguatemi,1130.9,São Paulo,Pesquisa OD 2023
+232,Iguatemi,36,São Paulo,32,Iguatemi,498.47,São Paulo,Pesquisa OD 2023
+233,Sítio Carrãozinho,36,São Paulo,32,Iguatemi,323.28,São Paulo,Pesquisa OD 2023
+234,Parque São Rafael,36,São Paulo,77,São Rafael,742.33,São Paulo,Pesquisa OD 2023
+235,Rodolfo Pirani,36,São Paulo,77,São Rafael,566.04,São Paulo,Pesquisa OD 2023
+236,Ipiranga,36,São Paulo,33,Ipiranga,91.94,São Paulo,Pesquisa OD 2023
+237,Sacomã,36,São Paulo,33,Ipiranga,90.34,São Paulo,Pesquisa OD 2023
+238,Alto do Ipiranga,36,São Paulo,33,Ipiranga,160.81,São Paulo,Pesquisa OD 2023
+239,Vila São José,36,São Paulo,33,Ipiranga,177.55,São Paulo,Pesquisa OD 2023
+240,Vila Monumento,36,São Paulo,33,Ipiranga,165.19,São Paulo,Pesquisa OD 2023
+241,Vila Independência,36,São Paulo,33,Ipiranga,170.22,São Paulo,Pesquisa OD 2023
+242,Vila Carioca,36,São Paulo,33,Ipiranga,249.11,São Paulo,Pesquisa OD 2023
+243,Moinho Velho,36,São Paulo,69,Sacomã,347.41,São Paulo,Pesquisa OD 2023
+244,Vila Heliópolis,36,São Paulo,69,Sacomã,232.81,São Paulo,Pesquisa OD 2023
+245,São João Clímaco,36,São Paulo,69,Sacomã,198.15,São Paulo,Pesquisa OD 2023
+246,Anchieta,36,São Paulo,69,Sacomã,217.08,São Paulo,Pesquisa OD 2023
+247,Vila das Mercês,36,São Paulo,69,Sacomã,468.94,São Paulo,Pesquisa OD 2023
+248,Parque do Estado,36,São Paulo,27,Cursino,445.41,São Paulo,Pesquisa OD 2023
+249,Água Funda,36,São Paulo,27,Cursino,276.3,São Paulo,Pesquisa OD 2023
+250,Jardim da Saúde,36,São Paulo,27,Cursino,182.94,São Paulo,Pesquisa OD 2023
+251,Vila Gumercindo,36,São Paulo,27,Cursino,137.19,São Paulo,Pesquisa OD 2023
+252,Jardim Previdência,36,São Paulo,27,Cursino,165.81,São Paulo,Pesquisa OD 2023
+253,Tamanduateí,36,São Paulo,95,Vila Prudente,112.99,São Paulo,Pesquisa OD 2023
+254,Orfanato,36,São Paulo,95,Vila Prudente,354.26,São Paulo,Pesquisa OD 2023
+255,Vila Zelina,36,São Paulo,95,Vila Prudente,492.94,São Paulo,Pesquisa OD 2023
+256,Linhas Corrente,36,São Paulo,74,São Lucas,251.81,São Paulo,Pesquisa OD 2023
+257,Vila Ema,36,São Paulo,74,São Lucas,267.22,São Paulo,Pesquisa OD 2023
+258,Parque São Lucas,36,São Paulo,74,São Lucas,449.68,São Paulo,Pesquisa OD 2023
+259,Vila Cardoso Franco,36,São Paulo,78,Sapopemba,163.88,São Paulo,Pesquisa OD 2023
+260,Parque Santa Madalena,36,São Paulo,78,Sapopemba,204.85,São Paulo,Pesquisa OD 2023
+261,Jardim Colorado,36,São Paulo,78,Sapopemba,320.26,São Paulo,Pesquisa OD 2023
+262,Teotônio Vilela,36,São Paulo,78,Sapopemba,346.33,São Paulo,Pesquisa OD 2023
+263,Fazenda da Juta,36,São Paulo,78,Sapopemba,329.57,São Paulo,Pesquisa OD 2023
+264,São Mateus,36,São Paulo,75,São Mateus,427.59,São Paulo,Pesquisa OD 2023
+265,Cidade IV Centenário,36,São Paulo,75,São Mateus,332.58,São Paulo,Pesquisa OD 2023
+266,Rio Claro,36,São Paulo,75,São Mateus,218.36,São Paulo,Pesquisa OD 2023
+267,Cidade Satélite,36,São Paulo,75,São Mateus,300.48,São Paulo,Pesquisa OD 2023
+268,Joaquim Nabuco,36,São Paulo,15,Campo Belo,198.44,São Paulo,Pesquisa OD 2023
+269,Vieira de Moraes,36,São Paulo,15,Campo Belo,171.28,São Paulo,Pesquisa OD 2023
+270,Campo Belo,36,São Paulo,15,Campo Belo,138.57,São Paulo,Pesquisa OD 2023
+271,Congonhas,36,São Paulo,15,Campo Belo,179.42,São Paulo,Pesquisa OD 2023
+272,Jardim Aeroporto,36,São Paulo,15,Campo Belo,198.55,São Paulo,Pesquisa OD 2023
+273,Vila Santa Catarina,36,São Paulo,37,Jabaquara,325.71,São Paulo,Pesquisa OD 2023
+274,Jabaquara,36,São Paulo,37,Jabaquara,288.72,São Paulo,Pesquisa OD 2023
+275,Cidade Vargas,36,São Paulo,37,Jabaquara,347.45,São Paulo,Pesquisa OD 2023
+276,Jardim Bom Clima,36,São Paulo,37,Jabaquara,445.92,São Paulo,Pesquisa OD 2023
+277,Cupecê,36,São Paulo,22,Cidade Ademar,416.89,São Paulo,Pesquisa OD 2023
+278,Jardim Miriam,36,São Paulo,22,Cidade Ademar,513.94,São Paulo,Pesquisa OD 2023
+279,Vila Missionária,36,São Paulo,22,Cidade Ademar,295.4,São Paulo,Pesquisa OD 2023
+280,Jurubatuba,36,São Paulo,16,Campo Grande,482.59,São Paulo,Pesquisa OD 2023
+281,Vila São Pedro,36,São Paulo,16,Campo Grande,312.58,São Paulo,Pesquisa OD 2023
+282,Campo Grande,36,São Paulo,16,Campo Grande,272.36,São Paulo,Pesquisa OD 2023
+283,Vila Sabará,36,São Paulo,16,Campo Grande,234.56,São Paulo,Pesquisa OD 2023
+284,Mar Paulista,36,São Paulo,59,Pedreira,548.66,São Paulo,Pesquisa OD 2023
+285,Pedreira,36,São Paulo,59,Pedreira,1302.69,São Paulo,Pesquisa OD 2023
+286,Vila Socorro,36,São Paulo,81,Socorro,293.26,São Paulo,Pesquisa OD 2023
+287,Parque Interlagos,36,São Paulo,81,Socorro,935.66,São Paulo,Pesquisa OD 2023
+288,Jardim Represa,36,São Paulo,23,Cidade Dutra,783.73,São Paulo,Pesquisa OD 2023
+289,Rio Bonito,36,São Paulo,23,Cidade Dutra,495.82,São Paulo,Pesquisa OD 2023
+290,SESC Interlagos,36,São Paulo,23,Cidade Dutra,736.48,São Paulo,Pesquisa OD 2023
+291,Jardim Presidente,36,São Paulo,23,Cidade Dutra,762.54,São Paulo,Pesquisa OD 2023
+292,Vila Natal,36,São Paulo,30,Grajaú,415.09,São Paulo,Pesquisa OD 2023
+293,Grajaú,36,São Paulo,30,Grajaú,540.7,São Paulo,Pesquisa OD 2023
+294,Cocaia,36,São Paulo,30,Grajaú,1093.33,São Paulo,Pesquisa OD 2023
+295,Belmira Marin,36,São Paulo,30,Grajaú,1236.83,São Paulo,Pesquisa OD 2023
+296,Bororé,36,São Paulo,30,Grajaú,5992.56,São Paulo,Pesquisa OD 2023
+297,Jaceguava,36,São Paulo,56,Parelheiros,3512.69,São Paulo,Pesquisa OD 2023
+298,Parelheiros,36,São Paulo,56,Parelheiros,11667.08,São Paulo,Pesquisa OD 2023
+299,Marsilac,36,São Paulo,52,Marsilac,4564.97,São Paulo,Pesquisa OD 2023
+300,Jardim Emburá,36,São Paulo,52,Marsilac,16230.99,São Paulo,Pesquisa OD 2023
+301,Granja Julieta,36,São Paulo,72,Santo Amaro,616.88,São Paulo,Pesquisa OD 2023
+302,Chácara Flora,36,São Paulo,72,Santo Amaro,452.25,São Paulo,Pesquisa OD 2023
+303,Santo Amaro,36,São Paulo,72,Santo Amaro,257.11,São Paulo,Pesquisa OD 2023
+304,Vila Miranda,36,São Paulo,72,Santo Amaro,271.15,São Paulo,Pesquisa OD 2023
+305,Jardim São Luís,36,São Paulo,45,Jardim São Luís,408.45,São Paulo,Pesquisa OD 2023
+306,Centro Empresarial,36,São Paulo,45,Jardim São Luís,675.29,São Paulo,Pesquisa OD 2023
+307,Guarapiranga,36,São Paulo,45,Jardim São Luís,1513.25,São Paulo,Pesquisa OD 2023
+308,Jardim Capela,36,São Paulo,42,Jardim Ângela,2022.05,São Paulo,Pesquisa OD 2023
+309,Riviera,36,São Paulo,42,Jardim Ângela,798.79,São Paulo,Pesquisa OD 2023
+310,Jardim Turquesa,36,São Paulo,42,Jardim Ângela,282.87,São Paulo,Pesquisa OD 2023
+311,Morro do Índio,36,São Paulo,42,Jardim Ângela,114.64,São Paulo,Pesquisa OD 2023
+312,Jardim Ângela,36,São Paulo,42,Jardim Ângela,463.77,São Paulo,Pesquisa OD 2023
+313,Capão Redondo,36,São Paulo,19,Capão Redondo,219.39,São Paulo,Pesquisa OD 2023
+314,Jardim Sônia Ingá,36,São Paulo,19,Capão Redondo,105.38,São Paulo,Pesquisa OD 2023
+315,Adventista,36,São Paulo,19,Capão Redondo,545.26,São Paulo,Pesquisa OD 2023
+316,Parque Fernanda,36,São Paulo,19,Capão Redondo,512.27,São Paulo,Pesquisa OD 2023
+317,Morumbi,36,São Paulo,55,Morumbi,271.46,São Paulo,Pesquisa OD 2023
+318,Jóquei Clube,36,São Paulo,55,Morumbi,333.24,São Paulo,Pesquisa OD 2023
+319,Fazenda Morumbi,36,São Paulo,55,Morumbi,320.73,São Paulo,Pesquisa OD 2023
+320,Real Parque,36,São Paulo,55,Morumbi,223.42,São Paulo,Pesquisa OD 2023
+321,Paraisópolis,36,São Paulo,85,Vila Andrade,361.95,São Paulo,Pesquisa OD 2023
+322,Jardim Vitória Régia,36,São Paulo,85,Vila Andrade,370.18,São Paulo,Pesquisa OD 2023
+323,Vila Suzana,36,São Paulo,85,Vila Andrade,300.5,São Paulo,Pesquisa OD 2023
+324,Parque Arariba,36,São Paulo,17,Campo Limpo,346.59,São Paulo,Pesquisa OD 2023
+325,Jardim Mitsutani,36,São Paulo,17,Campo Limpo,349.31,São Paulo,Pesquisa OD 2023
+326,Pirajussara,36,São Paulo,17,Campo Limpo,270.05,São Paulo,Pesquisa OD 2023
+327,Jardim Umarizal,36,São Paulo,17,Campo Limpo,294.91,São Paulo,Pesquisa OD 2023
+328,Portal do Morumbi,36,São Paulo,96,Vila Sônia,151.43,São Paulo,Pesquisa OD 2023
+329,Jardim Jussara,36,São Paulo,96,Vila Sônia,231.55,São Paulo,Pesquisa OD 2023
+330,Vila Sônia,36,São Paulo,96,Vila Sônia,348.44,São Paulo,Pesquisa OD 2023
+331,Jardim Maria do Carmo,36,São Paulo,96,Vila Sônia,277.55,São Paulo,Pesquisa OD 2023
+332,Jardim Cambará,36,São Paulo,66,Raposo Tavares,480.2,São Paulo,Pesquisa OD 2023
+333,Jardim João XXIII,36,São Paulo,66,Raposo Tavares,467.65,São Paulo,Pesquisa OD 2023
+334,Raposo Tavares,36,São Paulo,66,Raposo Tavares,271.34,São Paulo,Pesquisa OD 2023
+335,Rio Pequeno,36,São Paulo,68,Rio Pequeno,245.75,São Paulo,Pesquisa OD 2023
+336,Jardim Ester Yolanda,36,São Paulo,68,Rio Pequeno,264.93,São Paulo,Pesquisa OD 2023
+337,Jardim Adalgiza,36,São Paulo,68,Rio Pequeno,467.13,São Paulo,Pesquisa OD 2023
+338,Parque Continental,36,São Paulo,40,Jaguaré,226.38,São Paulo,Pesquisa OD 2023
+339,Jaguaré,36,São Paulo,40,Jaguaré,430.44,São Paulo,Pesquisa OD 2023
+340,Cidade Universitária,36,São Paulo,12,Butantã,584.56,São Paulo,Pesquisa OD 2023
+341,Butantã,36,São Paulo,12,Butantã,207.11,São Paulo,Pesquisa OD 2023
+342,Jardim Caxingui,36,São Paulo,12,Butantã,180.08,São Paulo,Pesquisa OD 2023
+343,Jardim Bonfiglioli,36,São Paulo,12,Butantã,319.97,São Paulo,Pesquisa OD 2023

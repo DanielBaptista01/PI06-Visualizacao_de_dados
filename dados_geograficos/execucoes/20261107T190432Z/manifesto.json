@@ -1,0 +1,36 @@
+{
+  "gerado_utc": "2026-11-07T19:04:34.245771+00:00",
+  "status": "integracao_espacial_sem_inferencia_de_viagens",
+  "fontes": {
+    "zonas_od": "C:\\Users\\Isaias filho\\Documents\\PI06-Visualizacao_de_dados\\dados_cache\\geografia\\od2023\\Shape\\Zonas_2023.shp",
+    "distritos_od": "C:\\Users\\Isaias filho\\Documents\\PI06-Visualizacao_de_dados\\dados_cache\\geografia\\od2023\\Shape\\Distritos_2023_region.shp",
+    "distritos_oficiais": null,
+    "subprefeituras": null,
+    "ocm": ".\\dados_limpos\\10_OPEN_CHARGE_MAP_SP.csv"
+  },
+  "contagens": {
+    "zonas_od_rmsp": 527,
+    "zonas_od_capital_por_campo_municipio": 343,
+    "distritos_od_rmsp": 134,
+    "relacoes_od_distritos_od": 355,
+    "pontos_total": 143,
+    "coordenadas_invalidas": 0,
+    "associados_uma_zona": 143,
+    "nao_associados_ou_ambiguos": 0
+  },
+  "pendencias": [
+    "Regiões Norte/Sul/Leste/Oeste/Centro exigem camada GeoSampa de subprefeituras com campo de região ou tabela oficial de correspondência",
+    "Limites GeoSampa não integrados: distritos OD não são tratados como limites distritais oficiais"
+  ],
+  "reparo_geometrico": {
+    "habilitado": true,
+    "limite_alteracao_area_pct": 1.0,
+    "registros_reparados": 217,
+    "auditoria": "auditoria_reparos_geometricos.csv"
+  },
+  "observacoes": [
+    "Percentuais de área são relações geométricas, não percentuais de viagens ou população.",
+    "Pontos sobre fronteiras são marcados ambíguos.",
+    "Não modifica arquivos anteriores nem base SQL/Supabase."
+  ]
+}
