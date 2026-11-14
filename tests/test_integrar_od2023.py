@@ -5,7 +5,11 @@ from pathlib import Path
 import pandas as pd
 from integrar_od2023 import ler_dimensoes,preparar_viagens,faixa_horaria,agregar,executar,salvar_geo
 
-REF=Path(__file__).parent/'dados_referencia_od/dim_zonas_od2023.csv'
+REF = (
+    Path(__file__).resolve().parent.parent
+    / "dados_referencia_od"
+    / "dim_zonas_od2023.csv"
+)
 
 class TestOd2023(unittest.TestCase):
  def setUp(self):
