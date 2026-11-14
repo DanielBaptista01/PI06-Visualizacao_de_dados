@@ -1,0 +1,2 @@
+﻿distribuidora,municipio_referencia,mes_cenario,inicio_vigencia_tarifa,fim_vigencia_tarifa,tarifa_base_rs_kwh,bandeira,adicional_bandeira_rs_kwh,tarifa_com_bandeira_rs_kwh,inclui_tributos,fonte_tarifa,fonte_bandeira
+Enel SP,Sao Paulo,2026-11,2026-07-04,2027-07-03,0.78938,Verde,0.0,0.78938,False,ANEEL - tarifas homologadas,https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/aneel-anuncia-bandeira-verde-para-vigorar-em-novembro

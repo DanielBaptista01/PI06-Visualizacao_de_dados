@@ -1,0 +1,3 @@
+﻿estado,municipio,produto,preco_medio_rs_litro,preco_mediano_rs_litro,preco_minimo_rs_litro,preco_maximo_rs_litro,quantidade_observacoes,quantidade_postos,periodo_inicio,periodo_fim
+SAO PAULO,SAO PAULO,ETANOL,4.089952380952381,3.99,3.49,5.99,210,210,2026-11-08,2026-11-14
+SAO PAULO,SAO PAULO,GASOLINA COMUM,6.342190476190476,6.29,5.49,8.49,210,210,2026-11-08,2026-11-14

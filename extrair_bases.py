@@ -156,38 +156,292 @@ def processar_aneel() -> None:
 
 
 def processar_anp() -> None:
-    arquivos = localizar_todos(["ANP/**/*.csv", "ANP/**/*.xlsx"])
-    if not arquivos:
-        print("ANP: arquivos não encontrados.")
-        return
-    dfs = []
-    for origem in arquivos:
-        try:
-            if origem.suffix.lower() == ".csv":
-                try:
-                    temp = pd.read_csv(origem, sep=";", encoding="utf-8-sig", low_memory=False)
-                except Exception:
-                    temp = pd.read_csv(origem, sep=",", encoding="utf-8-sig", low_memory=False)
-            else:
-                temp = pd.read_excel(origem)
-                
-            temp = _filtrar_uf_sp(temp)
-            temp["_arquivo_origem"] = origem.name
-            dfs.append(temp)
-        except Exception as exc:
-            print(f"ANP: erro em {origem.name}: {exc}")
-            
-    if not dfs:
-        raise RuntimeError("ANP: nenhum arquivo processado com sucesso")
-        
-    df = pd.concat(dfs, ignore_index=True, sort=False)
-    
-    # Limpa espaços extras nos nomes das colunas
-    df.columns = df.columns.str.strip()
+    from pathlib import Path
+    import unicodedata
 
-    destino = salvar_csv(df, "03_ANP_SP.csv")
-    registrar_coleta("ANP", "múltiplos arquivos", destino, len(df), observacao=f"{len(dfs)} arquivo(s) consolidados")
-    print(f"ANP: {len(df):,} registros -> {destino}")
+    def normalizar(valor):
+        texto = unicodedata.normalize("NFKD", str(valor))
+        return "".join(
+            c for c in texto
+            if not unicodedata.combining(c)
+        ).strip().upper()
+
+    def converter_preco(valor):
+        if pd.isna(valor):
+            return float("nan")
+
+        texto = (
+            str(valor)
+            .strip()
+            .replace("R$", "")
+            .replace(" ", "")
+        )
+
+        if "," in texto and "." in texto:
+            texto = texto.replace(".", "").replace(",", ".")
+        elif "," in texto:
+            texto = texto.replace(",", ".")
+
+        try:
+            return float(texto)
+        except ValueError:
+            return float("nan")
+
+    # Fonte selecionada explicitamente.
+    origem = Path(
+        "ANP/novembro-26/"
+        "revendas_lpc_2026_11_08-2026_11_14.xlsx"
+    )
+
+    if not origem.is_file():
+        raise FileNotFoundError(
+            f"ANP: arquivo nao encontrado: {origem}"
+        )
+
+    print("\n[ANP] Iniciando processamento...")
+    print("Fonte:", origem)
+
+    # A linha 10 da planilha e o cabecalho real.
+    df = pd.read_excel(
+        origem,
+        sheet_name="POSTOS REVENDEDORES",
+        header=9,
+        dtype=str,
+    )
+
+    df.columns = [normalizar(c) for c in df.columns]
+
+    obrigatorias = {
+        "CNPJ",
+        "MUNICIPIO",
+        "ESTADO",
+        "PRODUTO",
+        "UNIDADE DE MEDIDA",
+        "PRECO DE REVENDA",
+        "DATA DA COLETA",
+    }
+
+    ausentes = obrigatorias - set(df.columns)
+
+    if ausentes:
+        raise ValueError(
+            f"ANP: colunas ausentes: {sorted(ausentes)}"
+        )
+
+    total_nacional = len(df)
+
+    # Filtra o estado e os combustiveis relevantes.
+    df["ESTADO"] = df["ESTADO"].map(normalizar)
+    df["MUNICIPIO"] = df["MUNICIPIO"].map(normalizar)
+    df["PRODUTO"] = df["PRODUTO"].map(normalizar)
+
+    df = df.loc[
+        df["ESTADO"].isin({"SAO PAULO", "SP"})
+        & df["PRODUTO"].isin({"GASOLINA COMUM", "ETANOL"})
+    ].copy()
+
+    if df.empty:
+        raise ValueError(
+            "ANP: nenhum registro de gasolina ou etanol em SP"
+        )
+
+    print("Registros nacionais:", total_nacional)
+    print("Registros selecionados em SP:", len(df))
+
+    # Verifica a unidade de medida.
+    unidades = df["UNIDADE DE MEDIDA"].map(normalizar)
+
+    unidade_valida = unidades.isin({
+        "R$ / LITRO",
+        "R$/LITRO",
+    })
+
+    if not unidade_valida.all():
+        print(
+            df.loc[
+                ~unidade_valida,
+                ["PRODUTO", "UNIDADE DE MEDIDA"]
+            ].drop_duplicates().to_string(index=False)
+        )
+        raise ValueError("ANP: unidades inesperadas")
+
+    # Corrige tanto precos com virgula quanto com ponto.
+    df["preco_rs_litro"] = (
+        df["PRECO DE REVENDA"].apply(converter_preco)
+    )
+
+    # Valida todos os precos antes de descartar qualquer linha.
+    invalidos = df[
+        df["preco_rs_litro"].isna()
+        | ~df["preco_rs_litro"].between(1, 20)
+    ]
+
+    if not invalidos.empty:
+        print("\nPrecos invalidos ou suspeitos:")
+        print(
+            invalidos[
+                ["MUNICIPIO", "PRODUTO",
+                 "PRECO DE REVENDA", "preco_rs_litro"]
+            ].head(15).to_string(index=False)
+        )
+        raise ValueError(
+            f"ANP: {len(invalidos)} precos requerem revisao"
+        )
+
+    # Confere as datas da coleta.
+    df["data_coleta"] = pd.to_datetime(
+   df["DATA DA COLETA"],
+    format="%Y-%m-%d %H:%M:%S",
+    errors="coerce",
+  )
+
+    inicio = pd.Timestamp("2026-11-08")
+    fim = pd.Timestamp("2026-11-14")
+
+    datas_validas = df["data_coleta"].between(inicio, fim)
+
+    if not datas_validas.all():
+        print("\nDatas fora do periodo:")
+        print(
+            df.loc[
+                ~datas_validas,
+                ["DATA DA COLETA", "data_coleta"]
+            ].head(15).to_string(index=False)
+        )
+        raise ValueError(
+            "ANP: datas invalidas ou fora da semana"
+        )
+
+    # Mantem somente uma copia de linhas totalmente identicas.
+    antes = len(df)
+    df = df.drop_duplicates().copy()
+    duplicadas = antes - len(df)
+
+    df["periodo_inicio"] = "2026-11-08"
+    df["periodo_fim"] = "2026-11-14"
+    df["arquivo_origem"] = origem.name
+
+    # Padroniza nomes para facilitar integracao posterior.
+    df = df.rename(columns={
+        "CNPJ": "cnpj",
+        "MUNICIPIO": "municipio",
+        "ESTADO": "estado",
+        "PRODUTO": "produto",
+        "UNIDADE DE MEDIDA": "unidade_medida",
+        "BANDEIRA": "bandeira_posto",
+    })
+
+    df["data_coleta"] = df["data_coleta"].dt.strftime(
+        "%Y-%m-%d"
+    )
+
+    # Medias por municipio e combustivel.
+    resumo_municipios = (
+        df.groupby(
+            ["estado", "municipio", "produto"],
+            as_index=False,
+        )
+        .agg(
+            preco_medio_rs_litro=(
+                "preco_rs_litro", "mean"
+            ),
+            preco_mediano_rs_litro=(
+                "preco_rs_litro", "median"
+            ),
+            preco_minimo_rs_litro=(
+                "preco_rs_litro", "min"
+            ),
+            preco_maximo_rs_litro=(
+                "preco_rs_litro", "max"
+            ),
+            quantidade_observacoes=(
+                "preco_rs_litro", "size"
+            ),
+            quantidade_postos=(
+                "cnpj", "nunique"
+            ),
+        )
+    )
+
+    resumo_municipios["periodo_inicio"] = "2026-11-08"
+    resumo_municipios["periodo_fim"] = "2026-11-14"
+
+    # Recorte especifico da capital paulista.
+    resumo_capital = resumo_municipios.loc[
+        resumo_municipios["municipio"].eq("SAO PAULO")
+    ].copy()
+
+    if set(resumo_capital["produto"]) != {
+        "GASOLINA COMUM", "ETANOL"
+    }:
+        raise ValueError(
+            "ANP: faltam dados de gasolina ou etanol na capital"
+        )
+
+    # Validacao cruzada das agregacoes.
+    if resumo_municipios["quantidade_observacoes"].sum() != len(df):
+        raise ValueError(
+            "ANP: total agregado diverge dos registros"
+        )
+
+    print("\n[ANP] Validacao:")
+    print("Registros validos:", len(df))
+    print("Duplicatas exatas removidas:", duplicadas)
+    print("Municipios:", df["municipio"].nunique())
+    print("Postos distintos:", df["cnpj"].nunique())
+
+    print("\nPrecos estaduais por produto:")
+    print(
+        df.groupby("produto")["preco_rs_litro"]
+        .agg(["count", "min", "mean", "max"])
+        .to_string()
+    )
+
+    print("\nPrecos da capital:")
+    print(
+        resumo_capital[
+            [
+                "produto",
+                "preco_medio_rs_litro",
+                "preco_mediano_rs_litro",
+                "quantidade_observacoes",
+                "quantidade_postos",
+            ]
+        ].to_string(index=False)
+    )
+
+    # Exporta somente depois de todas as validacoes.
+    destino_sp = salvar_csv(
+        df,
+        "03_ANP_SP_NOV2026.csv"
+    )
+
+    destino_municipios = salvar_csv(
+        resumo_municipios,
+        "03_ANP_PRECOS_MUNICIPIOS_NOV2026.csv"
+    )
+
+    destino_capital = salvar_csv(
+        resumo_capital,
+        "03_ANP_PRECOS_CAPITAL_NOV2026.csv"
+    )
+
+    registrar_coleta(
+        "ANP",
+        origem.name,
+        destino_sp,
+        len(df),
+        observacao=(
+            "Semana 2026-11-08 a 2026-11-14; "
+            "São Paulo; gasolina comum e etanol; "
+            f"{df['municipio'].nunique()} municipios"
+        ),
+    )
+
+    print("\n[OK] ANP processada com sucesso")
+    print("Registros SP:", destino_sp)
+    print("Medias municipais:", destino_municipios)
+    print("Medias capital:", destino_capital)
     
 def processar_ibge() -> None:
     origem = localizar_primeiro([
@@ -287,6 +541,171 @@ def processar_inmetro() -> None:
         f"colunas_com_nulos={int((vazios > 0).sum())} | saida={destino}"
     )
 
+def validar_inmetro() -> None:
+    """Normaliza e valida o INMETRO sem modificar a base organizada."""
+    import unicodedata
+
+    origem = OUTPUT_DIR / "05_INMETRO_ORGANIZADO.csv"
+
+    if not origem.is_file():
+        raise FileNotFoundError(
+            f"INMETRO: base organizada nao encontrada: {origem}"
+        )
+
+    df = pd.read_csv(origem, dtype=str, low_memory=False)
+
+    total_original = len(df)
+
+    # Corrige marcadores textuais de valores ausentes.
+    df = df.replace(
+        r"^\s*(?:\\|-|--|N/?A|NULO|NULL)?\s*$",
+        pd.NA,
+        regex=True,
+    )
+
+    def normalizar(valor):
+        if pd.isna(valor):
+            return ""
+
+        texto = unicodedata.normalize("NFKD", str(valor))
+        texto = "".join(
+            c for c in texto
+            if not unicodedata.combining(c)
+        )
+
+        return (
+            texto.strip()
+            .upper()
+            .replace("–", "-")
+            .replace("—", "-")
+            .replace("_", "-")
+            .replace(" ", "")
+        )
+
+    mapa_propulsao = {
+        "COMBUSTAO": "Combustão",
+        "ELETRICO": "Elétrico",
+        "HIBRIDO": "Híbrido",
+        "PLUG-IN": "Plug-in",
+        "PLUGIN": "Plug-in",
+    }
+
+    originais = df["tipo_propulsao"].copy()
+
+    df["tipo_propulsao"] = (
+        originais.map(normalizar).map(mapa_propulsao)
+    )
+
+    invalidos = df["tipo_propulsao"].isna()
+
+    if invalidos.any():
+        print("\n[INMETRO] Propulsoes nao reconhecidas:")
+        print(
+            originais[invalidos]
+            .value_counts(dropna=False)
+            .to_string()
+        )
+        raise ValueError(
+            "INMETRO: existem propulsoes nao reconhecidas"
+        )
+
+    def converter_numero(valor):
+        if pd.isna(valor):
+            return float("nan")
+
+        texto = str(valor).strip().replace(" ", "")
+
+        if "," in texto and "." in texto:
+            texto = texto.replace(".", "").replace(",", ".")
+        elif "," in texto:
+            texto = texto.replace(",", ".")
+
+        try:
+            return float(texto)
+        except ValueError:
+            return float("nan")
+
+    colunas_numericas = [
+        "consumo_etanol_cidade_km_l",
+        "consumo_etanol_estrada_km_l",
+        "consumo_etanol_combinado_km_l",
+        "consumo_gasolina_diesel_cidade_km_l",
+        "consumo_gasolina_diesel_estrada_km_l",
+        "consumo_gasolina_diesel_combinado_km_l",
+        "consumo_energetico_mj_km",
+        "autonomia_eletrica_km",
+        "eficiencia_modo_eletrico_ve_vehp_gasolina_cidade_km_le",
+        "eficiencia_modo_eletrico_ve_vehp_gasolina_estrada_km_le",
+        "eficiencia_modo_eletrico_vehp_flex_etanol_cidade_km_le",
+        "eficiencia_modo_eletrico_vehp_flex_etanol_estrada_km_le",
+    ]
+
+    for coluna in colunas_numericas:
+        if coluna not in df.columns:
+            raise ValueError(
+                f"INMETRO: coluna ausente: {coluna}"
+            )
+
+        df[coluna] = df[coluna].map(converter_numero)
+
+    if len(df) != total_original:
+        raise ValueError(
+            "INMETRO: quantidade de registros alterada"
+        )
+
+    print("\n[INMETRO] Registros:", len(df))
+
+    print("\nPropulsao:")
+    print(
+        df["tipo_propulsao"]
+        .value_counts(dropna=False)
+        .to_string()
+    )
+
+    print("\nCobertura por propulsao (%):")
+    cobertura = df.groupby("tipo_propulsao")[
+        colunas_numericas
+    ].agg(
+        lambda serie: round(
+            serie.notna().mean() * 100, 1
+        )
+    )
+
+    print(cobertura.to_string())
+
+    print("\nCombustiveis por propulsao:")
+    print(
+        pd.crosstab(
+            df["tipo_propulsao"],
+            df["combustivel"],
+            dropna=False,
+        ).to_string()
+    )
+
+    print("\nDuplicatas exatas:", df.duplicated().sum())
+
+    destino = salvar_csv(
+        df,
+        "05_INMETRO_VALIDADO.csv"
+    )
+
+    registrar_coleta(
+        "INMETRO_PBEV",
+        origem,
+        destino,
+        len(df),
+        observacao=(
+            "Validacao de categorias de propulsao, "
+            "nulos e indicadores de consumo; "
+            "base organizada preservada"
+        ),
+    )
+
+    print(
+        f"\n[OK] INMETRO validado | "
+        f"registros={len(df)} | saida={destino}"
+    )
+
 
 def _grupo_senatran(nome: str) -> str:
     n = normalizar_texto(nome)
@@ -306,12 +725,32 @@ def _grupo_senatran(nome: str) -> str:
 
 
 
-def processar_senatran() -> None:
-    arquivos = localizar_todos(["SENATRAN/**/*.xlsx"])
+def processar_senatran(
+    arquivos_selecionados: list[Path] | None = None
+) -> None:
 
-    if not arquivos:
-        print("SENATRAN: arquivos não encontrados.")
-        return
+    if arquivos_selecionados is not None:
+        arquivos = arquivos_selecionados
+    else:
+        base = Path(__file__).resolve().parent / "SENATRAN"
+
+        nomes = [
+            "Setembro_2026/A_Frota_por_UF_Municipio_CEP_Setembro_2026.xlsx",
+            "Setembro_2026/D_Frota_por_UF_Municipio_COMBUSTIVEL_Setembro_2026.xlsx",
+            "Setembro_2026/E_Frota_por_UF_Municipio_POTENCIA_Setembro_2026.xlsx",
+            "Setembro_2026/F_Frota_por_UF_Municipio_ANO_FAB_MOD_Setembro_2026.xlsx",
+            "Setembro_2026/G_Frota_por_UF_Municipio_TIPO_ESPECIE_EIXOS_Setembro_2026.xlsx",
+            "Julho-26/i_frota_por_uf_municipio_marca_e_modelo_ano_julho_2026(Sao_Paulo).xlsx",
+        ]
+
+        arquivos = [base / nome for nome in nomes]
+
+    ausentes = [str(p) for p in arquivos if not p.is_file()]
+
+    if ausentes:
+        raise FileNotFoundError(
+            "Arquivos SENATRAN ausentes:\n" + "\n".join(ausentes)
+        )
 
     grupos: dict[str, list[pd.DataFrame]] = {}
 
@@ -322,49 +761,108 @@ def processar_senatran() -> None:
 
             # TRATAMENTO ESPECÍFICO DA FROTA POR TIPO DE VEÍCULO
             if grupo == "tipo_veiculo":
+                if all(termo in origem.stem.upper()for termo in ("TIPO", "ESPECIE", "EIXOS")):
+                    print(f"SENATRAN: processando layout G: {origem.name}")
 
-                # Aceita somente a planilha municipal.
-                if "por_municipio_e_tipo" not in nome:
-                    print(
-                        f"SENATRAN: arquivo ignorado em tipo_veiculo: "
-                        f"{origem.name}"
-                    )
-                    continue
-
-                print(
-                    f"SENATRAN: utilizando tabela municipal: "
-                    f"{origem.name}"
-                )
-
-                # Os cabeçalhos estão na terceira linha do Excel.
-                df = pd.read_excel(
-                    origem,
-                    sheet_name=0,
-                    header=2,
-                    dtype=object,
-                )
-
-                # Padroniza os nomes das colunas.
-                df.columns = [
-                    str(col).strip().upper()
-                    for col in df.columns
-                ]
-
-                # Confere a estrutura da tabela.
-                if not {"UF", "MUNICIPIO"}.issubset(df.columns):
-                    raise ValueError(
-                        "Cabeçalhos UF e MUNICIPIO não encontrados."
+                    df_g = pd.read_excel(
+                        origem,
+                        sheet_name="Layout G",
+                        dtype=object,
                     )
 
-                # Mantém somente os municípios de São Paulo.
-                df = df[
-                    df["UF"]
-                    .astype("string")
-                    .str.strip()
-                    .str.upper()
-                    .eq("SP")
-                ].copy()
+                    import unicodedata
 
+                    def normalizar_coluna(valor):
+                        texto = unicodedata.normalize("NFKD", str(valor))
+                        return "".join(
+                            c for c in texto
+                            if not unicodedata.combining(c)
+                        ).strip().upper()
+
+                    df_g.columns = [
+                        normalizar_coluna(c) for c in df_g.columns
+                    ]
+
+                    exigidas = {
+                        "UF", "MUNICIPIO", "TIPO VEICULO", "QTD. VEICULOS"
+                    }
+                    if not exigidas.issubset(df_g.columns):
+                        raise ValueError(
+                            f"Layout G incompatível: {origem.name}"
+                        )
+
+                    for coluna in ["UF", "MUNICIPIO", "TIPO VEICULO"]:
+                        df_g[coluna] = df_g[coluna].map(normalizar_coluna)
+
+                    df_g = df_g[
+                        df_g["UF"].isin(["SP", "SAO PAULO"])
+                    ].copy()
+
+                    df_g["QTD. VEICULOS"] = pd.to_numeric(
+                        df_g["QTD. VEICULOS"],
+                        errors="coerce",
+                    )
+
+                    if (
+                        df_g.empty
+                        or df_g["QTD. VEICULOS"].isna().any()
+                        or (df_g["QTD. VEICULOS"] < 0).any()
+                    ):
+                        raise ValueError("Layout G: quantidades inválidas")
+
+                    total_origem = df_g["QTD. VEICULOS"].sum()
+                    df = df_g.pivot_table(
+                        index="MUNICIPIO",
+                        columns="TIPO VEICULO",
+                        values="QTD. VEICULOS",
+                        aggfunc="sum",
+                        fill_value=0,
+                    ).reset_index()
+                    df.columns.name = None
+
+                    equivalencias = {
+                        "CHASSI/PLATAFORMA": "CHASSI PLATAF",
+                        "MICROONIBUS": "MICRO-ONIBUS",
+                        "TRATOR DE ESTEIRAS": "TRATOR ESTEI",
+                        "TRATOR DE RODAS": "TRATOR RODAS",
+                    }
+                    df = df.rename(columns=equivalencias)
+
+                    if df.columns.duplicated().any():
+                        raise ValueError("Layout G: colunas duplicadas")
+
+                    tipos = [c for c in df.columns if c != "MUNICIPIO"]
+                    df["TOTAL"] = df[tipos].sum(axis=1)
+                    df.insert(0, "UF", "SP")
+
+                    if df["TOTAL"].sum() != total_origem:
+                        raise ValueError("Layout G: totais inconsistentes")
+
+                    df["_referencia"] = "2026-09"
+                else:
+                    # Compatibilidade com layout municipal de julho.
+                    if "por_municipio_e_tipo" not in nome:
+                        print(f"SENATRAN: ignorado: {origem.name}")
+                        continue
+
+                    df = pd.read_excel(
+                        origem,
+                        sheet_name=0,
+                        header=2,
+                        dtype=object,
+                    )
+                    df.columns = [
+                        str(c).strip().upper() for c in df.columns
+                    ]
+
+                    if not {"UF", "MUNICIPIO"}.issubset(df.columns):
+                        raise ValueError("Cabeçalhos municipais ausentes")
+
+                    df = df[
+                        df["UF"].astype("string").str.strip().str.upper()
+                        .eq("SP")
+                    ].copy()
+                    df["_referencia"] = "2026-07"
             else:
                 df = pd.read_excel(origem)
                 df = _filtrar_uf_sp(df)
@@ -403,18 +901,18 @@ def processar_senatran() -> None:
                 )
                 # Mantém somente as três categorias desejadas.
                 df = df[
-                 df["categoria_visualizacao"].isin(
-                   ["Gasolina", "Híbrido", "Elétrico"]
-                   )
+                    df["categoria_visualizacao"].isin(
+                        ["Gasolina", "Híbrido", "Elétrico"]
+                    )
                 ].copy()
 
             df["_arquivo_origem"] = origem.name
             grupos.setdefault(grupo, []).append(df)
 
         except Exception as exc:
-            print(
-                f"SENATRAN: erro em {origem.name}: {exc}"
-            )
+            raise RuntimeError(
+                f"SENATRAN: falha ao processar {origem.name}"
+            ) from exc
 
     saidas = {
         "tipo_veiculo": "06_SENATRAN_TIPO_VEICULO_SP.csv",

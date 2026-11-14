@@ -1,0 +1,2 @@
+﻿distribuidora,subgrupo,modalidade,classe,inicio_vigencia,fim_vigencia,tusd_rs_mwh,te_rs_mwh,tarifa_base_rs_kwh,inclui_tributos,inclui_bandeira,data_referencia,arquivo_origem,linhas_equivalentes_fonte
+Enel SP,B1,Convencional,Residencial,2026-07-04,2027-07-03,472.42,316.96,0.78938,False,False,2026-11-14,tarifas-homologadas-distribuidoras-energia-eletrica (1).zip,2

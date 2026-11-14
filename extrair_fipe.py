@@ -484,6 +484,20 @@ def coletar_precos_catalogados(
             ):
                 raise ValueError("Resposta sem preço ou identificação.")
 
+            mes_resposta = str(info["referenceMonth"]).strip()
+
+            if referencia_alvo is None:
+                referencia_alvo = mes_resposta
+
+            elif mes_resposta != referencia_alvo:
+                print(
+                    "[FIPE] Referencia mensal diferente!"
+                    f" Esperada: {referencia_alvo};"
+                    f" recebida: {mes_resposta}."
+                    " Coleta interrompida sem gravar esse registro."
+                )
+                break
+
             ano_resposta = info.get("modelYear")
 
             if year_code.startswith("32000-"):
