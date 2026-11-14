@@ -1,0 +1,3 @@
+﻿perfil_id,regime,km_mes,horas_mes,receita_plataforma_liquida_rs_mes,manutencao_rs_km,pneus_rs_km,lavagem_rs_mes,celular_rs_mes,seguro_rs_mes,outros_fixos_rs_mes,ipva_efetivo_rs_ano,licenciamento_rs_ano,depreciacao_rs_mes,aluguel_rs_mes,percentual_energia_pago_motorista,percentual_manutencao_pago_motorista,percentual_pneus_pago_motorista,percentual_seguro_pago_motorista,percentual_ipva_pago_motorista,percentual_licenciamento_pago_motorista,fonte_premissas,observacoes
+proprio_base,proprio,3000,200,,,,,,,,,,,,1,1,1,1,1,1,PARAMETROS_A_PREENCHER,
+alugado_base,alugado,3000,200,,,,,,,,,,,,1,,,,,,CONTRATO_A_CONFERIR,
