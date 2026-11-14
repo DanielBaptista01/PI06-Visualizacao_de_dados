@@ -1,0 +1,22 @@
+﻿codigo,valor_referencia,unidade,qualidade,geografia,periodo,observacao,url_fonte
+licenciamento_sp_2026,174.08,R$/ano,OFICIAL,SP,2026,Taxa estadual de licenciamento,https://servicos.sp.gov.br/fcarta/564F6C83-1A86-472E-AC79-3A7F5ABFE248
+aliquota_ipva_automovel_sp,0.04,fracao,OFICIAL_REGRA,SP,2026,"Regra geral de automoveis proprios; 4% sobre base fiscal, sujeito a isencoes",https://legislacao.fazenda.sp.gov.br/Paginas/lei13296.aspx
+base_ipva_2026,,R$/veiculo,FONTE_SEM_MATCH,SP,2026,Base venal do IPVA 2026 publicada em tabela propria; nao usar FIPE novembro/2026 como base fiscal,https://legislacao.fazenda.sp.gov.br/Paginas/Resolu%C3%A7%C3%A3o-SFP-40-de-2025.aspx
+limite_isencao_hibridos_2026,261154.45,R$,OFICIAL_CONDICIONAL,SP,2026,"Nao basta ser hibrido; verificar motorizacao flex/etanol 40kW e 150V, e enquadramento",https://www3.fazenda.sp.gov.br/SIPET/ServicosInstrucao/Instrucao/321
+incentivo_ipva_municipio_2026,,R$,NAO_APLICAVEL_GERAL,Capital SP,2025-2026,Pedido de reembolso suspenso para exercicios a partir de 2025,https://prefeitura.sp.gov.br/web/meio_ambiente/w/organizacao/265486
+das_mei_servicos_2026,86.05,R$/mes,OFICIAL_CONDICIONAL,Brasil,2026,Somente motorista enquadrado como MEI de servicos; nao somar a outro INSS automaticamente,https://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/noticias/NoticiaCompleta.aspx?id=c3b2044c-ff97-432a-b33c-ecf2a3df6dc3
+rendimento_condutor_plataforma_ibge_2025,2873,R$/mes,OFICIAL_REFERENCIA_NAO_RECEITA,Brasil,2025,"Rendimento apos despesas de atividade declaradas, NAO receita da plataforma para descontar custos",https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html?=&t=series-historicas
+horas_condutor_plataforma_ibge_2025,45.9,horas/semana,OFICIAL_REFERENCIA,Brasil,2025,Media nacional para condutores por plataformas,https://agenciabrasil.ebc.com.br/economia/noticia/2026-09/apenas-1-em-cada-5-motociclistas-de-app-tem-cobertura-previdenciaria
+seguro_uso_app_exemplo_onix,400,R$/mes,CENARIO_MERCADO_NAO_COTACAO,Sao Paulo,2026,Exemplo central ilustrativo Onix; ha intervalos e perfis distintos; cobertura total deve ser verificada,https://meegseg.com/seguro-para-motorista-de-aplicativo-uber-99/
+custo_manutencao_e_pneus_total,0.13,R$/km,CENARIO_MERCADO,Brasil,2026,"Provisao ilustrativa 0.10 manutencao e 0.03 pneus, soma dentro de faixa 0.12-0.20 de terceiro",https://rodagem.com/blog/motorista-de-aplicativo-quanto-sobra-por-km/
+pneus_custo_central,0.03,R$/km,CENARIO_DERIVADO,Brasil,2026,Exemplo: 1400 reais por jogo / 50000 km = R$ 0.028/km; arredondado,https://clubers.app/
+recarga_residencial_enel_sem_tributos,0.78938,R$/kWh,OFICIAL_ARQUIVO_PROJETO,Capital SP,2026-11,Tarifa ANEEL Enel SP no projeto sem tributos; nao equivale ao valor total da conta,https://www.gov.br/aneel/pt-br/assuntos/tarifas
+recarga_publica_mediana_sp,2.10,R$/kWh,PESQUISA_MERCADO_TERCEIRO,Estado SP,2026-09,"Mediana de 617 estacoes reportada por FLAK, metodologia nao auditada; variam taxas extras",https://flakenergy.com.br/guias/preco-da-recarga-de-carro-eletrico-em-sp
+recarga_publica_precificacao_livre,,regra,OFICIAL_REGRA,Brasil,2026,Cobrança livre por operadores; nao aplicar tarifa residencial nas recargas publicas,https://www.gov.br/aneel/pt-br/assuntos/veiculos-eletricos
+rental_uber_match_sp,,R$/mes,OFERTA_AMOSTRA_PROJETO,Sao Paulo,2026-11-07,"Usar medianna de ofertas validas como contexto, nunca como aluguel garantido ou para todos os carros",https://earn.uber.com/en/city/sao-paulo-BR/458/rentals_category
+depreciacao_carro_especifico,,R$/mes,PENDENTE,SP,2026,Depende de serie FIPE para mesma versao/ano; cenarios de taxa percentual nao sao observacao,https://veiculos.fipe.org.br/
+receita_antes_de_custos_do_motorista,,R$/mes,PENDENTE,Capital SP,2026,Sem serie publica suficientemente comparavel para o campo do motor: nao usar media IBGE de rendimento,https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html?=&t=series-historicas
+lavagem_exemplo,80,R$/mes,HIPOTESE_AUTOR,SP,2026,"Hipotese 2 lavagens por 40 reais, nao media apurada",
+celular_exemplo,50,R$/mes,HIPOTESE_AUTOR,SP,2026,Reserva para plano de dados; nao media apurada,
+quilometragem_cenario,3000,km/mes,HIPOTESE_MODELO_EXISTENTE,SP,2026,Valor usado no motor; nao media estatistica de motoristas,
+horas_cenario,200,h/mes,CENARIO_REFERENCIADO,Brasil,2026,Aproxima 45.9 horas por semana x 52/12 = 198.9 horas; use como cenario nao media paulista,https://agenciabrasil.ebc.com.br/economia/noticia/2026-09/apenas-1-em-cada-5-motociclistas-de-app-tem-cobertura-previdenciaria
