@@ -22,6 +22,8 @@ SENATRAN/
 UBER/
 UBER_MATCH/
 ipva-26/
+INMETRO-dados-brutos/
+INMETRO-dados-organizados/
 
 # Cache local do pipeline (reconstruível)
 dados_cache/
