@@ -1,0 +1,86 @@
+{
+  "gerado_em_utc": "2026-11-14T23:29:52+00:00",
+  "versao": "1.0",
+  "resumo_od": {
+    "zonas": 527,
+    "municipios": 39,
+    "zonas_capital": 343,
+    "zonas_com_amostra_origem": 466,
+    "zonas_com_amostra_destino": 468,
+    "fluxos_originais": 3383,
+    "fluxos_top": 2749,
+    "distritos_capital": 96
+  },
+  "energia_cenarios": 838,
+  "motorista_cenarios": 1676,
+  "motorista_custos_completos": 0,
+  "motorista_status_completo": 0,
+  "receitas_hipoteticas": 3,
+  "sensibilidade_linhas": 5028,
+  "sensibilidade_com_resultado": 0,
+  "entradas_sha256": {
+    "zonas": {
+      "caminho": "dados_relatorios\\territorio_od2023\\indicadores_zonas_od2023.csv",
+      "sha256": "ee8ccb24de3fb91e62d6c4d22f8f418746eaad61fffeda18ffcd2354f7d73996"
+    },
+    "fluxos": {
+      "caminho": "dados_relatorios\\territorio_od2023\\fato_od_fluxos_zona_faixa.csv",
+      "sha256": "78b57320381b03ee1b772687cc38f372e10914205aeb539e53e38d9e1aae159b"
+    },
+    "energia": {
+      "caminho": "dados_relatorios\\consolidacao_integrada\\fato_cenarios_inmetro_energia.csv",
+      "sha256": "caff3515edd2f543060abbec6ea25311181217854e0d044c4f2b51db5a8c2cb2"
+    },
+    "motorista": {
+      "caminho": "dados_relatorios\\economia_completa\\fato_cenarios_motorista.csv",
+      "sha256": "48dc0197d720c80868d7c8b9d216d1466b83d6e326ac66632aef0fad782549ae"
+    },
+    "receita": {
+      "caminho": "dados_config\\cenarios_receita_analitica.csv",
+      "sha256": "080d36cc3d01d7b3d88190d402e73d2a930908f7fbd5fdfc53114e7738e8b236"
+    }
+  },
+  "saidas_sha256": {
+    "painel_od_zonas.csv": {
+      "linhas": 527,
+      "sha256": "83126a7b01e8c5095334bbd3fe842453ca5bd0356b92ba78924661108029d9a6"
+    },
+    "painel_od_municipios.csv": {
+      "linhas": 39,
+      "sha256": "76041a4a1f5653cff97f8e5e5c506539311aa05f00967531a1a5963c1e15c9a6"
+    },
+    "painel_od_distritos_capital.csv": {
+      "linhas": 96,
+      "sha256": "fa5c8c01ba8951ab682a6b9298b4a1d4ea8d4685ca30636dd9ec0eb5061d7bba"
+    },
+    "painel_od_top_destinos.csv": {
+      "linhas": 2749,
+      "sha256": "1a33769d9c500df368cd628f09a5e974c04ba723642c8e39e861b6b162cbf090"
+    },
+    "painel_energia_inmetro.csv": {
+      "linhas": 838,
+      "sha256": "d7284185d40a90bec2f9ccbfa0ce48a6b81e34312ac9e10e55fb7ace1e808f06"
+    },
+    "painel_motorista_custos.csv": {
+      "linhas": 1676,
+      "sha256": "f471960e33eb466ec82e60cf6763944134773cc1f91dad3617b526aae5229e97"
+    },
+    "dim_premissas_receita.csv": {
+      "linhas": 3,
+      "sha256": "9b8427d125f1776b31f34e952e7b3414bfd09014ea37c5e8c8e24abf3aab1c3c"
+    },
+    "painel_sensibilidade_receita.csv": {
+      "linhas": 5028,
+      "sha256": "81836a14a39519e2ab69d83152c006597c4beb2364d137cbacde280d18d1c48b"
+    }
+  },
+  "regras_de_integridade": [
+    "OD 2023 MODOPRIN=12 não é base exclusiva da Uber",
+    "Viagens expandidas FE_VIA não são número de motoristas nem faturamento",
+    "Cenários FIPE-INMETRO não homologados não recebem preço FIPE",
+    "Receitas didáticas não são fatos observados",
+    "Custo total e resultado são NULL quando custos não estão completos",
+    "Não existe junção zona OD x lucro do motorista",
+    "GeoJSON é produzido por integrar_od2023.py e não por este processo"
+  ]
+}

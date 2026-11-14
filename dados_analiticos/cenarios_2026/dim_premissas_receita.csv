@@ -1,0 +1,4 @@
+﻿cenario_receita_id,titulo,receita_apos_plataforma_rs_mes,fonte,observacao,natureza_dado
+hipotese_6000,Recebimento ilustrativo R$ 6 mil,6000.0,HIPOTESE_DIDATICA_NAO_OBSERVADA,Recebimento mensal hipotético após taxa da plataforma e antes de combustível e outros custos; NÃO é média observada,HIPOTESE_DIDATICA
+hipotese_8000,Recebimento ilustrativo R$ 8 mil,8000.0,HIPOTESE_DIDATICA_NAO_OBSERVADA,Recebimento mensal hipotético após taxa da plataforma e antes de custos; NÃO é remuneração medida,HIPOTESE_DIDATICA
+hipotese_10000,Recebimento ilustrativo R$ 10 mil,10000.0,HIPOTESE_DIDATICA_NAO_OBSERVADA,Recebimento mensal hipotético após taxa da plataforma e antes de custos; NÃO é previsão de renda,HIPOTESE_DIDATICA
