@@ -1,0 +1,21 @@
+{
+  "fonte": "Corresp2017_2023_190225.xlsx",
+  "sha256": "8177d8933876385e7038357a5034d1fca70b62cc123b14dc4f58ce193c9dafc5",
+  "aba": "Divisão Administrativa",
+  "linha_inicial": 8,
+  "ano_pesquisa": 2023,
+  "zonas": 527,
+  "municipios": 39,
+  "zonas_sao_paulo": 343,
+  "distritos_sao_paulo": 96,
+  "anomalias_tratadas": [
+    {
+      "zona": 485,
+      "codigo_original": 80,
+      "codigo_corrigido": 20,
+      "motivo": "Código 80 divergente da aba Municípios (Juquitiba=20)"
+    }
+  ],
+  "licenca": "Consultar condições de reutilização no portal oficial do Metrô",
+  "url_oficial": "https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino-2023-anexos/resource/04bd5c3a-1391-4c33-bda7-6feb3d500c16"
+}
