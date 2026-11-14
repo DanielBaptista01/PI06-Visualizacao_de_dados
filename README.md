@@ -1,222 +1,122 @@
-# PI06 — Visualização de dados
+# PI06 — Visualização de Dados
 
-Projeto integrador de visualização de dados voltado à análise econômica de veículos a combustão, híbridos e elétricos no contexto de motoristas de aplicativo na Região Metropolitana de São Paulo (RMSP).
+**Análise de custos de veículos e deslocamentos por aplicativo na Região Metropolitana de São Paulo (RMSP)**, com aprofundamento territorial no município de São Paulo. O produto final será uma narrativa interativa (*scrollytelling*) com mapa por município/distrito/zona OD e um comparador econômico de veículos a combustão/flex, híbridos e elétricos.
 
-## Roadmap e acompanhamento
+> **Situação em 14/11/2026:** ETL das principais fontes, tabelas-mestras provisórias, motor econômico parametrizado e integração OD 2023 executados. **Ainda não** são produto final nem dados de lucro observado: correspondências entre versões FIPE–INMETRO seguem sem homologação individual, cenários de receita/custos podem estar incompletos e carga operacional no PostGIS/backend ainda não foi confirmada.
 
-O andamento do projeto é acompanhado em [ROADMAP.md](ROADMAP.md). As tarefas pendentes possuem GitHub Issues com prioridade, dependências e critérios de conclusão.
+## Onde está cada documento
 
-A arquitetura de armazenamento e banco está documentada em [docs/ARQUITETURA_DADOS.md](docs/ARQUITETURA_DADOS.md). O inventário inicial da pasta compartilhada está em [docs/INVENTARIO_DADOS.md](docs/INVENTARIO_DADOS.md).
+| Documento | Assunto |
+| --- | --- |
+| [ROADMAP.md](ROADMAP.md) | Etapas concluídas, pendentes e próximos marcos |
+| [docs/INVENTARIO_DADOS.md](docs/INVENTARIO_DADOS.md) | Arquivos, cobertura, fontes, temporalidade e granularidade |
+| [docs/METODOLOGIA_ECONOMICA.md](docs/METODOLOGIA_ECONOMICA.md) | Fórmulas, premissas, classificação dos dados e limitações |
+| [docs/OD2023_METODOLOGIA.md](docs/OD2023_METODOLOGIA.md) | Tratamento da OD 2023 e geometrias |
+| [docs/CENARIOS_ANALITICOS_E_BACKEND.md](docs/CENARIOS_ANALITICOS_E_BACKEND.md) | Indicadores, dimensões, joins válidos e contrato para o backend |
+| [docs/PLANO_ORGANIZACAO_REPOSITORIO.md](docs/PLANO_ORGANIZACAO_REPOSITORIO.md) | Arquivos a manter, dependências e migração para Storage |
+| [docs/ARQUITETURA_DADOS.md](docs/ARQUITETURA_DADOS.md) | GitHub, Supabase Storage e PostGIS |
+| [docs/NAVEGACAO_MAPA_E_BACKEND.md](docs/NAVEGACAO_MAPA_E_BACKEND.md) | Navegação territorial proposta |
 
-## Organização do pipeline
+## Fontes e recortes
 
-- `extrair_bases.py`: processa bases baixadas (ANEEL, ANP, IBGE, INMETRO, SENATRAN, OD 2023, ABVE e regras Uber arquivadas).
-- `extrair_apis.py`: coleta APIs externas. Atualmente contém Open Charge Map.
-- `extrair_fipe.py`: pipeline FIPE incremental com mapeamento persistente, cache e checkpoint.
-- `extrair_uber_match.py`: lê snapshots HTML do Uber Match, descobre as ofertas e coleta os detalhes de locação/compra.
-- `extrair.py`: orquestrador.
-- `explorar.py`: gera catálogo e relatório de qualidade/estrutura das fontes.
-- `pipeline_utils.py`: funções compartilhadas de normalização, localização de arquivos e proveniência local.
-- `database_utils.py`: conexão PostgreSQL/PostGIS, inicialização do DDL e proveniência no banco.
-- `storage_utils.py`: acesso ao Object Storage compatível com S3.
-- `migrar_raw.py`: migração não destrutiva de arquivos RAW para o Storage.
-- `infra_check.py`: teste conjunto de banco e Storage.
-- `db/001_init.sql`: DDL inicial versionado.
+- **ANP:** preço de gasolina e etanol; referência local novembro/2026, com data semanal identificada.
+- **ANEEL:** tarifa da Enel SP e bandeira; tarifa base **sem tributos** no cenário atual.
+- **INMETRO/PBEV:** consumo e versão de veículos; preservar a tecnologia e a unidade física.
+- **FIPE:** valores por marca, modelo, versão e ano; catálogo **parcial** em novembro/2026.
+- **Uber:** regras de categorias/ano e ofertas Uber Match; associação por nome/ano é **candidata**, não elegibilidade definitiva.
+- **SENATRAN:** frota; diferentes arquivos possuem diferentes granularidades e não identificam veículos efetivamente usados pela Uber.
+- **OD 2023, Metrô:** viagens com `MODOPRIN=12` (táxi não convencional/aplicativo), peso `FE_VIA` e zonas. Não representa apenas Uber nem operação individual em 2026.
+- **IBGE / dados territoriais / GeoSampa:** referência municipal e eventual cruzamento com divisões da Prefeitura; não equiparar códigos ou limites sem validação.
+- **ABVE / Open Charge Map:** cenário de eletrificação e pontos de recarga, mantendo datas de levantamento e limitações de cobertura.
 
-## Preparação do ambiente Python
+## Arquitetura
 
-Em um computador novo, as bibliotecas do projeto precisam ser instaladas **uma vez por ambiente**.
+```text
+RAW de fontes oficiais / páginas-snapshot ---> Object Storage S3 (imutável, SHA-256)
+                                                |
+                                          ETL Python
+                                                |
+                      dados_limpos -> dados_padronizados -> tabelas-mestras
+                                                |
+                                       PostgreSQL / PostGIS
+                                           /          \
+                                     analytics       metadata
+                                           \          /
+                                           API/backend
+                                                |
+                                    site com mapa + comparador
+```
 
-No Windows PowerShell:
+**GitHub guarda código, SQL, configuração de exemplo e documentação**; arquivos RAW e snapshots grandes devem ser mantidos em Storage, após comprovação de integridade e possibilidade de reprodução.
+
+## Ambiente e instalação (Windows PowerShell)
 
 ```powershell
 python -m venv .venv
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-```
-
-Em um novo terminal, basta reativar o ambiente:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-Para conferir rapidamente:
-
-```powershell
-python -c "import pandas; import requests; import psycopg; import boto3; from bs4 import BeautifulSoup; print('Ambiente OK')"
-```
-
-A pasta `.venv/` é local e não deve ser enviada ao GitHub.
-
-## Configuração local e segredos
-
-Copie o arquivo de exemplo:
-
-```powershell
 Copy-Item .env.example .env
 ```
 
-Preencha no `.env` local as credenciais necessárias, incluindo `DATABASE_URL`, as variáveis `S3_*` e a chave da Open Charge Map. O `.env` real está ignorado pelo Git e **nunca deve ser versionado**.
+Configure `.env` localmente com credenciais do banco, Storage e serviços necessários. **Nunca versionar `.env`, chaves, tokens, cookies ou checkpoints privados.** Se usar `.venv-2`, ative esse ambiente em vez de criar outro.
 
-Como uma chave da Open Charge Map já esteve no histórico do repositório, a chave antiga deve permanecer revogada/rotacionada.
+## Fluxo atual do pipeline
 
-## Infraestrutura de dados
-
-A arquitetura adotada separa responsabilidades:
-
-```text
-GitHub            -> código, documentação e DDL
-Object Storage    -> arquivos RAW originais e imutáveis
-PostgreSQL        -> dados estruturados e históricos
-PostGIS           -> geometrias e consultas espaciais
-metadata.coletas  -> proveniência das cargas
-```
-
-O OneDrive atual é tratado como **origem de transição** dos arquivos já coletados. Depois da migração e validação, o pipeline deve usar Storage e PostgreSQL/PostGIS como infraestrutura compartilhada, sem depender de uma pasta específica de um computador.
-
-### Inicializar banco
-
-Depois de configurar `DATABASE_URL`:
+Execute **somente a etapa desejada**. Alguns passos exigem acesso aos RAW e à API, e novas coletas podem alterar a referência temporal.
 
 ```powershell
-python database_utils.py init
+# Extração/limpeza (RAW local ou Storage configurado)
+python extrair.py bases
+
+# Preparação das camadas por domínio
+python padronizar_bases.py
+python construir_tabelas_mestres.py --validar
+python construir_tabelas_mestres.py
+
+# Consolidação FIPE × INMETRO × Uber (candidatos, sem homologação)
+python consolidar_pi06.py
+
+# Modelo econômico por versão INMETRO e perfis existentes
+python economia_completa_pi06.py
+
+# Integração OD 2023, usando microdados tratados
+python integrar_od2023.py --shape "ORIGEM_E_DESTINO_2023\002_SiteMetro Mapas_190225\Shape\Zonas_2023.shp" --sobrescrever
 ```
 
-O comando aplica `db/001_init.sql`, habilita PostGIS e cria os schemas iniciais:
+> `construir_tabela_mestra.py` é uma etapa de auditoria por veículo FIPE, diferente de `construir_tabelas_mestres.py` (camada por domínio). `integrar_geografia_od.py` agrega recortes e pontos geográficos adicionais, enquanto `integrar_od2023.py` gera dimensões e fatos de viagens. **Não excluir ou fundir scripts sem equivalência funcional testada.**
 
-```text
-metadata
-core
-geo
-fato
-analytics
+### Testes permanentes
+
+```powershell
+python -m unittest discover -v -p "test_*.py"
 ```
 
-### Testar banco e Storage
+Os testes sintéticos não substituem validações com os arquivos reais. Consulte [docs/PLANO_ORGANIZACAO_REPOSITORIO.md](docs/PLANO_ORGANIZACAO_REPOSITORIO.md) antes de mover entradas do pipeline.
+
+## Baseline de resultados reproduzidos pela equipe
+
+| Camada | Resultado registrado | Ressalva |
+| --- | --- | --- |
+| FIPE | 1.903 registros válidos em novembro/2026 | Cobertura parcial de 6.954 combinações catalogadas (27,37%); não generalizar |
+| Matching | 1.284 FIPE com candidato INMETRO; 1.706 com algum ano Uber compatível | 0 versões FIPE–INMETRO homologadas automaticamente |
+| Simulação energética | 838 cenários por versão INMETRO e combustível/modalidade | Não vincular automaticamente a uma versão FIPE |
+| Economia motorista | 1.676 linhas, 2 perfis; 0 completos na execução inicial | Receita, IPVA individual e outros parâmetros sem preenchimento completo |
+| OD 2023 | 4.229 viagens amostrais modo 12; 1.041.875,01 viagens expandidas | Não são viagens Uber exclusivas |
+| Territorial | 527 zonas, 39 municípios, 343 zonas na capital e 96 distritos | GeoJSONs gerados; revisão cartográfica visual antes de publicar |
+
+## Banco e situação de publicação
+
+Os SQLs versionados estão em `db/001_init.sql` até `db/004_od2023_territorio.sql`. Eles **definem estruturas**, mas não comprovam carga de dados. Rodar `python database_utils.py init` aplica apenas o DDL inicial segundo a implementação atual. A importação das tabelas, criação de views analíticas e endpoints continuam pendentes.
 
 ```powershell
 python infra_check.py
 ```
 
-### Migrar um conjunto RAW
+## O que falta
 
-Faça primeiro um dry-run:
+1. **Higiene/arquitetura:** validar Storage e remover do Git os grandes CSVs reproduzíveis sem quebrar as dependências; manter os tests e manifests.
+2. **Documentação e cenários:** congelar baseline, montar visões analíticas separadas para mobilidade territorial e economia por veículo, com parametrização da receita e todos os estados de qualidade.
+3. **Backend:** carregar dimensões/fatos no PostGIS, disponibilizar consultas/GeoJSON, paginação, filtros e políticas de acesso.
+4. **Frontend:** mapa RMSP → município → distrito/zona, indicadores OD 2023 e comparador econômico; preservar a diferença entre dados históricos, referências e simulações.
 
-```powershell
-python migrar_raw.py --origem "C:\caminho\ANP" --fonte anp --prefixo raw/anp/2026/08 --referencia 2026-08 --dry-run
-```
-
-Depois de revisar:
-
-```powershell
-python migrar_raw.py --origem "C:\caminho\ANP" --fonte anp --prefixo raw/anp/2026/08 --referencia 2026-08
-```
-
-A origem não é apagada. O upload calcula SHA-256 e evita sobrescrever silenciosamente um objeto diferente.
-
-## Execução do pipeline de coleta/limpeza
-
-```powershell
-python extrair.py bases
-python extrair.py uber-match
-python extrair.py apis
-python extrair.py fipe
-python explorar.py
-```
-
-Para executar tudo em sequência:
-
-```powershell
-python extrair.py tudo
-```
-
-## Uber Match — locação e compra
-
-Os HTMLs gerais do Uber Match devem ser mantidos fora do GitHub como evidência da fonte, por exemplo:
-
-```text
-UBER_MATCH/
-└── 2026-09/
-    ├── uber_match_sao_paulo_locacoes.html
-    └── uber_match_sao_paulo_compra.html
-```
-
-O diretório `UBER_MATCH/` está no `.gitignore`. O coletor encontra os links das ofertas, preserva páginas de detalhe, extrai os campos relevantes e gera:
-
-```text
-dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv
-dados_limpos/17_UBER_MATCH_FALHAS_SP.csv  # quando houver aviso/falha
-```
-
-Execução:
-
-```powershell
-python extrair.py uber-match
-```
-
-Para apenas validar os HTMLs e listar links sem acessar cada oferta:
-
-```powershell
-python extrair_uber_match.py --somente-indexar
-```
-
-Para baixar novamente páginas já preservadas localmente:
-
-```powershell
-python extrair_uber_match.py --atualizar
-```
-
-A tabela de ofertas inclui validações como `revisar_oferta`, `status_qualidade`, `motivos_revisao`, `apto_modelo_economico`, `valor_card_reais` e divergência entre preço do card e página individual. Registros problemáticos são preservados e marcados para revisão, não excluídos silenciosamente.
-
-## Pesquisa OD 2023
-
-O pipeline procura `Banco2023_divulgacao_190225.sav` ou `.dbf`, filtra `MODOPRIN = 12` e gera:
-
-- `dados_limpos/07_OD2023_APP_MICRODADOS.csv`;
-- `dados_limpos/07_OD2023_APP_ZONA_HORA.csv`;
-- `dados_limpos/07_OD2023_ZONAS.geojson`, quando `Zonas_2023.shp` estiver disponível.
-
-A distância da OD é tratada explicitamente como **distância em linha reta**. Médias agregadas de duração e distância são ponderadas por `FE_VIA`. O Shape é reprojetado para EPSG:4326 para uso em mapas web e joins por latitude/longitude.
-
-## IBGE e RMSP
-
-Quando o Shape municipal estiver presente, o pipeline recorta os municípios da RMSP a partir dos municípios existentes nas Zonas OD e gera GeoJSON em EPSG:4326. O Excel/DBF isolado continua servindo como fallback de atributos.
-
-## SENATRAN
-
-Os arquivos não são concatenados como se possuíssem o mesmo esquema. São separados por assunto/granularidade: combustível, marca/modelo, ano, potência, CEP e tipo de veículo.
-
-## FIPE
-
-A primeira execução cria um mapeamento persistente Uber → FIPE em `dados_cache/fipe_mapeamento.csv`. Nas próximas execuções o matching é reutilizado e só os preços precisam ser atualizados.
-
-Há cache do catálogo, checkpoint, retomada, backoff para HTTP 429, marcação de matches fracos e filtro preliminar por modelos presentes no INMETRO quando isso é seguro.
-
-Para refazer o matching:
-
-```powershell
-python extrair_fipe.py --remapear
-```
-
-Para revisar apenas o mapeamento:
-
-```powershell
-python extrair_fipe.py --somente-mapear
-```
-
-## Proveniência e reprodutibilidade
-
-Durante a transição, o pipeline continua registrando eventos em `dados_relatorios/manifesto_coletas.csv`. A infraestrutura nova acrescenta `metadata.fontes` e `metadata.coletas` no PostgreSQL para tornar a proveniência consultável e compartilhada.
-
-Entre os metadados preservados estão fonte, data/hora da coleta, data de referência, origem, caminho no Storage, quantidade de registros, SHA-256, status e metadados extras.
-
-Os dados brutos pesados permanecem fora do Git. O repositório guarda código, documentação, DDL, arquivos processados leves quando fizer sentido e metadados de proveniência.
-
-## Validação já realizada nesta refatoração
-
-A lógica de OD foi testada com os microdados enviados no projeto: foram identificados **4.229 registros amostrais** com `MODOPRIN = 12`, correspondendo a aproximadamente **1.041.875 viagens expandidas** pelo fator `FE_VIA`.
-
-Também foi validada a leitura das **527 Zonas OD 2023** e da malha municipal do IBGE; o recorte pelos municípios presentes nas Zonas OD resulta em **39 municípios da RMSP**.
+Veja [ROADMAP.md](ROADMAP.md) para os critérios de conclusão de cada etapa.
