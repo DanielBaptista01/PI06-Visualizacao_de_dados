@@ -10,7 +10,6 @@ REF = (
     / "dados_referencia_od"
     / "dim_zonas_od2023.csv"
 )
-
 class TestOd2023(unittest.TestCase):
  def setUp(self):
   self.zonas=ler_dimensoes(REF)
