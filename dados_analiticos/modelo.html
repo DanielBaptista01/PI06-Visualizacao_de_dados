@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>PI06 · Mobilidade, energia e escolha do veículo</title>
+<style>
+:root{--bg:#090e16;--bg2:#0d1420;--panel:#121c2a;--panel2:#172231;--line:#283447;--ink:#ecf3f8;--muted:#9caab9;--faint:#6e8196;--mint:#72e3c2;--blue:#79bafb;--purple:#be9cff;--yellow:#ffcf8d;--red:#ff8d9b;--radius:20px;--shadow:0 22px 60px #0005}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.55}::selection{background:#65eacb55}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}input,select{background:#0e1825;color:var(--ink);border:1px solid #324459;border-radius:11px;padding:10px 12px;outline:0;min-width:0}input:focus,select:focus{border-color:var(--mint);box-shadow:0 0 0 3px #72e3c21e}button:focus-visible,a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.wrap{width:min(1260px,calc(100% - 80px));margin:auto}.top{position:fixed;top:0;left:0;right:0;height:65px;z-index:90;display:flex;align-items:center;justify-content:center;background:#091019df;backdrop-filter:blur(22px);border-bottom:1px solid #ffffff0d}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;gap:12px;align-items:center;font-size:15px;font-weight:800;letter-spacing:.04em}.brandmark{display:grid;place-items:center;width:34px;height:34px;background:linear-gradient(135deg,var(--mint),#80bfff);color:#071421;border-radius:9px;font-weight:900}.nav{display:flex;align-items:center;gap:19px}.nav a{font-size:12px;color:#b4c2d0;transition:color .2s;white-space:nowrap}.nav a:hover,.nav a.active{color:var(--mint)}.nav .nav-end{background:#1b3040;padding:7px 11px;border-radius:8px;color:var(--ink)}.progress{position:absolute;height:2px;left:0;bottom:-1px;width:0;background:linear-gradient(90deg,var(--mint),var(--blue));transition:width .08s}.mode{border-radius:999px;background:#1a2b39;color:var(--mint);border:1px solid #345246;font-size:10px;font-weight:800;letter-spacing:.08em;padding:6px 10px;text-transform:uppercase;white-space:nowrap}
+.hero{position:relative;min-height:820px;padding:168px 0 100px;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse 760px 700px at 95% 30%,#21445670,transparent 73%),radial-gradient(ellipse 560px 500px at 19% 16%,#224a4b3d,transparent 75%),linear-gradient(180deg,#0a1520,#090e16 94%)}.hero:after{content:"";position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(transparent,var(--bg));pointer-events:none}.hero .wrap{z-index:2;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:35px}.overline{font-weight:800;color:var(--mint);letter-spacing:.21em;font-size:12px;text-transform:uppercase}.hero h1{font-size:clamp(50px,5.5vw,88px);font-weight:800;line-height:1.02;letter-spacing:-.065em;margin:19px 0 26px}.hero h1 em{font-style:normal;background:linear-gradient(120deg,#9be8cb,#80c8ef);color:transparent;background-clip:text}.lead{max-width:590px;color:#b6c8d5;font-size:18px;line-height:1.8}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}.btn{border:1px solid #ffffff2a;border-radius:12px;padding:12px 19px;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1b2b39;color:var(--ink);font-weight:700;font-size:13px;transition:.18s}.btn:hover{transform:translateY(-2px);background:#293b4e}.btn.primary{background:var(--mint);color:#092225;border-color:var(--mint)}.btn.primary:hover{background:#9bedda}.hero-note{display:flex;gap:9px;align-items:center;font-size:12px;color:var(--muted);margin-top:24px}.hero-art{height:525px;position:relative}.orb{position:absolute;inset:15% 6% 12% 8%;border-radius:50%;background:radial-gradient(circle at 45% 45%,#234959,#112937 55%,transparent 75%);box-shadow:0 0 100px #40dbdd1c;filter:blur(7px)}.orbit{position:absolute;border:1px solid #6ed8c83e;border-radius:50%;transform:rotate(-22deg);inset:13% 1% 10% 3%}.orbit.two{inset:25% -2% 22% -4%;transform:rotate(32deg);border-style:dashed;opacity:.5}.orbit.three{inset:5% 13% 0% 9%;transform:rotate(-62deg);opacity:.35}.globe{position:absolute;inset:16% 8% 12% 10%;border-radius:50%;background:radial-gradient(circle at 37% 30%,#153b49,#07151b 67%);border:1px solid #6bd3cd35;box-shadow:inset -30px -30px 70px #0009,0 0 40px #41d1c91c;overflow:hidden}.globe svg{width:100%;height:100%;opacity:.82}.hero-stat{position:absolute;background:#162632d9;backdrop-filter:blur(12px);border:1px solid #45616a67;border-radius:16px;padding:15px 18px;box-shadow:var(--shadow)}.hero-stat b{font-size:25px;display:block;line-height:1.1}.hero-stat span{color:#aabfc9;font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700}.hs1{top:8%;right:-1%}.hs2{bottom:10%;left:1%}.hs3{bottom:17%;right:0%}.scrolldown{position:absolute;bottom:43px;left:50%;transform:translateX(-50%);font-size:11px;color:#8ca2af;z-index:5;text-align:center;letter-spacing:.16em}
+.section{padding:105px 0;position:relative;scroll-margin-top:65px}.section.alt{background:#0e1621}.section-head{margin-bottom:39px;max-width:790px}.eyebrow{color:var(--mint);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.section h2{font-size:clamp(34px,4vw,57px);margin:13px 0 17px;letter-spacing:-.048em;line-height:1.12}.section .deck{color:#abbac9;font-size:16px;max-width:760px;line-height:1.8}.badge-line{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.pill{font-size:11px;font-weight:700;border:1px solid #3f515e;border-radius:100px;padding:5px 11px;color:#aebfcc;background:#1a2532}.pill.green{color:#a3f6d1;border-color:#365e54;background:#1b3838}.pill.blue{color:#afd8ff;border-color:#435971;background:#182e43}.pill.warn{color:#ffdbab;border-color:#66543a;background:#30271d}.card{background:linear-gradient(155deg,#162130,#111a27);border:1px solid #2a3747;border-radius:var(--radius);padding:25px;box-shadow:0 12px 42px #050b1238}.card h3{margin:0 0 12px;font-size:19px;letter-spacing:-.02em}.card .sub{color:#a7b7c7;font-size:12px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:26px 0 36px}.metric{padding:20px;border:1px solid #2b3b4c;border-radius:15px;background:linear-gradient(145deg,#172636,#101925)}.metric b{font-size:31px;letter-spacing:-.06em;display:block;line-height:1.2}.metric span{font-size:11px;color:#9bb1c1;letter-spacing:.03em}.metric b.mint{color:var(--mint)}.metric b.blue{color:var(--blue)}.metric b.yellow{color:var(--yellow)}.meta-note{font-size:12px;color:#94a9b9;margin:15px 0}.twocol{display:grid;grid-template-columns:minmax(0,1.36fr) minmax(320px,.86fr);gap:18px}.controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:16px}.field{display:flex;flex-direction:column;gap:5px;font-size:11px;color:#9fb0c0;min-width:120px}.field select{min-width:160px}.field input[type=range]{accent-color:var(--mint);padding:0;border:0;background:transparent}.mapbox{background:#0a1420;border:1px solid #2a3d4a;border-radius:15px;position:relative;height:470px;overflow:hidden}.mapbox:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(#8dd4cb28 1px,transparent 1px),linear-gradient(90deg,#8dd4cb28 1px,transparent 1px);background-size:38px 38px}.mapbox svg{position:relative;width:100%;height:100%;display:block;touch-action:none;cursor:grab}.mapbox svg:active{cursor:grabbing}.mapbox .preview-map{width:100%;height:100%;object-fit:contain;filter:saturate(.8) brightness(.8)}.maphint{position:absolute;left:13px;bottom:12px;background:#07151ad9;border:1px solid #315266;border-radius:9px;color:#c7dce7;padding:8px 11px;font-size:11px;max-width:75%}.mapzoom{position:absolute;right:13px;top:13px;display:flex;flex-direction:column;gap:6px}.mapzoom button{background:#132838d9;color:#e5f3f7;border:1px solid #3c6072;border-radius:7px;width:34px;height:34px;font-size:19px}.zone{fill-rule:evenodd;stroke:#0b1b28;stroke-width:.65;cursor:pointer;vector-effect:non-scaling-stroke;transition:fill .14s}.zone:hover{fill:#fff0ae!important;stroke:#fff3bf;stroke-width:1.6}.zone.selected{fill:#ffcb80!important;stroke:#fff4cb;stroke-width:1.9}.zone.hidden-zone{opacity:.23;pointer-events:auto}.zone.hidden-zone.selected{opacity:1}.municipality{stroke:#9bdccc;stroke-opacity:.48;stroke-width:1.4;fill:none;pointer-events:none;vector-effect:non-scaling-stroke}.charging-point{fill:#f3d088;stroke:#38270d;stroke-width:.6;cursor:pointer}.charging-point:hover{fill:#fff;stroke-width:2}.maptooltip{position:absolute;z-index:5;pointer-events:none;min-width:140px;padding:8px 11px;background:#0c1c29f2;border:1px solid #69c8c585;box-shadow:0 6px 25px #0009;border-radius:9px;color:#e8f8f8;font-size:12px;display:none}.legend{display:flex;align-items:center;gap:8px;color:#9db4c3;font-size:11px;margin:13px 0 0;flex-wrap:wrap}.gradbar{width:140px;height:9px;border-radius:20px;background:linear-gradient(90deg,#21394a,#29636d,#51c2a7,#a5f1bd)}.baritem{margin:11px 0;cursor:pointer}.barhead{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px}.barhead b{font-weight:600}.barhead span{color:#adc4d4;font-variant-numeric:tabular-nums}.track{height:9px;background:#243445;border-radius:10px;overflow:hidden}.track .fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#367fa1,var(--mint));transition:width .4s}.baritem:hover .fill{filter:brightness(1.2)}.sidenote{border-left:2px solid var(--mint);padding:10px 0 10px 14px;color:#b2bfcd;font-size:12px;line-height:1.8;margin-top:17px}.empty{padding:22px;border:1px dashed #3d556b;border-radius:13px;color:#a6b7c9;font-size:13px;line-height:1.7}.smallcap{color:#9fb4c4;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;margin:4px 0 8px}.big-num{font-size:34px;font-weight:800;letter-spacing:-.05em;line-height:1.18}.info-rows{display:flex;flex-direction:column;gap:12px}.info-row{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding-bottom:9px;border-bottom:1px solid #263747}.info-row span{color:#a8b9c6}.info-row b{text-align:right}.split-stat{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{border:1px solid #2b3e4f;border-radius:12px;background:#0e1a28;padding:14px}.mini b{display:block;font-size:20px}.mini span{font-size:11px;color:#9eaebd}.tabset{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}.tab{border:1px solid #3b5060;border-radius:9px;padding:8px 12px;background:#152534;color:#b9cbd5;font-size:12px}.tab.current{background:#2c6b69;color:#f4ffff;border-color:#71dbbd}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.process{display:flex;gap:13px;padding:20px 0;border-bottom:1px solid #253547}.process .num{font-size:14px;color:var(--mint);font-weight:800}.process b{display:block;font-size:15px}.process p{margin:4px 0 0;color:#a3b5c4;font-size:12px}.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.howto article{padding:22px;border:1px solid #2e4150;border-radius:16px;background:#111f2b}.howto span{color:var(--mint);font-size:11px;letter-spacing:.1em}.howto h4{font-size:16px;margin:6px 0}.howto p{font-size:12px;color:#aec1cd;line-height:1.8}.notice{padding:18px 21px;border:1px solid #74603c;background:#31251883;border-radius:13px;color:#ffdeb4;font-size:12px;line-height:1.7}.banner{padding:16px 20px;border-radius:12px;border:1px solid #4a6875;background:#152937;margin:18px 0;color:#c9e2e5;font-size:12px}.footer{background:#07111a;border-top:1px solid #21303e;padding:35px 0 55px;color:#92aabd}.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer b{color:#d9eef0}#toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(120px);background:#1b3f3e;border:1px solid #81e5d0;border-radius:12px;padding:12px 20px;font-size:13px;z-index:100;transition:transform .3s;color:#e8ffff}#toast.show{transform:translateX(-50%) translateY(0)}.separator{height:1px;background:linear-gradient(90deg,transparent,#335164,transparent);margin:10px 0}.light{color:var(--mint)}.yellow{color:var(--yellow)}.mono{font-family:ui-monospace,Consolas,monospace;font-size:12px}.float-compare{border-radius:14px;background:#1b3540;border:1px solid #3f7c79;padding:20px}.float-compare strong{font-size:29px;color:var(--mint)}.sticky{position:sticky;top:82px}.sidepanel{max-height:790px;overflow:auto}.flowrow{display:grid;grid-template-columns:32px minmax(0,1fr) 90px;gap:11px;align-items:center;border-bottom:1px solid #2b3a47;padding:12px 0;font-size:12px}.flowrow .rank{background:#244858;color:var(--mint);border-radius:9px;text-align:center;padding:6px}.flowrow .v{color:#bdd6e0;text-align:right;font-variant-numeric:tabular-nums}.pricebox{padding:18px;background:#0e1f2a;border:1px solid #376453;border-radius:14px}.pricebox .big-num{color:var(--mint)}.simgauge{display:flex;gap:8px;margin:18px 0}.simgauge>div{height:18px;border-radius:5px;background:linear-gradient(90deg,#307b7e,var(--mint));transition:width .25s}.simgauge>div.missing{background:#4a4255}.footerlinks{display:flex;gap:20px;font-size:12px}.savebtn{font-size:12px}.dot{display:inline-block;width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 12px var(--mint);margin-right:6px}.quote{border-top:1px solid #2d4151;margin-top:23px;padding-top:19px;color:#a9bbcb;font-size:13px}.footer small{line-height:1.8}.sourcecode{font-size:11px;color:#7794a4;word-break:break-all}
+@media(max-width:1000px){.nav{gap:11px}.nav a{font-size:11px}.wrap{width:min(100% - 40px,1260px)}.hero .wrap{grid-template-columns:1fr}.hero{padding-top:125px}.hero-art{height:380px;max-width:630px;width:100%;margin:0 auto}.twocol{grid-template-columns:1fr}.sticky{position:static}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.nav a:not(.nav-end){display:none}.hero h1{font-size:52px}.hero{min-height:0}.hero-art{height:320px}.hero-stat{padding:11px}.hero-stat b{font-size:20px}.metrics{grid-template-columns:repeat(2,1fr)}.metric b{font-size:25px}.section{padding:72px 0}.grid3,.howto{grid-template-columns:1fr}.mapbox{height:365px}.controls{gap:9px}.field select{min-width:120px}.card{padding:18px}.footer .wrap{display:block}.footerlinks{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+@media print{.top,.scrolldown,.mapzoom,.hero-actions{display:none!important}.section{padding:35px 0;page-break-inside:avoid}.hero{min-height:0;padding:50px 0}.card{box-shadow:none}.wrap{width:100%}}
+
+/* PI06 v2.3 — quarto mapa de análise condicional + navegação responsiva. */
+.menu-toggle{display:none;background:#142333;border:1px solid #355161;border-radius:11px;color:#dcf5ef;font-size:13px;font-weight:700;padding:9px 12px}
+.decision-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.decision-grid{display:grid;grid-template-columns:minmax(0,1.23fr) minmax(325px,.86fr);gap:18px;align-items:start}
+.decision-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 15px}
+.decision-controls .field,.decision-filter .field{min-width:0}
+.decision-controls input,.decision-controls select,.decision-filter input,.decision-filter select{width:100%;max-width:100%;min-height:44px}
+.decision-map{height:490px}
+.decision-map svg{touch-action:pan-y}
+.decision-map .zone{stroke-width:.95}
+.decision-map .zone.dimmed{opacity:.19}
+.decision-map .zone.selected{opacity:1}
+.decision-map .charging-point{pointer-events:auto;stroke-width:1;stroke:#1d1a13}
+.decision-map .charging-point:focus-visible{stroke:#fff;stroke-width:3}
+.decision-filter{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:15px}
+.decision-callout{background:linear-gradient(120deg,#143a35,#162b36);border:1px solid #3b6f69;border-radius:17px;padding:18px;margin:14px 0}
+.decision-callout strong{font-size:19px;display:block;color:#c3f4e3}
+.decision-callout p{font-size:12px;color:#accac6;margin:8px 0 0;line-height:1.65}
+.decision-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
+.decision-stats>div{border:1px solid #30485c;background:#0e1a29;border-radius:12px;padding:13px}
+.decision-stats small{display:block;color:#9eb6c6;font-size:11px;line-height:1.4}
+.decision-stats b{display:block;font-size:22px;white-space:nowrap;margin-top:3px}
+.vehicle-compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:18px}
+.vehicle-option{padding:15px;background:#0e1a28;border:1px solid #2c3b4a;border-radius:14px;min-width:0}
+.vehicle-option label{display:block;font-size:12px;color:#b1c4cf;margin:10px 0 5px}
+.vehicle-option select,.vehicle-option input{width:100%;min-width:0;max-width:100%;font-size:12px;min-height:43px}
+.vehicle-option strong{font-size:14px;color:#d6f4ef}
+.vehicle-option .value{font-size:24px;font-weight:800;color:var(--mint);display:block;margin:10px 0 0;letter-spacing:-.03em}
+.vehicle-option .value-sub{font-size:11px;color:#acc1ca;display:block}
+.vehicle-option[data-group="Híbrido"] .value{color:#a1c8ff}
+.vehicle-option[data-group="Gasolina"] .value{color:#ffd59b}
+.decision-rank{display:flex;flex-direction:column;gap:10px;margin-top:13px}
+.decision-rank .rank-row{display:grid;grid-template-columns:116px 1fr auto;gap:11px;align-items:center;border-radius:12px;padding:10px;background:#101e2c;border:1px solid #304358}
+.rank-row .rank-label{font-size:12px;color:#b8c9d3;font-weight:700}
+.rank-track{height:10px;background:#2c3a4b;border-radius:20px;overflow:hidden}
+.rank-track>i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#4f90b8,#75e2bf)}
+.rank-row b{font-size:14px;white-space:nowrap}
+.assumption-row{display:flex;align-items:flex-start;gap:12px;margin:15px 0;padding:14px;background:#111e2c;border:1px solid #35485c;border-radius:12px;font-size:13px}
+.assumption-row input{margin-top:3px;width:18px;height:18px;flex:0 0 18px;accent-color:var(--mint)}
+.decision-subtitle{color:#a6bfcb;font-size:13px;margin:12px 0 6px}
+.mobile-note{display:none}
+.compact-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.compact-controls .field{flex:1;min-width:140px}
+@media(max-width:1100px){.decision-grid{grid-template-columns:1fr}.decision-map{height:480px}.vehicle-compare{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:850px){.menu-toggle{display:inline-flex;align-items:center;justify-content:center}.top .nav{position:absolute;left:18px;right:18px;top:65px;display:none;flex-direction:column;gap:0;background:#102131;border:1px solid #314b5d;border-radius:15px;padding:8px;box-shadow:0 18px 45px #000a;max-height:70vh;overflow-y:auto}.top .nav.open{display:flex}.top .nav a{display:block;width:100%;padding:12px 14px;font-size:14px}.top .nav a:not(.nav-end){display:block}.top .nav .nav-end{background:#204538}.mode{margin-left:auto}.hero{padding:120px 0 70px}.hero .wrap{gap:16px}}
+@media(max-width:700px){.wrap{width:calc(100% - 28px)}.top .wrap{gap:10px}.brand{gap:8px;font-size:12px}.brandmark{height:30px;width:30px;flex-shrink:0}.brand .brand-caption{display:none}.top .mode{font-size:9px;padding:5px 7px}.hero{padding:100px 0 55px}.hero h1{font-size:clamp(38px,12vw,56px)}.hero .lead{font-size:15px;line-height:1.7}.hero-art{height:260px}.hero-stat{padding:10px 11px}.hs1{right:0}.hs3{right:0}.section{padding:58px 0;scroll-margin-top:74px}.section h2{font-size:clamp(29px,8.5vw,43px)}.section .deck{font-size:14px}.section-head{margin-bottom:23px}.card{padding:16px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric{padding:12px}.metric b{font-size:22px}.metric span{font-size:10px}.twocol{grid-template-columns:minmax(0,1fr)}.field{min-width:0;width:100%}.field input,.field select{width:100%!important;min-width:0}.controls .field{flex:1 1 170px}.mapbox{height:330px}.mapbox svg{touch-action:pan-y}.mapzoom button{width:44px;height:44px}.maphint{font-size:10px;max-width:68%;padding:7px}.decision-map{height:365px}.decision-controls{grid-template-columns:1fr}.decision-filter{grid-template-columns:1fr}.vehicle-compare{grid-template-columns:1fr}.decision-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.decision-stats>div{padding:9px 7px}.decision-stats b{font-size:17px}.decision-stats small{font-size:10px}.decision-rank .rank-row{grid-template-columns:92px 1fr auto;gap:6px;padding:9px}.decision-rank b{font-size:11px}.mobile-note{display:block;color:#b6ceda;font-size:12px;margin-top:8px}.year-totals{grid-template-columns:1fr 1fr}.sources-row{grid-template-columns:1fr}.timeline-chart{height:230px}.maptooltip{max-width:150px}.hero-actions .btn{flex:1 1 auto}}
+@media(max-width:390px){.top .wrap{gap:6px}.brand{font-size:11px}.mode{display:none}.menu-toggle{padding:8px;font-size:12px}.decision-stats b{font-size:14px}.decision-map{height:320px}.year-totals{grid-template-columns:1fr}}
+
+</style>
+
+<style>
+/* PI06 v2 · evolução, drill-down territorial, fichas OCM e simulação responsiva */
+.timeline-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.75fr);gap:18px;margin:26px 0}
+.timeline-chart{height:265px;min-height:240px;overflow:hidden;position:relative}
+.timeline-chart svg{width:100%;height:100%;display:block}
+.timeline-year{border:1px solid #39546b;border-radius:10px;background:#162b3d;color:#d9ebf4;padding:9px 16px;font-weight:800;cursor:pointer;transition:.2s}
+.timeline-year.active,.timeline-year[aria-pressed=true]{background:var(--mint);color:#092327;border-color:var(--mint)}
+.timeline-year:focus-visible{outline:2px solid var(--mint)}
+.year-chooser{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:10px 0 20px}
+.timeline-key{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted)}
+.timeline-swatch{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px}
+.year-figure{font-size:36px;color:var(--mint);font-weight:850;letter-spacing:-.045em;line-height:1.15}
+.year-totals{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:18px 0}
+.year-totals .mini{background:#101d2b;border:1px solid #2c4457;border-radius:11px;padding:13px}
+.year-totals b{display:block;font-size:23px;color:#e8f8ff}
+.text-link{border:0;padding:0;background:transparent;color:var(--mint);text-decoration:underline;cursor:pointer}
+.sources-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.district-focus{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:15px 0;padding:14px;background:#112a35;border:1px solid #35606a;border-radius:12px}
+.district-focus b{display:block;color:var(--mint);font-size:23px}
+.selectzone{max-width:100%;width:100%}
+.zone-search-field{flex:1;min-width:235px;max-width:450px}
+.zone-search-field input{width:100%;min-width:215px}
+.zone-search-results{display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 17px;min-height:0}
+.zone-search-results:empty{display:none}
+.zone-search-results button{color:#dfefec;background:#132b39;border:1px solid #3c6473;border-radius:10px;padding:9px 11px;text-align:left;cursor:pointer;font-size:12px;line-height:1.35}
+.zone-search-results button:hover,.zone-search-results button:focus-visible{background:#214d58;border-color:var(--mint)}
+.zone-search-results button b{display:block;color:var(--mint)}
+.zone-search-results .zone-search-summary{font-size:12px;color:#a1b9c8;width:100%;margin:0}
+
+.specificity{border:1px solid #39546b;background:#112333;border-radius:11px;padding:12px 14px;font-size:12px;color:#adc5d6;margin:15px 0}
+.charge-result{display:block;border:1px solid #304659;border-radius:11px;background:#132334;padding:12px 13px;text-align:left;color:var(--ink);cursor:pointer;width:100%;margin:8px 0}
+.charge-result:hover,.charge-result.active{border-color:#84dfcc;background:#203848}
+.detail-grid{display:grid;grid-template-columns:minmax(100px,.8fr) 1.2fr;gap:9px;border-top:1px solid #304253;padding:9px 0;font-size:12px}
+.detail-grid span{color:var(--muted)}.detail-grid b{overflow-wrap:anywhere;font-weight:650}
+.charge-actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.charge-map-hint{position:absolute;right:12px;bottom:12px;background:#0b1828d9;border:1px solid #496c77;border-radius:10px;color:#d4e6ed;padding:8px 10px;font-size:11px}
+.interactive-guide{color:#a8e6db;border:1px dashed #3b5c65;background:#0e232d;border-radius:12px;padding:12px 15px;margin:12px 0;font-size:12px}
+.sim-live{background:#0d2730;border:1px solid #336458;border-radius:13px;padding:15px;margin:16px 0}
+.sim-live b{display:block;font-size:28px;color:var(--mint)}
+.mapbox .charging-point.selected{fill:#fff;stroke:#74e3c2;stroke-width:3;stroke-opacity:.8;filter:drop-shadow(0 0 6px #83f3ca)}
+@media(max-width:1000px){.timeline-layout{grid-template-columns:1fr}.sources-row{grid-template-columns:1fr}}
+@media(max-width:720px){.timeline-chart{height:240px}.year-totals{grid-template-columns:1fr 1fr}.district-focus{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a class="brand" href="#inicio"><span class="brandmark">06</span><span>PI06 <span class="brand-caption" style="font-weight:400;color:#90a6b5">/ Visualização de Dados</span></span></a><button class="menu-toggle" id="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação">☰ Menu</button><nav class="nav" id="main-nav" aria-label="Navegação principal"><a href="#mobilidade">Mobilidade</a><a href="#fluxos">Fluxos</a><a href="#energia">Energia</a><a href="#economia">Economia</a><a href="#recarga">Recarga</a><a href="#viabilidade">Decisão territorial</a><a href="#simulador" class="nav-end">Simulador ↗</a></nav><span class="mode" id="mode">Prévia</span></div><div class="progress" id="progress"></div></div>
+<section id="inicio" class="hero"><div class="wrap"><div><div class="overline"><span class="dot"></span> São Paulo · Pesquisa OD 2023 + dados 2026</div><h1>Uma cidade.<br>Três energias.<br><em>Muitas escolhas.</em></h1><p class="lead">Qual é o custo de trabalhar com um carro de aplicativo? Descubra como a mobilidade na metrópole e a tecnologia dos veículos ajudam a entender essa decisão — sem confundir dados observados com simulações.</p><div class="hero-actions"><a class="btn primary" href="#mobilidade">Explorar os dados ↓</a><a class="btn" href="#viabilidade">Testar a hipótese ↗</a></div><div class="hero-note">◉ Pesquisa Metrô OD 2023 · INMETRO, ANP, ANEEL e demais fontes de 2026</div></div><div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div><div class="globe"><svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"><defs><radialGradient id="mesh"><stop stop-color="#6fe9c4" stop-opacity=".3"/><stop offset="1" stop-color="#4f98e0" stop-opacity=".03"/></radialGradient></defs><circle cx="250" cy="250" r="235" fill="url(#mesh)"/><path d="M250 25 Q138 140 250 250T250 475 M250 25 Q365 140 250 250T250 475 M30 250H470 M65 165Q250 246 435 165 M65 335Q250 254 435 335" fill="none" stroke="#7ce3d3" stroke-opacity=".16" stroke-width="2"/><path d="M235 75 L293 91 300 125 339 146 317 179 356 211 333 242 354 284 314 318 291 362 240 347 226 392 190 359 173 300 140 266 157 210 132 157 180 116Z" fill="#4cbea6" fill-opacity=".17" stroke="#87ead1" stroke-opacity=".55" stroke-width="2"/><circle cx="255" cy="228" r="9" fill="#a3fff0"/><circle cx="255" cy="228" r="20" fill="none" stroke="#93f5e3" stroke-opacity=".5"/><circle cx="325" cy="283" r="5" fill="#b0e6ff"/><circle cx="193" cy="168" r="5" fill="#b0e6ff"/><path d="M255 228 325 283M255 228 193 168M193 168 265 138" stroke="#8adacc" stroke-dasharray="6 6" fill="none"/></svg></div><div class="hero-stat hs1"><b id="h-zones">343</b><span>Zonas OD</span></div><div class="hero-stat hs2"><b id="h-trips">574 mil</b><span>Origens expandidas na capital*</span></div><div class="hero-stat hs3"><b id="h-energy">838</b><span>Cenários de energia</span></div></div></div><div class="scrolldown">ROLE PARA EXPLORAR <div style="font-size:24px;margin-top:4px">⌄</div></div></section>
+<section class="section" id="contexto"><div class="wrap"><div class="section-head"><div class="eyebrow">01 / O problema</div><h2>A mesma viagem.<br><span class="light">Custos diferentes.</span></h2><p class="deck">Gasolina, híbrido ou elétrico? A resposta depende de consumo, preço da energia, quilometragem, custos fixos, contrato de aluguel e outras variáveis. A Pesquisa OD ajuda a compreender os deslocamentos — não informa quanto cada motorista recebeu.</p></div><div class="metrics"><div class="metric"><b class="mint" id="k-zones">343</b><span>Zonas OD catalogadas</span></div><div class="metric"><b class="blue" id="k-muns">96</b><span>Distritos da capital</span></div><div class="metric"><b id="k-samples">3.178</b><span>Registros amostrais de origem na capital</span></div><div class="metric"><b class="yellow" id="k-exp">574 mil</b><span>Viagens expandidas com origem na capital</span></div></div>
+<div class="timeline-layout" id="evolucao-eletrificados">
+  <div class="card">
+    <div class="smallcap">Série histórica interativa · Brasil, 2022–2026</div>
+    <h3>Como evoluíram as vendas de veículos eletrificados?</h3>
+    <div class="timeline-key"><span><i class="timeline-swatch" style="background:#72e3c2"></i> Elétricos 100% (BEV)</span><span><i class="timeline-swatch" style="background:#7fb7f9"></i> Híbridos (PHEV + HEV + HEV flex)</span></div>
+    <div id="timeline-chart" class="timeline-chart" role="img" aria-label="Gráfico de vendas anuais de elétricos e híbridos"></div>
+    <div id="timeline-years" class="year-chooser" aria-label="Escolha um ano para detalhes"></div>
+    <p id="timeline-footnote" class="meta-note">ABVE Data, vendas de novos veículos no Brasil. 2026 é parcial; MHEV não é somado pela mudança de metodologia.</p>
+  </div>
+  <div class="card" aria-live="polite">
+    <div class="smallcap">Detalhe do ano selecionado</div><div class="year-figure" id="timeline-year-title">2022</div>
+    <div class="year-totals"><div class="mini"><span>BEV vendidos</span><b id="timeline-bev">—</b></div><div class="mini"><span>Híbridos vendidos</span><b id="timeline-hybrid">—</b></div></div>
+    <div class="info-rows"><div class="info-row"><span>Vendas eletrificadas comparáveis</span><b id="timeline-total">—</b></div><div class="info-row"><span>Variação contra período equivalente anterior</span><b id="timeline-yoy">—</b></div><div class="info-row"><span>Meses disponíveis</span><b id="timeline-months">—</b></div></div>
+    <div class="sidenote" id="timeline-explain">Escolha um ano nas barras ou nos botões.</div>
+  </div>
+</div>
+<div class="sources-row">
+  <div class="card"><div class="smallcap">Retrato da frota · SENATRAN 2026</div><h3>Combustíveis cadastrados</h3><div class="sub">Município de São Paulo · todos os tipos de veículo. Não representa a frota de aplicativos.</div><div id="fleet-context-home" style="margin-top:14px"></div></div>
+  <div class="card"><div class="smallcap">Recorte de preços · FIPE, novembro/2026</div><h3>Veículos por ano-modelo</h3><p class="sub">As linhas FIPE são cotações parciais de 2026 agrupadas pelo <b>ano do modelo</b>. Não são vendas ou frota histórica.</p><div id="fipe-year-summary"></div></div>
+</div>
+<div class="interactive-guide">A série temporal mostra <b>vendas ABVE no Brasil</b>. A SENATRAN mostra <b>frota cadastrada em 2026</b> e a FIPE apresenta <b>preços de novembro de 2026</b>. Não cruzamos esses números como se fossem a mesma população. A série histórica de gasolina não está disponível nas fontes atuais.</div>
+<div class="notice"><b>O que estes números não significam:</b> as viagens são da categoria <b>táxi não convencional/aplicativo (MODOPRIN=12)</b>, e não exclusivamente da Uber. O fator FE_VIA expande viagens, não mede motoristas, carros ou faturamento.</div></div></section>
+<section class="section alt" id="mobilidade"><div class="wrap"><div class="section-head"><div class="eyebrow">02 / Onde acontecem os deslocamentos</div><h2>Um mapa de<br><span class="light">343 zonas.</span></h2><p class="deck">Explore exclusivamente o município de São Paulo. Filtre por Centro, Norte, Sul, Leste ou Oeste, busque um distrito ou clique diretamente em qualquer zona para abrir seus indicadores.</p></div><div class="controls"><label class="field">Região da capital<select id="map-region"><option value="">Todas as regiões</option><option value="Centro">Centro</option><option value="Norte">Norte</option><option value="Sul">Sul</option><option value="Leste">Leste</option><option value="Oeste">Oeste</option></select></label><label class="field">Indicador do mapa<select id="map-metric"><option value="viagens_origem_expandidas">Viagens saindo</option><option value="viagens_destino_expandidas">Viagens chegando</option></select></label><label class="field">Distrito de São Paulo<select id="map-district"><option value="">Todos os distritos</option></select></label><label class="field">Zona específica<select id="map-zone" class="selectzone"><option value="">Todas as zonas</option></select></label><label class="field zone-search-field">Buscar zona, distrito ou nº OD<input type="search" id="map-zone-search" autocomplete="off" placeholder="Ex.: Jabaquara, Santo Amaro, 123" aria-controls="map-zone-results" aria-label="Digite o nome ou número da zona"></label></div><div id="map-zone-results" class="zone-search-results" aria-live="polite"></div><div class="twocol"><div class="card"><div class="mapbox"><div id="map-render" style="position:absolute;inset:0"></div><div class="maptooltip" id="map-tooltip"></div><div class="mapzoom"><button id="zoom-in" title="Aproximar" aria-label="Aproximar">+</button><button id="zoom-out" title="Afastar" aria-label="Afastar">−</button><button id="zoom-reset" title="Redefinir" aria-label="Redefinir zoom">⌖</button></div><div class="maphint" id="map-hint">Clique em qualquer zona, mesmo fora do filtro, para atualizar o painel.</div></div><div class="legend"><span>Menos viagens</span><div class="gradbar"></div><span>Mais viagens</span><span style="margin-left:auto">Sem amostra = cinza</span></div></div><div class="card sidepanel"><div class="smallcap">Local selecionado</div><div class="big-num" id="selected-zone-title">Selecione no mapa</div><p class="sub" id="selected-zone-sub">O painel exibirá viagens de origem e destino.</p><div class="smallcap" style="margin-top:12px">Distrito / recorte</div><div id="map-district-name" style="font-weight:750;font-size:17px;color:var(--mint)">—</div><div class="district-focus"><div><small>Origens no recorte</small><b id="map-district-origin">—</b></div><div><small>Destinos no recorte</small><b id="map-district-dest">—</b></div></div><div class="separator"></div><div class="split-stat"><div class="mini"><span>Origens expandidas</span><b id="zone-origin">—</b></div><div class="mini"><span>Destinos expandidos</span><b id="zone-dest">—</b></div></div><div class="info-rows" style="margin-top:18px"><div class="info-row"><span>Município</span><b id="zone-mun">São Paulo</b></div><div class="info-row"><span>Região da capital</span><b id="zone-region">—</b></div><div class="info-row"><span>Distrito OD</span><b id="zone-district">—</b></div><div class="info-row"><span>Registros amostrais (origem)</span><b id="zone-sample">—</b></div></div><div id="map-fleet-context" class="specificity">Os dados de frota disponíveis estão na escala municipal, não na escala de uma zona OD.</div><div class="sidenote" id="zone-caveat">Zonas sem viagens na amostra não representam demanda zero.</div><div class="smallcap" style="margin-top:20px">Distritos com mais viagens de origem</div><div id="mun-bars"></div></div></div></div></section>
+<section class="section" id="fluxos"><div class="wrap"><div class="section-head"><div class="eyebrow">03 / De onde e para onde</div><h2>Os fluxos revelam<br><span class="light">os ritmos da cidade.</span></h2><p class="deck">Um mesmo território se conecta a destinos diferentes de manhã, à tarde e à noite. O ranking mostra destinos dentro da capital entre os cinco destinos de maior volume previamente classificados para cada origem e horário; outros fluxos podem ficar fora desta seleção. Não são trajetos viários nem ganhos de motoristas.</p></div><div class="twocol"><div class="card"><div class="smallcap">Selecione uma zona de origem</div><div class="controls"><label class="field" style="flex:1">Zona OD<select id="flow-zone" style="width:100%"></select></label><label class="field">Faixa de saída<select id="flow-hour"><option value="Manhã (6-11)">Manhã · 6–11h</option><option value="Tarde (12-17)">Tarde · 12–17h</option><option value="Noite (18-23)">Noite · 18–23h</option><option value="Madrugada (0-5)">Madrugada · 0–5h</option><option value="Hora desconhecida">Sem horário</option></select></label></div><div id="flow-list" style="min-height:180px"></div></div><div class="card"><div class="smallcap">Como ler os resultados</div><h3>Distância não é quilometragem.</h3><p class="deck" style="font-size:13px">A variável <span class="light mono">DISTANCIA</span> da OD representa distância em linha reta entre origem e destino. O trajeto real inclui vias, desvios, acesso e circulação sem passageiro.</p><div class="split-stat"><div class="mini"><span>Origem selecionada</span><b id="flow-zone-label" style="font-size:16px">—</b></div><div class="mini"><span>Destinos no ranking</span><b id="flow-count">0</b></div></div><p class="quote">O ranking é condicionado à amostra. Uma zona com poucas observações deve ser interpretada com cautela.</p></div></div></div></section>
+<section class="section alt" id="energia"><div class="wrap"><div class="section-head"><div class="eyebrow">04 / Qual energia custa menos</div><h2>O custo de avançar<br><span class="light">um quilômetro.</span></h2><p class="deck">Compare versões e modalidades do INMETRO usando os preços considerados no cenário. Os custos são técnicos, não uma certificação de que cada versão pode circular na Uber.</p></div><div class="controls"><label class="field">Tecnologia<select id="energy-group"><option value="">Todas</option><option value="Gasolina">Gasolina / flex / etanol</option><option value="Híbrido">Híbrido</option><option value="Elétrico">Elétrico</option></select></label><label class="field">Pesquisar modelo<input id="energy-search" placeholder="Ex.: Dolphin, Mobi…" type="search" style="min-width:210px"></label><label class="field">Km operacionais por mês <b id="energy-km-label" class="light">3.000 km</b><input id="energy-km" type="range" min="500" max="8000" step="250" value="3000"></label></div><div class="twocol"><div class="card"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><h3>Cenários de menor custo energético</h3><span class="pill blue" id="energy-n">—</span></div><div id="energy-bars"></div><p class="meta-note">Ordem baseada apenas no custo energético. Seguro, aquisição, manutenção e aluguel não estão incluídos.</p></div><div class="card"><div class="smallcap">Versão selecionada</div><div class="big-num" id="energy-model" style="font-size:25px">Selecione no ranking</div><div class="sub" id="energy-desc">—</div><div class="separator"></div><div class="pricebox"><div class="smallcap">Custo energético por km</div><div class="big-num" id="energy-perkm">—</div><p class="sub" style="margin:6px 0 0">Custo mensal sob a quilometragem escolhida</p><div class="big-num" id="energy-permonth" style="font-size:25px;margin-top:6px">—</div></div><div class="sidenote">Tarifas e combustíveis são referências de 2026. A tarifa elétrica de base pode não incluir tributos e perdas de recarga; conferir as premissas da análise.</div></div></div></div></section>
+<section class="section" id="economia"><div class="wrap"><div class="section-head"><div class="eyebrow">05 / O que sobra para o motorista</div><h2>Energia é só<br><span class="light">uma parte da conta.</span></h2><p class="deck">Mesmo que a eletricidade custe menos por quilômetro, a viabilidade depende de seguro, manutenção, impostos, depreciação ou aluguel e do recebimento do motorista. Custos ausentes não devem virar zero.</p></div><div class="grid3"><div class="card"><span class="pill green">Parte conhecida</span><div class="smallcap" style="margin-top:15px">Energia e outras despesas preenchidas</div><div class="big-num" id="econ-known">—</div><p class="sub">Subtotal conhecido do cenário selecionado. Não é custo total.</p></div><div class="card"><span class="pill warn">Lacunas</span><div class="smallcap" style="margin-top:15px">Componentes ainda não quantificados</div><div class="big-num" id="econ-missing">—</div><p class="sub">Podem incluir IPVA efetivo, seguro, manutenção, despesas fixas ou depreciação.</p></div><div class="card"><span class="pill blue">Resultado</span><div class="smallcap" style="margin-top:15px">Resultado econômico observado</div><div class="big-num">Não disponível</div><p class="sub">O projeto modela hipóteses; não possui rendimentos individuais observados por zona OD.</p></div></div><div class="notice" style="margin-top:18px"><b>Regra metodológica:</b> um total econômico só pode ser apresentado quando todos os custos relevantes são conhecidos ou explicitamente assumidos num cenário hipotético. A soma das despesas disponíveis é apenas um subtotal.</div></div></section>
+<section class="section alt" id="recarga"><div class="wrap"><div class="section-head"><div class="eyebrow">06 / Infraestrutura de recarga</div><h2>Energia elétrica também<br><span class="light">depende do lugar.</span></h2><p class="deck">Pontos cadastrados pelo Open Charge Map ajudam a contextualizar a eletrificação. Cadastro, potência e status informado não garantem disponibilidade em tempo real.</p></div><div class="metrics" style="grid-template-columns:repeat(3,1fr)"><div class="metric"><b class="mint" id="charge-total">—</b><span>Pontos cadastrados no recorte</span></div><div class="metric"><b id="charge-oper">—</b><span>Com status cadastral operacional</span></div><div class="metric"><b id="charge-unknown">—</b><span>Outros status cadastrais</span></div></div><div class="twocol"><div class="card"><h3>Pontos sobre a região</h3><div class="mapbox" style="height:390px"><div id="charge-map" style="height:100%"></div><div class="maphint">Clique em um ponto para ver sua ficha detalhada.</div><div class="mapzoom"><button type="button" id="charge-zoom-in" title="Aproximar eletropostos">+</button><button type="button" id="charge-zoom-out" title="Afastar eletropostos">−</button><button type="button" id="charge-zoom-reset" title="Visão geral">⌖</button></div></div></div><div class="card"><h3>Pontos de referência</h3><div class="controls"><label class="field">Buscar ponto<input id="charge-search" type="search" placeholder="Ex.: Paulista, Shopping…"></label></div><div id="charge-detail" class="specificity" aria-live="polite">Selecione um eletroposto no mapa ou na lista para conferir endereço, conectores, potência e fonte.</div><div id="charge-list"></div><p class="meta-note">Base de cadastro obtida em 2026; registros podem estar desatualizados.</p></div></div></div></section>
+
+<section class="section alt" id="viabilidade"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">07 / Teste da hipótese do PI06</div>
+  <h2>Qual veículo pode compensar <span class="light">em cada região?</span></h2>
+  <p class="deck">O mapa reúne mobilidade observada na OD 2023, pontos de recarga do levantamento OCM 2026 e custos técnicos dos veículos INMETRO. Escolha a área, compare configurações e, se quiser, declare despesas adicionais para testar uma hipótese econômica. <b>Não é um mapa de lucro observado.</b></p></div>
+  <div class="decision-head"><span class="pill green">São Paulo capital · 343 zonas OD</span><span class="pill blue">Comparação condicional, não recomendação Uber</span><span class="pill warn" id="decision-quality">Recorte territorial</span></div>
+  <div class="decision-grid">
+    <div class="card">
+      <h3>04 · Mapa de decisão</h3><p class="sub">Clique diretamente em uma zona para atualizar os indicadores e o comparador. Você também pode pesquisar Jabaquara, Itaim Bibi, Santo Amaro ou o nº da zona.</p>
+      <div class="decision-filter">
+        <label class="field">Região administrativa<select id="decision-region"><option value="">Todas as regiões</option><option>Centro</option><option>Norte</option><option>Sul</option><option>Leste</option><option>Oeste</option></select></label>
+        <label class="field">Camada do mapa<select id="decision-layer"><option value="viagens_origem_expandidas">Origens OD expandidas</option><option value="pontos_ocm_cadastrados">Pontos OCM cadastrados por zona</option></select></label>
+        <label class="field">Distrito OD<select id="decision-district"><option value="">Todos os distritos</option></select></label>
+        <label class="field">Buscar / selecionar zona<input type="search" list="decision-zones" id="decision-search" placeholder="Nome, distrito ou código OD" autocomplete="off"><datalist id="decision-zones"></datalist></label>
+      </div>
+      <div class="mapbox decision-map" id="decision-map-container"><div id="decision-map" style="position:absolute;inset:0"></div>
+         <div class="mapzoom"><button id="decision-zoom-in" type="button" aria-label="Aproximar mapa">+</button><button id="decision-zoom-out" type="button" aria-label="Afastar mapa">−</button><button id="decision-zoom-reset" type="button" aria-label="Visão geral">⌖</button></div>
+         <div class="maphint">Toque ou clique numa zona. O local selecionado aparece ao lado ou abaixo.</div>
+      </div>
+      <div class="legend"><span>Menos</span><div class="gradbar"></div><span>Mais · camada escolhida</span><span style="margin-left:auto">Cinza = dado ausente</span></div>
+      <p class="mobile-note">No celular: deslize a página normalmente, toque em uma zona e use os botões +/− para aproximar.</p>
+    </div>
+    <div class="card" aria-live="polite">
+      <div class="smallcap">Território analisado</div><h3 id="decision-name">São Paulo · capital</h3><p class="sub" id="decision-desc">Todas as regiões. Selecione uma zona no mapa ou pelos filtros.</p>
+      <div class="decision-stats"><div><small>Origens expandidas OD 2023</small><b id="decision-trips">—</b></div><div><small>Pontos OCM no recorte</small><b id="decision-chargers">—</b></div><div><small>Com status cadastral “operacional”</small><b id="decision-operational">—</b></div></div>
+      <div class="decision-callout"><span class="smallcap">Evidência versus hipótese</span><strong id="decision-verdict">A região, sozinha, não determina o veículo mais lucrativo.</strong><p id="decision-reason">A OD mede viagens e o OCM registra infraestrutura. Não há dados observados de receita por zona nem custo de operação específico por distrito.</p></div>
+      <div class="info-rows"><div class="info-row"><span>Zonas no recorte</span><b id="decision-count">—</b></div><div class="info-row"><span>Zonas com amostra de origem</span><b id="decision-samples">—</b></div><div class="info-row"><span>Referência territorial</span><b>OD 2023 · modo 12</b></div><div class="info-row"><span>Infraestrutura</span><b>OCM · cadastro 2026</b></div></div>
+      <p class="meta-note" id="decision-charge-detail">Os pontos são cadastros geolocalizados. Disponibilidade, preço efetivo e fila não foram medidos.</p>
+      <button class="btn" id="decision-open-mobility" type="button">Ver viagens desta zona no mapa de mobilidade ↗</button>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px"><div class="section-head" style="margin-bottom:12px"><div class="smallcap">Comparador econômico · mesma quilometragem, mesma receita</div><h3>Três configurações, uma hipótese transparente</h3><p class="sub">Escolha uma versão do INMETRO por tecnologia. A comparação usa energia/km; nenhuma dessas versões recebe automaticamente preço FIPE, elegibilidade Uber ou lucro regional.</p></div>
+    <div class="decision-controls">
+      <label class="field">Quilometragem operacional (km/mês)<input id="decision-km" type="number" min="100" max="30000" step="100" value="3000" inputmode="numeric"></label>
+      <label class="field">Recebimento hipotético após taxa da plataforma (R$/mês)<input id="decision-revenue" type="number" min="0" max="150000" step="100" value="8000" inputmode="decimal"></label>
+    </div>
+    <div class="vehicle-compare">
+      <div class="vehicle-option" data-group="Gasolina"><strong>01 / Gasolina e flex</strong><label for="decision-gas">Versão e modalidade</label><select id="decision-gas"></select><span class="value" id="decision-gas-value">—</span><span class="value-sub">Energia mensal estimada</span><label for="decision-gas-extra">Demais despesas mensais (R$)</label><input id="decision-gas-extra" type="number" min="0" step="50" placeholder="Não informado" inputmode="decimal"></div>
+      <div class="vehicle-option" data-group="Híbrido"><strong>02 / Híbrido</strong><label for="decision-hyb">Versão e modalidade</label><select id="decision-hyb"></select><span class="value" id="decision-hyb-value">—</span><span class="value-sub">Energia mensal estimada</span><label for="decision-hyb-extra">Demais despesas mensais (R$)</label><input id="decision-hyb-extra" type="number" min="0" step="50" placeholder="Não informado" inputmode="decimal"></div>
+      <div class="vehicle-option" data-group="Elétrico"><strong>03 / Elétrico</strong><label for="decision-ev">Versão e modalidade</label><select id="decision-ev"></select><span class="value" id="decision-ev-value">—</span><span class="value-sub">Energia mensal estimada</span><label for="decision-ev-extra">Demais despesas mensais (R$)</label><input id="decision-ev-extra" type="number" min="0" step="50" placeholder="Não informado" inputmode="decimal"></div>
+    </div>
+    <div class="assumption-row"><input type="checkbox" id="decision-confirm"><label for="decision-confirm"><b>Assumo que cada valor de “demais despesas” cobre integralmente todos os custos além da energia</b> (manutenção, seguro, impostos, pneus, depreciação ou aluguel, lavagem etc.). Sem essa declaração, mostramos apenas a comparação energética.</label></div>
+    <div class="decision-callout"><div class="smallcap" id="decision-ranking-title">Comparação inicial: custo de energia</div><strong id="decision-winner">Selecione as versões para comparar</strong><p id="decision-winner-note">Diferença de custo energético não é lucro. A classificação pode mudar quando todos os custos forem assumidos.</p></div>
+    <div class="decision-rank" id="decision-ranking"></div>
+    <p class="meta-note">A mesma hipótese econômica é aplicada a toda São Paulo capital; a seleção territorial oferece contexto de viagens e de recarga, não altera preço/km sem uma fonte regional de custo ou receita. O resultado, quando habilitado, é <b>simulado</b>, nunca rendimento observado.</p>
+    <div class="compact-controls"><a href="#simulador" class="btn primary">Abrir simulador detalhado ↗</a><button type="button" class="btn" id="decision-reset">Restaurar comparação</button></div>
+  </div>
+</div></section>
+
+<section class="section" id="simulador"><div class="wrap"><div class="section-head"><div class="eyebrow">08 / Simulador pessoal</div><h2>E se fosse<br><span class="light">o seu cenário?</span></h2><p class="deck">Selecione um veículo, escolha os quilômetros e teste um recebimento hipotético. O simulador preserva custos não informados e só estima resultado completo quando você declara uma hipótese para todas as despesas restantes.</p></div><div class="twocol"><div class="card"><h3>Configure seu perfil</h3><div class="controls"><label class="field">Regime<select id="sim-regime"><option value="proprio">Veículo próprio</option><option value="alugado">Veículo alugado</option></select></label><label class="field" style="flex:1">Modelo / versão<select id="sim-vehicle" style="width:100%;max-width:490px"></select></label></div><div class="controls"><label class="field" style="flex:1">Quilometragem operacional mensal <b class="light" id="sim-km-label">3.000 km</b><input id="sim-km" type="range" min="500" max="8000" step="250" value="3000" style="width:100%"></label><label class="field">Horas de trabalho/mês<input id="sim-hours" type="number" min="1" max="450" step="1" value="200" style="width:150px"></label></div><div class="controls"><label class="field">Recebimento mensal após taxas da plataforma (R$)<input id="sim-revenue" type="number" min="0" max="100000" step="100" value="8000" style="width:230px"></label></div><label class="field">Região OD para contexto (não altera os custos)<select id="sim-zone" style="max-width:100%;width:360px"></select></label><div class="separator"></div><div class="smallcap">Custos não informados no modelo</div><div id="sim-costlist" class="sub" style="line-height:1.8"></div><div class="notice" style="margin-top:14px">A opção de assumir os custos pendentes começa ativada <b>apenas para demonstrar o cálculo</b>. O valor é uma hipótese editável, não uma despesa medida. Desmarque-a para voltar ao estado parcial.</div><div style="display:flex;gap:11px;align-items:center;margin:19px 0 10px"><input id="sim-complete" checked type="checkbox" style="accent-color:var(--mint);width:18px;height:18px"><label for="sim-complete" style="font-size:13px">Assumir que o valor abaixo cobre <b>todos</b> os custos ainda pendentes</label></div><label class="field">Total hipotético das despesas pendentes (R$/mês)<input id="sim-extra" type="number" min="0" max="100000" step="50" value="1200" style="width:230px"></label></div><div class="card sticky"><span class="pill green" id="sim-status">PARCIAL — NÃO É LUCRO</span><div class="smallcap" style="margin-top:20px">Custo energético mensal estimado</div><div class="big-num" id="sim-energy">—</div><div class="smallcap" style="margin-top:18px">Subtotal conhecido + variação da energia</div><div class="big-num" style="font-size:27px" id="sim-known">—</div><div class="smallcap" style="margin-top:20px">Custo total sob as hipóteses</div><div class="big-num" id="sim-total">Não disponível</div><div class="simgauge"><div id="sim-gauge" style="width:40%"></div><div class="missing" id="sim-gauge-other" style="width:60%"></div></div><div class="sim-live"><span class="smallcap">Saldo antes das despesas pendentes (não é lucro)</span><b id="sim-provisional">—</b><span class="sub">Recebimento hipotético menos apenas custos identificados.</span></div><div class="smallcap">Resultado econômico hipotético mensal</div><div class="big-num" style="color:var(--mint)" id="sim-result">—</div><div class="split-stat" style="margin-top:17px"><div class="mini"><span>Equilíbrio estimado R$/km</span><b id="sim-breakkm">—</b></div><div class="mini"><span>Equilíbrio estimado R$/hora</span><b id="sim-breakhour">—</b></div></div><div class="mini" style="margin-top:18px"><span>Contexto de mobilidade da região OD escolhida</span><b style="font-size:15px" id="sim-zone-context">—</b><span>Este indicador territorial não modifica o resultado econômico do veículo.</span></div><p class="meta-note" id="sim-explanation">Preencha todas as despesas pendentes para obter um resultado ilustrativo. Nenhum valor é uma renda observada.</p></div></div></div></section>
+<section class="section alt" id="metodo"><div class="wrap"><div class="section-head"><div class="eyebrow">09 / O que aprendemos</div><h2>Dados ajudam a decidir.<br><span class="light">Limites também.</span></h2><p class="deck">O trabalho reúne referências de épocas e granularidades diferentes. A principal contribuição é mostrar como compará-las corretamente — sem transformar amostras, preços ou hipóteses em certezas.</p></div><div class="howto"><article><span>01 · OBSERVADO / AMOSTRAL</span><h4>Mobilidade</h4><p>OD 2023, modo 12, fatores de expansão e zonas. Retrata um levantamento de deslocamentos, não registros comerciais da Uber.</p></article><article><span>02 · DERIVADO / SIMULADO</span><h4>Energia e custos</h4><p>INMETRO, ANP, ANEEL e premissas. Estima custos condicionados à tecnologia, ao consumo e aos preços de referência.</p></article><article><span>03 · HIPOTÉTICO</span><h4>Viabilidade</h4><p>Receitas, quilômetros e despesas podem ser escolhidos pelo usuário. Resultado financeiro não é lucro observado.</p></article></div><div class="card" style="margin-top:20px"><h3>Transparência do projeto</h3><div class="info-rows"><div class="info-row"><span>Pesquisa OD</span><b>Metrô-SP · 2023</b></div><div class="info-row"><span>Fontes econômicas</span><b>INMETRO · ANP · ANEEL · 2026</b></div><div class="info-row"><span>Infraestrutura de recarga</span><b>Open Charge Map · levantamento 2026</b></div><div class="info-row"><span>Natureza da comparação</span><b>Descritiva + simulações explícitas</b></div><div class="info-row"><span>Validação de veículos Uber</span><b>Não inferida automaticamente</b></div><div class="info-row"><span>Versão da apresentação</span><b id="site-version">—</b></div></div><div class="quote">O quarto mapa usa viagens OD por zona, recarga OCM geolocalizada por zona e custo técnico INMETRO. Não há prova de lucratividade por região. O site pode funcionar offline depois de incorporar os arquivos do projeto. O original das fontes e o código de análise permanecem disponíveis no repositório da equipe.</div><a class="btn" style="margin-top:10px" href="https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados" target="_blank" rel="noopener noreferrer">Ver o repositório no GitHub ↗</a></div></div></section>
+<footer class="footer"><div class="wrap"><div><b>PI06 · Visualização de Dados</b><br><small>Estudo educacional · Município de São Paulo<br>Dados reais e simulações apresentados com suas limitações.</small></div><div class="footerlinks"><a href="#inicio">Voltar ao início ↑</a><a href="#metodo">Metodologia</a><a href="https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script id="pi06-data" type="application/json">__PI06_DATA__</script>
+<script id="pi06-map-image" type="application/json">__PI06_IMAGE__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('pi06-data').textContent);
+const MAPIMG=JSON.parse(document.getElementById('pi06-map-image').textContent);
+const $=x=>document.getElementById(x),n=x=>x===''||x===undefined||x===null||!Number.isFinite(Number(x))?null:Number(x), fmt=(v,d=0)=>n(v)===null?'—':Number(v).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d}), money=(v,d=2)=>n(v)===null?'—':Number(v).toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:d,maximumFractionDigits:d}),escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const zones=DATA.zones||[],muns=DATA.municipios||[],districts=DATA.distritos||[],flows=DATA.fluxos||[],energy=DATA.energia||[],drivers=DATA.motoristas||[],premises=DATA.premissas||[],charging=DATA.recarga||[],historyAnnual=DATA.historyAnnual||[],fleet=DATA.fleet||[],fipeYears=DATA.fipeYears||[];
+let zoneById=new Map(zones.map(z=>[String(z.zona_od_id),z])),selectedZone=null,selectedEnergy=null,selectedCharge=null,zoom=1,offsetX=0,offsetY=0,chargeZoom=1,chargeDX=0,chargeDY=0,selectedYear=2025;
+const normName=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim();
+const meta=DATA.meta||{};
+function mode(){const full=!!DATA.full;$('mode').textContent=full?'Offline completo':'Prévia parcial';$('mode').className='mode';$('mode').title=full?'Dados locais incorporados; nenhuma consulta de rede':'Exemplo de interface com registros reais selecionados; gere apresentação completa na raiz do repositório';$('site-version').textContent=(DATA.version||'2026-11-14')+(full?' · offline completo':' · prévia');}
+function kpis(){
+ const trips=n(meta.viagens_expandidas),sample=n(meta.amostra_origem);
+ $('h-zones').textContent=fmt(meta.zonas??343);
+ $('h-energy').textContent=fmt(meta.energia_cenarios??838);
+ $('h-trips').textContent=trips===null?'—':fmt(trips/1000,0)+' mil';
+ $('k-zones').textContent=fmt(meta.zonas??343);
+ $('k-muns').textContent=fmt(meta.distritos??96);
+ $('k-samples').textContent=fmt(sample);
+ $('k-exp').textContent=fmt(trips,0);
+}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.remove('show'),3300)}
+function opts(select,rows,id,label,start=''){select.innerHTML=start+rows.map(r=>`<option value="${escapeHtml(String(r[id]))}">${escapeHtml(String(r[label]))}</option>`).join('')}
+function bar(container,items,max,click){container.innerHTML='';if(!items.length){container.innerHTML='<div class="empty">Nenhum resultado disponível para esses filtros.</div>';return}items.forEach((item,i)=>{let el=document.createElement('div');el.className='baritem';el.tabIndex=0;el.setAttribute('role','button');el.innerHTML=`<div class="barhead"><b>${escapeHtml(item.title)}</b><span>${escapeHtml(item.right)}</span></div><div class="track"><div class="fill" style="width:${Math.max(2,100*item.value/Math.max(1,max))}%"></div></div>`;el.addEventListener('click',()=>click(item,i));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();click(item,i)}});container.appendChild(el)})}
+function districtInfo(z){
+ let d=z?districts.find(x=>String(x.distrito_od_id)===String(z.distrito_od_id)):null;
+ $('map-district-name').textContent=d?(d.distrito_nome+' · '+fmt(d.qtd_zonas)+' zonas'):(z?.distrito_nome||'—');
+ $('map-district-origin').textContent=d?fmt(d.viagens_origem_expandidas):'—';$('map-district-dest').textContent=d?fmt(d.viagens_destino_expandidas):'—';
+}
+function fleetForMunicipio(name){return fleet.find(x=>normName(x.municipio_nome)===normName(name))||null}
+function fleetCard(name){let d=fleetForMunicipio(name);if(!d)return '<span class="sub">Sem recorte municipal da SENATRAN incorporado neste HTML.</span>';let categories=['Gasolina','Híbrido','Elétrico'];return categories.map(c=>`<div class="info-row"><span>${escapeHtml(c)}</span><b>${fmt(d[c]||0)}</b></div>`).join('')+'<div class="meta-note">Categorias amplas de combustível; incluem todos os tipos de veículo. Não são carros Uber nem dados por zona OD.</div>'}
+function selected(z){
+ if(!z||Number(z.municipio_od_id)!==36)return;
+ selectedZone=z;const key=String(z.zona_od_id);
+ $('map-region').value=z.regiao_sp||'';
+ $('map-district').value='';
+ refreshMapOptions();
+ $('map-district').value=String(z.distrito_od_id);
+ refreshMapOptions();
+ $('map-zone').value=key;
+ $('selected-zone-title').textContent=z.zona_nome+' · Zona OD '+key;
+ $('selected-zone-sub').textContent=`${z.distrito_nome||'Distrito não identificado'} · Região ${z.regiao_sp||'não identificada'} · São Paulo`;
+ $('zone-origin').textContent=fmt(z.viagens_origem_expandidas);
+ $('zone-dest').textContent=fmt(z.viagens_destino_expandidas);
+ $('zone-mun').textContent='São Paulo';$('zone-region').textContent=z.regiao_sp||'—';
+ $('zone-district').textContent=z.distrito_nome||'—';
+ $('zone-sample').textContent=fmt(z.viagens_origem_amostra);
+ $('zone-caveat').textContent=n(z.viagens_origem_amostra)===null?'Sem registros na amostra: isso não equivale a demanda zero.':'Viagens da OD 2023 incluem táxi não convencional/aplicativo, não apenas Uber.';
+ districtInfo(z);
+ $('map-fleet-context').innerHTML='<b>Frota SENATRAN · somente São Paulo capital (2026)</b><div class="info-rows">'+fleetCard('São Paulo')+'</div>';
+ $('map-zone-search').value='';$('map-zone-results').replaceChildren();
+ if($('flow-zone').options.length){$('flow-zone').value=key;renderFlow()}
+ if($('sim-zone').options.length){$('sim-zone').value=key;renderSim()}
+ document.querySelectorAll('#map-render .zone').forEach(el=>el.classList.toggle('selected',el.dataset.zid===key));
+ filterMap();
+ if(typeof decisionSelectZone==='function'&&(!decisionZone||String(decisionZone.zona_od_id)!==key)) decisionSelectZone(z,false);
+}
+function visibleScopeZones(){
+ const region=$('map-region').value,district=$('map-district').value;
+ return zones.filter(z=>(!region||z.regiao_sp===region)&&(!district||String(z.distrito_od_id)===district));
+}
+function sumOrNull(rows,key){const items=rows.map(z=>n(z[key])).filter(v=>v!==null);return items.length?items.reduce((a,b)=>a+b,0):null;}
+function clearZoneSelection(){
+ selectedZone=null;
+ const subset=visibleScopeZones(),region=$('map-region').value,districtId=$('map-district').value;
+ const district=districts.find(d=>String(d.distrito_od_id)===districtId);
+ const label=district?district.distrito_nome:region?'Região '+region:'São Paulo · capital';
+ $('selected-zone-title').textContent=label;
+ $('selected-zone-sub').textContent=fmt(subset.length)+' zona(s) no recorte. Clique em qualquer polígono para abrir os dados específicos.';
+ $('zone-origin').textContent=fmt(sumOrNull(subset,'viagens_origem_expandidas'));
+ $('zone-dest').textContent=fmt(sumOrNull(subset,'viagens_destino_expandidas'));
+ $('zone-mun').textContent='São Paulo';$('zone-region').textContent=region||'Todas as regiões';
+ $('zone-district').textContent=district?.distrito_nome||'Todos os distritos';
+ $('zone-sample').textContent=fmt(sumOrNull(subset,'viagens_origem_amostra'));
+ $('map-district-name').textContent=label+' · '+fmt(subset.length)+' zonas';
+ $('map-district-origin').textContent=fmt(sumOrNull(subset,'viagens_origem_expandidas'));
+ $('map-district-dest').textContent=fmt(sumOrNull(subset,'viagens_destino_expandidas'));
+ $('zone-caveat').textContent='Total de viagens expandidas do recorte: ausência de amostra não significa demanda zero. O filtro não altera as demais fontes.';
+ $('map-fleet-context').innerHTML='<b>Frota SENATRAN · São Paulo capital inteira (2026)</b><div class="info-rows">'+fleetCard('São Paulo')+'</div>';
+ document.querySelectorAll('#map-render .zone.selected').forEach(el=>el.classList.remove('selected'));
+ $('map-zone').value='';
+}
+
+function zoneMatchesQuery(z,query){
+ const terms=normName(query).split(/\s+/).filter(Boolean);
+ const haystack=normName([z.zona_od_id,z.zona_nome,z.distrito_nome,z.regiao_sp].join(' '));
+ return terms.every(term=>haystack.includes(term));
+}
+function zoneSearchResults(query){
+ if(!query.trim())return [];
+ const key=normName(query);
+ return zones.filter(z=>zoneMatchesQuery(z,query)).sort((a,b)=>{
+  const rank=z=>{const name=normName(z.zona_nome),id=String(z.zona_od_id),dist=normName(z.distrito_nome),mun=normName(z.municipio_nome);
+   if(id===key||name===key)return 0;
+   if(name.startsWith(key)||id.startsWith(key))return 1;
+   if(dist===key||mun===key)return 2;
+   if(name.includes(key))return 3;
+   return 4;};
+  return rank(a)-rank(b)||Number(a.zona_od_id)-Number(b.zona_od_id);
+ });
+}
+function renderZoneSearch(){
+ const query=$('map-zone-search').value.trim(),results=$('map-zone-results');results.replaceChildren();
+ if(!query)return;
+ const matches=zoneSearchResults(query);
+ const summary=document.createElement('p');summary.className='zone-search-summary';summary.textContent=matches.length?`${matches.length} zona(s) encontrada(s). Escolha uma abaixo ou pressione Enter para a primeira.`:'Nenhuma zona encontrada. Experimente outro nome ou código OD.';
+ results.appendChild(summary);
+ matches.slice(0,10).forEach(z=>{
+  const btn=document.createElement('button');btn.type='button';
+  btn.dataset.zoneId=String(z.zona_od_id);btn.innerHTML=`<b>${escapeHtml(z.zona_nome)} · OD ${escapeHtml(z.zona_od_id)}</b>${escapeHtml(z.distrito_nome||'—')} · ${escapeHtml(z.municipio_nome||'—')}`;
+  btn.addEventListener('click',()=>{focusZone(z);toast(z.zona_nome+' selecionada pelo campo de busca')});
+  results.appendChild(btn);
+ });
+}
+function focusZone(z){if(!z)return;let path=[...document.querySelectorAll('#map-render .zone')].find(e=>e.dataset.zid===String(z.zona_od_id));if(path){try{let b=path.getBBox();let w=Math.max(4,b.width),h=Math.max(4,b.height);zoom=Math.max(1.7,Math.min(7,Math.min(720/w,510/h)));offsetX=(500-(b.x+b.width/2))*zoom;offsetY=(380-(b.y+b.height/2))*zoom;applyTransform()}catch(e){}}selected(z)}
+
+function renderBarsMun(){
+ const region=$('map-region').value,metric=$('map-metric').value;
+ const groups=new Map();
+ zones.filter(z=>!region||z.regiao_sp===region).forEach(z=>{
+  const k=String(z.distrito_od_id);
+  if(!groups.has(k))groups.set(k,{id:k,title:z.distrito_nome,rows:[]});
+  groups.get(k).rows.push(z);
+ });
+ const ranked=[...groups.values()].map(d=>({...d,value:sumOrNull(d.rows,metric)})).filter(d=>d.value!==null)
+   .sort((a,b)=>b.value-a.value).slice(0,8);
+ const mm=Math.max(1,...ranked.map(d=>d.value));
+ bar($('mun-bars'),ranked.map(d=>({...d,right:fmt(d.value)})),mm,it=>{
+  $('map-district').value='';refreshMapOptions();$('map-district').value=String(it.id);refreshMapOptions();
+  clearZoneSelection();filterMap();resetTransform();
+  toast('Distrito destacado: '+it.title);
+ });
+}
+function numColor(v,max){if(n(v)===null)return '#28394a';let t=Math.sqrt(Math.min(1,Math.max(0,Number(v)/Math.max(1,max))));let c1=[29,61,78],c2=[117,232,188];return 'rgb('+c1.map((v,i)=>Math.round(v+(c2[i]-v)*t)).join(',')+')'}
+function resetTransform(){zoom=1;offsetX=0;offsetY=0;applyTransform()}
+function applyTransform(){const g=$('map-pan-group');if(g)g.setAttribute('transform',`translate(${offsetX} ${offsetY}) translate(${500*(1-zoom)} ${380*(1-zoom)}) scale(${zoom})`)}
+function filterMap(){
+ const region=$('map-region').value,metric=$('map-metric').value,district=$('map-district').value;
+ const max=Math.max(1,...zones.map(z=>n(z[metric])||0));
+ document.querySelectorAll('#map-render .zone').forEach(el=>{
+  const z=zoneById.get(el.dataset.zid);if(!z)return;
+  const hidden=(region&&z.regiao_sp!==region)||(district&&String(z.distrito_od_id)!==district);
+  el.classList.toggle('hidden-zone',!!hidden&&String(selectedZone?.zona_od_id)!==String(z.zona_od_id));
+  // Zonas fora do filtro permanecem clicáveis: o clique prevalece sobre os filtros.
+  el.style.fill=numColor(z[metric],max);
+ });
+ renderBarsMun();
+}
+function focusScope(items){
+ const boxes=[];items.forEach(z=>{
+  const p=document.querySelector('#map-render .zone[data-zid="'+String(z.zona_od_id)+'"]');
+  if(p){try{boxes.push(p.getBBox())}catch(e){}}
+ });
+ if(!boxes.length){resetTransform();return}
+ const x=Math.min(...boxes.map(b=>b.x)),y=Math.min(...boxes.map(b=>b.y));
+ const xx=Math.max(...boxes.map(b=>b.x+b.width)),yy=Math.max(...boxes.map(b=>b.y+b.height));
+ const w=Math.max(20,xx-x),h=Math.max(20,yy-y);
+ zoom=Math.max(1,Math.min(6,Math.min(790/w,590/h)));
+ offsetX=(500-(x+xx)/2)*zoom;offsetY=(380-(y+yy)/2)*zoom;
+ applyTransform();
+}
+function drawMap(target,withCharging=false){
+ const geo=DATA.geo||[];
+ if(!geo.length){target.innerHTML=MAPIMG?`<img class="preview-map" src="${MAPIMG}" alt="Mapa geral OD 2023, referência estática da prévia"/>`:'<div class="empty">Gere o HTML completo com os GeoJSONs para ativar o mapa das 343 zonas de São Paulo.</div>';if(!withCharging)$('map-hint').textContent='Prévia do mapa como imagem. O HTML completo terá 343 zonas da capital clicáveis; use os seletores para testar os painéis.';return}
+ target.innerHTML='';const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 1000 760');svg.setAttribute('role','img');svg.setAttribute('aria-label',withCharging?'Mapa de eletropostos':'Mapa interativo das zonas OD');
+ let g=document.createElementNS(svg.namespaceURI,'g');g.id=withCharging?'charge-pan-group':'map-pan-group';svg.appendChild(g);
+ const metric=$('map-metric').value,max=Math.max(1,...zones.map(z=>n(z[metric])||0));
+ geo.forEach(item=>{let path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d',item.p);let z=zoneById.get(String(item.id));path.setAttribute('class','zone');path.dataset.zid=String(item.id);path.style.fill=z?numColor(z[metric],max):'#34445a';path.setAttribute('tabindex',withCharging?'-1':'0');path.setAttribute('role','button');path.setAttribute('aria-label',z?'Selecionar zona '+z.zona_nome+', OD '+item.id:'Zona '+item.id);let pick=()=>{if(withCharging||!z)return;focusZone(z);toast(z.zona_nome+' selecionada no mapa')};path.addEventListener('click',pick);path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}});path.addEventListener('pointermove',e=>{if(!withCharging)showMapTip(e,z?`${z.zona_nome} · OD ${item.id}`:`Zona ${item.id}`)});path.addEventListener('pointerleave',hideMapTip);g.appendChild(path)});
+ if(withCharging){(DATA.chargingXY||[]).forEach(item=>{let circle=document.createElementNS(svg.namespaceURI,'circle');circle.setAttribute('cx',item.x);circle.setAttribute('cy',item.y);circle.setAttribute('r','4.5');circle.setAttribute('class','charging-point');circle.dataset.chargeId=String(item.id);circle.setAttribute('tabindex','0');circle.setAttribute('role','button');circle.setAttribute('aria-label','Abrir eletroposto '+item.id);let activate=()=>selectCharge(String(item.id),true);circle.addEventListener('click',activate);circle.addEventListener('keydown',e=>{if(e.key==='Enter'){activate()}});circle.addEventListener('pointermove',e=>showMapTip(e,charging.find(x=>String(x.id_posto)===String(item.id))?.titulo||'Ponto'));circle.addEventListener('pointerleave',hideMapTip);g.appendChild(circle)})}
+ else{(DATA.municipioGeo||[]).forEach(item=>{let path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d',item.p);path.setAttribute('class','municipality');g.appendChild(path)})}
+ target.appendChild(svg);
+ if(!withCharging){let dragged=false,from=null;svg.addEventListener('pointerdown',e=>{if(e.button!==0)return;dragged=false;from={x:e.clientX,y:e.clientY,ox:offsetX,oy:offsetY}});svg.addEventListener('pointermove',e=>{if(!from)return;let dx=e.clientX-from.x,dy=e.clientY-from.y;if(Math.abs(dx)+Math.abs(dy)>7){if(!dragged){dragged=true;try{svg.setPointerCapture(e.pointerId)}catch(_){}}offsetX=from.ox+dx*1000/svg.clientWidth;offsetY=from.oy+dy*760/svg.clientHeight;applyTransform()}});svg.addEventListener('pointerup',e=>{from=null;if(svg.hasPointerCapture(e.pointerId))svg.releasePointerCapture(e.pointerId)});svg.addEventListener('pointercancel',()=>{from=null});svg.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.min(9,Math.max(1,zoom*(e.deltaY<0?1.14:.87)));applyTransform()},{passive:false});svg.addEventListener('click',e=>{if(dragged){e.stopPropagation();dragged=false}},true)}
+}
+
+function showMapTip(e,text){let el=$('map-tooltip');if(!el||!e)return;let box=$('map-render').getBoundingClientRect();if(!box.width)return;el.textContent=text;el.style.display='block';el.style.left=Math.min(box.width-170,Math.max(8,e.clientX-box.left+12))+'px';el.style.top=Math.min(box.height-45,Math.max(8,e.clientY-box.top-30))+'px'}
+function hideMapTip(){$('map-tooltip').style.display='none'}
+function refreshMapOptions(){
+ const region=$('map-region').value, oldDistrict=$('map-district').value,oldZone=$('map-zone').value;
+ const available=zones.filter(z=>!region||z.regiao_sp===region);
+ const districtIds=new Set(available.map(z=>String(z.distrito_od_id)));
+ const choices=[...districts].filter(d=>districtIds.has(String(d.distrito_od_id)))
+     .sort((a,b)=>String(a.distrito_nome).localeCompare(String(b.distrito_nome),'pt-BR'));
+ opts($('map-district'),choices,'distrito_od_id','distrito_nome','<option value="">Todos os distritos</option>');
+ if(choices.some(d=>String(d.distrito_od_id)===oldDistrict))$('map-district').value=oldDistrict;
+ const permitted=available.filter(z=>!$('map-district').value||String(z.distrito_od_id)===$('map-district').value)
+  .sort((a,b)=>Number(a.zona_od_id)-Number(b.zona_od_id));
+ $('map-zone').innerHTML='<option value="">Todas as zonas no recorte</option>'+permitted.map(z=>
+  `<option value="${escapeHtml(z.zona_od_id)}">${escapeHtml(z.zona_od_id+' · '+z.zona_nome)}</option>`).join('');
+ if(permitted.some(z=>String(z.zona_od_id)===oldZone))$('map-zone').value=oldZone;
+}
+function initMap(){
+ const zz=[...zones].sort((a,b)=>Number(a.zona_od_id)-Number(b.zona_od_id));
+ $('flow-zone').innerHTML=zz.map(z=>`<option value="${escapeHtml(z.zona_od_id)}">${escapeHtml(z.zona_od_id+' · '+z.zona_nome)}</option>`).join('');
+ refreshMapOptions();
+ $('map-metric').addEventListener('change',filterMap);
+ $('map-region').addEventListener('change',()=>{
+  $('map-district').value='';refreshMapOptions();
+  $('map-zone-search').value='';$('map-zone-results').replaceChildren();
+  clearZoneSelection();filterMap();resetTransform();
+ });
+ $('map-district').addEventListener('change',()=>{
+  refreshMapOptions();$('map-zone-search').value='';$('map-zone-results').replaceChildren();
+  clearZoneSelection();filterMap();resetTransform();
+ });
+ $('map-zone').addEventListener('change',()=>{
+  const z=zoneById.get($('map-zone').value);
+  if(z){focusZone(z)}
+  else{clearZoneSelection();filterMap();resetTransform()}
+ });
+ $('map-zone-search').addEventListener('input',renderZoneSearch);
+ $('map-zone-search').addEventListener('keydown',e=>{
+  if(e.key==='Enter'){
+   e.preventDefault();const z=zoneSearchResults($('map-zone-search').value)[0];
+   if(z){focusZone(z);toast(z.zona_nome+' selecionada pela busca')}
+  }else if(e.key==='Escape'){$('map-zone-search').value='';$('map-zone-results').replaceChildren()}
+ });
+ $('zoom-in').addEventListener('click',()=>{zoom=Math.min(9,zoom*1.3);applyTransform()});
+ $('zoom-out').addEventListener('click',()=>{zoom=Math.max(1,zoom/1.3);applyTransform()});
+ $('zoom-reset').addEventListener('click',()=>{resetTransform()});
+ drawMap($('map-render'));
+ clearZoneSelection();filterMap();
+}
+function renderFlow(){
+ let z=$('flow-zone').value,h=$('flow-hour').value;let origin=zoneById.get(z);$('flow-zone-label').textContent=origin?.zona_nome||'—';
+ let a=flows.filter(f=>String(f.zona_origem_id)===z&&f.faixa_horaria===h).sort((x,y)=>Number(x.posicao)-Number(y.posicao)).slice(0,5);
+ $('flow-count').textContent=fmt(a.length);
+ if(!a.length){$('flow-list').innerHTML='<div class="empty">Nenhum destino classificado para a zona e faixa na amostra disponível. Tente outra faixa horária.</div>';return}
+ $('flow-list').innerHTML=a.map((f,i)=>`<button type="button" class="charge-result flow-destination" data-dest="${escapeHtml(f.zona_destino_id)}"><span style="font-weight:800;color:var(--mint)">${i+1}.</span> <b>${escapeHtml(f.nome_zona_destino||String(f.zona_destino_id))}</b><span class="sub" style="display:block;margin-left:19px">${escapeHtml(f.municipio_destino||'')} · ${fmt(f.viagens_expandidas)} viagens expandidas${n(f.duracao_media_ponderada_min)!==null?' · '+fmt(f.duracao_media_ponderada_min)+' min':''} · ${fmt(f.viagens_amostra)} registros</span></button>`).join('');
+ document.querySelectorAll('#flow-list .flow-destination').forEach(btn=>btn.addEventListener('click',()=>{let dest=zoneById.get(btn.dataset.dest);if(dest){focusZone(dest);toast('Destino destacado no mapa: '+dest.zona_nome);document.querySelector('#mobilidade').scrollIntoView({behavior:'smooth'})}}));
+}
+
+function initFlow(){$('flow-zone').addEventListener('change',()=>{let z=zoneById.get($('flow-zone').value);if(z)selected(z);else renderFlow()});$('flow-hour').addEventListener('change',renderFlow);renderFlow()}
+function energyLabel(e){return [e.marca_inmetro,e.modelo_inmetro,e.versao_inmetro].filter(Boolean).join(' ').trim()+' · '+String(e.modalidade||'')}
+function renderEnergy(){let group=$('energy-group').value,search=$('energy-search').value.trim().toLowerCase(),km=n($('energy-km').value)||3000;$('energy-km-label').textContent=fmt(km)+' km';let f=energy.filter(e=>(!group||e.grupo_interface===group)&&(!search||energyLabel(e).toLowerCase().includes(search))&&n(e.custo_energia_rs_km)!==null).sort((a,b)=>n(a.custo_energia_rs_km)-n(b.custo_energia_rs_km));$('energy-n').textContent=fmt(f.length)+' modalidades';let top=f.slice(0,10),max=Math.max(1,...top.map(e=>n(e.custo_energia_rs_km)));bar($('energy-bars'),top.map(e=>({title:energyLabel(e),right:money(n(e.custo_energia_rs_km),3)+'/km',value:n(e.custo_energia_rs_km),data:e})),max,it=>{selectedEnergy=it.data;renderEnergySelection();toast('Versão selecionada')});if(!selectedEnergy||!f.some(x=>String(x.inmetro_id)===String(selectedEnergy.inmetro_id)&&x.modalidade===selectedEnergy.modalidade))selectedEnergy=f[0]||null;renderEnergySelection();}
+function renderEnergySelection(){let e=selectedEnergy,km=n($('energy-km').value)||3000;$('energy-model').textContent=e?[e.marca_inmetro,e.modelo_inmetro].join(' '):'Sem versão';$('energy-desc').textContent=e?[e.versao_inmetro,e.modalidade,e.grupo_interface].join(' · '):'—';$('energy-perkm').textContent=e?money(e.custo_energia_rs_km,3):'—';$('energy-permonth').textContent=e?money(n(e.custo_energia_rs_km)*km):'—'}
+function initEnergy(){['energy-group','energy-search','energy-km'].forEach(id=>$(id).addEventListener(id==='energy-km'?'input':'input',renderEnergy));renderEnergy()}
+function driverBase(){return drivers.find(r=>r.regime==='proprio')||drivers[0]||null}
+function initEconomy(){let r=driverBase();$('econ-known').textContent=r?money(r.subtotal_custos_conhecidos_rs_mes):'—';$('econ-missing').textContent=r?fmt(r.componentes_custos_pendentes)+' de 11':'—'}
+function chargeApply(){let g=$('charge-pan-group');if(g)g.setAttribute('transform',`translate(${chargeDX} ${chargeDY}) translate(${500*(1-chargeZoom)} ${380*(1-chargeZoom)}) scale(${chargeZoom})`)}
+function chargeFocus(x,y){chargeZoom=4;chargeDX=(500-x)*chargeZoom;chargeDY=(380-y)*chargeZoom;chargeApply()}
+function selectCharge(id,focus=false){
+ const c=charging.find(x=>String(x.id_posto)===String(id));if(!c)return;selectedCharge=c;
+ const validUrl=String(c.fonte_url||'');const link=/^https:\/\/openchargemap\.org\//.test(validUrl)?`<a class="btn" href="${escapeHtml(validUrl)}" target="_blank" rel="noopener noreferrer">Abrir ficha OCM ↗</a>`:'';
+ let lat=n(c.latitude),lon=n(c.longitude);const mapUrl=lat!==null&&lon!==null?'https://www.openstreetmap.org/?mlat='+encodeURIComponent(lat)+'&mlon='+encodeURIComponent(lon)+'#map=17/'+encodeURIComponent(lat)+'/'+encodeURIComponent(lon):'';
+ $('charge-detail').innerHTML=`<div class="smallcap">Ponto selecionado · cadastro Open Charge Map</div><h3 style="margin:8px 0">${escapeHtml(c.titulo||'Sem nome')}</h3>`+
+ [['Endereço',c.logradouro||'Não informado'],['Município',c.cidade||'Não informado'],['Operadora',c.operadora||'Não informada'],['Conectores',c.tipos_conectores||'Não informados'],['Quantidade de conexões',c.qtd_conexoes||'Não informada'],['Potência máxima',c.potencia_max_kw?c.potencia_max_kw+' kW':'Não informada'],['Status cadastral',c.status_cadastral||'Não informado'],['Custo de uso',c.custo_uso||'Não informado'],['Data da coleta',c.data_coleta||'Não informada'],['Coordenadas',lat!==null&&lon!==null?fmt(lat,5)+', '+fmt(lon,5):'Não informadas']].map(([k,v])=>`<div class="detail-grid"><span>${k}</span><b>${escapeHtml(v)}</b></div>`).join('')+
+ `<div class="charge-actions">${link}${mapUrl?`<a class="btn" href="${escapeHtml(mapUrl)}" target="_blank" rel="noopener noreferrer">Ver localização ↗</a>`:''}</div><p class="meta-note">Localização e status vêm do cadastro de 2026; isso não confirma operação em tempo real. Os links externos precisam de internet.</p>`;
+ document.querySelectorAll('#charge-map .charging-point').forEach(x=>x.classList.toggle('selected',x.dataset.chargeId===String(id)));
+ document.querySelectorAll('#charge-list .charge-result').forEach(x=>x.classList.toggle('active',x.dataset.cid===String(id)));
+ if(focus){let p=(DATA.chargingXY||[]).find(x=>String(x.id)===String(id));if(p)chargeFocus(p.x,p.y);else toast('Ponto sem localização no enquadramento do mapa')}
+}
+function initCharge(){
+ let all=charging.filter(r=>n(r.latitude)!==null&&n(r.longitude)!==null);let op=all.filter(r=>String(r.status_cadastral||'').toLowerCase()==='operational');
+ $('charge-total').textContent=fmt(all.length);$('charge-oper').textContent=fmt(op.length);$('charge-unknown').textContent=fmt(all.length-op.length);
+ drawMap($('charge-map'),true);
+ $('charge-search').addEventListener('input',renderChargeList);renderChargeList();
+ $('charge-zoom-in').addEventListener('click',()=>{chargeZoom=Math.min(12,chargeZoom*1.4);chargeApply()});
+ $('charge-zoom-out').addEventListener('click',()=>{chargeZoom=Math.max(1,chargeZoom/1.4);chargeApply()});
+ $('charge-zoom-reset').addEventListener('click',()=>{chargeZoom=1;chargeDX=0;chargeDY=0;chargeApply()});
+ if(charging.length)selectCharge(String(charging.find(x=>x.status_cadastral==='Operational')?.id_posto||charging[0].id_posto));
+}
+
+function renderChargeList(){let s=$('charge-search').value.trim().toLowerCase();let f=charging.filter(p=>!s||[p.titulo,p.cidade,p.logradouro,p.operadora,p.tipos_conectores].some(x=>String(x||'').toLowerCase().includes(s))).slice(0,15);
+ $('charge-list').innerHTML=f.length?f.map(p=>`<button type="button" class="charge-result ${selectedCharge&&String(selectedCharge.id_posto)===String(p.id_posto)?'active':''}" data-cid="${escapeHtml(p.id_posto)}"><b>${escapeHtml(p.titulo||'Ponto cadastrado')}</b><span class="sub" style="display:block">${escapeHtml(p.logradouro||p.cidade||'Endereço não informado')} · ${escapeHtml(p.status_cadastral||'Sem status')}</span></button>`).join(''):'<div class="empty">Nenhum ponto correspondente ao filtro.</div>';
+ document.querySelectorAll('#charge-list .charge-result').forEach(el=>el.addEventListener('click',()=>selectCharge(el.dataset.cid,true)));
+}
+
+function simKey(e){return String(e.inmetro_id)+'|'+String(e.modalidade)}
+function simSelect(){let reg=$('sim-regime').value, filtered=drivers.filter(x=>x.regime===reg);let seen=new Set;filtered=filtered.filter(x=>{let k=simKey(x);if(seen.has(k))return false;seen.add(k);return true});filtered.sort((a,b)=>(a.marca_inmetro+' '+a.modelo_inmetro).localeCompare(b.marca_inmetro+' '+b.modelo_inmetro,'pt-BR'));let existing=$('sim-vehicle').value;$('sim-vehicle').innerHTML=filtered.map(x=>`<option value="${escapeHtml(simKey(x))}">${escapeHtml(energyLabel(x))}</option>`).join('');if(filtered.some(x=>simKey(x)===existing))$('sim-vehicle').value=existing;else{const preferred=filtered.find(x=>x.modelo_inmetro==='DOLPHIN MINI')||filtered[0];if(preferred)$('sim-vehicle').value=simKey(preferred)}renderSim()}
+function selectedDriver(){return drivers.find(x=>x.regime===$('sim-regime').value&&simKey(x)===$('sim-vehicle').value)||null}
+function renderSim(){
+ let r=selectedDriver(),km=n($('sim-km').value)||3000,hrs=n($('sim-hours').value),rev=n($('sim-revenue').value),extra=n($('sim-extra').value),assume=$('sim-complete').checked;
+ $('sim-km-label').textContent=fmt(km)+' km';let z=zoneById.get(String($('sim-zone').value));$('sim-zone-context').textContent=z?`${z.zona_nome} · ${fmt(z.viagens_origem_expandidas)} viagens expandidas de origem`:'Zona não selecionada';
+ if(!r){['sim-energy','sim-known','sim-total','sim-result','sim-breakkm','sim-breakhour','sim-provisional'].forEach(id=>$(id).textContent='—');$('sim-costlist').textContent='Sem veículos para esse regime';return}
+ const en=energy.find(x=>simKey(x)===simKey(r)),perkm=en?n(en.custo_energia_rs_km):null,baseKm=n(r.km_mes)||3000;
+ const known=n(r.subtotal_custos_conhecidos_rs_mes);
+ const knownAdjusted=known===null?null:known+(perkm===null?0:perkm*(km-baseKm));
+ const enMonth=perkm===null?null:perkm*km;
+ const missing=n(r.componentes_custos_pendentes);
+ const completedOriginal=missing===0&&n(r.custo_total_economico_rs_mes)!==null;
+ const declaredAssumptions=assume&&extra!==null&&extra>=0&&knownAdjusted!==null;
+ const total=declaredAssumptions?knownAdjusted+extra:completedOriginal?n(r.custo_total_economico_rs_mes)+(perkm||0)*(km-baseKm):null;
+ const result=total!==null&&rev!==null?rev-total:null;
+ $('sim-energy').textContent=money(enMonth);$('sim-known').textContent=money(knownAdjusted);
+ $('sim-provisional').textContent=knownAdjusted!==null&&rev!==null?money(rev-knownAdjusted):'—';
+ $('sim-total').textContent=money(total);$('sim-result').textContent=money(result);
+ $('sim-breakkm').textContent=total!==null?money(total/km,2):'—';$('sim-breakhour').textContent=total!==null&&hrs>0?money(total/hrs):'—';
+ $('sim-status').textContent=result!==null?(declaredAssumptions?'HIPÓTESE DIDÁTICA · NÃO É LUCRO OBSERVADO':'CENÁRIO PARAMETRIZADO'):'PARCIAL · RESULTADO INDISPONÍVEL';$('sim-status').className='pill '+(result!==null?'green':'warn');
+ $('sim-costlist').textContent=(r.campos_pendentes||'Sem identificação detalhada').replaceAll(';',', ');
+ let a=total!==null&&knownAdjusted!==null?Math.max(0,Math.min(100,knownAdjusted/Math.max(.01,total)*100)):100;
+ $('sim-gauge').style.width=a+'%';$('sim-gauge-other').style.width=(100-a)+'%';
+ $('sim-explanation').textContent=result===null?'Sem todos os custos declarados, o resultado permanece indisponível. O saldo provisório acima considera apenas despesas já identificadas e não equivale a lucro.':`Sob as premissas do usuário: recebimento após plataforma ${money(rev)}, custo conhecido ajustado ${money(knownAdjusted)} e custos pendentes assumidos ${money(extra)}. Resultado hipotético ${money(result)}. Nada disso foi observado em uma zona OD.`;
+}
+
+function initSimulator(){let choices=[...zones].sort((a,b)=>Number(a.zona_od_id)-Number(b.zona_od_id));$('sim-zone').innerHTML=choices.map(z=>`<option value="${escapeHtml(z.zona_od_id)}">${escapeHtml(z.zona_od_id+' · '+z.zona_nome)}</option>`).join('');if(selectedZone)$('sim-zone').value=selectedZone.zona_od_id;$('sim-zone').addEventListener('change',renderSim);['sim-km','sim-hours','sim-revenue','sim-extra','sim-complete','sim-vehicle'].forEach(id=>$(id).addEventListener('input',renderSim));$('sim-regime').addEventListener('change',simSelect);if(premises.length){let p=premises.find(x=>n(x.receita_apos_plataforma_rs_mes)===8000)||premises[0];$('sim-revenue').value=p.receita_apos_plataforma_rs_mes}simSelect();}
+function initScroll(){const update=()=>{let d=document.documentElement;let max=d.scrollHeight-innerHeight;$('progress').style.width=100*(max?scrollY/max:0)+'%';let nav=[...document.querySelectorAll('.nav a[href^="#"]')];let sections=nav.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);let current=sections.filter(s=>s.getBoundingClientRect().top<innerHeight*.4).at(-1);nav.forEach(a=>a.classList.toggle('active',current&&a.getAttribute('href')==='#'+current.id));};window.addEventListener('scroll',update,{passive:true});update()}
+function historyYear(y){return historyAnnual.find(v=>Number(v.year)===y)||{year:y,months:0,bev:0,hybrid:0,prior_matching_total:null}}
+function renderTimeline(y){
+ selectedYear=y;const years=[2022,2023,2024,2025,2026].map(historyYear),d=years.find(v=>v.year===y),prior=n(d.prior_matching_total);
+ const pTotal=prior;
+ const currentTotal=d.bev+d.hybrid;const growth=pTotal!==null&&pTotal>0?((currentTotal/pTotal)-1)*100:null;
+ $('timeline-year-title').textContent=y+(d.months<12?' · jan–'+(d.months===9?'set':'mês '+d.months):'');
+ $('timeline-bev').textContent=d.months?fmt(d.bev):'—';$('timeline-hybrid').textContent=d.months?fmt(d.hybrid):'—';$('timeline-total').textContent=d.months?fmt(currentTotal):'—';
+ $('timeline-yoy').textContent=growth===null?'Sem período comparável':(growth>=0?'+':'')+fmt(growth,1)+'%';$('timeline-months').textContent=d.months+'/12';
+ $('timeline-explain').textContent=d.months<12?`Dado parcial: ${d.months} meses disponíveis em ${y}. O crescimento, quando existe, compara os mesmos ${d.months} meses do ano anterior. Não anualizamos os valores.`:`Série de ${y} com 12 meses. Comparação contra os mesmos 12 meses do ano anterior, quando há dados. Híbridos = PHEV + HEV + HEV flex; MHEV está excluído para manter comparabilidade.`;
+ document.querySelectorAll('.timeline-year').forEach(b=>{let active=Number(b.dataset.year)===y;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+ let max=Math.max(1,...years.map(v=>v.bev+v.hybrid));
+ const svgNS='http://www.w3.org/2000/svg', W=800,H=270,bw=92,gap=60,scale=205/max;
+ let t=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" aria-label="Vendas nacionais de BEV e híbridos por ano">`;
+ years.forEach((v,i)=>{const x=40+i*(bw+gap),total=v.bev+v.hybrid;const bevH=v.bev*scale,hyH=v.hybrid*scale,yBase=220;const sel=v.year===y;t+=`<g class="year-group" data-year="${v.year}" tabindex="0" role="button" aria-label="${v.year}: ${fmt(total)} vendas eletrificadas comparáveis" style="cursor:pointer"><rect x="${x-10}" y="0" width="${bw+20}" height="250" rx="12" fill="${sel?'#213f48':'transparent'}"/><rect x="${x}" y="${yBase-hyH}" width="${bw}" height="${hyH}" rx="3" fill="#7fb7f9"/><rect x="${x}" y="${yBase-hyH-bevH}" width="${bw}" height="${bevH}" rx="3" fill="#72e3c2"/><text x="${x+bw/2}" y="${yBase+21}" text-anchor="middle" font-size="15" font-weight="700" fill="${sel?'#9ef4dc':'#d4e2ee'}">${v.year}</text><text x="${x+bw/2}" y="${Math.max(14,yBase-hyH-bevH-8)}" text-anchor="middle" font-size="11" fill="#cfe4f1">${fmt(total)}</text></g>`});
+ t+='</svg>';$('timeline-chart').innerHTML=t;
+ $('timeline-chart').querySelectorAll('.year-group').forEach(g=>{let go=()=>renderTimeline(Number(g.dataset.year));g.addEventListener('click',go);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+ const f=fipeYears.find(x=>Number(x.year)===y);$('fipe-year-summary').innerHTML=f?`<div class="info-rows"><div class="info-row"><span>Ano-modelo escolhido</span><b>${y}</b></div><div class="info-row"><span>Cotações coletadas</span><b>${fmt(f.qtd)}</b></div><div class="info-row"><span>Gasolina/flex · híbridos · elétricos</span><b>${fmt(f.categorias?.Gasolina)} · ${fmt(f.categorias?.['Híbrido'])} · ${fmt(f.categorias?.['Elétrico'])}</b></div><div class="info-row"><span>Mediana das cotações (amostra)</span><b>${money(f.mediana_brl)}</b></div></div><p class="meta-note">FIPE · preços observados em novembro de 2026, coletados parcialmente. Não representam preços vigentes em ${y}.</p>`:'<div class="empty">Sem resumo FIPE incorporado nesta versão. A FIPE disponível tem referência de novembro de 2026.</div>';
+}
+function initTimeline(){
+ let years=[2022,2023,2024,2025,2026];$('timeline-years').innerHTML=years.map(y=>`<button type="button" class="timeline-year" data-year="${y}" aria-pressed="false">${y}</button>`).join('');
+ $('timeline-years').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>renderTimeline(Number(b.dataset.year))));
+ let sp=fleetForMunicipio('São Paulo');$('fleet-context-home').innerHTML=sp?'<div class="info-rows">'+fleetCard('São Paulo')+'</div>':'<div class="empty">Frota SENATRAN municipal não incorporada à prévia. O HTML completo poderá apresentar o recorte de São Paulo.</div>';
+ if(!historyAnnual.length){$('timeline-chart').innerHTML='<div class="empty">Série temporal indisponível. Confirme dados_padronizados/11_ABVE_VENDAS_TECNOLOGIA_BRASIL_MENSAL.csv na geração do HTML.</div>';return}
+ renderTimeline(2025);
+}
+
+
+// Quarto mapa da v2.3: contexto local medido + comparações condicionais.
+let decisionZone=null,decisionSvg=null,decisionView={x:0,y:0,w:1000,h:760};
+const decisionGroups=[['gas','Gasolina'],['hyb','Híbrido'],['ev','Elétrico']];
+function decisionContext(){
+ const r=$('decision-region').value,d=$('decision-district').value;
+ if(decisionZone)return [decisionZone];
+ return zones.filter(z=>(!r||z.regiao_sp===r)&&(!d||String(z.distrito_od_id)===d));
+}
+function decisionResetView(){decisionView={x:0,y:0,w:1000,h:760};decisionViewApply()}
+function decisionViewApply(){if(decisionSvg)decisionSvg.setAttribute('viewBox',[decisionView.x,decisionView.y,decisionView.w,decisionView.h].join(' '))}
+function decisionZoom(f){let v=decisionView;let nw=Math.max(55,Math.min(1000,v.w/f));let nh=nw*.76;let cx=v.x+v.w/2,cy=v.y+v.h/2;decisionView={x:Math.max(-30,Math.min(1030-nw,cx-nw/2)),y:Math.max(-30,Math.min(790-nh,cy-nh/2)),w:nw,h:nh};decisionViewApply()}
+function decisionFocus(z){
+ if(!z||!decisionSvg)return;
+ const path=decisionSvg.querySelector('[data-dzid="'+String(z.zona_od_id)+'"]');
+ if(!path)return;
+ try{const b=path.getBBox(), w=Math.max(35,b.width*3.2),h=Math.max(30,b.height*3.2);let vw=Math.max(110,Math.min(1000,Math.max(w,h*1000/760)));let vh=vw*.76;decisionView={x:Math.max(0,Math.min(1000-vw,b.x+b.width/2-vw/2)),y:Math.max(0,Math.min(760-vh,b.y+b.height/2-vh/2)),w:vw,h:vh};decisionViewApply()}catch(e){}
+}
+function decisionUpdateFilters(){
+ const region=$('decision-region').value;
+ const current=$('decision-district').value;
+ const permitted=zones.filter(z=>!region||z.regiao_sp===region);
+ const set=new Set(permitted.map(z=>String(z.distrito_od_id)));
+ const options=districts.filter(d=>set.has(String(d.distrito_od_id))).sort((a,b)=>String(a.distrito_nome).localeCompare(String(b.distrito_nome),'pt-BR'));
+ $('decision-district').innerHTML='<option value="">Todos os distritos</option>'+options.map(d=>`<option value="${escapeHtml(d.distrito_od_id)}">${escapeHtml(d.distrito_nome)}</option>`).join('');
+ if(options.some(d=>String(d.distrito_od_id)===current))$('decision-district').value=current;
+ $('decision-zones').innerHTML=permitted.map(z=>`<option value="${escapeHtml(z.zona_nome+' · OD '+z.zona_od_id)}">${escapeHtml(z.distrito_nome)}</option>`).join('');
+}
+function decisionSearch(text){
+ const term=normName(text).trim();if(!term)return null;
+ const direct=term.match(/\b(?:OD\s*)?(\d{1,3})\b/);if(direct&&zoneById.has(direct[1]))return zoneById.get(direct[1]);
+ return zones.find(z=>normName(z.zona_nome+' · OD '+z.zona_od_id)===term)||zones.find(z=>normName(z.zona_nome)===term)||zones.find(z=>normName(z.zona_nome).includes(term)||normName(z.distrito_nome).includes(term))||null;
+}
+function decisionSelectZone(z,focus=false){
+ if(!z)return;decisionZone=z;
+ $('decision-region').value=z.regiao_sp||'';$('decision-district').value='';decisionUpdateFilters();$('decision-district').value=String(z.distrito_od_id);
+ $('decision-search').value=z.zona_nome+' · OD '+z.zona_od_id;
+ decisionDisplay();if(focus)decisionFocus(z);
+ if(String(selectedZone?.zona_od_id)!==String(z.zona_od_id))selected(z);
+}
+function decisionClear(){decisionZone=null;$('decision-search').value='';decisionDisplay();decisionResetView()}
+function decisionDisplay(){
+ const r=$('decision-region').value,d=$('decision-district').value,subset=decisionContext();
+ const district=districts.find(x=>String(x.distrito_od_id)===d);
+ const name=decisionZone?decisionZone.zona_nome+' · Zona OD '+decisionZone.zona_od_id:district?district.distrito_nome:r?'Região '+r:'São Paulo · capital';
+ $('decision-name').textContent=name;
+ $('decision-desc').textContent=decisionZone?(decisionZone.distrito_nome+' · Região '+decisionZone.regiao_sp+' · São Paulo'):district?('Distrito OD · Região '+(r||'—')+' · São Paulo'):r?'Recorte regional da capital':'Todas as 343 zonas OD da capital';
+ const sum=k=>{let vals=subset.map(z=>n(z[k])).filter(v=>v!==null);return vals.length?vals.reduce((a,b)=>a+b,0):null};
+ const chargersAvailable=DATA.ocmZoned===true;
+ $('decision-trips').textContent=fmt(sum('viagens_origem_expandidas'));
+ $('decision-chargers').textContent=chargersAvailable?fmt(sum('pontos_ocm_cadastrados')):'—';
+ $('decision-operational').textContent=chargersAvailable?fmt(sum('pontos_ocm_status_operational')):'—';
+ $('decision-count').textContent=fmt(subset.length);
+ $('decision-samples').textContent=fmt(subset.filter(z=>z.tem_amostra_origem).length);
+ $('decision-quality').textContent=chargersAvailable?'OCM geolocalizado por zona · 2026':'Sem geolocalização zonal OCM';
+ let ct=chargersAvailable?sum('pontos_ocm_cadastrados'):null;
+ $('decision-reason').textContent=(!chargersAvailable?'O mapa de recarga por zona exige GeoJSON e coordenadas completos. ':'')+
+     (ct===0?'Nenhum ponto OCM foi localizado dentro deste recorte no snapshot; isso não prova ausência de recarga. ':'')+
+     'A OD identifica viagens por território, não renda individual. O custo energético do veículo é o mesmo cenário técnico em qualquer zona até haver preços regionais comprovados.';
+ $('decision-charge-detail').textContent='Pontos de recarga são cadastros do Open Charge Map, não disponibilidade em tempo real. Origem de viagens OD 2023 inclui táxi não convencional/aplicativo. Sem amostra não significa zero.';
+ $('decision-verdict').textContent='A região altera o contexto, mas não comprova qual veículo dá maior lucro.';
+ const metric=$('decision-layer').value;
+ const mm=Math.max(1,...zones.map(z=>n(z[metric])||0));
+ if(decisionSvg){decisionSvg.querySelectorAll('.decision-zone').forEach(el=>{
+   const z=zoneById.get(el.dataset.dzid);if(!z)return;
+   const hidden=(r&&z.regiao_sp!==r)||(d&&String(z.distrito_od_id)!==d);
+   el.classList.toggle('dimmed',!!hidden&&String(decisionZone?.zona_od_id)!==String(z.zona_od_id));
+   el.classList.toggle('selected',String(decisionZone?.zona_od_id)===String(z.zona_od_id));
+   let v=n(z[metric]);el.style.fill=v===null?'#344357':numColor(v,mm);
+   el.setAttribute('aria-pressed',String(String(decisionZone?.zona_od_id)===String(z.zona_od_id)));
+  });
+  decisionSvg.querySelectorAll('.decision-charge').forEach(el=>{el.style.display=metric==='pontos_ocm_cadastrados'?'':'none'});
+ }
+}
+function decisionRenderMap(){
+ const target=$('decision-map'),geo=DATA.geo||[];target.replaceChildren();
+ if(!geo.length){target.innerHTML='<div class="empty" style="margin:22px">Mapa interativo indisponível nesta prévia. Gere <b>apresentacao_PI06_capital_v23.html</b> com o script do projeto para ativar as 343 zonas; filtros e comparador continuam funcionando.</div>';return}
+ const ns='http://www.w3.org/2000/svg';const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 1000 760');svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa de decisão por zona OD de São Paulo');svg.style.touchAction='pan-y';
+ const g=document.createElementNS(ns,'g');svg.appendChild(g);
+ geo.forEach(it=>{const z=zoneById.get(String(it.id));if(!z)return;
+  const path=document.createElementNS(ns,'path');path.setAttribute('d',it.p);path.setAttribute('class','zone decision-zone');path.dataset.dzid=String(it.id);path.setAttribute('tabindex','0');path.setAttribute('role','button');path.setAttribute('aria-label','Selecionar '+z.zona_nome+' · OD '+it.id);
+  const pick=()=>decisionSelectZone(z,true);path.addEventListener('click',pick);path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}});const title=document.createElementNS(ns,'title');title.textContent=z.zona_nome+' · OD '+it.id;path.appendChild(title);g.appendChild(path)});
+ (DATA.municipioGeo||[]).forEach(it=>{let path=document.createElementNS(ns,'path');path.setAttribute('d',it.p);path.setAttribute('class','municipality');g.appendChild(path)});
+ (DATA.chargingXY||[]).forEach(it=>{let c=document.createElementNS(ns,'circle');c.setAttribute('cx',it.x);c.setAttribute('cy',it.y);c.setAttribute('r',3.3);c.setAttribute('class','charging-point decision-charge');c.setAttribute('aria-label','Ponto OCM '+it.id);let title=document.createElementNS(ns,'title');let charge=charging.find(x=>String(x.id_posto)===String(it.id));title.textContent=charge?(charge.titulo+' · '+(charge.status_cadastral||'Status não informado')):'Ponto '+it.id;c.appendChild(title);
+ c.addEventListener('click',()=>{if(charge){$('decision-charge-detail').textContent=(charge.titulo||'Ponto OCM')+' · '+(charge.logradouro||'Endereço não informado')+' · status: '+(charge.status_cadastral||'Não informado')+' · fonte Open Charge Map, levantamento 2026';toast('Detalhes do eletroposto no painel')}});g.appendChild(c)});
+ target.appendChild(svg);decisionSvg=svg;
+ // Pan de mouse, seleção por toque/clique. Em celular, arrastar verticalmente rola o documento.
+ let drag=null,moved=false;
+ svg.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'||e.button!==0)return;drag={x:e.clientX,y:e.clientY,v:{...decisionView}};moved=false});
+ svg.addEventListener('pointermove',e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>6){moved=true;const w=Math.max(1,svg.clientWidth),h=Math.max(1,svg.clientHeight);decisionView.x=Math.max(-25,Math.min(1025-decisionView.w,drag.v.x-dx*drag.v.w/w));decisionView.y=Math.max(-25,Math.min(785-decisionView.h,drag.v.y-dy*drag.v.h/h));decisionViewApply()}});
+ svg.addEventListener('pointerup',()=>{drag=null});svg.addEventListener('pointercancel',()=>{drag=null});svg.addEventListener('click',e=>{if(moved){e.stopPropagation();moved=false}},true);
+ svg.addEventListener('wheel',e=>{e.preventDefault();decisionZoom(e.deltaY<0?1.14:1/1.14)},{passive:false});
+ decisionDisplay();
+}
+function decisionPopulateVehicles(){
+ const prefs={gas:['MOBI','ARGO'],hyb:['COROLLA CROSS','COROLLA','YARIS'],ev:['DOLPHIN MINI','DOLPHIN','E-KWID']};
+ for(const [key,group] of decisionGroups){const options=energy.filter(e=>e.grupo_interface===group&&n(e.custo_energia_rs_km)!==null).sort((a,b)=>energyLabel(a).localeCompare(energyLabel(b),'pt-BR'));
+  const sel=$('decision-'+key);sel.innerHTML=options.map(x=>`<option value="${escapeHtml(simKey(x))}">${escapeHtml(energyLabel(x))}</option>`).join('');
+  const preferred=(prefs[key]||[]).map(p=>options.find(x=>normName(x.modelo_inmetro).includes(p))).find(Boolean)||options[0];if(preferred)sel.value=simKey(preferred);
+ }
+}
+function decisionRenderCompare(){
+ const km=n($('decision-km').value),rev=n($('decision-revenue').value),complete=$('decision-confirm').checked;
+ const eligible=km!==null&&km>=100&&km<=30000&&rev!==null&&rev>=0&&rev<=150000;
+ let configs=[];for(const [key,group] of decisionGroups){
+  let e=energy.find(x=>simKey(x)===$('decision-'+key).value&&x.grupo_interface===group),per=e?n(e.custo_energia_rs_km):null;
+  let energyMonth=eligible&&per!==null?per*km:null;
+  let extraRaw=$('decision-'+key+'-extra').value.trim(),extra=extraRaw===''?null:n(extraRaw);
+  const validExtra=extra!==null&&extra>=0;
+  $('decision-'+key+'-value').textContent=money(energyMonth);
+  configs.push({key,group,vehicle:e,energyMonth,extra:validExtra?extra:null,total:validExtra&&energyMonth!==null?energyMonth+extra:null});
+ }
+ let haveAll=eligible&&configs.every(x=>x.energyMonth!==null&&x.extra!==null),isProfit=complete&&haveAll;
+ let comparable=configs.filter(x=>isProfit?x.total!==null:x.energyMonth!==null);
+ comparable.sort((a,b)=>isProfit?a.total-b.total:a.energyMonth-b.energyMonth);
+ $('decision-ranking-title').textContent=isProfit?'RESULTADO HIPOTÉTICO · CUSTOS TOTAIS DECLARADOS':'COMPARAÇÃO TÉCNICA · SOMENTE ENERGIA';
+ if(!eligible){$('decision-winner').textContent='Preencha quilometragem e recebimento válidos';$('decision-winner-note').textContent='Não calculamos resultados com entradas inválidas.'}
+ else if(comparable.length){const first=comparable[0];$('decision-winner').textContent=isProfit?'Maior resultado simulado: '+first.group+' · '+energyLabel(first.vehicle):'Menor custo de energia: '+first.group+' · '+energyLabel(first.vehicle);
+ $('decision-winner-note').textContent=isProfit?'Estimativa: '+money(rev-first.total)+' / mês depois das despesas declaradas. Não é rendimento observado, e a mesma fórmula vale para todas as regiões.':'Economia de energia não equivale a lucro. Complete todos os custos extras e marque a declaração para estimar o resultado sob suas hipóteses.'}
+ else{$('decision-winner').textContent='Sem versões comparáveis';$('decision-winner-note').textContent='É necessário gerar as tabelas INMETRO e escolher modelos com custo de energia.'}
+ const maximum=Math.max(1,...comparable.map(x=>isProfit?x.total:x.energyMonth));
+ $('decision-ranking').innerHTML=comparable.map((x,i)=>{
+ let value=isProfit?x.total:x.energyMonth;
+ return `<div class="rank-row"><div class="rank-label">${i+1}. ${escapeHtml(x.group)}</div><div class="rank-track"><i style="width:${Math.max(3,value/maximum*100)}%"></i></div><b>${money(value)}</b></div>`
+ }).join('')||'<div class="empty">Comparação indisponível para a seleção atual.</div>';
+ // 'Menor custo total' equivale a maior saldo com recebimento idêntico e declarado.
+}
+function initDecision(){
+ decisionUpdateFilters();decisionRenderMap();decisionPopulateVehicles();decisionRenderCompare();
+ $('decision-region').addEventListener('change',()=>{$('decision-district').value='';decisionUpdateFilters();decisionClear()});
+ $('decision-district').addEventListener('change',decisionClear);
+ const search=$('decision-search');
+ function submit(){let z=decisionSearch(search.value);if(z){decisionSelectZone(z,true);toast(z.zona_nome+' selecionada no mapa de decisão')}else if(search.value.trim()){toast('Zona não encontrada. Confira o nome ou número OD.')}}
+ search.addEventListener('change',submit);search.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();submit()}if(e.key==='Escape')decisionClear()});
+ $('decision-layer').addEventListener('change',decisionDisplay);
+ $('decision-zoom-in').addEventListener('click',()=>decisionZoom(1.45));$('decision-zoom-out').addEventListener('click',()=>decisionZoom(1/1.45));$('decision-zoom-reset').addEventListener('click',decisionResetView);
+ for(const [key] of decisionGroups){$('decision-'+key).addEventListener('change',decisionRenderCompare);$('decision-'+key+'-extra').addEventListener('input',decisionRenderCompare)}
+ ['decision-km','decision-revenue','decision-confirm'].forEach(id=>$(id).addEventListener('input',decisionRenderCompare));
+ $('decision-open-mobility').addEventListener('click',()=>{if(decisionZone)focusZone(decisionZone);document.getElementById('mobilidade').scrollIntoView({behavior:'smooth'})});
+ $('decision-reset').addEventListener('click',()=>{ $('decision-km').value=3000;$('decision-revenue').value=8000;$('decision-confirm').checked=false;for(const [key] of decisionGroups)$('decision-'+key+'-extra').value='';decisionPopulateVehicles();decisionRenderCompare();toast('Comparação restaurada')});
+}
+function initMobileMenu(){const b=$('mobile-menu'),nav=$('main-nav');b.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);b.setAttribute('aria-expanded',String(open));b.textContent=open?'✕ Fechar':'☰ Menu'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');b.textContent='☰ Menu';b.setAttribute('aria-expanded','false')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰ Menu'}})}
+
+function main(){mode();kpis();initTimeline();initMap();initFlow();initEnergy();initEconomy();initCharge();initDecision();initSimulator();initMobileMenu();initScroll();if(!DATA.full){const alert=document.createElement('div');alert.className='banner';alert.innerHTML='<b>Prévia com amostra real:</b> esta cópia mostra parte dos dados do repositório. Para obter todas as zonas clicáveis, fluxos, veículos e pontos, execute <span class="mono">python preparar_site_offline.py</span> uma única vez no computador com as bases do PI06.';document.querySelector('#contexto .wrap').prepend(alert)}}
+try{main()}catch(e){console.error(e);toast('Erro na visualização: '+e.message)}
+</script>
+</body>
+</html>

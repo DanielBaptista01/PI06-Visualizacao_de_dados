@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="dark" />
-<title>PI06 · Mobilidade, energia e escolha do veículo</title>
+<title>PI06 · Mobilidade, energia e viabilidade do motorista | v2.4</title>
 <style>
 :root{--bg:#090e16;--bg2:#0d1420;--panel:#121c2a;--panel2:#172231;--line:#283447;--ink:#ecf3f8;--muted:#9caab9;--faint:#6e8196;--mint:#72e3c2;--blue:#79bafb;--purple:#be9cff;--yellow:#ffcf8d;--red:#ff8d9b;--radius:20px;--shadow:0 22px 60px #0005}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.55}::selection{background:#65eacb55}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}input,select{background:#0e1825;color:var(--ink);border:1px solid #324459;border-radius:11px;padding:10px 12px;outline:0;min-width:0}input:focus,select:focus{border-color:var(--mint);box-shadow:0 0 0 3px #72e3c21e}button:focus-visible,a:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
@@ -14,6 +14,85 @@
 @media(max-width:1000px){.nav{gap:11px}.nav a{font-size:11px}.wrap{width:min(100% - 40px,1260px)}.hero .wrap{grid-template-columns:1fr}.hero{padding-top:125px}.hero-art{height:380px;max-width:630px;width:100%;margin:0 auto}.twocol{grid-template-columns:1fr}.sticky{position:static}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.nav a:not(.nav-end){display:none}.hero h1{font-size:52px}.hero{min-height:0}.hero-art{height:320px}.hero-stat{padding:11px}.hero-stat b{font-size:20px}.metrics{grid-template-columns:repeat(2,1fr)}.metric b{font-size:25px}.section{padding:72px 0}.grid3,.howto{grid-template-columns:1fr}.mapbox{height:365px}.controls{gap:9px}.field select{min-width:120px}.card{padding:18px}.footer .wrap{display:block}.footerlinks{margin-top:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @media print{.top,.scrolldown,.mapzoom,.hero-actions{display:none!important}.section{padding:35px 0;page-break-inside:avoid}.hero{min-height:0;padding:50px 0}.card{box-shadow:none}.wrap{width:100%}}
+
+/* PI06 v2.4 — quarto mapa de análise condicional + navegação responsiva. */
+.menu-toggle{display:none;background:#142333;border:1px solid #355161;border-radius:11px;color:#dcf5ef;font-size:13px;font-weight:700;padding:9px 12px}
+.decision-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.decision-grid{display:grid;grid-template-columns:minmax(0,1.23fr) minmax(325px,.86fr);gap:18px;align-items:start}
+.decision-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 15px}
+.decision-controls .field,.decision-filter .field{min-width:0}
+.decision-controls input,.decision-controls select,.decision-filter input,.decision-filter select{width:100%;max-width:100%;min-height:44px}
+.decision-map{height:490px}
+.decision-map svg{touch-action:pan-y}
+.decision-map .zone{stroke-width:.95}
+.decision-map .zone.dimmed{opacity:.19}
+.decision-map .zone.selected{opacity:1}
+.decision-map .charging-point{pointer-events:auto;stroke-width:1;stroke:#1d1a13}
+.decision-map .charging-point:focus-visible{stroke:#fff;stroke-width:3}
+.decision-filter{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:15px}
+.decision-callout{background:linear-gradient(120deg,#143a35,#162b36);border:1px solid #3b6f69;border-radius:17px;padding:18px;margin:14px 0}
+.decision-callout strong{font-size:19px;display:block;color:#c3f4e3}
+.decision-callout p{font-size:12px;color:#accac6;margin:8px 0 0;line-height:1.65}
+.decision-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
+.decision-stats>div{border:1px solid #30485c;background:#0e1a29;border-radius:12px;padding:13px}
+.decision-stats small{display:block;color:#9eb6c6;font-size:11px;line-height:1.4}
+.decision-stats b{display:block;font-size:22px;white-space:nowrap;margin-top:3px}
+.vehicle-compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:18px}
+.vehicle-option{padding:15px;background:#0e1a28;border:1px solid #2c3b4a;border-radius:14px;min-width:0}
+.vehicle-option label{display:block;font-size:12px;color:#b1c4cf;margin:10px 0 5px}
+.vehicle-option select,.vehicle-option input{width:100%;min-width:0;max-width:100%;font-size:12px;min-height:43px}
+.vehicle-option strong{font-size:14px;color:#d6f4ef}
+.vehicle-option .value{font-size:24px;font-weight:800;color:var(--mint);display:block;margin:10px 0 0;letter-spacing:-.03em}
+.vehicle-option .value-sub{font-size:11px;color:#acc1ca;display:block}
+.vehicle-option[data-group="Híbrido"] .value{color:#a1c8ff}
+.vehicle-option[data-group="Gasolina"] .value{color:#ffd59b}
+.decision-rank{display:flex;flex-direction:column;gap:10px;margin-top:13px}
+.decision-rank .rank-row{display:grid;grid-template-columns:116px 1fr auto;gap:11px;align-items:center;border-radius:12px;padding:10px;background:#101e2c;border:1px solid #304358}
+.rank-row .rank-label{font-size:12px;color:#b8c9d3;font-weight:700}
+.rank-track{height:10px;background:#2c3a4b;border-radius:20px;overflow:hidden}
+.rank-track>i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#4f90b8,#75e2bf)}
+.rank-row b{font-size:14px;white-space:nowrap}
+.assumption-row{display:flex;align-items:flex-start;gap:12px;margin:15px 0;padding:14px;background:#111e2c;border:1px solid #35485c;border-radius:12px;font-size:13px}
+.assumption-row input{margin-top:3px;width:18px;height:18px;flex:0 0 18px;accent-color:var(--mint)}
+.decision-subtitle{color:#a6bfcb;font-size:13px;margin:12px 0 6px}
+.mobile-note{display:none}
+.compact-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.compact-controls .field{flex:1;min-width:140px}
+@media(max-width:1100px){.decision-grid{grid-template-columns:1fr}.decision-map{height:480px}.vehicle-compare{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:850px){.menu-toggle{display:inline-flex;align-items:center;justify-content:center}.top .nav{position:absolute;left:18px;right:18px;top:65px;display:none;flex-direction:column;gap:0;background:#102131;border:1px solid #314b5d;border-radius:15px;padding:8px;box-shadow:0 18px 45px #000a;max-height:70vh;overflow-y:auto}.top .nav.open{display:flex}.top .nav a{display:block;width:100%;padding:12px 14px;font-size:14px}.top .nav a:not(.nav-end){display:block}.top .nav .nav-end{background:#204538}.mode{margin-left:auto}.hero{padding:120px 0 70px}.hero .wrap{gap:16px}}
+@media(max-width:700px){.wrap{width:calc(100% - 28px)}.top .wrap{gap:10px}.brand{gap:8px;font-size:12px}.brandmark{height:30px;width:30px;flex-shrink:0}.brand .brand-caption{display:none}.top .mode{font-size:9px;padding:5px 7px}.hero{padding:100px 0 55px}.hero h1{font-size:clamp(38px,12vw,56px)}.hero .lead{font-size:15px;line-height:1.7}.hero-art{height:260px}.hero-stat{padding:10px 11px}.hs1{right:0}.hs3{right:0}.section{padding:58px 0;scroll-margin-top:74px}.section h2{font-size:clamp(29px,8.5vw,43px)}.section .deck{font-size:14px}.section-head{margin-bottom:23px}.card{padding:16px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric{padding:12px}.metric b{font-size:22px}.metric span{font-size:10px}.twocol{grid-template-columns:minmax(0,1fr)}.field{min-width:0;width:100%}.field input,.field select{width:100%!important;min-width:0}.controls .field{flex:1 1 170px}.mapbox{height:330px}.mapbox svg{touch-action:pan-y}.mapzoom button{width:44px;height:44px}.maphint{font-size:10px;max-width:68%;padding:7px}.decision-map{height:365px}.decision-controls{grid-template-columns:1fr}.decision-filter{grid-template-columns:1fr}.vehicle-compare{grid-template-columns:1fr}.decision-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.decision-stats>div{padding:9px 7px}.decision-stats b{font-size:17px}.decision-stats small{font-size:10px}.decision-rank .rank-row{grid-template-columns:92px 1fr auto;gap:6px;padding:9px}.decision-rank b{font-size:11px}.mobile-note{display:block;color:#b6ceda;font-size:12px;margin-top:8px}.year-totals{grid-template-columns:1fr 1fr}.sources-row{grid-template-columns:1fr}.timeline-chart{height:230px}.maptooltip{max-width:150px}.hero-actions .btn{flex:1 1 auto}}
+@media(max-width:390px){.top .wrap{gap:6px}.brand{font-size:11px}.mode{display:none}.menu-toggle{padding:8px;font-size:12px}.decision-stats b{font-size:14px}.decision-map{height:320px}.year-totals{grid-template-columns:1fr}}
+
+/* v2.4 — prestação de contas do motorista. Sem dependências remotas. */
+.financial-head{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.finance-layout{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(320px,.8fr);gap:18px;align-items:start}
+.finance-form,.finance-results{min-width:0}
+.finance-step{padding:6px 0 24px;margin-bottom:20px;border-bottom:1px solid #2e4150}
+.finance-step:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.finance-step-title{display:flex;align-items:center;gap:11px;margin-bottom:16px}.finance-step-title>span{background:#264f56;border:1px solid #397b75;color:#a5f3d7;border-radius:10px;padding:8px 11px;font-weight:800;font-size:12px}.finance-step-title h3{margin:0}
+.finance-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:13px 0}
+.finance-fields .field{min-width:0}.finance-fields .field.wide{grid-column:1/-1}.finance-fields input,.finance-fields select,.finance-form .field select,.finance-form .field input{min-width:0;width:100%;max-width:100%;min-height:43px}
+.finance-form input[type=range]{width:100%;padding:0;border:0;accent-color:var(--mint)}
+.finance-form [hidden]{display:none!important}.finance-form .source-note,.source-note{color:#97acbb;font-size:11px;line-height:1.6;margin:10px 0 6px}
+.finance-note{border:1px solid #395466;background:#102534;border-radius:11px;padding:12px 13px;color:#bdd0dd;font-size:12px;line-height:1.7;margin-top:12px}
+.finance-includes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px 0}.finance-includes label{font-size:12px;color:#cbdae3;display:flex;gap:8px;align-items:center}
+.finance-check{display:flex;align-items:flex-start;gap:11px;font-size:12px;line-height:1.65;padding:13px;border:1px solid #375063;border-radius:11px;background:#122632;margin:14px 0;color:#c6d8e2}.finance-check input{flex:0 0 18px;width:18px;height:18px;accent-color:var(--mint);margin-top:1px}.finance-check.finance-confirm{background:#17332f;border-color:#3f7569}
+.finance-overview{display:grid;grid-template-columns:1fr;gap:7px}.finance-overview>div{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid #283c47;padding:11px 0}.finance-overview small,.finance-result-main small{color:#abc0ca;font-size:12px}.finance-overview strong{font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.finance-result-main{border:1px solid #396d60;background:#0f3132;border-radius:15px;padding:20px;margin:18px 0}.finance-result-main .big-num{color:#9bf4cf;margin:8px 0 4px;font-size:clamp(27px,3vw,39px)}.finance-result-main .big-num.negative{color:#ffc28c}.finance-result-main p{line-height:1.65;margin:8px 0 0}
+.finance-results-sticky{position:sticky;top:84px}
+.finance-breakdown{display:flex;flex-direction:column;gap:9px;margin-top:11px}.finance-cost-row{display:grid;grid-template-columns:minmax(0,1fr) 95px;gap:12px;align-items:center;font-size:12px}.finance-cost-row>div{min-width:0}.finance-cost-row .cost-label{display:flex;justify-content:space-between;gap:5px;font-size:11px;color:#b0cbd6;margin-bottom:4px}.finance-cost-row b{font-size:12px;text-align:right}.finance-cost-track{width:100%;height:7px;background:#243b47;border-radius:6px;overflow:hidden}.finance-cost-track>div{height:100%;background:linear-gradient(90deg,#399698,#9ef5cc);border-radius:6px}
+.finance-sensitivity{display:grid;gap:9px;margin-top:12px}.finance-sensitivity-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:7px;align-items:center;padding:10px 12px;background:#122737;border:1px solid #304658;border-radius:11px;font-size:12px}.finance-sensitivity-item b{font-variant-numeric:tabular-nums}.finance-sensitivity-item .negative{color:#ffc28c}.finance-sensitivity-item .positive{color:#a1f1cb}
+@media(max-width:1000px){.finance-layout{grid-template-columns:1fr}.finance-results-sticky{position:static}}
+@media(max-width:500px){.finance-fields{grid-template-columns:1fr}.finance-fields .field.wide{grid-column:auto}.finance-includes{grid-template-columns:1fr}.finance-step-title h3{font-size:18px}.finance-form.card,.finance-results.card{padding:17px}.finance-result-main{padding:15px}.finance-overview>div{gap:8px}.finance-overview small{max-width:55%}}
+@media(max-width:700px){
+  .controls>.field{flex:1 1 100%;width:100%;min-width:0}
+  .controls>.field input,.controls>.field select{width:100%;max-width:100%;min-width:0}
+  .hero-art{overflow:hidden}
+}
+.finance-saved{margin:12px 0}.finance-saved-row{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:9px;margin:7px 0;padding:10px;background:#142837;border:1px solid #344b5a;border-radius:10px;font-size:11px}.finance-saved-row span{overflow-wrap:anywhere;color:#b6cbd6}.finance-saved-row strong{white-space:nowrap;color:#9decd2}.finance-saved .finance-note{margin:12px 0}
+@media(max-width:500px){.finance-saved-row{grid-template-columns:1fr}.finance-saved-row strong{font-size:15px}}
+.finance-fipe-results{display:grid;gap:6px;margin:8px 0}.finance-fipe-results button{display:flex;flex-direction:column;gap:3px;text-align:left;cursor:pointer;background:#132d3b;border:1px solid #355365;border-radius:9px;padding:10px;color:#d8ebef}.finance-fipe-results button:hover,.finance-fipe-results button:focus-visible{border-color:#9bf3cf;background:#214353}.finance-fipe-results button span{font-size:11px;color:#9edebd}
+
 </style>
 
 <style>
@@ -61,8 +140,8 @@
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><a class="brand" href="#inicio"><span class="brandmark">06</span><span>PI06 <span style="font-weight:400;color:#90a6b5">/ Visualização de Dados</span></span></a><nav class="nav" aria-label="Navegação principal"><a href="#mobilidade">Mobilidade</a><a href="#fluxos">Fluxos</a><a href="#energia">Energia</a><a href="#economia">Economia</a><a href="#recarga">Recarga</a><a href="#simulador" class="nav-end">Simulador ↗</a></nav><span class="mode" id="mode">Prévia</span></div><div class="progress" id="progress"></div></div>
-<section id="inicio" class="hero"><div class="wrap"><div><div class="overline"><span class="dot"></span> São Paulo · Pesquisa OD 2023 + dados 2026</div><h1>Uma cidade.<br>Três energias.<br><em>Muitas escolhas.</em></h1><p class="lead">Qual é o custo de trabalhar com um carro de aplicativo? Descubra como a mobilidade na metrópole e a tecnologia dos veículos ajudam a entender essa decisão — sem confundir dados observados com simulações.</p><div class="hero-actions"><a class="btn primary" href="#mobilidade">Explorar os dados ↓</a><a class="btn" href="#simulador">Abrir simulador ↗</a></div><div class="hero-note">◉ Pesquisa Metrô OD 2023 · INMETRO, ANP, ANEEL e demais fontes de 2026</div></div><div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div><div class="globe"><svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"><defs><radialGradient id="mesh"><stop stop-color="#6fe9c4" stop-opacity=".3"/><stop offset="1" stop-color="#4f98e0" stop-opacity=".03"/></radialGradient></defs><circle cx="250" cy="250" r="235" fill="url(#mesh)"/><path d="M250 25 Q138 140 250 250T250 475 M250 25 Q365 140 250 250T250 475 M30 250H470 M65 165Q250 246 435 165 M65 335Q250 254 435 335" fill="none" stroke="#7ce3d3" stroke-opacity=".16" stroke-width="2"/><path d="M235 75 L293 91 300 125 339 146 317 179 356 211 333 242 354 284 314 318 291 362 240 347 226 392 190 359 173 300 140 266 157 210 132 157 180 116Z" fill="#4cbea6" fill-opacity=".17" stroke="#87ead1" stroke-opacity=".55" stroke-width="2"/><circle cx="255" cy="228" r="9" fill="#a3fff0"/><circle cx="255" cy="228" r="20" fill="none" stroke="#93f5e3" stroke-opacity=".5"/><circle cx="325" cy="283" r="5" fill="#b0e6ff"/><circle cx="193" cy="168" r="5" fill="#b0e6ff"/><path d="M255 228 325 283M255 228 193 168M193 168 265 138" stroke="#8adacc" stroke-dasharray="6 6" fill="none"/></svg></div><div class="hero-stat hs1"><b id="h-zones">343</b><span>Zonas OD</span></div><div class="hero-stat hs2"><b id="h-trips">574 mil</b><span>Origens expandidas na capital*</span></div><div class="hero-stat hs3"><b id="h-energy">838</b><span>Cenários de energia</span></div></div></div><div class="scrolldown">ROLE PARA EXPLORAR <div style="font-size:24px;margin-top:4px">⌄</div></div></section>
+<div class="top"><div class="wrap"><a class="brand" href="#inicio"><span class="brandmark">06</span><span>PI06 <span class="brand-caption" style="font-weight:400;color:#90a6b5">/ Visualização de Dados</span></span></a><button class="menu-toggle" id="mobile-menu" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu de navegação">☰ Menu</button><nav class="nav" id="main-nav" aria-label="Navegação principal"><a href="#mobilidade">Mobilidade</a><a href="#fluxos">Fluxos</a><a href="#energia">Energia</a><a href="#economia">Economia</a><a href="#recarga">Recarga</a><a href="#viabilidade">Decisão territorial</a><a href="#simulador" class="nav-end">Simulador de custos ↗</a></nav><span class="mode" id="mode">Prévia</span></div><div class="progress" id="progress"></div></div>
+<section id="inicio" class="hero"><div class="wrap"><div><div class="overline"><span class="dot"></span> São Paulo · Pesquisa OD 2023 + dados 2026</div><h1>Uma cidade.<br>Três energias.<br><em>Muitas escolhas.</em></h1><p class="lead">Qual é o custo de trabalhar com um carro de aplicativo? Descubra como a mobilidade na metrópole e a tecnologia dos veículos ajudam a entender essa decisão — sem confundir dados observados com simulações.</p><div class="hero-actions"><a class="btn primary" href="#mobilidade">Explorar os dados ↓</a><a class="btn" href="#viabilidade">Testar a hipótese ↗</a></div><div class="hero-note">◉ Pesquisa Metrô OD 2023 · INMETRO, ANP, ANEEL e demais fontes de 2026</div></div><div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div><div class="globe"><svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"><defs><radialGradient id="mesh"><stop stop-color="#6fe9c4" stop-opacity=".3"/><stop offset="1" stop-color="#4f98e0" stop-opacity=".03"/></radialGradient></defs><circle cx="250" cy="250" r="235" fill="url(#mesh)"/><path d="M250 25 Q138 140 250 250T250 475 M250 25 Q365 140 250 250T250 475 M30 250H470 M65 165Q250 246 435 165 M65 335Q250 254 435 335" fill="none" stroke="#7ce3d3" stroke-opacity=".16" stroke-width="2"/><path d="M235 75 L293 91 300 125 339 146 317 179 356 211 333 242 354 284 314 318 291 362 240 347 226 392 190 359 173 300 140 266 157 210 132 157 180 116Z" fill="#4cbea6" fill-opacity=".17" stroke="#87ead1" stroke-opacity=".55" stroke-width="2"/><circle cx="255" cy="228" r="9" fill="#a3fff0"/><circle cx="255" cy="228" r="20" fill="none" stroke="#93f5e3" stroke-opacity=".5"/><circle cx="325" cy="283" r="5" fill="#b0e6ff"/><circle cx="193" cy="168" r="5" fill="#b0e6ff"/><path d="M255 228 325 283M255 228 193 168M193 168 265 138" stroke="#8adacc" stroke-dasharray="6 6" fill="none"/></svg></div><div class="hero-stat hs1"><b id="h-zones">343</b><span>Zonas OD</span></div><div class="hero-stat hs2"><b id="h-trips">574 mil</b><span>Origens expandidas na capital*</span></div><div class="hero-stat hs3"><b id="h-energy">838</b><span>Cenários de energia</span></div></div></div><div class="scrolldown">ROLE PARA EXPLORAR <div style="font-size:24px;margin-top:4px">⌄</div></div></section>
 <section class="section" id="contexto"><div class="wrap"><div class="section-head"><div class="eyebrow">01 / O problema</div><h2>A mesma viagem.<br><span class="light">Custos diferentes.</span></h2><p class="deck">Gasolina, híbrido ou elétrico? A resposta depende de consumo, preço da energia, quilometragem, custos fixos, contrato de aluguel e outras variáveis. A Pesquisa OD ajuda a compreender os deslocamentos — não informa quanto cada motorista recebeu.</p></div><div class="metrics"><div class="metric"><b class="mint" id="k-zones">343</b><span>Zonas OD catalogadas</span></div><div class="metric"><b class="blue" id="k-muns">96</b><span>Distritos da capital</span></div><div class="metric"><b id="k-samples">3.178</b><span>Registros amostrais de origem na capital</span></div><div class="metric"><b class="yellow" id="k-exp">574 mil</b><span>Viagens expandidas com origem na capital</span></div></div>
 <div class="timeline-layout" id="evolucao-eletrificados">
   <div class="card">
@@ -91,8 +170,123 @@
 <section class="section alt" id="energia"><div class="wrap"><div class="section-head"><div class="eyebrow">04 / Qual energia custa menos</div><h2>O custo de avançar<br><span class="light">um quilômetro.</span></h2><p class="deck">Compare versões e modalidades do INMETRO usando os preços considerados no cenário. Os custos são técnicos, não uma certificação de que cada versão pode circular na Uber.</p></div><div class="controls"><label class="field">Tecnologia<select id="energy-group"><option value="">Todas</option><option value="Gasolina">Gasolina / flex / etanol</option><option value="Híbrido">Híbrido</option><option value="Elétrico">Elétrico</option></select></label><label class="field">Pesquisar modelo<input id="energy-search" placeholder="Ex.: Dolphin, Mobi…" type="search" style="min-width:210px"></label><label class="field">Km operacionais por mês <b id="energy-km-label" class="light">3.000 km</b><input id="energy-km" type="range" min="500" max="8000" step="250" value="3000"></label></div><div class="twocol"><div class="card"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><h3>Cenários de menor custo energético</h3><span class="pill blue" id="energy-n">—</span></div><div id="energy-bars"></div><p class="meta-note">Ordem baseada apenas no custo energético. Seguro, aquisição, manutenção e aluguel não estão incluídos.</p></div><div class="card"><div class="smallcap">Versão selecionada</div><div class="big-num" id="energy-model" style="font-size:25px">Selecione no ranking</div><div class="sub" id="energy-desc">—</div><div class="separator"></div><div class="pricebox"><div class="smallcap">Custo energético por km</div><div class="big-num" id="energy-perkm">—</div><p class="sub" style="margin:6px 0 0">Custo mensal sob a quilometragem escolhida</p><div class="big-num" id="energy-permonth" style="font-size:25px;margin-top:6px">—</div></div><div class="sidenote">Tarifas e combustíveis são referências de 2026. A tarifa elétrica de base pode não incluir tributos e perdas de recarga; conferir as premissas da análise.</div></div></div></div></section>
 <section class="section" id="economia"><div class="wrap"><div class="section-head"><div class="eyebrow">05 / O que sobra para o motorista</div><h2>Energia é só<br><span class="light">uma parte da conta.</span></h2><p class="deck">Mesmo que a eletricidade custe menos por quilômetro, a viabilidade depende de seguro, manutenção, impostos, depreciação ou aluguel e do recebimento do motorista. Custos ausentes não devem virar zero.</p></div><div class="grid3"><div class="card"><span class="pill green">Parte conhecida</span><div class="smallcap" style="margin-top:15px">Energia e outras despesas preenchidas</div><div class="big-num" id="econ-known">—</div><p class="sub">Subtotal conhecido do cenário selecionado. Não é custo total.</p></div><div class="card"><span class="pill warn">Lacunas</span><div class="smallcap" style="margin-top:15px">Componentes ainda não quantificados</div><div class="big-num" id="econ-missing">—</div><p class="sub">Podem incluir IPVA efetivo, seguro, manutenção, despesas fixas ou depreciação.</p></div><div class="card"><span class="pill blue">Resultado</span><div class="smallcap" style="margin-top:15px">Resultado econômico observado</div><div class="big-num">Não disponível</div><p class="sub">O projeto modela hipóteses; não possui rendimentos individuais observados por zona OD.</p></div></div><div class="notice" style="margin-top:18px"><b>Regra metodológica:</b> um total econômico só pode ser apresentado quando todos os custos relevantes são conhecidos ou explicitamente assumidos num cenário hipotético. A soma das despesas disponíveis é apenas um subtotal.</div></div></section>
 <section class="section alt" id="recarga"><div class="wrap"><div class="section-head"><div class="eyebrow">06 / Infraestrutura de recarga</div><h2>Energia elétrica também<br><span class="light">depende do lugar.</span></h2><p class="deck">Pontos cadastrados pelo Open Charge Map ajudam a contextualizar a eletrificação. Cadastro, potência e status informado não garantem disponibilidade em tempo real.</p></div><div class="metrics" style="grid-template-columns:repeat(3,1fr)"><div class="metric"><b class="mint" id="charge-total">—</b><span>Pontos cadastrados no recorte</span></div><div class="metric"><b id="charge-oper">—</b><span>Com status cadastral operacional</span></div><div class="metric"><b id="charge-unknown">—</b><span>Outros status cadastrais</span></div></div><div class="twocol"><div class="card"><h3>Pontos sobre a região</h3><div class="mapbox" style="height:390px"><div id="charge-map" style="height:100%"></div><div class="maphint">Clique em um ponto para ver sua ficha detalhada.</div><div class="mapzoom"><button type="button" id="charge-zoom-in" title="Aproximar eletropostos">+</button><button type="button" id="charge-zoom-out" title="Afastar eletropostos">−</button><button type="button" id="charge-zoom-reset" title="Visão geral">⌖</button></div></div></div><div class="card"><h3>Pontos de referência</h3><div class="controls"><label class="field">Buscar ponto<input id="charge-search" type="search" placeholder="Ex.: Paulista, Shopping…"></label></div><div id="charge-detail" class="specificity" aria-live="polite">Selecione um eletroposto no mapa ou na lista para conferir endereço, conectores, potência e fonte.</div><div id="charge-list"></div><p class="meta-note">Base de cadastro obtida em 2026; registros podem estar desatualizados.</p></div></div></div></section>
-<section class="section" id="simulador"><div class="wrap"><div class="section-head"><div class="eyebrow">07 / Decisão informada</div><h2>E se fosse<br><span class="light">o seu cenário?</span></h2><p class="deck">Selecione um veículo, escolha os quilômetros e teste um recebimento hipotético. O simulador preserva custos não informados e só estima resultado completo quando você declara uma hipótese para todas as despesas restantes.</p></div><div class="twocol"><div class="card"><h3>Configure seu perfil</h3><div class="controls"><label class="field">Regime<select id="sim-regime"><option value="proprio">Veículo próprio</option><option value="alugado">Veículo alugado</option></select></label><label class="field" style="flex:1">Modelo / versão<select id="sim-vehicle" style="width:100%;max-width:490px"></select></label></div><div class="controls"><label class="field" style="flex:1">Quilometragem operacional mensal <b class="light" id="sim-km-label">3.000 km</b><input id="sim-km" type="range" min="500" max="8000" step="250" value="3000" style="width:100%"></label><label class="field">Horas de trabalho/mês<input id="sim-hours" type="number" min="1" max="450" step="1" value="200" style="width:150px"></label></div><div class="controls"><label class="field">Recebimento mensal após taxas da plataforma (R$)<input id="sim-revenue" type="number" min="0" max="100000" step="100" value="8000" style="width:230px"></label></div><label class="field">Região OD para contexto (não altera os custos)<select id="sim-zone" style="max-width:100%;width:360px"></select></label><div class="separator"></div><div class="smallcap">Custos não informados no modelo</div><div id="sim-costlist" class="sub" style="line-height:1.8"></div><div class="notice" style="margin-top:14px">A opção de assumir os custos pendentes começa ativada <b>apenas para demonstrar o cálculo</b>. O valor é uma hipótese editável, não uma despesa medida. Desmarque-a para voltar ao estado parcial.</div><div style="display:flex;gap:11px;align-items:center;margin:19px 0 10px"><input id="sim-complete" checked type="checkbox" style="accent-color:var(--mint);width:18px;height:18px"><label for="sim-complete" style="font-size:13px">Assumir que o valor abaixo cobre <b>todos</b> os custos ainda pendentes</label></div><label class="field">Total hipotético das despesas pendentes (R$/mês)<input id="sim-extra" type="number" min="0" max="100000" step="50" value="1200" style="width:230px"></label></div><div class="card sticky"><span class="pill green" id="sim-status">PARCIAL — NÃO É LUCRO</span><div class="smallcap" style="margin-top:20px">Custo energético mensal estimado</div><div class="big-num" id="sim-energy">—</div><div class="smallcap" style="margin-top:18px">Subtotal conhecido + variação da energia</div><div class="big-num" style="font-size:27px" id="sim-known">—</div><div class="smallcap" style="margin-top:20px">Custo total sob as hipóteses</div><div class="big-num" id="sim-total">Não disponível</div><div class="simgauge"><div id="sim-gauge" style="width:40%"></div><div class="missing" id="sim-gauge-other" style="width:60%"></div></div><div class="sim-live"><span class="smallcap">Saldo antes das despesas pendentes (não é lucro)</span><b id="sim-provisional">—</b><span class="sub">Recebimento hipotético menos apenas custos identificados.</span></div><div class="smallcap">Resultado econômico hipotético mensal</div><div class="big-num" style="color:var(--mint)" id="sim-result">—</div><div class="split-stat" style="margin-top:17px"><div class="mini"><span>Equilíbrio estimado R$/km</span><b id="sim-breakkm">—</b></div><div class="mini"><span>Equilíbrio estimado R$/hora</span><b id="sim-breakhour">—</b></div></div><div class="mini" style="margin-top:18px"><span>Contexto de mobilidade da região OD escolhida</span><b style="font-size:15px" id="sim-zone-context">—</b><span>Este indicador territorial não modifica o resultado econômico do veículo.</span></div><p class="meta-note" id="sim-explanation">Preencha todas as despesas pendentes para obter um resultado ilustrativo. Nenhum valor é uma renda observada.</p></div></div></div></section>
-<section class="section alt" id="metodo"><div class="wrap"><div class="section-head"><div class="eyebrow">08 / O que aprendemos</div><h2>Dados ajudam a decidir.<br><span class="light">Limites também.</span></h2><p class="deck">O trabalho reúne referências de épocas e granularidades diferentes. A principal contribuição é mostrar como compará-las corretamente — sem transformar amostras, preços ou hipóteses em certezas.</p></div><div class="howto"><article><span>01 · OBSERVADO / AMOSTRAL</span><h4>Mobilidade</h4><p>OD 2023, modo 12, fatores de expansão e zonas. Retrata um levantamento de deslocamentos, não registros comerciais da Uber.</p></article><article><span>02 · DERIVADO / SIMULADO</span><h4>Energia e custos</h4><p>INMETRO, ANP, ANEEL e premissas. Estima custos condicionados à tecnologia, ao consumo e aos preços de referência.</p></article><article><span>03 · HIPOTÉTICO</span><h4>Viabilidade</h4><p>Receitas, quilômetros e despesas podem ser escolhidos pelo usuário. Resultado financeiro não é lucro observado.</p></article></div><div class="card" style="margin-top:20px"><h3>Transparência do projeto</h3><div class="info-rows"><div class="info-row"><span>Pesquisa OD</span><b>Metrô-SP · 2023</b></div><div class="info-row"><span>Fontes econômicas</span><b>INMETRO · ANP · ANEEL · 2026</b></div><div class="info-row"><span>Infraestrutura de recarga</span><b>Open Charge Map · levantamento 2026</b></div><div class="info-row"><span>Natureza da comparação</span><b>Descritiva + simulações explícitas</b></div><div class="info-row"><span>Validação de veículos Uber</span><b>Não inferida automaticamente</b></div><div class="info-row"><span>Versão da apresentação</span><b id="site-version">—</b></div></div><div class="quote">O site pode funcionar offline depois de incorporar os arquivos do projeto. O original das fontes e o código de análise permanecem disponíveis no repositório da equipe.</div><a class="btn" style="margin-top:10px" href="https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados" target="_blank" rel="noopener noreferrer">Ver o repositório no GitHub ↗</a></div></div></section>
+
+<section class="section alt" id="viabilidade"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">07 / Teste da hipótese do PI06</div>
+  <h2>Qual veículo pode compensar <span class="light">em cada região?</span></h2>
+  <p class="deck">O mapa reúne mobilidade observada na OD 2023, pontos de recarga do levantamento OCM 2026 e custos técnicos dos veículos INMETRO. Escolha a área, compare configurações e, se quiser, declare despesas adicionais para testar uma hipótese econômica. <b>Não é um mapa de lucro observado.</b></p></div>
+  <div class="decision-head"><span class="pill green">São Paulo capital · 343 zonas OD</span><span class="pill blue">Comparação condicional, não recomendação Uber</span><span class="pill warn" id="decision-quality">Recorte territorial</span></div>
+  <div class="decision-grid">
+    <div class="card">
+      <h3>04 · Mapa de decisão</h3><p class="sub">Clique diretamente em uma zona para atualizar os indicadores e o comparador. Você também pode pesquisar Jabaquara, Itaim Bibi, Santo Amaro ou o nº da zona.</p>
+      <div class="decision-filter">
+        <label class="field">Região administrativa<select id="decision-region"><option value="">Todas as regiões</option><option>Centro</option><option>Norte</option><option>Sul</option><option>Leste</option><option>Oeste</option></select></label>
+        <label class="field">Camada do mapa<select id="decision-layer"><option value="viagens_origem_expandidas">Origens OD expandidas</option><option value="pontos_ocm_cadastrados">Pontos OCM cadastrados por zona</option></select></label>
+        <label class="field">Distrito OD<select id="decision-district"><option value="">Todos os distritos</option></select></label>
+        <label class="field">Buscar / selecionar zona<input type="search" list="decision-zones" id="decision-search" placeholder="Nome, distrito ou código OD" autocomplete="off"><datalist id="decision-zones"></datalist></label>
+      </div>
+      <div class="mapbox decision-map" id="decision-map-container"><div id="decision-map" style="position:absolute;inset:0"></div>
+         <div class="mapzoom"><button id="decision-zoom-in" type="button" aria-label="Aproximar mapa">+</button><button id="decision-zoom-out" type="button" aria-label="Afastar mapa">−</button><button id="decision-zoom-reset" type="button" aria-label="Visão geral">⌖</button></div>
+         <div class="maphint">Toque ou clique numa zona. O local selecionado aparece ao lado ou abaixo.</div>
+      </div>
+      <div class="legend"><span>Menos</span><div class="gradbar"></div><span>Mais · camada escolhida</span><span style="margin-left:auto">Cinza = dado ausente</span></div>
+      <p class="mobile-note">No celular: deslize a página normalmente, toque em uma zona e use os botões +/− para aproximar.</p>
+    </div>
+    <div class="card" aria-live="polite">
+      <div class="smallcap">Território analisado</div><h3 id="decision-name">São Paulo · capital</h3><p class="sub" id="decision-desc">Todas as regiões. Selecione uma zona no mapa ou pelos filtros.</p>
+      <div class="decision-stats"><div><small>Origens expandidas OD 2023</small><b id="decision-trips">—</b></div><div><small>Pontos OCM no recorte</small><b id="decision-chargers">—</b></div><div><small>Com status cadastral “operacional”</small><b id="decision-operational">—</b></div></div>
+      <div class="decision-callout"><span class="smallcap">Evidência versus hipótese</span><strong id="decision-verdict">A região, sozinha, não determina o veículo mais lucrativo.</strong><p id="decision-reason">A OD mede viagens e o OCM registra infraestrutura. Não há dados observados de receita por zona nem custo de operação específico por distrito.</p></div>
+      <div class="info-rows"><div class="info-row"><span>Zonas no recorte</span><b id="decision-count">—</b></div><div class="info-row"><span>Zonas com amostra de origem</span><b id="decision-samples">—</b></div><div class="info-row"><span>Referência territorial</span><b>OD 2023 · modo 12</b></div><div class="info-row"><span>Infraestrutura</span><b>OCM · cadastro 2026</b></div></div>
+      <p class="meta-note" id="decision-charge-detail">Os pontos são cadastros geolocalizados. Disponibilidade, preço efetivo e fila não foram medidos.</p>
+      <button class="btn" id="decision-open-mobility" type="button">Ver viagens desta zona no mapa de mobilidade ↗</button>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px"><div class="section-head" style="margin-bottom:12px"><div class="smallcap">Comparador econômico · mesma quilometragem, mesma receita</div><h3>Três configurações, uma hipótese transparente</h3><p class="sub">Escolha uma versão do INMETRO por tecnologia. A comparação usa energia/km; nenhuma dessas versões recebe automaticamente preço FIPE, elegibilidade Uber ou lucro regional.</p></div>
+    <div class="decision-controls">
+      <label class="field">Quilometragem operacional (km/mês)<input id="decision-km" type="number" min="100" max="30000" step="100" value="3000" inputmode="numeric"></label>
+      <label class="field">Recebimento hipotético após taxa da plataforma (R$/mês)<input id="decision-revenue" type="number" min="0" max="150000" step="100" value="8000" inputmode="decimal"></label>
+    </div>
+    <div class="vehicle-compare">
+      <div class="vehicle-option" data-group="Gasolina"><strong>01 / Gasolina e flex</strong><label for="decision-gas">Versão e modalidade</label><select id="decision-gas"></select><span class="value" id="decision-gas-value">—</span><span class="value-sub">Energia mensal estimada</span><label for="decision-gas-extra">Demais despesas mensais (R$)</label><input id="decision-gas-extra" type="number" min="0" step="50" placeholder="Não informado" inputmode="decimal"></div>
+      <div class="vehicle-option" data-group="Híbrido"><strong>02 / Híbrido</strong><label for="decision-hyb">Versão e modalidade</label><select id="decision-hyb"></select><span class="value" id="decision-hyb-value">—</span><span class="value-sub">Energia mensal estimada</span><label for="decision-hyb-extra">Demais despesas mensais (R$)</label><input id="decision-hyb-extra" type="number" min="0" step="50" placeholder="Não informado" inputmode="decimal"></div>
+      <div class="vehicle-option" data-group="Elétrico"><strong>03 / Elétrico</strong><label for="decision-ev">Versão e modalidade</label><select id="decision-ev"></select><span class="value" id="decision-ev-value">—</span><span class="value-sub">Energia mensal estimada</span><label for="decision-ev-extra">Demais despesas mensais (R$)</label><input id="decision-ev-extra" type="number" min="0" step="50" placeholder="Não informado" inputmode="decimal"></div>
+    </div>
+    <div class="assumption-row"><input type="checkbox" id="decision-confirm"><label for="decision-confirm"><b>Assumo que cada valor de “demais despesas” cobre integralmente todos os custos além da energia</b> (manutenção, seguro, impostos, pneus, depreciação ou aluguel, lavagem etc.). Sem essa declaração, mostramos apenas a comparação energética.</label></div>
+    <div class="decision-callout"><div class="smallcap" id="decision-ranking-title">Comparação inicial: custo de energia</div><strong id="decision-winner">Selecione as versões para comparar</strong><p id="decision-winner-note">Diferença de custo energético não é lucro. A classificação pode mudar quando todos os custos forem assumidos.</p></div>
+    <div class="decision-rank" id="decision-ranking"></div>
+    <p class="meta-note">A mesma hipótese econômica é aplicada a toda São Paulo capital; a seleção territorial oferece contexto de viagens e de recarga, não altera preço/km sem uma fonte regional de custo ou receita. O resultado, quando habilitado, é <b>simulado</b>, nunca rendimento observado.</p>
+    <div class="compact-controls"><a href="#simulador" class="btn primary">Abrir simulador detalhado ↗</a><button type="button" class="btn" id="decision-reset">Restaurar comparação</button></div>
+  </div>
+</div></section>
+
+<section class="section" id="simulador"><div class="wrap">
+<div class="section-head"><div class="eyebrow">08 / O bolso do motorista · modelo financeiro completo</div><h2>Quanto sobra <span class="light">no fim do mês?</span></h2>
+<p class="deck">Compare o custo operacional de um carro próprio ou alugado. Inclua combustível ou recarga, pneus, manutenção, seguro, impostos, depreciação e outros gastos. Mude qualquer premissa: os valores e o gráfico se atualizam na hora. <b>Não são lucros observados; são cenários condicionais.</b></p></div>
+<div class="financial-head"><span class="pill green">São Paulo capital · preços e custos de referência 2026</span><span class="pill blue">Receita após taxas da plataforma</span><span class="pill warn">Sem receitas medidas por zona OD</span></div>
+<div class="finance-layout">
+ <div class="finance-form card">
+ <div class="finance-step"><div class="finance-step-title"><span>01</span><h3>Perfil, carro e trabalho</h3></div><div class="finance-fields">
+ <label class="field">Como usa o carro?<select id="fin-regime"><option value="proprio">Próprio</option><option value="alugado">Alugado</option></select></label>
+ <label class="field wide">Veículo INMETRO e modalidade de energia<select id="fin-vehicle"></select></label>
+ <label class="field">Quilômetros totais por mês<input type="number" id="fin-km" value="3000" min="100" max="30000" step="100" inputmode="numeric"></label>
+ <label class="field">Horas online por mês<input type="number" id="fin-hours" value="200" min="1" max="450" step="10" inputmode="numeric"></label>
+ <label class="field wide">Recebimento mensal após as taxas da plataforma (R$)<input type="number" id="fin-revenue" value="8000" min="0" max="150000" step="100" inputmode="decimal"></label>
+ <label class="field wide">Zona selecionada para contexto (não altera a receita)<select id="sim-zone"></select></label>
+ </div><p class="source-note" id="fin-model-note">Modelo e consumo do INMETRO. Não significa elegibilidade na Uber nem vínculo confirmado com um preço FIPE.</p></div>
+ <div class="finance-step"><div class="finance-step-title"><span>02</span><h3>Combustível e eletricidade</h3></div>
+ <p class="sub">Preços-base da ANP e da ANEEL são referências, não preços garantidos. Use um valor pago por você para tornar o cenário mais próximo da sua realidade.</p>
+ <div class="finance-fields"><label class="field">Gasolina comum · R$/litro<input id="fin-gas-price" type="number" min="0.01" step="0.01" inputmode="decimal"></label>
+ <label class="field">Etanol · R$/litro<input id="fin-eth-price" type="number" min="0.01" step="0.01" inputmode="decimal"></label>
+ <label class="field">Eletricidade residencial · R$/kWh<input id="fin-home-price" type="number" min="0.01" step="0.01" inputmode="decimal"></label>
+ <label class="field">Recarga pública · R$/kWh<input id="fin-public-price" type="number" min="0.01" step="0.01" inputmode="decimal"></label>
+ </div>
+ <div id="fin-electric-fields" class="finance-fields"><label class="field wide">Percentual de energia elétrica carregada em postos públicos <b id="fin-public-label" class="light">0%</b><input id="fin-public-share" type="range" min="0" max="100" step="5" value="0"></label></div>
+ <div id="fin-hybrid-fields" class="finance-fields" hidden><label class="field">% dos km percorridos no modo elétrico<input id="fin-electric-share" type="number" value="0" min="0" max="100" step="5"></label>
+ <label class="field">Consumo elétrico assumido · kWh/km, se faltar registro INMETRO<input id="fin-electric-consumption" type="number" min="0.01" max="2" step="0.01" placeholder="Sem dado da versão"></label></div>
+ <div class="finance-note" id="fin-energy-note">O consumo é específico da modalidade selecionada. Para híbridos comuns, o motor elétrico não implica pagamento de recarga externa.</div>
+ </div>
+ <div class="finance-step"><div class="finance-step-title"><span>03</span><h3 id="fin-regime-title">Carro próprio · custo de posse</h3></div>
+ <div id="fin-rental-section" hidden><label class="field wide">Oferta de aluguel Uber Match (referência independente)<select id="fin-offer"><option value="">Informarei manualmente o aluguel</option></select></label><div class="finance-fields"><label class="field">Mensalidade de aluguel · R$<input id="fin-rental" type="number" min="0" step="50" placeholder="Escolha uma oferta ou digite"></label><label class="field">Quilômetros incluídos no mês<input id="fin-rental-km" type="number" min="0" step="100" placeholder="Confirme o contrato"></label><label class="field">Preço por km excedente (R$)<input id="fin-rental-overage" type="number" min="0" step="0.01" placeholder="Se o limite for excedido"></label></div><label class="finance-check"><input id="fin-rental-unlimited" type="checkbox"> <span>Confirmo que o aluguel contempla quilometragem ilimitada para este perfil (contrato ou hipótese assumida).</span></label>
+ <p class="source-note" id="fin-offer-note">Ofertas são snapshots de 2026; preços e condições podem mudar. Não há correspondência automática da oferta com a versão INMETRO selecionada.</p>
+ <label class="finance-check"><input id="fin-offer-confirm" type="checkbox"> <span>Confirmo que <b>este aluguel é aplicável à configuração que estou simulando</b> (ou é uma hipótese deliberada de contrato).</span></label>
+ <p class="sub">Marque os itens comprovadamente cobertos pelo contrato. Os não incluídos devem ter custo informado abaixo.</p>
+ <div class="finance-includes"><label><input id="fin-includes-maint" type="checkbox"> Manutenção incluída</label><label><input id="fin-includes-tires" type="checkbox"> Pneus incluídos</label><label><input id="fin-includes-ins" type="checkbox"> Seguro incluído</label><label><input id="fin-includes-ipva" type="checkbox"> IPVA incluído</label><label><input id="fin-includes-lic" type="checkbox"> Licenciamento incluído</label></div></div>
+ <div id="fin-owned-section"><div class="finance-fields"><label class="field">Depreciação · R$/mês<input id="fin-depreciation" type="number" min="0" step="50" placeholder="Informe sua estimativa"></label>
+ <label class="field">Preço de compra (opcional, R$)<input id="fin-purchase" type="number" min="0" step="1000" placeholder="Não é somado ao custo mensal"></label>
+ <label class="field">Valor residual estimado (R$)<input id="fin-residual" type="number" min="0" step="1000" placeholder="Para projetar depreciação"></label>
+ <label class="field">Meses de uso projetados<input id="fin-lifetime" type="number" min="1" max="360" step="12" placeholder="Ex.: 60"></label></div>
+ <div class="finance-note">Consulta opcional FIPE · base parcial, preços de novembro/2026. <b>Não há vínculo automático entre esta versão FIPE e o veículo INMETRO acima.</b></div>
+ <label class="field wide">Buscar marca, modelo ou ano FIPE<input type="search" id="fin-fipe-search" placeholder="Ex.: Corolla 2024" autocomplete="off"></label>
+ <div id="fin-fipe-results" class="finance-fipe-results"></div>
+ <label class="finance-check"><input id="fin-fipe-confirm" type="checkbox"><span>Conferi manualmente o modelo, a versão e o ano FIPE e assumo este preço como hipótese de compra.</span></label>
+ <p class="source-note" id="fin-fipe-picked">Nenhuma cotação FIPE selecionada. A compra pode ser informada manualmente.</p>
+ <button id="fin-estimate-dep" type="button" class="btn">Calcular depreciação a partir do valor de compra</button>
+ <p class="source-note">FIPE não é aplicada automaticamente ao INMETRO: a correspondência de versão/ano ainda não foi homologada. Compra à vista não é somada como despesa mensal junto com depreciação. Financiamento não está modelado.</p></div>
+ </div>
+ <div class="finance-step"><div class="finance-step-title"><span>04</span><h3>Manutenção, impostos e outras despesas</h3></div>
+ <div class="finance-fields"><label class="field">Manutenção · R$/km<input id="fin-maint" type="number" min="0" step="0.01" inputmode="decimal"></label><label class="field">Pneus · R$/km<input id="fin-tires" type="number" min="0" step="0.01" inputmode="decimal"></label>
+ <label class="field">Seguro · R$/mês<input id="fin-insurance" type="number" min="0" step="25" inputmode="decimal"></label><label class="field">IPVA efetivo · R$/ano<input id="fin-ipva" type="number" min="0" step="50" placeholder="Preencher ou justificar 0" inputmode="decimal"></label>
+ <label class="field">Licenciamento · R$/ano<input id="fin-lic" type="number" min="0" step="1" inputmode="decimal"></label><label class="field">Lavagem · R$/mês<input id="fin-wash" type="number" min="0" step="10" inputmode="decimal"></label>
+ <label class="field">Celular/internet · R$/mês<input id="fin-phone" type="number" min="0" step="10" inputmode="decimal"></label><label class="field">Reparos imprevistos · R$/mês (provisão)<input id="fin-repair" type="number" min="0" step="10" placeholder="Inclua imprevistos ou declare 0" inputmode="decimal"></label><label class="field">Outras despesas · R$/mês<input id="fin-other" type="number" min="0" step="10" inputmode="decimal"></label></div>
+ <label class="finance-check"><input id="fin-mei" type="checkbox"> <span>Incluir contribuição do MEI do perfil pesquisado (apenas se o enquadramento for aplicável)</span></label>
+ <p class="source-note">Referências demonstrativas da pesquisa: manutenção R$ 0,10/km, pneus R$ 0,03/km, seguro R$ 400/mês, lavagem R$ 80/mês, celular R$ 50/mês, licenciamento SP 2026 R$ 174,08/ano. IPVA e depreciação variam por veículo e não são inventados.</p>
+ <label class="finance-check finance-confirm"><input id="fin-confirm" type="checkbox"> <span><b>Confirmo que os valores cobrem todos os custos aplicáveis ao meu cenário</b>; valores zero significam hipótese explícita, não dado ausente.</span></label>
+ <div class="compact-controls"><button id="fin-reset" class="btn" type="button">Restaurar premissas</button><button id="fin-copy" class="btn primary" type="button">Copiar resumo do cenário</button></div>
+ </div>
+ </div>
+ <aside class="finance-results card" aria-live="polite"><div class="finance-results-sticky"><span id="fin-status" class="pill warn">CENÁRIO PARCIAL</span><h3 style="margin-top:16px">Seu resultado mensal</h3><div class="finance-overview"><div><small>Recebimento após plataforma</small><strong id="fin-revenue-out">—</strong></div><div><small>Gasto com energia</small><strong id="fin-energy-out">—</strong></div><div><small>Subtotal de custos informados</small><strong id="fin-subtotal">—</strong></div></div>
+ <div class="finance-result-main"><small>Resultado econômico hipotético</small><div id="fin-profit" class="big-num">—</div><p id="fin-status-detail" class="sub">Preencha os campos pendentes para liberar o cálculo completo.</p></div>
+ <div class="split-stat"><div class="mini"><span>Recebimento de equilíbrio / km</span><b id="fin-breakeven-km">—</b></div><div class="mini"><span>Recebimento de equilíbrio / hora</span><b id="fin-breakeven-hour">—</b></div></div>
+ <div class="smallcap" style="margin-top:20px">Composição dos custos estimados</div><div id="fin-breakdown" class="finance-breakdown"></div>
+ <div class="smallcap" style="margin-top:18px">Sensibilidade do recebimento</div><div id="fin-sensitivity" class="finance-sensitivity"></div>
+ <div class="separator" style="margin:20px 0"></div><div class="smallcap">Comparação A × B</div><p class="sub">Salve dois cenários para comparar próprio e alugado, ou veículos distintos, sob os mesmos quilômetros e recebimento.</p>
+ <div class="compact-controls"><button type="button" class="btn" id="fin-save-a">Salvar cenário A</button><button type="button" class="btn" id="fin-save-b">Salvar cenário B</button></div>
+ <div id="fin-saved-comparison" class="finance-saved"><div class="empty">Escolha as premissas e salve dois cenários para compará-los.</div></div>
+ <p id="fin-pending" class="finance-note">Pendências: IPVA, depreciação e confirmação das premissas.</p>
+ <div class="mini" style="margin-top:15px"><span>Região apenas como contexto territorial</span><b id="sim-zone-context" style="font-size:14px">—</b><span>OD 2023 mede deslocamentos, não ganhos de motoristas.</span></div>
+ <p class="meta-note" id="fin-source-note">Custos de energia calculados com o INMETRO, ANP/ANEEL e premissas. Não representa lucro efetivo de motoristas.</p></div></aside>
+</div></div></section>
+<section class="section alt" id="metodo"><div class="wrap"><div class="section-head"><div class="eyebrow">09 / O que aprendemos</div><h2>Dados ajudam a decidir.<br><span class="light">Limites também.</span></h2><p class="deck">O trabalho reúne referências de épocas e granularidades diferentes. A principal contribuição é mostrar como compará-las corretamente — sem transformar amostras, preços ou hipóteses em certezas.</p></div><div class="howto"><article><span>01 · OBSERVADO / AMOSTRAL</span><h4>Mobilidade</h4><p>OD 2023, modo 12, fatores de expansão e zonas. Retrata um levantamento de deslocamentos, não registros comerciais da Uber.</p></article><article><span>02 · DERIVADO / SIMULADO</span><h4>Energia e custos</h4><p>INMETRO, ANP, ANEEL e premissas. Estima custos condicionados à tecnologia, ao consumo e aos preços de referência.</p></article><article><span>03 · HIPOTÉTICO</span><h4>Viabilidade</h4><p>Receitas, quilômetros e despesas podem ser escolhidos pelo usuário. Resultado financeiro não é lucro observado.</p></article></div><div class="card" style="margin-top:20px"><h3>Transparência do projeto</h3><div class="info-rows"><div class="info-row"><span>Pesquisa OD</span><b>Metrô-SP · 2023</b></div><div class="info-row"><span>Fontes econômicas</span><b>INMETRO · ANP · ANEEL · 2026</b></div><div class="info-row"><span>Infraestrutura de recarga</span><b>Open Charge Map · levantamento 2026</b></div><div class="info-row"><span>Natureza da comparação</span><b>Descritiva + simulações explícitas</b></div><div class="info-row"><span>Validação de veículos Uber</span><b>Não inferida automaticamente</b></div><div class="info-row"><span>Versão da apresentação</span><b id="site-version">—</b></div></div><div class="quote">O quarto mapa usa viagens OD por zona, recarga OCM geolocalizada por zona e custo técnico INMETRO. O simulador financeiro discrimina aluguel, energia, manutenção, pneus, seguro, IPVA e depreciação por premissas. Não há prova de lucratividade por região. O site pode funcionar offline depois de incorporar os arquivos do projeto. O original das fontes e o código de análise permanecem disponíveis no repositório da equipe.</div><a class="btn" style="margin-top:10px" href="https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados" target="_blank" rel="noopener noreferrer">Ver o repositório no GitHub ↗</a></div></div></section>
 <footer class="footer"><div class="wrap"><div><b>PI06 · Visualização de Dados</b><br><small>Estudo educacional · Município de São Paulo<br>Dados reais e simulações apresentados com suas limitações.</small></div><div class="footerlinks"><a href="#inicio">Voltar ao início ↑</a><a href="#metodo">Metodologia</a><a href="https://github.com/DanielBaptista01/PI06-Visualizacao_de_dados" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 <script id="pi06-data" type="application/json">__PI06_DATA__</script>
@@ -106,7 +300,7 @@ const zones=DATA.zones||[],muns=DATA.municipios||[],districts=DATA.distritos||[]
 let zoneById=new Map(zones.map(z=>[String(z.zona_od_id),z])),selectedZone=null,selectedEnergy=null,selectedCharge=null,zoom=1,offsetX=0,offsetY=0,chargeZoom=1,chargeDX=0,chargeDY=0,selectedYear=2025;
 const normName=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim();
 const meta=DATA.meta||{};
-function mode(){const full=!!DATA.full;$('mode').textContent=full?'Offline completo':'Prévia parcial';$('mode').className='mode';$('mode').title=full?'Dados locais incorporados; nenhuma consulta de rede':'Exemplo de interface com registros reais selecionados; gere apresentação completa na raiz do repositório';$('site-version').textContent=(DATA.version||'2026-11-14')+(full?' · offline completo':' · prévia');}
+function mode(){const full=!!DATA.full;$('mode').textContent=full?'Offline completo':'Prévia parcial';$('mode').className='mode';$('mode').title=full?'Dados locais incorporados; nenhuma consulta de rede':'Exemplo de interface com registros reais selecionados; gere apresentação completa na raiz do repositório';$('site-version').textContent='2.4 · '+(DATA.version||'2026-11-14')+(full?' · offline completo':' · prévia');}
 function kpis(){
  const trips=n(meta.viagens_expandidas),sample=n(meta.amostra_origem);
  $('h-zones').textContent=fmt(meta.zonas??343);
@@ -148,9 +342,10 @@ function selected(z){
  $('map-fleet-context').innerHTML='<b>Frota SENATRAN · somente São Paulo capital (2026)</b><div class="info-rows">'+fleetCard('São Paulo')+'</div>';
  $('map-zone-search').value='';$('map-zone-results').replaceChildren();
  if($('flow-zone').options.length){$('flow-zone').value=key;renderFlow()}
- if($('sim-zone').options.length){$('sim-zone').value=key;renderSim()}
+ if($('sim-zone')&&$('sim-zone').options.length){$('sim-zone').value=key;if(typeof renderFinance==='function')renderFinance()}
  document.querySelectorAll('#map-render .zone').forEach(el=>el.classList.toggle('selected',el.dataset.zid===key));
  filterMap();
+ if(typeof decisionSelectZone==='function'&&(!decisionZone||String(decisionZone.zona_od_id)!==key)) decisionSelectZone(z,false);
 }
 function visibleScopeZones(){
  const region=$('map-region').value,district=$('map-district').value;
@@ -417,7 +612,363 @@ function initTimeline(){
  renderTimeline(2025);
 }
 
-function main(){mode();kpis();initTimeline();initMap();initFlow();initEnergy();initEconomy();initCharge();initSimulator();initScroll();if(!DATA.full){const alert=document.createElement('div');alert.className='banner';alert.innerHTML='<b>Prévia com amostra real:</b> esta cópia mostra parte dos dados do repositório. Para obter todas as zonas clicáveis, fluxos, veículos e pontos, execute <span class="mono">python preparar_site_offline.py</span> uma única vez no computador com as bases do PI06.';document.querySelector('#contexto .wrap').prepend(alert)}}
+
+// Quarto mapa da v2.3: contexto local medido + comparações condicionais.
+let decisionZone=null,decisionSvg=null,decisionView={x:0,y:0,w:1000,h:760};
+const decisionGroups=[['gas','Gasolina'],['hyb','Híbrido'],['ev','Elétrico']];
+function decisionContext(){
+ const r=$('decision-region').value,d=$('decision-district').value;
+ if(decisionZone)return [decisionZone];
+ return zones.filter(z=>(!r||z.regiao_sp===r)&&(!d||String(z.distrito_od_id)===d));
+}
+function decisionResetView(){decisionView={x:0,y:0,w:1000,h:760};decisionViewApply()}
+function decisionViewApply(){if(decisionSvg)decisionSvg.setAttribute('viewBox',[decisionView.x,decisionView.y,decisionView.w,decisionView.h].join(' '))}
+function decisionZoom(f){let v=decisionView;let nw=Math.max(55,Math.min(1000,v.w/f));let nh=nw*.76;let cx=v.x+v.w/2,cy=v.y+v.h/2;decisionView={x:Math.max(-30,Math.min(1030-nw,cx-nw/2)),y:Math.max(-30,Math.min(790-nh,cy-nh/2)),w:nw,h:nh};decisionViewApply()}
+function decisionFocus(z){
+ if(!z||!decisionSvg)return;
+ const path=decisionSvg.querySelector('[data-dzid="'+String(z.zona_od_id)+'"]');
+ if(!path)return;
+ try{const b=path.getBBox(), w=Math.max(35,b.width*3.2),h=Math.max(30,b.height*3.2);let vw=Math.max(110,Math.min(1000,Math.max(w,h*1000/760)));let vh=vw*.76;decisionView={x:Math.max(0,Math.min(1000-vw,b.x+b.width/2-vw/2)),y:Math.max(0,Math.min(760-vh,b.y+b.height/2-vh/2)),w:vw,h:vh};decisionViewApply()}catch(e){}
+}
+function decisionUpdateFilters(){
+ const region=$('decision-region').value;
+ const current=$('decision-district').value;
+ const permitted=zones.filter(z=>!region||z.regiao_sp===region);
+ const set=new Set(permitted.map(z=>String(z.distrito_od_id)));
+ const options=districts.filter(d=>set.has(String(d.distrito_od_id))).sort((a,b)=>String(a.distrito_nome).localeCompare(String(b.distrito_nome),'pt-BR'));
+ $('decision-district').innerHTML='<option value="">Todos os distritos</option>'+options.map(d=>`<option value="${escapeHtml(d.distrito_od_id)}">${escapeHtml(d.distrito_nome)}</option>`).join('');
+ if(options.some(d=>String(d.distrito_od_id)===current))$('decision-district').value=current;
+ $('decision-zones').innerHTML=permitted.map(z=>`<option value="${escapeHtml(z.zona_nome+' · OD '+z.zona_od_id)}">${escapeHtml(z.distrito_nome)}</option>`).join('');
+}
+function decisionSearch(text){
+ const term=normName(text).trim();if(!term)return null;
+ const direct=term.match(/\b(?:OD\s*)?(\d{1,3})\b/);if(direct&&zoneById.has(direct[1]))return zoneById.get(direct[1]);
+ return zones.find(z=>normName(z.zona_nome+' · OD '+z.zona_od_id)===term)||zones.find(z=>normName(z.zona_nome)===term)||zones.find(z=>normName(z.zona_nome).includes(term)||normName(z.distrito_nome).includes(term))||null;
+}
+function decisionSelectZone(z,focus=false){
+ if(!z)return;decisionZone=z;
+ $('decision-region').value=z.regiao_sp||'';$('decision-district').value='';decisionUpdateFilters();$('decision-district').value=String(z.distrito_od_id);
+ $('decision-search').value=z.zona_nome+' · OD '+z.zona_od_id;
+ decisionDisplay();if(focus)decisionFocus(z);
+ if(String(selectedZone?.zona_od_id)!==String(z.zona_od_id))selected(z);
+}
+function decisionClear(){decisionZone=null;$('decision-search').value='';decisionDisplay();decisionResetView()}
+function decisionDisplay(){
+ const r=$('decision-region').value,d=$('decision-district').value,subset=decisionContext();
+ const district=districts.find(x=>String(x.distrito_od_id)===d);
+ const name=decisionZone?decisionZone.zona_nome+' · Zona OD '+decisionZone.zona_od_id:district?district.distrito_nome:r?'Região '+r:'São Paulo · capital';
+ $('decision-name').textContent=name;
+ $('decision-desc').textContent=decisionZone?(decisionZone.distrito_nome+' · Região '+decisionZone.regiao_sp+' · São Paulo'):district?('Distrito OD · Região '+(r||'—')+' · São Paulo'):r?'Recorte regional da capital':'Todas as 343 zonas OD da capital';
+ const sum=k=>{let vals=subset.map(z=>n(z[k])).filter(v=>v!==null);return vals.length?vals.reduce((a,b)=>a+b,0):null};
+ const chargersAvailable=DATA.ocmZoned===true;
+ $('decision-trips').textContent=fmt(sum('viagens_origem_expandidas'));
+ $('decision-chargers').textContent=chargersAvailable?fmt(sum('pontos_ocm_cadastrados')):'—';
+ $('decision-operational').textContent=chargersAvailable?fmt(sum('pontos_ocm_status_operational')):'—';
+ $('decision-count').textContent=fmt(subset.length);
+ $('decision-samples').textContent=fmt(subset.filter(z=>z.tem_amostra_origem).length);
+ $('decision-quality').textContent=chargersAvailable?'OCM geolocalizado por zona · 2026':'Sem geolocalização zonal OCM';
+ let ct=chargersAvailable?sum('pontos_ocm_cadastrados'):null;
+ $('decision-reason').textContent=(!chargersAvailable?'O mapa de recarga por zona exige GeoJSON e coordenadas completos. ':'')+
+     (ct===0?'Nenhum ponto OCM foi localizado dentro deste recorte no snapshot; isso não prova ausência de recarga. ':'')+
+     'A OD identifica viagens por território, não renda individual. O custo energético do veículo é o mesmo cenário técnico em qualquer zona até haver preços regionais comprovados.';
+ $('decision-charge-detail').textContent='Pontos de recarga são cadastros do Open Charge Map, não disponibilidade em tempo real. Origem de viagens OD 2023 inclui táxi não convencional/aplicativo. Sem amostra não significa zero.';
+ $('decision-verdict').textContent='A região altera o contexto, mas não comprova qual veículo dá maior lucro.';
+ const metric=$('decision-layer').value;
+ const mm=Math.max(1,...zones.map(z=>n(z[metric])||0));
+ if(decisionSvg){decisionSvg.querySelectorAll('.decision-zone').forEach(el=>{
+   const z=zoneById.get(el.dataset.dzid);if(!z)return;
+   const hidden=(r&&z.regiao_sp!==r)||(d&&String(z.distrito_od_id)!==d);
+   el.classList.toggle('dimmed',!!hidden&&String(decisionZone?.zona_od_id)!==String(z.zona_od_id));
+   el.classList.toggle('selected',String(decisionZone?.zona_od_id)===String(z.zona_od_id));
+   let v=n(z[metric]);el.style.fill=v===null?'#344357':numColor(v,mm);
+   el.setAttribute('aria-pressed',String(String(decisionZone?.zona_od_id)===String(z.zona_od_id)));
+  });
+  decisionSvg.querySelectorAll('.decision-charge').forEach(el=>{el.style.display=metric==='pontos_ocm_cadastrados'?'':'none'});
+ }
+}
+function decisionRenderMap(){
+ const target=$('decision-map'),geo=DATA.geo||[];target.replaceChildren();
+ if(!geo.length){target.innerHTML='<div class="empty" style="margin:22px">Mapa interativo indisponível nesta prévia. Gere <b>apresentacao_PI06_capital_v24.html</b> com o script do projeto para ativar as 343 zonas; filtros e comparador continuam funcionando.</div>';return}
+ const ns='http://www.w3.org/2000/svg';const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 1000 760');svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa de decisão por zona OD de São Paulo');svg.style.touchAction='pan-y';
+ const g=document.createElementNS(ns,'g');svg.appendChild(g);
+ geo.forEach(it=>{const z=zoneById.get(String(it.id));if(!z)return;
+  const path=document.createElementNS(ns,'path');path.setAttribute('d',it.p);path.setAttribute('class','zone decision-zone');path.dataset.dzid=String(it.id);path.setAttribute('tabindex','0');path.setAttribute('role','button');path.setAttribute('aria-label','Selecionar '+z.zona_nome+' · OD '+it.id);
+  const pick=()=>decisionSelectZone(z,true);path.addEventListener('click',pick);path.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}});const title=document.createElementNS(ns,'title');title.textContent=z.zona_nome+' · OD '+it.id;path.appendChild(title);g.appendChild(path)});
+ (DATA.municipioGeo||[]).forEach(it=>{let path=document.createElementNS(ns,'path');path.setAttribute('d',it.p);path.setAttribute('class','municipality');g.appendChild(path)});
+ (DATA.chargingXY||[]).forEach(it=>{let c=document.createElementNS(ns,'circle');c.setAttribute('cx',it.x);c.setAttribute('cy',it.y);c.setAttribute('r',3.3);c.setAttribute('class','charging-point decision-charge');c.setAttribute('aria-label','Ponto OCM '+it.id);let title=document.createElementNS(ns,'title');let charge=charging.find(x=>String(x.id_posto)===String(it.id));title.textContent=charge?(charge.titulo+' · '+(charge.status_cadastral||'Status não informado')):'Ponto '+it.id;c.appendChild(title);
+ c.addEventListener('click',()=>{if(charge){$('decision-charge-detail').textContent=(charge.titulo||'Ponto OCM')+' · '+(charge.logradouro||'Endereço não informado')+' · status: '+(charge.status_cadastral||'Não informado')+' · fonte Open Charge Map, levantamento 2026';toast('Detalhes do eletroposto no painel')}});g.appendChild(c)});
+ target.appendChild(svg);decisionSvg=svg;
+ // Pan de mouse, seleção por toque/clique. Em celular, arrastar verticalmente rola o documento.
+ let drag=null,moved=false;
+ svg.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'||e.button!==0)return;drag={x:e.clientX,y:e.clientY,v:{...decisionView}};moved=false});
+ svg.addEventListener('pointermove',e=>{if(!drag)return;let dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>6){moved=true;const w=Math.max(1,svg.clientWidth),h=Math.max(1,svg.clientHeight);decisionView.x=Math.max(-25,Math.min(1025-decisionView.w,drag.v.x-dx*drag.v.w/w));decisionView.y=Math.max(-25,Math.min(785-decisionView.h,drag.v.y-dy*drag.v.h/h));decisionViewApply()}});
+ svg.addEventListener('pointerup',()=>{drag=null});svg.addEventListener('pointercancel',()=>{drag=null});svg.addEventListener('click',e=>{if(moved){e.stopPropagation();moved=false}},true);
+ svg.addEventListener('wheel',e=>{e.preventDefault();decisionZoom(e.deltaY<0?1.14:1/1.14)},{passive:false});
+ decisionDisplay();
+}
+function decisionPopulateVehicles(){
+ const prefs={gas:['MOBI','ARGO'],hyb:['COROLLA CROSS','COROLLA','YARIS'],ev:['DOLPHIN MINI','DOLPHIN','E-KWID']};
+ for(const [key,group] of decisionGroups){const options=energy.filter(e=>e.grupo_interface===group&&n(e.custo_energia_rs_km)!==null).sort((a,b)=>energyLabel(a).localeCompare(energyLabel(b),'pt-BR'));
+  const sel=$('decision-'+key);sel.innerHTML=options.map(x=>`<option value="${escapeHtml(simKey(x))}">${escapeHtml(energyLabel(x))}</option>`).join('');
+  const preferred=(prefs[key]||[]).map(p=>options.find(x=>normName(x.modelo_inmetro).includes(p))).find(Boolean)||options[0];if(preferred)sel.value=simKey(preferred);
+ }
+}
+function decisionRenderCompare(){
+ const km=n($('decision-km').value),rev=n($('decision-revenue').value),complete=$('decision-confirm').checked;
+ const eligible=km!==null&&km>=100&&km<=30000&&rev!==null&&rev>=0&&rev<=150000;
+ let configs=[];for(const [key,group] of decisionGroups){
+  let e=energy.find(x=>simKey(x)===$('decision-'+key).value&&x.grupo_interface===group),per=e?n(e.custo_energia_rs_km):null;
+  let energyMonth=eligible&&per!==null?per*km:null;
+  let extraRaw=$('decision-'+key+'-extra').value.trim(),extra=extraRaw===''?null:n(extraRaw);
+  const validExtra=extra!==null&&extra>=0;
+  $('decision-'+key+'-value').textContent=money(energyMonth);
+  configs.push({key,group,vehicle:e,energyMonth,extra:validExtra?extra:null,total:validExtra&&energyMonth!==null?energyMonth+extra:null});
+ }
+ let haveAll=eligible&&configs.every(x=>x.energyMonth!==null&&x.extra!==null),isProfit=complete&&haveAll;
+ let comparable=configs.filter(x=>isProfit?x.total!==null:x.energyMonth!==null);
+ comparable.sort((a,b)=>isProfit?a.total-b.total:a.energyMonth-b.energyMonth);
+ $('decision-ranking-title').textContent=isProfit?'RESULTADO HIPOTÉTICO · CUSTOS TOTAIS DECLARADOS':'COMPARAÇÃO TÉCNICA · SOMENTE ENERGIA';
+ if(!eligible){$('decision-winner').textContent='Preencha quilometragem e recebimento válidos';$('decision-winner-note').textContent='Não calculamos resultados com entradas inválidas.'}
+ else if(comparable.length){const first=comparable[0];$('decision-winner').textContent=isProfit?'Maior resultado simulado: '+first.group+' · '+energyLabel(first.vehicle):'Menor custo de energia: '+first.group+' · '+energyLabel(first.vehicle);
+ $('decision-winner-note').textContent=isProfit?'Estimativa: '+money(rev-first.total)+' / mês depois das despesas declaradas. Não é rendimento observado, e a mesma fórmula vale para todas as regiões.':'Economia de energia não equivale a lucro. Complete todos os custos extras e marque a declaração para estimar o resultado sob suas hipóteses.'}
+ else{$('decision-winner').textContent='Sem versões comparáveis';$('decision-winner-note').textContent='É necessário gerar as tabelas INMETRO e escolher modelos com custo de energia.'}
+ const maximum=Math.max(1,...comparable.map(x=>isProfit?x.total:x.energyMonth));
+ $('decision-ranking').innerHTML=comparable.map((x,i)=>{
+ let value=isProfit?x.total:x.energyMonth;
+ return `<div class="rank-row"><div class="rank-label">${i+1}. ${escapeHtml(x.group)}</div><div class="rank-track"><i style="width:${Math.max(3,value/maximum*100)}%"></i></div><b>${money(value)}</b></div>`
+ }).join('')||'<div class="empty">Comparação indisponível para a seleção atual.</div>';
+ // 'Menor custo total' equivale a maior saldo com recebimento idêntico e declarado.
+}
+function initDecision(){
+ decisionUpdateFilters();decisionRenderMap();decisionPopulateVehicles();decisionRenderCompare();
+ $('decision-region').addEventListener('change',()=>{$('decision-district').value='';decisionUpdateFilters();decisionClear()});
+ $('decision-district').addEventListener('change',decisionClear);
+ const search=$('decision-search');
+ function submit(){let z=decisionSearch(search.value);if(z){decisionSelectZone(z,true);toast(z.zona_nome+' selecionada no mapa de decisão')}else if(search.value.trim()){toast('Zona não encontrada. Confira o nome ou número OD.')}}
+ search.addEventListener('change',submit);search.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();submit()}if(e.key==='Escape')decisionClear()});
+ $('decision-layer').addEventListener('change',decisionDisplay);
+ $('decision-zoom-in').addEventListener('click',()=>decisionZoom(1.45));$('decision-zoom-out').addEventListener('click',()=>decisionZoom(1/1.45));$('decision-zoom-reset').addEventListener('click',decisionResetView);
+ for(const [key] of decisionGroups){$('decision-'+key).addEventListener('change',decisionRenderCompare);$('decision-'+key+'-extra').addEventListener('input',decisionRenderCompare)}
+ ['decision-km','decision-revenue','decision-confirm'].forEach(id=>$(id).addEventListener('input',decisionRenderCompare));
+ $('decision-open-mobility').addEventListener('click',()=>{if(decisionZone)focusZone(decisionZone);document.getElementById('mobilidade').scrollIntoView({behavior:'smooth'})});
+ $('decision-reset').addEventListener('click',()=>{ $('decision-km').value=3000;$('decision-revenue').value=8000;$('decision-confirm').checked=false;for(const [key] of decisionGroups)$('decision-'+key+'-extra').value='';decisionPopulateVehicles();decisionRenderCompare();toast('Comparação restaurada')});
+}
+// PI06 v2.4 — modelo econômico do motorista, offline e auditável.
+// Preço e consumo: referências; custos sem evidência continuam ausentes (NULL), nunca viram zero.
+const FIN=DATA.financialSources||{};
+const FINREF=FIN.reference||{
+ gasoline:6.342190476190476,ethanol:4.089952380952381,home_kwh:0.78938,public_kwh:2.10,
+ maintenance_km:0.10,tires_km:0.03,insurance_month:400,wash_month:80,phone_month:50,license_year:174.08,mei_month:86.05};
+const FINOFFERS=Array.isArray(FIN.offers)?FIN.offers:[];
+const FINFIPE=Array.isArray(FIN.fipe)?FIN.fipe:[];
+let selectedFipe=null;
+const fnValue=id=>n($(id)?.value);
+const fnInput=(id,v)=>{$(id).value=v===null||v===undefined?'':String(v)};
+const financialRows=[
+ ['energia','Energia','INMETRO + preços ANP/ANEEL'],
+ ['aluguel','Aluguel','Contrato Uber Match ou hipótese manual'],
+ ['km_extra','Quilometragem excedente','Limites de km e preço do contrato'],
+ ['depreciacao','Depreciação','Hipótese de valor residual / vida útil'],
+ ['manutencao','Manutenção','Provisão mensal por km'],
+ ['pneus','Pneus','Provisão mensal por km'],
+ ['seguro','Seguro','Valor informado ou cobertura contratual'],
+ ['ipva','IPVA','Valor efetivo anual; benefício não presumido'],
+ ['licenciamento','Licenciamento','Taxa anual de SP ou cobertura do contrato'],
+ ['lavagem','Lavagem','Hipótese mensal'],
+ ['celular','Celular/internet','Hipótese mensal'],
+ ['imprevistos','Reparos imprevistos','Provisão hipotética para consertos não programados'],
+ ['outros','Outras despesas','Informadas pelo usuário'],
+ ['contribuicao','Contribuição MEI','Só quando aplicável ao perfil']
+];
+function financeDefault(){
+ const k={
+  'fin-km':3000,'fin-hours':200,'fin-revenue':8000,
+  'fin-gas-price':FINREF.gasoline,'fin-eth-price':FINREF.ethanol,
+  'fin-home-price':FINREF.home_kwh,'fin-public-price':FINREF.public_kwh,
+  'fin-public-share':0,'fin-electric-share':0,'fin-electric-consumption':null,
+  'fin-depreciation':null,'fin-purchase':null,'fin-residual':null,'fin-lifetime':null,
+  'fin-rental':null,'fin-rental-km':null,'fin-rental-overage':null,'fin-maint':FINREF.maintenance_km,'fin-tires':FINREF.tires_km,
+  'fin-insurance':FINREF.insurance_month,'fin-ipva':null,'fin-lic':FINREF.license_year,
+  'fin-wash':FINREF.wash_month,'fin-phone':FINREF.phone_month,'fin-repair':null,'fin-other':0
+ };
+ for(const [id,v] of Object.entries(k))fnInput(id,v);
+ for(const id of ['fin-mei','fin-confirm','fin-offer-confirm','fin-rental-unlimited','fin-fipe-confirm','fin-includes-maint','fin-includes-tires','fin-includes-ins','fin-includes-ipva','fin-includes-lic'])$(id).checked=false;
+ $('fin-offer').value='';selectedFipe=null;$('fin-fipe-picked').textContent='Nenhuma cotação FIPE selecionada. A compra pode ser informada manualmente.';$('fin-fipe-search').value='';
+}
+function renderFipeSearch(){
+ const term=normName($('fin-fipe-search').value.trim());
+ const results=term.length<2?[]:FINFIPE.filter(x=>normName(x.brand+' '+x.model+' '+x.year).includes(term)).slice(0,8);
+ $('fin-fipe-results').innerHTML=term.length<2?`<p class="source-note">${FINFIPE.length?`Digite ao menos dois caracteres para consultar ${fmt(FINFIPE.length)} referências FIPE.`:'Nenhuma referência FIPE disponível neste arquivo; informe seu preço de compra.'}</p>`:
+  results.length?results.map(x=>`<button type="button" data-fipe="${escapeHtml(x.id)}"><b>${escapeHtml(x.brand+' '+x.model+' · '+x.year)}</b><span>${money(x.price)} · ${escapeHtml(x.reference||'Data não informada')}</span></button>`).join(''):'<p class="source-note">Nenhuma cotação FIPE corresponde à busca.</p>';
+ $('fin-fipe-results').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{selectedFipe=FINFIPE.find(x=>x.id===b.dataset.fipe);
+  $('fin-fipe-picked').textContent=`Cotação selecionada: ${selectedFipe.brand} ${selectedFipe.model} ${selectedFipe.year} · ${money(selectedFipe.price)} · ${selectedFipe.reference}. Não é homologação INMETRO.`;
+  if($('fin-fipe-confirm').checked)fnInput('fin-purchase',selectedFipe.price);
+  renderFinance();toast('Referência FIPE escolhida; confirme versão/ano antes de usar como preço de compra')
+ }));
+}
+function finVehicle(){return energy.find(x=>simKey(x)===$('fin-vehicle').value)||null}
+function finVehicleModes(){
+ const v=finVehicle();const tech=normName(v?.tecnologia||'');
+ const plugin=tech.includes('PLUG');const electric=tech.includes('ELETRIC')&&!tech.includes('HIBRID');
+ $('fin-electric-fields').hidden=!(plugin||electric);
+ $('fin-hybrid-fields').hidden=!plugin;
+ $('fin-public-label').textContent=($('fin-public-share').value||0)+'%';
+ $('fin-model-note').textContent=v?`${energyLabel(v)} — modalidade ${v.modalidade}. Consumo técnico INMETRO e custo/km de referência. Sem homologação automática FIPE, IPVA ou Uber.`:'Sem modelo disponível nesta prévia.';
+ $('fin-energy-note').textContent=plugin?'Plug-in: somente some eletricidade comprada aos quilômetros elétricos escolhidos. Sem dado da mesma versão para ambos os modos, informe consumo elétrico hipotético; nunca supomos energia grátis.':electric?'O custo elétrico usa o preço residencial e a parcela de recarga pública informada; a tarifa residencial-base não inclui tributos.':'Gasolina/etanol e híbrido convencional: a recuperação elétrica já está embutida na eficiência do INMETRO. Não há recarga elétrica externa cobrada à parte.';
+}
+function financeEnergy(v,km){
+ const bad=x=>x===null||x<=0;
+ const fPrice={gasolina:fnValue('fin-gas-price'),etanol:fnValue('fin-eth-price')};
+ const home=fnValue('fin-home-price'),pub=fnValue('fin-public-price');
+ const publicShare=fnValue('fin-public-share');
+ if(publicShare===null||publicShare<0||publicShare>100)return {value:null,reason:'Percentual de recarga pública inválido'};
+ const electricityPrice=bad(home)||bad(pub)?null:home*(1-publicShare/100)+pub*publicShare/100;
+ const tech=normName(v?.tecnologia),plugin=tech.includes('PLUG'),ev=tech.includes('ELETRIC')&&!tech.includes('HIBRID');
+ const equivalent=energy.filter(e=>String(e.inmetro_id)===String(v?.inmetro_id));
+ let fuel=equivalent.find(x=>['gasolina','etanol'].includes(x.modalidade))||null;
+ let elec=equivalent.find(x=>x.modalidade==='eletricidade')||null;
+ if(v?.modalidade==='etanol'||v?.modalidade==='gasolina')fuel=v;
+ if(v?.modalidade==='eletricidade')elec=v;
+ const scaledFuel=()=>{
+  if(!fuel)return null;
+  const mode=fuel.modalidade,ref=mode==='etanol'?FINREF.ethanol:FINREF.gasoline;
+  return bad(fPrice[mode])||bad(ref)?null:n(fuel.custo_energia_rs_km)*fPrice[mode]/ref;
+ };
+ const scaledElec=()=>{
+  if(electricityPrice===null||bad(FINREF.home_kwh))return null;
+  if(elec&&n(elec.custo_energia_rs_km)!==null)return n(elec.custo_energia_rs_km)*electricityPrice/FINREF.home_kwh;
+  let manual=fnValue('fin-electric-consumption');
+  return manual!==null&&manual>0&&manual<=2?manual*electricityPrice/0.90:null;
+ };
+ let price=null,mode='';
+ if(ev){price=scaledElec();mode='100% elétrico';}
+ else if(plugin){let share=fnValue('fin-electric-share');if(share===null||share<0||share>100)return {value:null,reason:'Fração elétrica do plug-in inválida'};
+  const combustion=share<100?scaledFuel():0,grid=share>0?scaledElec():0;
+  if(combustion===null||grid===null)return {value:null,reason:'Plug-in sem consumo do modo elétrico/combustível da mesma versão: preencha consumo elétrico ou selecione modalidade disponível'};
+  price=combustion*(1-share/100)+grid*(share/100);mode=`Plug-in: ${share}% km elétricos, ${100-share}% a combustível`;
+ }else if(v?.modalidade==='eletricidade'){price=null;mode='Modalidade elétrica não homologada para este veículo';}
+ else{price=scaledFuel();mode='Gasolina/etanol ou híbrido convencional (sem carga externa)';}
+ if(price===null||!Number.isFinite(price)||price<0)return {value:null,reason:'Faltam preços ou consumo energético válido para a modalidade escolhida'};
+ return {value:price*km,perKm:price,mode};
+}
+function finMissing(id,label,missing){const value=fnValue(id);if(value===null||value<0||!Number.isFinite(value)){missing.push(label);return null}return value;}
+function financeCalc(){
+ const pending=[];
+ const vehicle=finVehicle();const regime=$('fin-regime').value;
+ let km=finMissing('fin-km','quilometragem',pending),hrs=finMissing('fin-hours','horas online',pending),rev=finMissing('fin-revenue','recebimento',pending);
+ if(km!==null&&(km<100||km>30000)){pending.push('quilometragem entre 100 e 30.000 km');km=null}
+ if(hrs!==null&&(hrs<1||hrs>450)){pending.push('horas entre 1 e 450');hrs=null}
+ if(rev!==null&&rev>150000){pending.push('recebimento até R$ 150.000');rev=null}
+ if(!vehicle)pending.push('versão INMETRO');
+ const en=vehicle&&km!==null?financeEnergy(vehicle,km):{value:null,reason:'Selecione uma versão e quilometragem válidas'};
+ if(en.value===null)pending.push(en.reason||'energia');
+ const cost={energia:en.value,aluguel:0,km_extra:0,depreciacao:0};
+ const included=x=>regime==='alugado'&&$('fin-includes-'+x).checked;
+ const m=included('maint')?0:finMissing('fin-maint','manutenção por km',pending);
+ const t=included('tires')?0:finMissing('fin-tires','pneus por km',pending);
+ cost.manutencao=m===null||km===null?null:m*km;
+ cost.pneus=t===null||km===null?null:t*km;
+ cost.seguro=included('ins')?0:finMissing('fin-insurance','seguro mensal',pending);
+ const ipva=included('ipva')?0:finMissing('fin-ipva','IPVA efetivo anual',pending);
+ const lic=included('lic')?0:finMissing('fin-lic','licenciamento anual',pending);
+ cost.ipva=ipva===null?null:ipva/12;cost.licenciamento=lic===null?null:lic/12;
+ cost.lavagem=finMissing('fin-wash','lavagem',pending);
+ cost.celular=finMissing('fin-phone','celular/internet',pending);
+ cost.imprevistos=finMissing('fin-repair','reparos imprevistos (provisão)',pending);
+ cost.outros=finMissing('fin-other','outras despesas',pending);
+ cost.contribuicao=$('fin-mei').checked?Number(FINREF.mei_month):0;
+ if(regime==='proprio')cost.depreciacao=finMissing('fin-depreciation','depreciação mensal',pending);
+ else{
+  cost.aluguel=finMissing('fin-rental','aluguel mensal',pending);
+  if(!$('fin-offer-confirm').checked)pending.push('confirmar aplicabilidade do contrato de aluguel');
+  if($('fin-rental-unlimited').checked)cost.km_extra=0;
+  else{
+   const limit=finMissing('fin-rental-km','quilometragem inclusa no aluguel',pending);
+   if(limit===null||km===null)cost.km_extra=null;
+   else if(km<=limit)cost.km_extra=0;
+   else {const overage=finMissing('fin-rental-overage','valor do quilômetro excedente',pending);
+    cost.km_extra=overage===null?null:(km-limit)*overage;}
+  }
+ }
+ if(!$('fin-confirm').checked)pending.push('confirmação de completude das premissas');
+ const subtotal=Object.values(cost).filter(v=>v!==null&&Number.isFinite(v)).reduce((a,b)=>a+b,0);
+ const complete=pending.length===0&&Object.values(cost).every(x=>x!==null&&Number.isFinite(x));
+ const total=complete?subtotal:null;
+ const profit=complete&&rev!==null?rev-total:null;
+ return {cost,energy:en,km,hrs,rev,regime,vehicle,pending:[...new Set(pending)],subtotal,total,profit,complete};
+}
+let lastFinance=null;
+const savedFinance={A:null,B:null};
+function financeSavedDisplay(){
+ const box=$('fin-saved-comparison'),a=savedFinance.A,b=savedFinance.B;
+ if(!a&&!b){box.innerHTML='<div class="empty">Nenhum cenário salvo. Preencha e salve A e B.</div>';return}
+ const format=x=>x?`${escapeHtml(energyLabel(x.vehicle||{}))} · ${escapeHtml(x.regime)} · ${fmt(x.km)} km · receita ${money(x.rev)}`:'Ainda não salvo';
+ box.innerHTML=`<div class="finance-saved-row"><b>Cenário A</b><span>${format(a)}</span><strong>${a?(a.complete?money(a.profit):'Parcial'):'—'}</strong></div>
+ <div class="finance-saved-row"><b>Cenário B</b><span>${format(b)}</span><strong>${b?(b.complete?money(b.profit):'Parcial'):'—'}</strong></div>`;
+ if(a&&b){const same=a.km===b.km&&a.rev===b.rev,valid=same&&a.complete&&b.complete;
+ box.innerHTML+=`<div class="finance-note">${valid?`Diferença simulada (B − A): <b>${money(b.profit-a.profit)}</b>. Menor custo total: <b>${a.total<=b.total?'cenário A':'cenário B'}</b>.`:
+ 'Comparação de resultado indisponível: os dois cenários devem estar completos e usar os mesmos quilômetros e o mesmo recebimento. Não indica lucro real.'}</div>`;
+ }
+}
+
+function renderFinance(){
+ const zone=zoneById.get(String($('sim-zone').value));
+ $('sim-zone-context').textContent=zone?`${zone.zona_nome} · ${zone.distrito_nome} · ${fmt(zone.viagens_origem_expandidas)} origens expandidas`:'Selecione uma zona OD da capital';
+ finVehicleModes();const r=financeCalc();lastFinance=r;
+ $('fin-revenue-out').textContent=money(r.rev);$('fin-energy-out').textContent=money(r.cost.energia);$('fin-subtotal').textContent=money(r.subtotal);
+ $('fin-profit').textContent=r.complete?money(r.profit):'—';$('fin-profit').classList.toggle('negative',r.complete&&r.profit<0);
+ $('fin-status').textContent=r.complete?'RESULTADO HIPOTÉTICO · PREMISSAS DECLARADAS':'CENÁRIO PARCIAL · SEM RESULTADO';$('fin-status').className='pill '+(r.complete?'green':'warn');
+ $('fin-status-detail').textContent=r.complete?`${r.profit>=0?'Saldo positivo':'Saldo negativo'} sob as premissas escolhidas. Não é lucro observado nem previsão por região.`:'Pendências impedem calcular lucro ou prejuízo mensal confiável. O subtotal inclui apenas parcelas fornecidas.';
+ $('fin-breakeven-km').textContent=r.complete?money(r.total/r.km,2):'—';$('fin-breakeven-hour').textContent=r.complete?money(r.total/r.hrs):'—';
+ $('fin-pending').textContent=r.complete?'Todos os componentes foram declarados como hipóteses. Reavalie preços e despesas para o seu caso.':'Pendências: '+(r.pending.length?r.pending.join(' · '):'verificar entradas');
+ $('fin-source-note').textContent=`${r.energy.mode||'Energia parcial'}. Energia: INMETRO e referências ANP/ANEEL 2026; custos de posse e aluguel: pesquisa e premissas editáveis. Mesmo carro/ano na Uber e correspondência FIPE não são garantidos.`;
+ const barMax=Math.max(1,...financialRows.map(x=>r.cost[x[0]]||0));
+ $('fin-breakdown').innerHTML=financialRows.map(([key,label,orig])=>{const v=r.cost[key];if(v===0&&((key==='aluguel'&&r.regime==='proprio')||(key==='depreciacao'&&r.regime==='alugado')))return '';
+ return `<div class="finance-cost-row"><div><div class="cost-label"><span>${escapeHtml(label)}</span></div><div class="finance-cost-track"><div style="width:${v===null?0:Math.max(0,100*v/barMax)}%"></div></div></div><b title="${escapeHtml(orig)}">${v===null?'Pendente':money(v)}</b></div>`}).join('');
+ const candidates=[6000,8000,10000];if(r.rev!==null&&!candidates.some(v=>v===r.rev))candidates.push(r.rev);
+ candidates.sort((a,b)=>a-b);
+ $('fin-sensitivity').innerHTML=candidates.map(receita=>{const val=r.complete?receita-r.total:null;return `<div class="finance-sensitivity-item"><span>Recebimento ${money(receita)}${receita===r.rev?' · escolhido':''}</span><b class="${val===null?'':val<0?'negative':'positive'}">${val===null?'Pendente':money(val)}</b></div>`}).join('');
+}
+function financeOfferSelect(){const offer=FINOFFERS.find(x=>x.id===$('fin-offer').value);if(!offer){$('fin-offer-note').textContent='Sem oferta vinculada. Informe uma mensalidade hipotética e confirme a aplicabilidade desse contrato ao veículo selecionado.';return renderFinance();}
+ fnInput('fin-rental',offer.monthly);fnInput('fin-rental-km',offer.kmIncluded);fnInput('fin-rental-overage',offer.extraKm);$('fin-rental-unlimited').checked=offer.unlimited===true;
+ const flags={maint:'maintenance',ins:'insurance',ipva:'ipva'};
+ for(const [id,prop] of Object.entries(flags))$('fin-includes-'+id).checked=offer[prop]===true;
+ // Campos não descritos pela oferta não são assumidos como incluídos.
+ $('fin-includes-tires').checked=false;$('fin-includes-lic').checked=false;
+ $('fin-offer-confirm').checked=false;
+ $('fin-offer-note').textContent=`${offer.company} · ${offer.vehicle} · ${money(offer.monthly)}/mês · snapshot ${offer.date}. Caução informada: ${money(offer.deposit)} (não incluída no gasto mensal). Seguro/manutenção/IPVA: somente itens explicitamente incluídos; confirme exigências, km e disponibilidade. Oferta e versão INMETRO ainda não foram homologadas.`;
+ renderFinance();
+}
+function financialRegime(){const own=$('fin-regime').value==='proprio';$('fin-owned-section').hidden=!own;$('fin-rental-section').hidden=own;$('fin-regime-title').textContent=own?'Carro próprio · custo de posse':'Carro alugado · contrato e coberturas';renderFinance()}
+function finSelectFromDecision(key){const v=energy.find(x=>simKey(x)===$('decision-'+key).value);if(!v)return;$('fin-vehicle').value=simKey(v);if(selectedFipe){selectedFipe=null;$('fin-fipe-confirm').checked=false;fnInput('fin-purchase',null)}if($('decision-km').value)fnInput('fin-km',$('decision-km').value);if($('decision-revenue').value)fnInput('fin-revenue',$('decision-revenue').value);renderFinance();document.getElementById('simulador').scrollIntoView({behavior:'smooth'});toast('Veículo selecionado no simulador detalhado')}
+function initFinance(){
+ const list=energy.filter(e=>n(e.custo_energia_rs_km)!==null).sort((a,b)=>energyLabel(a).localeCompare(energyLabel(b),'pt-BR'));
+ $('fin-vehicle').innerHTML=list.map(e=>`<option value="${escapeHtml(simKey(e))}">${escapeHtml(e.grupo_interface+' · '+energyLabel(e))}</option>`).join('');
+ const preferred=list.find(x=>x.modelo_inmetro==='MOBI'&&x.modalidade==='gasolina')||list[0];if(preferred)$('fin-vehicle').value=simKey(preferred);
+ $('sim-zone').innerHTML=[...zones].sort((a,b)=>Number(a.zona_od_id)-Number(b.zona_od_id)).map(z=>`<option value="${escapeHtml(z.zona_od_id)}">${escapeHtml(z.zona_od_id+' · '+z.zona_nome)}</option>`).join('');
+ if(selectedZone)$('sim-zone').value=selectedZone.zona_od_id;
+ $('fin-offer').innerHTML='<option value="">Informarei manualmente o aluguel</option>'+FINOFFERS.map(o=>`<option value="${escapeHtml(o.id)}">${escapeHtml(o.vehicle+' · '+o.company+' · '+money(o.monthly)+'/mês')}</option>`).join('');
+ financeDefault();
+ $('fin-vehicle').addEventListener('change',()=>{if(selectedFipe){selectedFipe=null;$('fin-fipe-confirm').checked=false;fnInput('fin-purchase',null);$('fin-fipe-picked').textContent='Seleção FIPE anterior desfeita após trocar o veículo; confira modelo/ano.'}renderFinance()});
+ $('fin-fipe-search').addEventListener('input',renderFipeSearch);
+ $('fin-fipe-confirm').addEventListener('change',()=>{if($('fin-fipe-confirm').checked&&selectedFipe){fnInput('fin-purchase',selectedFipe.price);renderFinance()}});
+ renderFipeSearch();
+ $('fin-regime').addEventListener('change',financialRegime);
+ $('fin-offer').addEventListener('change',financeOfferSelect);
+ $('sim-zone').addEventListener('change',()=>{let z=zoneById.get(String($('sim-zone').value));if(z&&typeof focusZone==='function')focusZone(z);renderFinance()});
+ $('fin-estimate-dep').addEventListener('click',()=>{let buy=fnValue('fin-purchase'),res=fnValue('fin-residual'),months=fnValue('fin-lifetime');if(buy===null||res===null||months===null||buy<res||res<0||months<1||months>360){toast('Informe preço, valor residual e meses válidos; preço deve ser maior ou igual ao residual');return}fnInput('fin-depreciation',((buy-res)/months).toFixed(2));renderFinance();toast('Depreciação estimada: hipótese de valor residual, não preço FIPE homologado')});
+ $('fin-reset').addEventListener('click',()=>{financeDefault();financialRegime();toast('Premissas demonstrativas restauradas; IPVA e depreciação continuam pendentes')});
+ for(const key of ['A','B'])$('fin-save-'+key.toLowerCase()).addEventListener('click',()=>{savedFinance[key]=financeCalc();financeSavedDisplay();toast('Cenário '+key+' salvo nesta sessão do navegador')});
+ financeSavedDisplay();
+ $('fin-copy').addEventListener('click',async()=>{const r=lastFinance;if(!r)return;const lines=[`PI06 — cenário econômico hipotético (${r.regime})`,energyLabel(r.vehicle||{}),`Km: ${r.km??'pendente'}; horas: ${r.hrs??'pendente'}`,`Recebimento hipotético após plataforma: ${money(r.rev)}`,...financialRows.map(([key,label])=>`${label}: ${money(r.cost[key])}`),`Custo total: ${money(r.total)}`,`Resultado hipotético: ${money(r.profit)}`,`Pendências: ${r.pending.join('; ')||'nenhuma declarada'}`,'Fonte: INMETRO, ANP/ANEEL 2026 e premissas. Não é lucro observado nem por zona OD.'].join('\n');try{if(!navigator.clipboard)throw Error('Sem permissão');await navigator.clipboard.writeText(lines);toast('Resumo copiado')}catch(e){window.prompt('Copie o resumo abaixo:',lines)}});
+ for(const el of document.querySelectorAll('#simulador input, #simulador select')){if(['fin-regime','fin-vehicle','fin-offer','sim-zone'].includes(el.id))continue;el.addEventListener('input',renderFinance);el.addEventListener('change',renderFinance)}
+ for(const key of ['gas','hyb','ev']){const host=$('decision-'+key)?.closest('.vehicle-option');if(!host)continue;const b=document.createElement('button');b.type='button';b.className='btn';b.style.marginTop='12px';b.style.width='100%';b.textContent='Simular todos os custos deste veículo ↗';b.addEventListener('click',()=>finSelectFromDecision(key));host.appendChild(b)}
+ financialRegime();
+}
+
+function initMobileMenu(){const b=$('mobile-menu'),nav=$('main-nav');b.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);b.setAttribute('aria-expanded',String(open));b.textContent=open?'✕ Fechar':'☰ Menu'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');b.textContent='☰ Menu';b.setAttribute('aria-expanded','false')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰ Menu'}})}
+
+function main(){mode();kpis();initTimeline();initMap();initFlow();initEnergy();initEconomy();initCharge();initDecision();initFinance();initMobileMenu();initScroll();if(!DATA.full){const alert=document.createElement('div');alert.className='banner';alert.innerHTML='<b>Prévia com amostra real:</b> esta cópia mostra parte dos dados do repositório. Para obter todas as zonas clicáveis, fluxos, veículos e pontos, execute <span class="mono">python preparar_site_offline.py</span> uma única vez no computador com as bases do PI06.';document.querySelector('#contexto .wrap').prepend(alert)}}
 try{main()}catch(e){console.error(e);toast('Erro na visualização: '+e.message)}
 </script>
 </body>

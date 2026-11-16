@@ -381,10 +381,194 @@ def load_fipe_years(path: Path) -> list[dict[str,Any]]:
     return out
 
 
+
+def point_in_ring(x: float, y: float, ring: list) -> bool:
+    """Teste de ponto em anel de polígono em coordenadas WGS84 (ray crossing)."""
+    inside = False
+    if len(ring) < 4:
+        return False
+    last = ring[-1]
+    for current in ring:
+        x1,y1 = last[:2];x2,y2 = current[:2]
+        if (y1 > y) != (y2 > y):
+            xintersect = (x2-x1) * (y-y1) / (y2-y1) + x1
+            if x < xintersect:
+                inside = not inside
+        last = current
+    return inside
+
+
+def point_in_geometry(x:float, y:float, geom:dict) -> bool:
+    """Respeita buracos e multipolígonos; não usa distância como substituto do limite."""
+    for poly in polygon_coords(geom):
+        if poly and point_in_ring(x,y,poly[0]) and not any(point_in_ring(x,y,hole) for hole in poly[1:]):
+            return True
+    return False
+
+
+def charging_by_zone(geo_path:Path,zones:list[dict],charging:list[dict]) -> dict:
+    """OCM por zona OD; somente pontos dentro dos polígonos da capital.
+
+    A contagem é cadastral e espacial, sem inferir status ao vivo, uso por Uber
+    ou frequência de recarga dos motoristas.
+    """
+    zone_ids={int(z['zona_od_id']) for z in zones}
+    features=as_geo(geo_path)
+    refs=[]
+    for f in features:
+        zid=extract_id(f,('zona_od_id','NumeroZona','numero_zona'))
+        if zid not in zone_ids:
+            continue
+        coords=[pos for poly in polygon_coords(f['geometry']) for ring in poly for pos in ring]
+        if not coords:
+            raise ValueError('Zona sem coordenadas na contagem OCM: '+str(zid))
+        xs=[p[0] for p in coords];ys=[p[1] for p in coords]
+        refs.append((zid,(min(xs),min(ys),max(xs),max(ys)),f['geometry']))
+    if len(refs)!=len(zone_ids):
+        raise ValueError('Polígonos incompletos para relacionar OCM com as zonas OD')
+    totals={zid:{'total':0,'operational':0} for zid in zone_ids}
+    assigned=set()
+    for c in charging:
+        try:
+            lon=float(c.get('longitude') or '')
+            lat=float(c.get('latitude') or '')
+        except (ValueError,TypeError):
+            continue
+        if not valid_coords([lon,lat]):
+            continue
+        for zid,(x0,y0,x1,y1),geom in refs:
+            if x0<=lon<=x1 and y0<=lat<=y1 and point_in_geometry(lon,lat,geom):
+                if c.get('id_posto') in assigned:
+                    raise ValueError('OCM com ponto duplicado na geografia: '+str(c.get('id_posto')))
+                totals[zid]['total']+=1
+                if str(c.get('status_cadastral') or '').casefold().strip()=='operational':
+                    totals[zid]['operational']+=1
+                assigned.add(c.get('id_posto'))
+                break
+    for z in zones:
+        t=totals[int(z['zona_od_id'])]
+        z['pontos_ocm_cadastrados']=t['total']
+        z['pontos_ocm_status_operational']=t['operational']
+    return {'atribuidos':len(assigned),'nao_atribuidos':len(charging)-len(assigned),'zonas_com_ocm':sum(v['total']>0 for v in totals.values()),'ids_atribuidos':sorted(str(i) for i in assigned)}
+
+
+
+
+def financial_sources(root: Path) -> dict[str, Any]:
+    """Referências financeiras públicas e editáveis; sem homologar FIPE/INMETRO/Uber.
+
+    Dados locais das mesmas fontes usados no ETL. Oferta e contrato nunca se
+    vinculam automaticamente a uma versão INMETRO.
+    """
+    ref={}
+    anp=root/'dados_limpos/03_ANP_PRECOS_CAPITAL_NOV2026.csv'
+    with anp.open('r',encoding='utf-8-sig',newline='') as f:
+        rows=list(csv.DictReader(f))
+    for label,tag in [('gasoline','GASOLINA COMUM'),('ethanol','ETANOL')]:
+        vals=[r for r in rows if normalize_label(r['municipio'])=='SAO PAULO'
+              and normalize_label(r['produto'])==tag]
+        if len(vals)!=1:raise ValueError(f'ANP: referência {tag} para São Paulo não é única')
+        ref[label]=float(vals[0]['preco_medio_rs_litro'])
+        if not math.isfinite(ref[label]) or ref[label]<=0:raise ValueError('ANP: preço inválido')
+    aneel=root/'dados_limpos/02_ANEEL_CENARIO_ENERGIA_SP.csv'
+    with aneel.open('r',encoding='utf-8-sig',newline='') as f:
+        tariffs=list(csv.DictReader(f))
+    applicable=[r for r in tariffs if normalize_label(r['municipio_referencia'])=='SAO PAULO' and r['mes_cenario']=='2026-11']
+    if len(applicable)!=1:raise ValueError('ANEEL: ausência ou duplicação do cenário de novembro/2026')
+    ref['home_kwh']=float(applicable[0]['tarifa_base_rs_kwh'])
+    if not math.isfinite(ref['home_kwh']) or ref['home_kwh']<=0:raise ValueError('ANEEL: tarifa inválida')
+    ref['public_kwh']=None
+    cat=root/'dados_complementares/etapa19/cotacoes.csv'
+    with cat.open('r',encoding='utf-8-sig',newline='') as f:
+        quotes=list(csv.DictReader(f))
+    for row in quotes:
+        if row.get('categoria')=='recarga_publica_mediana':
+            ref['public_kwh']=float(row['valor_brl'])
+            break
+    if ref['public_kwh'] is None or ref['public_kwh']<=0:raise ValueError('Pesquisa de recarga pública indisponível')
+    cfg=root/'dados_config/cenarios_motorista_pesquisa_2026.csv'
+    with cfg.open('r',encoding='utf-8-sig',newline='') as f:
+        profils=list(csv.DictReader(f))
+    own=[p for p in profils if p.get('regime')=='proprio']
+    if len(own)!=1:raise ValueError('Perfil próprio demonstrativo ausente/duplicado')
+    k=own[0]
+    mapper={'maintenance_km':'manutencao_rs_km','tires_km':'pneus_rs_km',
+            'insurance_month':'seguro_rs_mes','wash_month':'lavagem_rs_mes',
+            'phone_month':'celular_rs_mes','license_year':'licenciamento_rs_ano'}
+    for key,column in mapper.items():
+        raw=k.get(column,'').strip()
+        if not raw:raise ValueError(f'Perfil próprio: {column} não está preenchido')
+        ref[key]=float(raw.replace(',','.'))
+        if not math.isfinite(ref[key]) or ref[key]<0:raise ValueError(f'Perfil próprio: {column} inválido')
+    # DAS: apenas referência condicional para MEI de serviços aplicável a perfil.
+    ref['mei_month']=86.05
+    offers_path=root/'dados_limpos/17_UBER_MATCH_OFERTAS_SP.csv'
+    offers=[]
+    if offers_path.is_file():
+        with offers_path.open('r',encoding='utf-8-sig',newline='') as f:
+            reader=csv.DictReader(f)
+            for row in reader:
+                if (normalize_label(row.get('cidade'))!='SAO PAULO'
+                    or normalize_label(row.get('tipo_oferta_fonte'))!='ALUGUEL'
+                    or str(row.get('apto_modelo_economico','')).lower()!='true'
+                    or str(row.get('revisar_oferta','')).lower()=='true'):
+                    continue
+                monthly=row.get('valor_mensal_equivalente','').strip()
+                try:price=float(monthly)
+                except ValueError:continue
+                if not 0<price<100000 or not math.isfinite(price):continue
+                def flag(col):
+                    v=str(row.get(col,'')).strip().lower()
+                    if v=='true':return True
+                    if v=='false':return False
+                    return None
+                entry={
+                    'id':str(row.get('id_publico_oferta',''))[:80],
+                    'company':str(row.get('locadora',''))[:120],
+                    'vehicle':str(row.get('veiculo',''))[:140],
+                    'monthly':round(price,2),'insurance':flag('seguro_incluso'),
+                    'unlimited':flag('sem_limite_quilometragem'),
+                    'kmIncluded':None,'extraKm':None,'deposit':None,
+                    'maintenance':flag('manutencao_inclusa'),'ipva':flag('ipva_incluso'),
+                    'date':str(row.get('data_coleta',''))[:30],
+                    'source':str(row.get('url_oferta',''))[:250],
+                }
+                for field,target in [('km_inclusos','kmIncluded'),('valor_km_excedente_reais','extraKm'),('caucao_reais','deposit')]:
+                    raw=str(row.get(field,'')).strip().replace(',','.')
+                    try:v=float(raw)
+                    except ValueError:continue
+                    if math.isfinite(v) and v>=0:entry[target]=v
+                offers.append(entry)
+    offers.sort(key=lambda x:(x['monthly'],x['company'],x['vehicle']))
+    # Pesquisa FIPE independente. NUNCA vincula automaticamente a INMETRO ou Uber.
+    fipe=[]
+    pricefile=root/'dados_limpos/08_FIPE_VEICULOS_PARCIAL.csv'
+    if pricefile.is_file():
+        with pricefile.open('r',encoding='utf-8-sig',newline='') as f:
+            for row in csv.DictReader(f):
+                year=str(row.get('ano_modelo') or '').strip()
+                if not re.fullmatch(r'20[0-3][0-9]',year):continue
+                raw=str(row.get('preco_fipe') or '').replace('R$','').replace('.','').replace(',','.').strip()
+                try:price=float(raw)
+                except ValueError:continue
+                if not math.isfinite(price) or price<=0:continue
+                fipe.append({'id':str(len(fipe)),'brand':str(row.get('marca_fipe') or ''),
+                             'model':str(row.get('modelo_fipe') or ''),'year':int(year),
+                             'price':round(price,2),'reference':str(row.get('mes_referencia') or '')})
+    return {'reference':ref,'offers':offers,'fipe':fipe,'sources':{
+        'gasoline_ethanol':'ANP São Paulo, semana 08–14/11/2026, valores médios',
+        'home_kwh':'ANEEL/ENEL SP novembro/2026, tarifa-base sem tributos',
+        'public_kwh':'Cotação setorial mediana do estado de SP, hipótese, não é preço por posto',
+        'maintenance_tires_insurance':'Perfil próprio demonstrativo da pesquisa 2026, hipóteses',
+        'rentals':'Uber Match, snapshot 2026, condições e disponibilidade sujeitas a revisão',
+        'ipva_depreciation':'Valores individuais não homologados, exigir preenchimento explícito'
+    }}
+
+
 def main():
     parser=argparse.ArgumentParser(description='Gera a apresentação HTML offline completa do PI06')
     parser.add_argument('--raiz',type=Path,default=Path.cwd(),help='Raiz do repositório PI06')
-    parser.add_argument('--saida',type=Path,default=Path('apresentacao_PI06_capital_v22.html'),help='Arquivo final de apresentação')
+    parser.add_argument('--saida',type=Path,default=Path('apresentacao_PI06_capital_v24.html'),help='Arquivo final de apresentação')
     parser.add_argument('--geo',type=Path,default=Path('dados_relatorios/territorio_od2023/geo_zonas_od2023_rmsp.geojson'))
     parser.add_argument('--geo-municipios',type=Path,default=Path('dados_relatorios/territorio_od2023/geo_municipios_derivados_zonas_od2023.geojson'))
     parser.add_argument('--ocm',type=Path,default=Path('dados_limpos/10_OPEN_CHARGE_MAP_SP.csv'))
@@ -445,7 +629,13 @@ def main():
     geom=args.geo_municipios if args.geo_municipios.is_absolute() else root/args.geo_municipios
     if not geo.exists():
         raise FileNotFoundError('Falta o GeoJSON das 527 zonas: '+str(geo)+'\nExecute integrar_od2023.py --shape ... --sobrescrever, ou use --geo CAMINHO')
+    contagem_ocm=charging_by_zone(geo,zonas_capital,charging)
+    ids_geolocalizados=set(contagem_ocm['ids_atribuidos'])
+    # Um município escrito no cadastro pode divergir da posição real do ponto.
+    # Mostrar somente eletropostos cuja coordenada caiu dentro da capital.
+    charging=[c for c in charging if str(c.get('id_posto')) in ids_geolocalizados]
     geo_shapes,mun_shapes,charge_xy=build_map(geo,geom,zonas_capital,charging)
+    print(f"  OK: OCM atribuído a zonas OD: {contagem_ocm}")
     print(f'  OK: {len(geo_shapes)} zonas da capital, {len(mun_shapes)} limite municipal, {len(charge_xy)} pontos de recarga, {len(capital_flows)} fluxos internos')
     tpath=args.modelo or Path(__file__).resolve().parent/'modelo.html'
     template=tpath.read_text(encoding='utf-8')
@@ -461,12 +651,15 @@ def main():
         'energia_cenarios':len(datasets['energia']),
         'viagens_expandidas':round(sum(float(z['viagens_origem_expandidas']) for z in zonas_capital if z['viagens_origem_expandidas'] is not None),2),
         'sensibilidade_linhas':datasets['sensibilidade_linhas'],
+        'ocm_associado_zonas':contagem_ocm['atribuidos'],
         'saidas_sha256':{k:v.get('sha256') for k,v in m['saidas_sha256'].items()}},
         'zones':zonas_capital,'municipios':sp_municipio,'distritos':districts,
         'fluxos':capital_flows,'energia':datasets['energia'],
         'motoristas':datasets['motoristas'],'premissas':datasets['premissas'],
         'recarga':charging,'geo':geo_shapes,'municipioGeo':mun_shapes,'chargingXY':charge_xy,
-        'historyAnnual':history,'fleet':fleet,'fipeYears':fipe_years}
+        'historyAnnual':history,'fleet':fleet,'fipeYears':fipe_years,
+        'ocmZoned':True,'ocmSpatialAudit':contagem_ocm,
+        'financialSources':financial_sources(root)}
     html=inject(template,obj,image)
     out=args.saida if args.saida.is_absolute() else root/args.saida
     out.parent.mkdir(parents=True,exist_ok=True)
